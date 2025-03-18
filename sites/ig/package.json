@@ -14,7 +14,8 @@
 		"nextra": "^4.2.16",
 		"nextra-theme-docs": "^4.2.16",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"shared": "workspace:*"
 	},
 	"devDependencies": {
 		"@svgr/webpack": "^8.0.1",

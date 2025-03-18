@@ -2,9 +2,20 @@
     "name": "shared",
     "version": "0.1.0",
     "private": true,
-    "license": "AGPL-3.0-only",
     "peerDependencies": {
         "react": "^19.0.0",
         "typescript": "^5.0.0"
+    },
+    "dependencies": {
+        "graceful-fs": "^4.2.11",
+        "mdast-util-from-markdown": "^2.0.2",
+        "unified": "^11.0.5",
+        "unist-util-visit": "^5.0.0",
+        "vfile": "^6.0.3"
+    },
+    "devDependencies": {
+        "@types/mdast": "^4.0.4",
+        "@types/node": "^22.0.0",
+        "@types/react": "^19.0.10"
     }
 }
