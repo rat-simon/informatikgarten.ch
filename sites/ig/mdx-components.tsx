@@ -2,6 +2,7 @@
 // @ts-nocheck
 
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
+import { Excalidraw } from 'shared/components'
 
 const {
   tr: Tr,
@@ -13,6 +14,7 @@ const {
 
 export const useMDXComponents: typeof getDocsMDXComponents = components => ({
   ...docsComponents,
+  excalidraw: Excalidraw,
   tr: Tr,
   th: Th,
   thead({ children, ...props }) {

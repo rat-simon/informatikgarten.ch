@@ -1,5 +1,5 @@
 import nextra from 'nextra'
-import { remarkPathCorrections, remarkWikiLinks } from 'shared/remark'
+import { remarkExcalidraw, remarkPathCorrections, remarkWikiLinks } from 'shared/remark'
 
 function isExportNode(node, varName: string) {
     if (node.type !== 'mdxjsEsm') return false
@@ -60,7 +60,8 @@ const withNextra = nextra({
     defaultShowCopyCode: true,
     mdxOptions: {
         remarkPlugins: [
-            remarkWikiLinks, // before path corrections
+            remarkWikiLinks, // before Excalidraw
+            remarkExcalidraw, // before path corrections
             remarkPathCorrections
         ],
         rehypePlugins: [
