@@ -1,5 +1,5 @@
 import nextra from 'nextra'
-import { remarkExcalidraw, remarkPathCorrections, remarkWikiLinks } from 'shared/remark'
+import { rehypeMuxvideo, remarkExcalidraw, remarkPathCorrections, remarkVideo, remarkWikiLinks } from 'shared/remark'
 
 function isExportNode(node, varName: string) {
     if (node.type !== 'mdxjsEsm') return false
@@ -62,11 +62,13 @@ const withNextra = nextra({
         remarkPlugins: [
             remarkWikiLinks, // before Excalidraw
             remarkExcalidraw, // before path corrections
+            remarkVideo, // before path corrections
             remarkPathCorrections
         ],
         rehypePlugins: [
             // Provide only on `build` since turbopack on `dev` supports only serializable values
-            process.env.NODE_ENV === 'production' && rehypeOpenGraphImage
+            process.env.NODE_ENV === 'production' && rehypeOpenGraphImage,
+            rehypeMuxvideo
         ]
     },
     whiteListTagsStyling: ['figure', 'figcaption']
