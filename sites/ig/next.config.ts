@@ -1,5 +1,5 @@
 import nextra from 'nextra'
-import { rehypeMuxvideo, remarkExcalidraw, remarkPathCorrections, remarkVideo, remarkWikiLinks } from 'shared/remark'
+import { rehypeMuxvideo, remarkExcalidraw, remarkPathCorrections, remarkVideo, remarkWikiLinks } from '@shared/server/remark'
 
 function isExportNode(node, varName: string) {
     if (node.type !== 'mdxjsEsm') return false

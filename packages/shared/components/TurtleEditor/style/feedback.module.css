@@ -1,0 +1,24 @@
+.feedbackrow {
+    width: 100%;
+}
+
+.feedbackContent {
+    transition-duration: 300ms;
+    height: 0px;
+    &.showFeedback {
+        height: 300px;
+    }
+}
+
+.feedbackButton {
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+    border: 1px solid #999;
+    margin: 0px 4px;
+    padding: 4px;
+    border-top-width: 0px;
+    border-radius: 0% 0% 25% 25%;
+    float: right;
+    cursor: pointer;
+}

@@ -2,7 +2,7 @@
 // @ts-nocheck
 
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
-import { Excalidraw, MuxVideo } from 'shared/components'
+import { Excalidraw, MuxVideo } from '@shared/components'
 
 const {
   tr: Tr,

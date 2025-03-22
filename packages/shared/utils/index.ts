@@ -1,2 +1,5 @@
 export { logger } from './logger'
-export { searchFileInSubdirectories } from './searchFileInSubdirectories'
+export { generateHash } from './generateHash'
+export { YearsHSLGradient } from './yearsHSLGradient'
+export { sanitizeIdString } from './sanitizeIdString'
+export { isTeacherCS } from './isTeacherCS'

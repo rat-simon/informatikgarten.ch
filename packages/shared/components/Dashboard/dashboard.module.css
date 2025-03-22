@@ -1,0 +1,13 @@
+.dashboard tbody tr {
+    @apply border-collapse border-t;
+    border-color: #ffffff33;
+
+    &:hover {
+        filter: brightness(1.1);
+
+    }
+}
+
+.dashboard tbody tr:hover+tr {
+    @apply border-none;
+}

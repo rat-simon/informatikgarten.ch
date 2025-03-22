@@ -1,0 +1,241 @@
+.canvasButtons {
+    opacity: 0;
+    transition: 0.2s;
+    z-index: var(--z-button);
+    position: absolute;
+    /* equivalent to absolute in Tailwind */
+    right: 0.5rem;
+    /* equivalent to right-2 in Tailwind */
+    top: 0.5rem;
+    /* equivalent to top-2 in Tailwind */
+}
+
+.canvasButtons button {
+    transition: 0.2s;
+    opacity: 0.5;
+    padding: 0.25rem;
+    /* equivalent to p-1 in Tailwind */
+    margin: 0.25rem;
+    border: 1px solid;
+    border-radius: 5px;
+    color: var(--themed-text);
+    border-color: var(--themed-text);
+
+    &:hover {
+        cursor: pointer;
+        opacity: 1;
+    }
+}
+
+.turtlewrapper:hover .canvasButtons {
+    opacity: 1;
+}
+
+.turtlewrapper {
+    resize: both;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    overflow: hidden;
+    margin-top: 1rem;
+    position: relative;
+    z-index: var(--z-base);
+    background-color: var(--themed-background);
+
+    & .turtlerow {
+        display: flex;
+        flex: 1 1 100px;
+        width: 100%;
+
+        &.output {
+            flex: 0 0 auto;
+        }
+    }
+
+    & .panel {
+        flex: 1 1 auto;
+        position: relative;
+        width: 100%;
+        min-height: 200px;
+        padding: 0;
+        border: 0;
+        margin: 0;
+        border-radius: 0;
+        /* padding-bottom: 35px; */
+    }
+
+    /* & .resetcode {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        cursor: pointer;
+        margin: 10px;
+        z-index: var(--z-button);
+    } */
+    &.fullscreen {
+        position: fixed;
+        z-index: var(--z-fullscreen);
+        margin: 0;
+        top: var(--nextra-navbar-height);
+        left: 0;
+        width: 100% !important;
+        height: calc(100vh - var(--nextra-navbar-height)) !important;
+    }
+
+    & a {
+        text-decoration: none !important;
+    }
+
+    .turtleicon {
+        background-color: rgba(237, 242, 247, 0.1);
+        border: 1px solid #d2d6dc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.25rem;
+        border-radius: 9999px;
+
+        &:hover {
+            background-color: rgba(237, 242, 247, 0.25);
+        }
+
+    }
+
+    .turtleicon span {
+        font-size: 0.75rem;
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+    }
+}
+
+.monacoeditor section {
+    position: absolute !important;
+}
+
+.monacoeditor {
+    position: relative;
+
+
+    .turtleeditorcontrols {
+        position: absolute;
+        bottom: 0.5rem;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+
+        &.right {
+            right: 1.25rem;
+        }
+
+        &.left {
+            left: 1.25rem;
+        }
+
+        .turtlebutton {
+            cursor: pointer;
+        }
+
+        .turtlebutton.inactive {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    }
+}
+
+.graphicspanel {
+    background-color: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    cursor: grab;
+    z-index: var(--z-base);
+
+    & .graphicswrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+
+    &.hasturtle {
+        width: 0px;
+    }
+}
+
+.outputpre {
+    background-color: var(--themed-background);
+    font-family: Consolas, "Courier New", monospace;
+    color: var(--gray);
+    width: 100%;
+    max-height: 10rem;
+    overflow-x: auto;
+    padding: 0px;
+    border-radius: 3%;
+    margin: 0;
+    counter-reset: line;
+    border-top: 3px solid var(--tw-prose);
+    opacity: 0.3;
+    margin-top: 0px;
+
+    &:not(:empty) {
+        opacity: 0.8;
+    }
+
+    & span {
+        display: block;
+        line-height: 1.5rem;
+
+        &::before {
+            counter-increment: line;
+            content: counter(line);
+            display: inline-block;
+            border-right: 1px solid #ddd;
+            padding: 0 0.5em;
+            margin-right: 0.5em;
+            color: #888;
+        }
+
+        &.warning {
+            color: var(--callout-warning);
+        }
+
+        &.error {
+            color: var(--callout-danger);
+        }
+    }
+}
+
+.resizerH {
+    flex: none;
+    width: 3px;
+    cursor: col-resize;
+    background-color: rgba(255, 255, 255);
+    opacity: 0.3;
+    z-index: var(--z-resizer);
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    /* Increasing clicking area with pseudo-elements */
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+    }
+
+    &::before {
+        width: 4px;
+        margin-left: -4px;
+    }
+
+    &::after {
+        width: 13px;
+    }
+}

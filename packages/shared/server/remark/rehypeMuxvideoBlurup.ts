@@ -1,5 +1,5 @@
 import { createBlurUp } from '@mux/blurup'
-import { logger } from '../utils' // Direct because it's a plugin
+import { logger } from '../../utils' // Direct because it's a plugin
 import type { Plugin } from 'unified'
 import type { Node } from 'unist'
 import { visit } from 'unist-util-visit'

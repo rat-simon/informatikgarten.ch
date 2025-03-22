@@ -3,8 +3,8 @@
     "compilerOptions": {
         "baseUrl": ".",
         "paths": {
-            "@components/*": [
-                "../../packages/shared/components/*"
+            "@shared/*": [
+                "../../packages/shared/*"
             ]
         },
         "plugins": [
@@ -18,7 +18,7 @@
         "**/*.ts",
         "**/*.tsx",
         ".next/types/**/*.ts"
-    ],
+, "next-sitemap.config.js"    ],
     "exclude": [
         "node_modules",
         ".next"

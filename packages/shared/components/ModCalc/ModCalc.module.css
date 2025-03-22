@@ -1,0 +1,102 @@
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    --textColor: #ffffff;
+    color: var(--textColor);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.equationWrapper {
+    position: relative;
+}
+
+.equation {
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+    &.nonsense {
+        opacity: 0.1;
+    }
+}
+
+.warning {
+    position: absolute;
+    top: 0.5rem;
+    width: 100%;
+    text-align: center;
+
+    font-weight: bold;
+    color: #ff2f00;
+    &:hover {
+        color: #ff0000;
+    }
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--textColor);
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.basisColor {
+    --textColor: #ff5733;
+    color: var(--textColor);
+}
+
+.exponentColor {
+    --textColor: #33ff57;
+    color: var(--textColor);
+}
+
+.modulusColor {
+    --textColor: #8c73ff;
+    color: var(--textColor);
+}
+
+.resultColor {
+    --textColor: #236a1a;
+    color: var(--textColor);
+}
+
+.inputGroup {
+    margin-bottom: 20px;
+}
+
+.inputGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--textColor);
+}
+
+.inputGroup input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-size: 16px;
+}

@@ -1,19 +1,13 @@
 {
     "extends": "../../tsconfig.base.json",
     "compilerOptions": {
-        "baseUrl": "./",
-        "paths": {
-            "@/*": [
-                "*"
-            ]
-        },
         "declaration": true,
         "noEmit": false
     },
     "include": [
         "**/*.ts",
         "**/*.tsx"
-    ],
+, "../../sites/ig/app/env.d.ts"    ],
     "exclude": [
         "node_modules",
         "dist"

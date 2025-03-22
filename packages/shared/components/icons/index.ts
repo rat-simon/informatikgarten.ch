@@ -1,3 +1,8 @@
+// Animated icons from Lordicon
+export { ThreeDotsWave } from './ThreeDotsWave'
+export { Checkmark } from './Checkmark'
+export { Pin, Unpin } from './Pin'
+
 export { default as FilesIcon } from './files.svg?svgr'
 export { default as TailwindIcon } from './tailwind.svg?svgr'
 export { default as LightningIcon } from './lightning.svg?svgr'

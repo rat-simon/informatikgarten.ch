@@ -1,4 +1,3 @@
-import { } from '@components/icons'
 import type { Metadata } from 'next'
 import { Layout, Navbar } from 'nextra-theme-docs'
 import { Head } from 'nextra/components'

@@ -4,7 +4,8 @@ import type { Image, Root } from 'mdast'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
 import { VFile } from 'vfile'
-import { logger, searchFileInSubdirectories } from '../utils'
+import { logger } from '../../utils'
+import { searchFileInSubdirectories } from '../utils'
 
 export const remarkPathCorrections: Plugin<[], Root, VFile> = () =>
     (ast, file) => {
