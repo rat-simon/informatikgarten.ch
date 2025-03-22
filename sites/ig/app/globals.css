@@ -3,8 +3,7 @@
 
 @variant dark (&:where(.dark *));
 
-@theme {
-}
+@theme {}
 
 body {
   font-feature-settings:

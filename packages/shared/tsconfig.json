@@ -7,7 +7,7 @@
     "include": [
         "**/*.ts",
         "**/*.tsx"
-, "../../sites/ig/app/env.d.ts"    ],
+, "../../sites/ig/app/env.d.ts", "postcss.config.mjs"    ],
     "exclude": [
         "node_modules",
         "dist"

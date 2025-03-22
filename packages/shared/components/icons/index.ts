@@ -1,3 +1,5 @@
+export { default as IgLogo } from './IgLogo.svg?svgr'
+
 // Animated icons from Lordicon
 export { ThreeDotsWave } from './ThreeDotsWave'
 export { Checkmark } from './Checkmark'

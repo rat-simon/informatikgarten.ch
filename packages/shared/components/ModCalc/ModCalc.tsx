@@ -1,6 +1,6 @@
 "use client"
 
-import { Logo } from '../../components/logo'
+import { IgLogo } from '../icons'
 import cn from 'clsx'
 import { useEffect, useState } from 'react'
 import { Textfit } from 'react-textfit'
@@ -39,7 +39,7 @@ export const ModCalc = () => {
                     'nextra-focus _flex _items-center hover:_opacity-75 ltr:_mr-auto rtl:_ml-auto'
                 )}
             >
-                {Logo}
+                <IgLogo height="32" />
                 <span className="_font-extrabold _text-xl sm:_text-2xl _text-white">
                     Power Mod Calculator
                 </span>

@@ -3,8 +3,6 @@
 /** @type {import('postcss').Postcss} */
 export default {
     plugins: {
-        'tailwindcss': {},
-        'postcss-nested': {},
-        'autoprefixer': {}
+        '@tailwindcss/postcss': {},
     }
 }

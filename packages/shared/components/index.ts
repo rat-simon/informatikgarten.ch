@@ -3,7 +3,6 @@ export { MuxVideo } from './MuxVideo'
 
 export { TurtleEditor } from './TurtleEditor'
 export { Dashboard as UserDashboard } from './Dashboard/Dashboard'
-export { Logo } from './logo'
 export { Codepen, RenderHtml } from './CodeblockCustomLangs'
 export { IgStrong } from './IgStrong'
 export { OfmCallout } from './OfmCallout'
