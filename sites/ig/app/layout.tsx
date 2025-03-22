@@ -58,7 +58,9 @@ const RootLayout: FC<{
   const pageMap = await getPageMap()
   return (
     <html lang="en" dir="ltr" suppressHydrationWarning>
-      <Head />
+      <Head>
+        <link rel="shortcut icon" href="/img/logo.svg" />
+      </Head>
       <body>
         <Layout
           navbar={navbar}

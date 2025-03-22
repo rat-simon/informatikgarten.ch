@@ -1,7 +1,5 @@
 ## hallo
 
-asdfa
-
 ![[02-joins-full.excalidraw]]
 
 asasda

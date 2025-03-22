@@ -3,3 +3,4 @@ content/videos/*
 !content/videos/*.json
 !content/videos/*.js
 !content/videos/*.ts
+.vercel

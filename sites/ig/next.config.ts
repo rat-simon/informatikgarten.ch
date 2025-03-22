@@ -59,6 +59,7 @@ const withNextra = nextra({
     latex: true,
     defaultShowCopyCode: true,
     mdxOptions: {
+        format: 'mdx',
         remarkPlugins: [
             remarkWikiLinks, // before Excalidraw
             remarkExcalidraw, // before path corrections
