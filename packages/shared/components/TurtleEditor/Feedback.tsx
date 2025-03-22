@@ -7,9 +7,9 @@ import {
 } from '@excalidraw/excalidraw/element/types'
 import {
     BinaryFileData,
+    DataURL,
     ExcalidrawImperativeAPI
 } from "@excalidraw/excalidraw/types"
-import autocrop from 'autocrop-js'
 import cn from 'clsx'
 import domtoimage from 'dom-to-image-more'
 import FeatherIcon from 'feather-icons-react'
@@ -19,6 +19,7 @@ import { codeToHtml } from 'shiki'
 import fb from './style/feedback.module.css'
 import { excali_image_template } from './types/FeedbackTypes'
 import { TurtleConfigType } from './types/TurtleTypes'
+import { cropToContent } from './utils/cropToContent'
 
 const Excalidraw = dynamic(
     async () => (await import('@excalidraw/excalidraw')).Excalidraw,
@@ -27,41 +28,46 @@ const Excalidraw = dynamic(
     }
 )
 
+
 export function Feedback({ c }: { c: TurtleConfigType }) {
-    const [showFeedback, setShowFeedback] = useState(false)
-    const [excalidrawAPI, setExcalidrawAPI] =
-        useState<ExcalidrawImperativeAPI | null>(null)
+    const [showFeedback, setShowFeedback] = useState(false);
+    const [excalidrawAPI, setExcalidrawAPI] = 
+        useState<ExcalidrawImperativeAPI | null>(null);
+        
     const screenshotToExcalidraw = async () => {
-        if (!excalidrawAPI) return
+        if (!excalidrawAPI) return;
 
         try {
-            const files_to_add = [] as BinaryFileData[]
-            const elements_to_add = [] as ExcalidrawImageElement[]
+            const files_to_add: BinaryFileData[] = [];
+            const elements_to_add: ExcalidrawImageElement[] = [];
 
             // Snapshot of code
-            const code =
-                c.codeeditorRef.current?.getValue() || 'No code provided'
+            const code = c.codeeditorRef.current?.getValue() || 'No code provided';
             const codeShikiHtml = await codeToHtml(code, {
                 lang: 'python',
                 theme: 'min-light'
-            })
-            const parser = new DOMParser()
-            const doc = parser.parseFromString(codeShikiHtml, 'text/html')
-            const codeElement = doc.body.firstChild
+            });
+            
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(codeShikiHtml, 'text/html');
+            const codeElement = doc.body.firstChild;
             const codeImageDataURL = await domtoimage.toPng(codeElement, {
                 scale: 2
-            })
-            const codeSnapResult = await autocrop(codeImageDataURL)
+            });
+            
+            // Use our custom cropToContent function instead of autocrop-js
+            const codeSnapResult = await cropToContent(codeImageDataURL);
 
-            const codeFileId = 'code' as FileId
-            const turtleImageFileId = 'turtle' as FileId
+            const codeFileId = 'code' as FileId;
+            const turtleImageFileId = 'turtle' as FileId;
 
             files_to_add.push({
                 mimeType: 'image/png',
                 id: codeFileId,
-                dataURL: codeSnapResult.dataURL,
+                dataURL: codeSnapResult.dataURL as unknown as DataURL,
                 created: Date.now()
-            })
+            });
+            
             elements_to_add.push({
                 ...excali_image_template,
                 x: 0,
@@ -69,12 +75,12 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                 height: codeSnapResult.bbox.height,
                 id: codeFileId,
                 fileId: codeFileId
-            })
+            });
 
             // Turtle screenshot
             const turtleSnapResult = await getScreenshot(
                 c.graphicswrapperRef.current
-            )
+            );
 
             if (turtleSnapResult) {
                 elements_to_add.push({
@@ -84,24 +90,24 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                     fileId: turtleImageFileId,
                     width: turtleSnapResult.bbox.width * 2,
                     height: turtleSnapResult.bbox.height * 2
-                })
+                });
 
                 files_to_add.push({
                     mimeType: 'image/png',
                     id: turtleImageFileId,
-                    dataURL: turtleSnapResult.dataURL,
+                    dataURL: turtleSnapResult.dataURL as unknown as DataURL,
                     created: Date.now()
-                })
+                });
             }
 
-            excalidrawAPI.addFiles(files_to_add)
+            excalidrawAPI.addFiles(files_to_add);
             excalidrawAPI.updateScene({
                 elements: elements_to_add
-            })
+            });
         } catch (error) {
-            console.error('Error processing screenshots:', error)
+            console.error('Error processing screenshots:', error);
         }
-    }
+    };
 
     return (
         <div className={cn(fb.feedbackrow)}>
@@ -132,5 +138,5 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                 </div>
             )}
         </div>
-    )
+    );
 }

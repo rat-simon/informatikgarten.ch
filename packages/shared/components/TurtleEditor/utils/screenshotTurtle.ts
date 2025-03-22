@@ -1,4 +1,4 @@
-import autocrop from 'autocrop-js'
+import { cropToContent } from "./cropToContent"
 
 const flattenCanvas = (
     wrapper: HTMLDivElement
@@ -46,7 +46,7 @@ export const downloadScreenshot = wrapper => {
     const downloadLink = document.createElement('a')
     let pngDataUrl = canvas.toDataURL('image/png')
 
-    autocrop(pngDataUrl).then(result => {
+    cropToContent(pngDataUrl).then(result => {
         downloadLink.href = result.dataURL
         downloadLink.download = 'canvas_image.png'
         downloadLink.click()
@@ -61,7 +61,7 @@ export const getScreenshot = async wrapper => {
     if (!canvas) return
 
     const pngDataUrl = canvas.toDataURL('image/png')
-    const result = await autocrop(pngDataUrl)
+    const result = await cropToContent(pngDataUrl)
     
     // Clean up the URL object
     URL.revokeObjectURL(pngDataUrl)
