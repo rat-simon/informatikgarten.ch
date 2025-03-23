@@ -7,6 +7,10 @@ import './globals.css'
 import { IgLogo } from '@shared/components/icons'
 import { Barlow_Condensed, Roboto_Slab } from 'next/font/google'
 import cn from 'clsx'
+import Providers from '@shared/lib/Providers'
+
+// TODO: move to modules
+import '@shared/components/TurtleEditor/style/turtle.global.css'
 
 const mainFont = Roboto_Slab({
   subsets: ['latin'],
@@ -62,6 +66,8 @@ export const metadata: Metadata = {
   }
 }
 
+import { AuthBtn } from '@shared/components'
+
 const navbar = (
   <Navbar
     logo={
@@ -80,7 +86,9 @@ const navbar = (
       </div>
     }
     projectLink="https://github.com/marcchehab/nextras25"
-  />
+  >
+    <AuthBtn />
+  </Navbar>
 )
 
 const RootLayout: FC<{
@@ -88,20 +96,22 @@ const RootLayout: FC<{
 }> = async ({ children }) => {
   const pageMap = await getPageMap()
   return (
-    <html lang="en" dir="ltr" suppressHydrationWarning className={cn(mainFont.variable, titleFont.variable)}>
+    <html lang="en" dir="ltr" className={cn(mainFont.variable, titleFont.variable)} suppressHydrationWarning>
       <Head />
       <body>
-        <Layout
-          navbar={navbar}
-          feedback={{ content: null }}
-          pageMap={pageMap}
-          docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/docs"
-          editLink="Verbesserung vorschlagen"
-          sidebar={{ defaultMenuCollapseLevel: 1 }}
-          footer={<></>}
-        >
-          {children}
-        </Layout>
+        <Providers>
+          <Layout
+            navbar={navbar}
+            feedback={{ content: null }}
+            pageMap={pageMap}
+            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/docs"
+            editLink="Verbesserung vorschlagen"
+            sidebar={{ defaultMenuCollapseLevel: 1 }}
+            footer={<></>}
+          >
+            {children}
+          </Layout>
+        </Providers>
       </body>
     </html>
   )

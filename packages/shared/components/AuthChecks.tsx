@@ -1,3 +1,5 @@
+"use client"
+
 import { isTeacherCS } from '../utils'
 import { useSession } from 'next-auth/react'
 import type { ReactNode } from 'react'

@@ -122,10 +122,10 @@ export const TurtleEditor = ({
                 python3: true,
                 execLimit: Number.POSITIVE_INFINITY
             })
-            ;(Sk.TurtleGraphics ||= {
-                width: canvas.clientWidth,
-                height: canvas.clientHeight
-            }).target = canvas
+                ; (Sk.TurtleGraphics ||= {
+                    width: canvas.clientWidth,
+                    height: canvas.clientHeight
+                }).target = canvas
             const myPromise = Sk.misceval.asyncToPromise(() => {
                 return Sk.importMainWithBody('<stdin>', false, pythonCode, true)
             })
@@ -192,7 +192,8 @@ export const TurtleEditor = ({
                 outputState={[output, setOutput]}
                 runlevel={[currentRunLevel, setCurrentRunLevel]}
             />
-            {isTeacherCS() && <Feedback c={configRef.current} />}
+            {/* TODO: Add feedback component again
+            {isTeacherCS() && <Feedback c={configRef.current} />} */}
         </div>
     )
 }

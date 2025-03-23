@@ -1,19 +1,25 @@
+'use client'
+
 import { signIn, useSession } from 'next-auth/react'
 import Image from 'next/image'
-import { useRouter } from 'nextra/hooks'
-import { IconLogin, IconUser } from './icons'
+import { useRouter, usePathname } from 'next/navigation'
+import FeatherIcon from 'feather-icons-react'
 
 export function AuthBtn() {
     const router = useRouter()
+    const pathname = usePathname()
     const { data: session } = useSession()
-    const callbackBase = `${router.basePath}/`
-    const currentUrl = router.asPath
+    
+    // In App Router, there's no direct equivalent to basePath
+    // You can use a constant or environment variable if needed
+    const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
+    
     if (session) {
         return (
             <>
                 <button
                     title="Go to dashboard"
-                    onClick={() => router.push(callbackBase + 'dashboard')}
+                    onClick={() => router.push(`${basePath}/dashboard`)}
                 >
                     {session.user?.image ? (
                         <Image
@@ -24,23 +30,24 @@ export function AuthBtn() {
                             className="w-7 h-7 rounded-full opacity-90 m-4 hover:opacity-100"
                         />
                     ) : (
-                        <IconUser className="opacity-50 hover:opacity-90" />
+                        <FeatherIcon size={24} icon="user-check" />
                     )}
                 </button>
             </>
         )
     }
+    
     return (
         <>
             <button
                 title="Login"
                 onClick={() =>
                     signIn('azure-ad', {
-                        callbackUrl: currentUrl
+                        callbackUrl: pathname
                     })
                 }
             >
-                <IconLogin className="opacity-50 m-4 hover:opacity-90 larger" />
+                <FeatherIcon size={24} icon="log-in" />
             </button>
         </>
     )

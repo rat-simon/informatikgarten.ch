@@ -1,3 +1,5 @@
+import { logger } from "../../../utils";
+
 // Simple utility to replace autocrop-js functionality
 export async function cropToContent(dataUrl: string): Promise<{ dataURL: string, bbox: { width: number, height: number } }> {
     return new Promise((resolve) => {
@@ -6,6 +8,7 @@ export async function cropToContent(dataUrl: string): Promise<{ dataURL: string,
             // Create a canvas
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
+            logger.debug('Cropping image to content', img.width);
             if (!ctx) {
                 // Fallback if canvas context isn't available
                 resolve({

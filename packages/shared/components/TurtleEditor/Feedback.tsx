@@ -14,26 +14,30 @@ import cn from 'clsx'
 import domtoimage from 'dom-to-image-more'
 import FeatherIcon from 'feather-icons-react'
 import dynamic from 'next/dynamic'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { codeToHtml } from 'shiki'
 import fb from './style/feedback.module.css'
 import { excali_image_template } from './types/FeedbackTypes'
 import { TurtleConfigType } from './types/TurtleTypes'
 import { cropToContent } from './utils/cropToContent'
+import { logger } from '../../utils'
 
 const Excalidraw = dynamic(
-    async () => (await import('@excalidraw/excalidraw')).Excalidraw,
+    async () => {
+        await new Promise(resolve => setTimeout(resolve, 100));
+        return (await import('@excalidraw/excalidraw')).Excalidraw;
+    },
     {
-        ssr: false
+        ssr: false,
+        loading: () => <div className="p-4">Loading drawing tool...</div>
     }
 )
 
-
 export function Feedback({ c }: { c: TurtleConfigType }) {
     const [showFeedback, setShowFeedback] = useState(false);
-    const [excalidrawAPI, setExcalidrawAPI] = 
+    const [excalidrawAPI, setExcalidrawAPI] =
         useState<ExcalidrawImperativeAPI | null>(null);
-        
+
     const screenshotToExcalidraw = async () => {
         if (!excalidrawAPI) return;
 
@@ -47,16 +51,21 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                 lang: 'python',
                 theme: 'min-light'
             });
-            
+
             const parser = new DOMParser();
             const doc = parser.parseFromString(codeShikiHtml, 'text/html');
             const codeElement = doc.body.firstChild;
+            if (!codeElement) {
+                console.error('Code element not found');
+                return;
+            }
+
             const codeImageDataURL = await domtoimage.toPng(codeElement, {
                 scale: 2
             });
-            
-            // Use our custom cropToContent function instead of autocrop-js
+
             const codeSnapResult = await cropToContent(codeImageDataURL);
+            logger.debug('Code snapshot result:', codeSnapResult.bbox);
 
             const codeFileId = 'code' as FileId;
             const turtleImageFileId = 'turtle' as FileId;
@@ -67,7 +76,7 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                 dataURL: codeSnapResult.dataURL as unknown as DataURL,
                 created: Date.now()
             });
-            
+
             elements_to_add.push({
                 ...excali_image_template,
                 x: 0,
@@ -117,7 +126,9 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
                     showFeedback && fb.showFeedback
                 )}
             >
-                <Excalidraw excalidrawAPI={api => setExcalidrawAPI(api)} />
+                {showFeedback && (
+                    <Excalidraw excalidrawAPI={api => setExcalidrawAPI(api)} />
+                )}
             </div>
             <div
                 className={cn(fb.feedbackButton)}
@@ -131,7 +142,7 @@ export function Feedback({ c }: { c: TurtleConfigType }) {
             </div>
             {showFeedback && (
                 <div
-                    className={fb.feedbackButton}
+                    className={cn(fb.feedbackButton)}
                     onClick={() => screenshotToExcalidraw()}
                 >
                     <FeatherIcon size="24" icon="download" />

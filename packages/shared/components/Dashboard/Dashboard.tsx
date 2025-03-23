@@ -3,7 +3,7 @@
 import { ExtendedSession } from '../../types/AuthTypes'
 import cn from 'clsx'
 import { signIn, signOut, useSession } from 'next-auth/react'
-import { useRouter } from 'next/router'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import ClassesDashboard from './ClassesDashboard'
 import s from './dashboard.module.css'
@@ -19,8 +19,10 @@ export const Dashboard = () => {
     }
     const [activeTab, setActiveTab] = useState<activeTabType>('user')
     const userRoles = sessionData?.user?.roles || []
-    const router = useRouter()
-    const callbackBase = `${router.basePath}/`
+    
+    // App Router path handling
+    const pathname = usePathname()
+    const baseUrl = pathname.split('/').slice(0, -1).join('/') || '/'
 
     if (!sessionData || status !== 'authenticated')
         return <button onClick={() => signIn('azure-ad')}>Log in</button>
@@ -43,7 +45,7 @@ export const Dashboard = () => {
                         )}
                         <button
                             onClick={() =>
-                                signOut({ callbackUrl: callbackBase })
+                                signOut({ callbackUrl: baseUrl })
                             }
                         >
                             Log out

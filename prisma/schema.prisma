@@ -1,0 +1,145 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
+}
+
+model User {
+  id            String      @id @default(cuid())
+  name          String?
+  email         String      @unique
+  emailVerified DateTime?   @map("email_verified")
+  image         String?
+  codes         Code[]
+  classes       UserClass[]
+  roles         UserRole[]
+  accounts      Account[]
+  sessions      Session[]
+  userData      UserData[] // Relation to UserData
+  createdAt     DateTime    @default(now())
+  updatedAt     DateTime    @updatedAt
+
+  @@map("users")
+}
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@map("accounts")
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  @@map("sessions")
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+  @@map("verification_tokens")
+}
+
+// Informatikgarten schema
+
+// Data saved for users
+
+model Code {
+  id           Int    @id @default(autoincrement())
+  userId       String
+  editorString String @db.VarChar(255)
+  code         String
+  timestamp    BigInt
+  user         User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("codes")
+}
+
+model UserData {
+  id          String   @id @default(cuid())
+  path        String   // URL path of the content
+  componentId String   // Component ID within the content
+  data        Json?    // JSON data for this component
+  userId      String   // User this data belongs to
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt   String   // ISO string that identifies the version thread
+  updatedAt   DateTime @updatedAt // When this specific version was last updated
+
+  // Composite unique constraint for version identification
+  @@unique([path, componentId, userId, createdAt])
+  
+  // Index for efficiently finding data by path and componentId
+  @@index([path, componentId])
+  
+  // Index for finding all data for a user
+  @@index([userId])
+
+  @@map("user_data")
+}
+
+// Classes
+model UserClass {
+  userId    String
+  classId   Int
+  isTeacher Boolean?
+  class     Class    @relation(fields: [classId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, classId])
+  @@map("user_classes")
+}
+
+model Class {
+  id      Int         @id @default(autoincrement())
+  name    String      @db.VarChar(255)
+  year    Int?        @db.SmallInt
+  hash    String?     @db.VarChar
+  members UserClass[]
+
+  @@map("classes")
+}
+
+// Roles
+
+model UserRole {
+  userId String
+  roleId Int
+  role   Role   @relation(fields: [roleId], references: [id])
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, roleId])
+  @@map("user_roles")
+}
+
+model Role {
+  id    Int        @id @default(autoincrement())
+  name  String     @unique @db.VarChar(255)
+  users UserRole[]
+
+  @@map("roles")
+}

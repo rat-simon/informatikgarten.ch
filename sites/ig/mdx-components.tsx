@@ -2,7 +2,29 @@
 // @ts-nocheck
 
 import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
-import { Excalidraw, MuxVideo, ModCalc } from '@shared/components'
+import {
+  Codepen,
+  ColorSliders,
+  Excalidraw,
+  Flex,
+  IgStrong,
+  IsAuthenticated,
+  IsNotAuthenticated,
+  IsTeacher,
+  Logo,
+  // MagicMove,
+  ModCalc,
+  MuxVideo,
+  OfmCallout,
+  RenderHtml,
+  TeachingNotes,
+  TurtleEditor,
+  Youtube,
+  StickMe
+} from '@shared/components'
+import type { OfmCalloutProps } from '@shared/components'
+import FeatherIcon from 'feather-icons-react'
+import { Tabs } from 'nextra/components'
 
 const {
   tr: Tr,
@@ -17,6 +39,36 @@ export const useMDXComponents: typeof getDocsMDXComponents = components => ({
   excalidraw: Excalidraw,
   muxvideo: MuxVideo,
   ModCalc,
+  TurtleEditor,
+  turtle: TurtleEditor,
+  strong: IgStrong,
+  codepen: Codepen,
+  renderhtml: RenderHtml,
+  Youtube,
+  IsAuthenticated,
+  IsTeacher,
+  IsNotAuthenticated,
+  TeachingNotes,
+  FeatherIcon,
+  ColorSliders,
+  Tabs,
+  Flex,
+  StickMe,
+  blockquote: (props: OfmCalloutProps) =>
+    props.className?.includes('callout-foldable') ? (
+      createElement(OfmCallout, props as OfmCalloutProps)
+    ) : (
+      <blockquote
+        className={cn(
+          '_mt-6 _border-gray-300 _italic _text-gray-700 dark:_border-gray-700 dark:_text-gray-400',
+          'first:_mt-0 ltr:_border-l-2 ltr:_pl-6 rtl:_border-r-2 rtl:_pr-6'
+        )}
+        {...props}
+      />
+    ),
+  // MagicMove,
+  // Question,
+  // SQLQuestion,
   tr: Tr,
   th: Th,
   thead({ children, ...props }) {
