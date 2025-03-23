@@ -52,7 +52,7 @@ function extractLoginCode(html: string): string | null {
     const codeMatch = html.match(
         /<h1[^>]*>(?:<[^>]*>)*(\d{6})(?:<[^>]*>)*<\/h1>/i
     )
-    return codeMatch ? codeMatch[1] : null
+    return codeMatch ? codeMatch[1] ?? null : null
 }
 
 export default async function handler(

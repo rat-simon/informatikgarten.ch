@@ -21,7 +21,7 @@ export const Dashboard = () => {
     const userRoles = sessionData?.user?.roles || []
     
     // App Router path handling
-    const pathname = usePathname()
+    const pathname = usePathname() ?? '/'
     const baseUrl = pathname.split('/').slice(0, -1).join('/') || '/'
 
     if (!sessionData || status !== 'authenticated')

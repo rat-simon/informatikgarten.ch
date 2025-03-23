@@ -91,7 +91,7 @@ export default async function handler(
 
                     // Format the response according to your client-side type expectations
                     if (latestData.length > 0) {
-                        const latest = latestData[0];
+                        const latest = latestData[0]!;
                         return res.status(200).json({
                             path: latest.path,
                             componentId: latest.componentId,

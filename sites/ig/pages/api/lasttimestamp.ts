@@ -46,7 +46,7 @@ export default async function handler(
         }
 
         res.setHeader('Content-Type', 'text/plain')
-        res.status(200).send(timestamps[0].timestamp)
+        res.status(200).send(timestamps[0]?.timestamp || '')
     } catch (error) {
         console.error('Error fetching data:', error)
         res.status(500).json({ error: 'Error fetching data' })

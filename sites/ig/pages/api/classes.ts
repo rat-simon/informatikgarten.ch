@@ -1,10 +1,10 @@
 import {
     serverHasPermission,
     serverUserMayEditClass
-} from '@/lib/serverCheckPermission'
-import { serverGetStudentsFromClassId } from '@/lib/serverGetClassMembers'
-import { ExtendedSession } from '@/types/AuthTypes'
-import { logger } from '@/utils'
+} from '@shared/server/lib/serverCheckPermission'
+import { serverGetStudentsFromClassId } from '@shared/server/lib/serverGetClassMembers'
+import { ExtendedSession } from '@shared/types/AuthTypes'
+import { logger } from '@shared/utils'
 import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from 'next-auth'
@@ -80,15 +80,14 @@ async function handleAuthorizedGetRequest(
         if (!classId) return res.status(400).json({ error: 'Missing class' })
 
         const classIdString = Array.isArray(classId) ? classId[0] : classId
-        const classMembers = await serverGetStudentsFromClassId(
-            parseInt(classIdString)
-        )
+        if (!classIdString) return res.status(400).json({ error: 'Invalid class' })
+
+        const classMembers = await serverGetStudentsFromClassId(parseInt(classIdString))
         if (classMembers) {
             // Don't send user id
-            res.status(200).json(classMembers.map(({ id, ...rest }) => rest))
-        } else {
-            res.status(500).json({ error: 'Failed to get class members' })
+            return res.status(200).json(classMembers.map(({ id, ...rest }) => rest))
         }
+        return res.status(500).json({ error: 'Failed to get class members' })
     } else {
         // Reject unrecognized query parameters
         res.status(418).json({ error: "I don't serve coffee, I serve data." })

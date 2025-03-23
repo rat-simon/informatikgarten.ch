@@ -1,9 +1,7 @@
 'use client'
 
-import { logger } from '@utils'
 import cn from 'clsx'
 import FeatherIcon from 'feather-icons-react'
-import { p } from 'nextra/dist/types-BhjhW0gX'
 import React, { useEffect, useRef, useState } from 'react'
 import { Pin, Unpin } from './icons'
 

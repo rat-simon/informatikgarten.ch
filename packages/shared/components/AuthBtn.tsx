@@ -7,11 +7,9 @@ import FeatherIcon from 'feather-icons-react'
 
 export function AuthBtn() {
     const router = useRouter()
-    const pathname = usePathname()
+    const pathname = usePathname() ?? '/'
     const { data: session } = useSession()
     
-    // In App Router, there's no direct equivalent to basePath
-    // You can use a constant or environment variable if needed
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
     
     if (session) {
