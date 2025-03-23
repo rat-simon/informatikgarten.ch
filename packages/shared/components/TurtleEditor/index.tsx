@@ -6,7 +6,6 @@ import { useSession } from 'next-auth/react'
 import { useTheme } from 'next-themes'
 import { usePathname } from 'next/navigation'
 import { useContext, useEffect, useRef, useState } from 'react'
-import { Feedback } from './Feedback'
 import { TurtleContext } from './TurtleContext'
 import {
     errorlevel,
@@ -21,10 +20,10 @@ import {
     restoreHandler,
     saveBeforeUnload
 } from './utils/autosave'
-import { isTeacherCS } from '../../utils'
 import { loadScript } from './utils/loadScript'
-
-// TODO switch to signals https://www.youtube.com/watch?v=SO8lBVWF2Y8
+// TODO: Add back when feedback is added
+// import { isTeacherCS } from '../../utils'
+// import { Feedback } from './Feedback'
 
 declare let Sk: any
 

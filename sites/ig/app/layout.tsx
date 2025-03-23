@@ -9,7 +9,7 @@ import { Barlow_Condensed, Roboto_Slab } from 'next/font/google'
 import cn from 'clsx'
 import Providers from '@shared/lib/Providers'
 
-// TODO: move to modules
+// TODO: move to taliwind
 import '@shared/components/TurtleEditor/style/turtle.global.css'
 
 const mainFont = Roboto_Slab({
