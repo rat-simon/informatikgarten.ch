@@ -21,8 +21,8 @@ import {
   TurtleEditor,
   Youtube,
   StickMe
-} from '@shared/components'
-import type { OfmCalloutProps } from '@shared/components'
+} from 'shared/components'
+import type { OfmCalloutProps } from 'shared/components'
 import FeatherIcon from 'feather-icons-react'
 import { Tabs } from 'nextra/components'
 

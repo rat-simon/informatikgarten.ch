@@ -1,10 +1,10 @@
 import {
     serverHasPermission,
     serverUserMayEditClass
-} from '@shared/server/lib/serverCheckPermission'
-import { serverGetStudentsFromClassId } from '@shared/server/lib/serverGetClassMembers'
-import { ExtendedSession } from '@shared/types/AuthTypes'
-import { logger } from '@shared/utils'
+} from 'shared/server/lib/serverCheckPermission'
+import { serverGetStudentsFromClassId } from 'shared/server/lib/serverGetClassMembers'
+import { ExtendedSession } from 'shared/types/AuthTypes'
+import { logger } from 'shared/utils'
 import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from 'next-auth'

@@ -36,11 +36,11 @@ export const ModCalc = () => {
             <h1
                 className={cn(
                     styles.title,
-                    'nextra-focus _flex _items-center hover:_opacity-75 ltr:_mr-auto rtl:_ml-auto'
+                    'nextra-focus flex items-center hover:opacity-75 ltr:mr-auto rtl:ml-auto'
                 )}
             >
                 <IgLogo height="32" />
-                <span className="_font-extrabold _text-xl sm:_text-2xl _text-white">
+                <span className="font-extrabold text-xl sm:text-2xl text-white">
                     Power Mod Calculator
                 </span>
             </h1>

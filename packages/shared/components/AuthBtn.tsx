@@ -17,6 +17,7 @@ export function AuthBtn() {
             <>
                 <button
                     title="Go to dashboard"
+                    className='cursor-pointer'
                     onClick={() => router.push(`${basePath}/dashboard`)}
                 >
                     {session.user?.image ? (

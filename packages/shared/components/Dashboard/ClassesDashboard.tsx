@@ -1,5 +1,5 @@
 import { logger, YearsHSLGradient } from '../../utils'
-import { Checkmark, ThreeDotsWave } from '../../components/icons'
+import { Checkmark, ThreeDotsWave } from '../icons'
 import { generateHash } from '../../utils'
 import FeatherIcon from 'feather-icons-react'
 import { Fragment, useEffect, useRef, useState } from 'react'

@@ -1,4 +1,4 @@
-import { logger } from '@shared/utils'
+import { logger } from 'shared/utils'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 interface CloudMailinPayload {

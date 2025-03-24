@@ -8,10 +8,14 @@
         "start": "pnpm --filter=ig start",
         "postinstall": "prisma generate"
     },
+    "packageManager": "pnpm@9.13.0",
     "workspaces": [
         "sites/*",
         "packages/*"
     ],
+    "prisma": {
+		"schema": "packages/shared/server/prisma/schema.prisma"
+	},
     "dependencies": {
         "@excalidraw/excalidraw": "^0.18.0",
         "@monaco-editor/react": "^4.7.0",

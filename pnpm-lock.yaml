@@ -142,7 +142,11 @@ importers:
 
   packages/shared: {}
 
-  sites/ig: {}
+  sites/ig:
+    dependencies:
+      shared:
+        specifier: workspace:*
+        version: link:../../packages/shared
 
 packages:
 

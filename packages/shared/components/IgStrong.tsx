@@ -6,7 +6,7 @@ export function IgStrong({
   ...props
 }: ComponentProps<'strong'> & { className?: string }): ReactElement {
   return (
-    <strong className={`_text-strong ${className ?? ''}`} {...props}>
+    <strong className={`text-red-500 ${className ?? ''}`} {...props}>
       {children}
     </strong>
   )

@@ -1,9 +1,9 @@
-import { prisma } from '@shared/server/lib/prisma'
-import { logger } from '@shared/utils'
+import { prisma } from 'shared/server/lib/prisma'
+import { logger } from 'shared/utils'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getServerSession } from 'next-auth'
 import { authOptions } from './auth/[...nextauth]'
-import type { QuestionRecordLocal, QuestionDataJson } from '@shared/types/UserDataTypes'
+import type { QuestionRecordLocal, QuestionDataJson } from 'shared/types/UserDataTypes'
 
 export default async function handler(
     req: NextApiRequest,

@@ -1,5 +1,5 @@
 import type { TurtleConfigType } from '../types/TurtleTypes'
-import { autosaveHandler } from '../utils/autosave'
+import { autosaveHandler } from './autosave'
 
 /**
  * Event handler to grab the canvas in the graphics panel and move it around

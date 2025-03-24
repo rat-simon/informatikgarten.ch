@@ -4,13 +4,13 @@ import { Head } from 'nextra/components'
 import { getPageMap } from 'nextra/page-map'
 import type { FC, ReactNode } from 'react'
 import './globals.css'
-import { IgLogo } from '@shared/components/icons'
+import { IgLogo } from 'shared/components/icons'
 import { Barlow_Condensed, Roboto_Slab } from 'next/font/google'
 import cn from 'clsx'
-import Providers from '@shared/lib/Providers'
+import Providers from 'shared/lib/Providers'
 
 // TODO: move to taliwind
-import '@shared/components/TurtleEditor/style/turtle.global.css'
+import 'shared/components/TurtleEditor/style/turtle.global.css'
 
 const mainFont = Roboto_Slab({
   subsets: ['latin'],
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   }
 }
 
-import { AuthBtn } from '@shared/components'
+import { AuthBtn } from 'shared/components'
 
 const navbar = (
   <Navbar

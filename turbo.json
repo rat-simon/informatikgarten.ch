@@ -7,10 +7,8 @@
     "tasks": {
         "build": {
             "dependsOn": [
-                // Run `build` in workspaces I depend on first
                 "^build"
             ],
-            // Cache all files emitted to the packages's directories
             "outputs": [
                 "dist/**",
                 ".next/**",
@@ -24,7 +22,6 @@
         },
         "types:check": {
             "dependsOn": [
-                // Run `build` in workspaces I depend on first
                 "^build"
             ],
             "outputs": [
@@ -34,7 +31,6 @@
         },
         "dev": {
             "dependsOn": [
-                // Run `build` in workspaces I depend on first
                 "^build"
             ],
             "cache": false

@@ -12,5 +12,8 @@
 	"browserslist": [
 		">= .25%",
 		"not dead"
-	]
+	],
+	"dependencies": {
+		"shared": "workspace:*"
+	}
 }

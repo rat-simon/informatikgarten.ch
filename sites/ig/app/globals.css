@@ -1,5 +1,6 @@
 @import 'tailwindcss';
 @import 'nextra-theme-docs/style.css';
+@source '../../../packages/shared/**/*.{ts,tsx,js,jsx}';
 
 @variant dark (&:where(.dark *));
 

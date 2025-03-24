@@ -1,7 +1,7 @@
-import { prisma } from '@shared/server/lib/prisma'
-import { getUserRoles } from '@shared/server/lib/serverGetUserRoles'
+import { prisma } from 'shared/server/lib/prisma'
+import { getUserRoles } from 'shared/server/lib/serverGetUserRoles'
 import { PrismaAdapter } from '@next-auth/prisma-adapter'
-import { logger } from '@shared/utils'
+import { logger } from 'shared/utils'
 import NextAuth from 'next-auth'
 import AzureADProvider from 'next-auth/providers/azure-ad'
 
