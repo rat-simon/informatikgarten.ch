@@ -259,7 +259,7 @@ export function SQLQuestion({
             const actual = results[i]
 
             // Check columns
-            if (!arraysEqual(expected.columns, actual.columns)) {
+            if (!expected || !actual || !arraysEqual(expected.columns, actual.columns)) {
                 return false
             }
 
@@ -270,7 +270,7 @@ export function SQLQuestion({
 
             // Check each row's values
             for (let j = 0; j < expected.values.length; j++) {
-                if (!arraysEqual(expected.values[j], actual.values[j])) {
+                if (!expected.values[j] || !actual.values[j] || !arraysEqual(expected.values[j]!, actual.values[j]!)) {
                     return false
                 }
             }

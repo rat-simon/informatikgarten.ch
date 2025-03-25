@@ -13,7 +13,7 @@ export { TeachingNotes } from './TeachingNotes'
 export { IsAuthenticated, IsTeacher, IsNotAuthenticated } from './AuthChecks'
 export { Flex } from './Flex'
 export { StickMe } from './StickMe'
-// export { Question, SQLQuestion } from './Quiz'
+export { Question, Option, SQLQuestion } from './Quiz'
 export { AuthBtn } from './AuthBtn'
 export { Dashboard } from './Dashboard'
 

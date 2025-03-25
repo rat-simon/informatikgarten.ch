@@ -1,4 +1,4 @@
-import styles from 'shared/styles/menu.module.css'
+import styles from "shared/styles/menu.module.css";
 
 export default {
     // Pages
@@ -61,9 +61,9 @@ export default {
     //         </span>
     //     )
     // },
-    // privacy: {
-    //     display: 'hidden'
-    // },
+    privacy: {
+        display: 'hidden'
+    },
     // // Weitere Inhalte
     // '--': {
     //     type: 'separator',
@@ -99,7 +99,6 @@ export default {
     //     display: 'hidden'
     // },
     // kurse: {},
-
     // // Navbar items
     // dashboard: {
     //     display: 'hidden'
@@ -130,5 +129,4 @@ export default {
     // ".obsidian": {
     //     display: 'hidden'
     // },
-
-}
+};

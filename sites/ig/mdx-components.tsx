@@ -12,7 +12,6 @@ import {
   IsNotAuthenticated,
   IsTeacher,
   Logo,
-  // MagicMove,
   ModCalc,
   MuxVideo,
   OfmCallout,
@@ -20,7 +19,10 @@ import {
   TeachingNotes,
   TurtleEditor,
   Youtube,
-  StickMe
+  StickMe,
+  SQLQuestion,
+  Question,
+  Option
 } from 'shared/components'
 import type { OfmCalloutProps } from 'shared/components'
 import FeatherIcon from 'feather-icons-react'
@@ -68,9 +70,9 @@ export const useMDXComponents: typeof getDocsMDXComponents = components => ({
         {...props}
       />
     ),
-  // MagicMove,
-  // Question,
-  // SQLQuestion,
+  Question,
+  Option,
+  SQLQuestion,
   tr: Tr,
   th: Th,
   thead({ children, ...props }) {

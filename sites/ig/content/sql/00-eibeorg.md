@@ -1,0 +1,48 @@
+---
+title: Überblick EIBE
+---
+Der aktuelle Überblick zu EIBE-Informatik im Frühlingssemester 2025:
+- **Benotet** wird dieses Semester ein eigenständiges Python-Projekt. Damit haben Sie drei gleichwertige Informatiknoten für das Schuljahr.
+- Falls Sie eine **vierte Note** möchten oder bräuchten, können Sie sich bei mir zu einer **freiwilligen** SQL-Prüfung anmelden, die anfangs Juli stattfinden würde.
+
+![[00-eibeorg.png]]
+
+## Aktueller Stand dem Lehrer mitteilen
+
+<IsNotAuthenticated>
+
+Sie können sich oben mit <FeatherIcon size={'1rem'} icon="log-in" className="inline" /> anmelden, dann werden Ihre Antworten auf dem Server gespeichert.
+
+</IsNotAuthenticated>
+
+<IsAuthenticated>
+
+<Question id="sql-eibe-status" 
+  type="number"
+  minValue={0} 
+  maxValue={11}
+  step={1}
+  allowUpdate={true}>
+  Bei welcher Lektion in SQL-Bolt sind Sie aktuell?
+</Question>
+
+</IsAuthenticated>
+
+## Teil 1: SQL lernen
+
+Um SQL zu lernen, verwenden wir hauptsächlich eine interaktive Webseite namens [SQLBolt](https://sqlbolt.com/).
+
+* In den ersten Wochen EIBE sollten Sie [[01-dbintro|das Intro zu SQL]] durchlesen und bei SQLBolt **bis und mit Lektion 11** durcharbeiten. Ich verspreche Ihnen, dass Sie spätestens in Lektion 6 den Vorteil von Datenbanken erkennen! 👩‍💻 
+- Ich habe Ihnen [[09-quiz|ein unbenotetes Checkpoint-Quiz (CP)]] mit Daten von Netflix aufgeschaltet. Entschuldigen Sie bitte die Verzögerung, ich habe das Quiz interaktiv wie auf SQL-Bolt gemacht. Es kann gut sein, dass ich das Quiz noch erweitere. Falls Sie noch weiter knobeln möchten, schauen Sie in einer Woche nochmal vorbei.
+- Machen Sie sich von Anfang an **Notizen der Befehle** auf Papier. Es gilt weiterhin: Sie müssen keine Befehle auswendig lernen!
+- SQLBolt ist auf **Englisch**. Falls Sie etwas nicht verstehen, versuchen Sie, ob Deepl.com oder ChatGPT weiterhilft, oder kontaktieren Sie mich auf Teams. Ich bin weiterhin sehr oft am Computer... 🤷
+- Fragen Sie ungeniert nach **Videoerklärungen**.
+
+## Teil 2: Eigenständiges Projekt
+
+*Sie erhalten die Infos zum eigenständigen Projekt bis am 31. März an dieser Stelle*.
+
+## Teil 3: Abschlussprojekt
+
+*Sie erhalten die Infos zum Abschlussprojekt bis anfangs Juni an dieser Stelle.*
+

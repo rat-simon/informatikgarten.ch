@@ -6,7 +6,7 @@ import {
     remarkPathCorrections,
     remarkVideo,
     remarkWikiLinks,
-    remarkCallouts
+    remarkCallouts,
 } from "shared/server/remark";
 
 function isExportNode(node, varName: string) {
@@ -76,7 +76,7 @@ const withNextra = nextra({
             remarkVideo, // before path corrections
             remarkPathCorrections,
             remarkCustomCodeLangs,
-            remarkCallouts
+            remarkCallouts,
         ],
         rehypePlugins: [
             // Provide only on `build` since turbopack on `dev` supports only serializable values
@@ -94,6 +94,12 @@ const nextConfig = withNextra({
         ignoreDuringBuilds: true,
     },
     webpack(config, { isServer }) {
+        if (process.env.NODE_ENV === "development") {
+            config.infrastructureLogging = {
+                level: "verbose",
+                debug: /PackFileCacheStrategy/,
+            };
+        }
         // rule.exclude doesn't work starting from Next.js 15
         const { test: _test, ...imageLoaderOptions } = config.module.rules.find(
             (rule) => rule.test?.test?.(".svg")
@@ -110,7 +116,12 @@ const nextConfig = withNextra({
         });
 
         config.module.rules.push({
-            test: /\.(txt|csv|tsv|log|md\.backup|excalidraw\.md)$/,
+            test: /\.(xlsx|txt|odt|docx|pdf|py|log)$/,
+            type: "asset/resource",
+        });
+
+        config.module.rules.push({
+            test: /\.(tsv|ai|blend|log|backup\.md|excalidraw\.md)$/,
             use: "null-loader",
         });
 
@@ -119,7 +130,6 @@ const nextConfig = withNextra({
             config.resolve.fallback = {
                 fs: false,
                 path: false,
-                // other Node.js modules
             };
         }
         return config;

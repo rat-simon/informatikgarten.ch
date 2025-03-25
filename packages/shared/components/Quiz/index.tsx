@@ -49,7 +49,7 @@ function Question({
     const [savedToRemote, setSavedToRemote] = useState(false)
     const { status } = useSession()
 
-    const path = usePathname()
+    const path = usePathname() ?? '/'
     const { record, isLoading, updateRecord } = useUserData(path, id)
 
     // Load saved state when record is available
@@ -338,9 +338,11 @@ function Question({
     )
 }
 
-Question.Option = function Option({ children, feedback, is }: OptionProps) {
+function Option({ children, feedback, is }: OptionProps) {
     return <div>{children}</div>
 }
 
-export { Question }
+Question.Option = Option
+
+export { Question, Option }
 export { SQLQuestion } from './SQLQuestion'
