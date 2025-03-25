@@ -1,0 +1,200 @@
+---
+title: Prüfungsvorbereitung
+---
+Die Prüfung findet online auf exam.net statt. Sie umfasst theoretische Fragen, kurze Programmieraufgaben, sowie Fragen zu den Übungen, die wir behandelt haben, oder direkte Abwandlungen davon. Es gibt keinen praktischen Teil mit dem Roboter, Sie dürfen keine Unterlagen oder Notizen verwenden.
+
+Befehle, die Sie gebrauchen werden:
+```python
+maqueen.set_motor(0,255) # Stellt den linken Motor auf maximale Kraft voraus
+maqueen.motor_stop_all() # Stellt alle Motoren ab
+distanz = maqueen.read_distance() # Misst die Distanz in cm
+links = maqueen.read_patrol(0) # Misst linken Helligkeitssensor, speichert den Wert dunkel (0) oder hell (1) in der Variabel
+zufallszahl = random.randint(8,16) # Eine Zufallszahl zwischen 8 und 16
+```
+
+Wenn Sie zuhause mit dem Editor üben möchten, können Sie [diese Datei](https://github.com/marcchehab/microbit-maqueen/blob/master/maqueen_boilerplate.hex) downloaden und öffnen, damit Sie das `maqueen` Modul haben.
+## Ausgabe
+
+Was gibt folgender Code aus?
+```turtle
+zahl = 5
+while zahl < 10:
+	zahl = zahl + 1
+print("Ausgabe:",zahl)
+```
+
+## Maqueen not defined
+
+Wie könnte ich diese Fehler in meinem Programm lösen, damit ich nur auf einer Linie etwas ändern muss? Was müsste ich auf welcher Linie ändern?
+
+![](microbit-06-examprep-import-1.png)
+
+> [!solution]- Lösung
+> 
+> Linie 2: `import maqueen`
+
+## Herz pocht nicht
+
+Hilfe! Folgendes Programm zeigt immer nur ein kleines Herz an. Erklären Sie meinen Fehler und was man auf welchen Linien hinzufügen müsste.
+
+```python showLineNumbers
+from microbit import *
+
+while True:
+
+    display.show(Image.HEART)
+    
+    display.show(Image.HEART_SMALL)
+    
+```
+
+> [!solution]- Lösung
+> 
+> Der Microbit führt die Befehle **zu schnell** aus, sodass die LEDs und das menschliche Auge gar nicht mitkommen. Man muss auf den **Linien `6` und `8` jeweils etwas warten mit `sleep()`, z.B. `sleep(500)`**.
+
+## Vor der Wand stoppen
+
+Schreiben Sie ein Programm, dass der Maqueen-Roboter vorwärtsfährt, solange er mehr als 10cm von einer Wand entfernt ist. Ansonsten stoppt er alle Motoren und bricht das Programm ab.
+
+> [!solution]- Lösung
+> 
+> ```python
+> import maqueen
+> 
+> maqueen.set_motor(0,255)
+> maqueen.set_motor(1,255)
+> 
+> RUNNING = True
+> while RUNNING:
+>     distanz = maqueen.read_distance()
+>     if distanz < 10:
+>         maqueen.motor_stop_all()
+>         RUNNING = False
+> ```
+
+## Zufallspirouette auf schwarzen Punkten
+
+Ihr Maqueen-Roboter ist auf einem weissen Untergrund voller schwarzer Punkte unterwegs. Wir schreiben ein Programm, dass der Roboter vorwärtsfährt und eine zufällige Pirouette macht, wenn er über einen schwarzen Punkt fährt. Nach 5 Pirouetten stellt er alle Motoren ab und beendet das Programm. 
+
+Schreiben Sie die fehlenden Linien. Der Einzug ist irrelevant.
+
+![[microbit-06-examprep-2024-10-21-12.40.39.excalidraw]]
+
+> [!solution]- Lösung
+> 
+> ```python
+> from microbit import *
+> import maqueen
+> import random
+> 
+> RUNNING = True
+> pirouetten = 0
+> 
+> while RUNNING:
+>     # Vorwärts
+>     maqueen.set_motor(0, 255)
+>     maqueen.set_motor(1, 255)
+> 
+>     left = maqueen.read_patrol(0)
+>     if left == 0:
+> 	    # highlight-start
+>         maqueen.set_motor(0,255)
+>         maqueen.set_motor(1,-255)
+>         zufallszahl = random.randint(1000,4000)
+>         sleep(zufallszahl)
+>         pirouetten = pirouetten + 1
+> 	    # highlight-end
+>         if pirouetten == 5:
+>             RUNNING = False
+>             maqueen.motor_stop_all()
+> ```
+
+## Dem Rand einer Figur folgen
+
+Hilfe! Ich habe meinen Maqueen-Roboter so programmiert, dass er dem Rand einer Figur im Uhrzeiger folgt. Aber dann hat ein Sonnensturm meine Daten korrumpiert! Bitte reparieren Sie mein Programm!
+
+*(Für Leute im Darkmode: Die Figur ist schwarz, die Umgebung weiss.)*
+
+![[microbit-06-examprep-2024-10-21-12.26.52.excalidraw]]
+
+> [!solution]- Lösung
+> 
+> 1. `left == 1 and right == 0`
+> 2. `left == 0 and right == 0`
+> 3. `left == 1 and right == 1`
+
+## Zufällige Geschwindigkeit
+
+Ihr Maqueen soll die Geschwindigkeit zufällig verändern, wenn er auf eine neue schwarze Stelle stösst. (Sie können annehmen, dass ein schwarzer Strich immer in 300ms überwunden ist.)
+
+![randomspeed](scratch-06-exercises-2024-10-16-07.00.52.excalidraw.md)
+
+> [!solution]- Lösung
+> 
+> ```python
+> from microbit import *
+> import maqueen
+> import random
+> 
+> speed = 200
+> maqueen.set_motor(0, speed)
+> maqueen.set_motor(1, speed)
+> 
+> while True:
+>     left = maqueen.read_patrol(0)
+>     if left == 0:
+>         speed = random.randint(0,200)
+>         maqueen.set_motor(0, speed)
+>         maqueen.set_motor(1, speed)
+>         sleep(300)
+> ```
+## Refaktorieren
+
+Ich möchte mein Programm refaktorieren und diese Logik eines Rasenmähers in eine eigene Funktion `wand_ausweichen()` mit einem optionalen Parameter MINIMAL_DISTANZ in einer separaten Datei `rasenmaeher.py` auslagern.
+
+```python
+from microbit import *
+import maqueen
+import random
+
+MINIMAL_DISTANZ = 10
+
+while True:
+    distanz = maqueen.read_distance()
+    if distanz < MINIMAL_DISTANZ:
+        maqueen.set_motor(0,-255)
+        maqueen.set_motor(1,255)
+        zufallszahl = random.randint(300,1500)
+        sleep(zufallszahl)
+        maqueen.set_motor(0,255)
+        maqueen.set_motor(1,255)
+```
+
+Wie schaut nachher `main.py` und `rasenmaeher.py` aus?
+
+> [!solution]- Lösung
+> 
+> ```python filename="main.py"
+> from rasenmaeher import *
+> 
+> while True:
+> 	wand_ausweichen()
+> ```
+> 
+> 
+> ```python filename="rasemaeher.py"
+> from microbit import *
+> import maqueen
+> import random
+> 
+> def wand_ausweichen(MINIMAL_DISTANZ = 10):
+>     distanz = maqueen.read_distance()
+>     if distanz < MINIMAL_DISTANZ:
+>         maqueen.set_motor(0,-255)
+>         maqueen.set_motor(1,255)
+>         zufallszahl = random.randint(300,1500)
+>         sleep(zufallszahl)
+>         maqueen.set_motor(0,255)
+>         maqueen.set_motor(1,255)
+> ```
+> 

@@ -1,9 +1,11 @@
-import { useUserData } from '@/lib/userDataService'
-import { QuestionRecordLocal, QuestionDataJson } from '@/types/UserDataTypes'
-import { logger } from '@utils'
+"use client"
+
+import { useUserData } from '../../server/lib/userDataService'
+import { QuestionRecordLocal, QuestionDataJson } from '../../types/UserDataTypes'
+import { logger } from '../../utils'
 import cn from 'clsx'
 import { useSession } from 'next-auth/react'
-import { useRouter } from 'nextra/hooks'
+import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 
 interface QuestionProps {
@@ -47,7 +49,7 @@ function Question({
     const [savedToRemote, setSavedToRemote] = useState(false)
     const { status } = useSession()
 
-    const path = useRouter().asPath
+    const path = usePathname()
     const { record, isLoading, updateRecord } = useUserData(path, id)
 
     // Load saved state when record is available
@@ -200,8 +202,8 @@ function Question({
                                     'cursor-default': !allowUpdate && isSubmitted,
                                     'hover:bg-gray-50 dark:hover:bg-gray-800': !isSubmitted || allowUpdate,
                                     'border-blue-500': selected.includes(index),
-                                    'text-green-500 border-green-500': isSubmitted && showFeedback && strToBool(child.props.is) === selected.includes(index),
-                                    'text-red-500 border-red-500': isSubmitted && showFeedback && !strToBool(child.props.is) === selected.includes(index)
+                                    'text-green-500 border-green-500': isSubmitted && showFeedback && strToBool((child.props as OptionProps).is) === selected.includes(index),
+                                    'text-red-500 border-red-500': isSubmitted && showFeedback && !strToBool((child.props as OptionProps).is) === selected.includes(index)
                                 })}
                             >
                                 <div className="flex items-center gap-3">
@@ -229,10 +231,10 @@ function Question({
                                     {child}
                                 </div>
 
-                                {isSubmitted && showFeedback && child.props.feedback && (
+                                {isSubmitted && showFeedback && (child.props as OptionProps).feedback && (
                                     <div className="mt-2 p-2 bg-gray-50 dark:bg-gray-800 rounded">
-                                        {strToBool(child.props.is) === selected.includes(index) ? '✓ ' : '✗ '}
-                                        {child.props.feedback}
+                                        {strToBool((child.props as OptionProps).is) === selected.includes(index) ? '✓ ' : '✗ '}
+                                        {(child.props as OptionProps).feedback}
                                     </div>
                                 )}
                             </div>

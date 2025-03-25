@@ -1,0 +1,82 @@
+---
+title: Hardware
+---
+
+> [!success] Lernziele
+> 
+> - Sie wissen, was **Peripheriegeräte** sind
+> - Sie verstehen die Begriffe **Hardware, Betriebssystem, Anwendungen**, und wie sie nach "Abstraktion" sortiert werden können
+> - Sie verstehen grob, was Taktfrequenz, Prozessorkerne und die Prozessor-"Generation" mit der Geschwindigkeit des Prozessors zu tun haben.
+> - Sie können von den Komponenten die Kernfunktion und Kerngrösse sinngemäss zusammenfassen
+
+## Ein ganzer Computer aus Modulen
+
+Wir haben gesehen, dass in der Informatik die Komplexität reduziert wird, indem wir das grosse Ganze in einzelne **Module** aufteilen. Wenn wir das radikal vereinfachen, können wir uns diese vier Module als Bauteile überlegen, die aufeinander aufbauen.
+
+<!-- ![aufbau](../01-aufbau/attachments/Excalidraw/aufbau-00-intro-2024-04-22-06.42.20.excalidraw) -->
+
+## Hardware-Übersicht
+
+Ihr Computer ist ähnlich Ihrem Körper **ein System aus verschiedenen Komponenten**. Die wichtigsten Teile sind in einem Gehäuse versorgt. Ausserhalb des Gehäuses sind sogenannte **Peripheriegeräte** mit Kabeln (meist USB) oder über Funk angeschlossen. "Peripherie" heisst soviel wie "ausserhalb", oder "am Rande gelegen".
+
+Schauen wir nun aber in den Computer:
+
+![hwoverview](../01-aufbau/attachments/Excalidraw/aufbau-01-hwoverview-2024-04-23-08.38.41.excalidraw)
+
+**1 Mainboard mit Chipset**
+- Kernfunktion: Die Platine verbindet die verschiedenen Hardware-Komponenten. 
+	- Kernkomponenten wie RAM und Grafikkarte (je nach Prozessor und Chipset noch mehr!) können direkt per Systembus mit der CPU kommunizieren.
+	- Weitere Komponenten (z.B. USB-Ports, Netzwerkkarten, Festplatten) sind über einen Verteiler-Chip auf dem Mainboard angeschlossen, dem sogenannten **Chipset**
+- Kenngrössen: Chipset, was für Steckplätze
+- Wichtige Marken: ASUS, MSI, Gigabyte
+
+<Youtube id="Z2LgmIGE2nI" />
+
+**2 Prozessor (Central Processing Unit, CPU)**
+- Kernfunktion: Führt die Anweisungen eines Computerprogramms durch und verarbeitet Daten.
+- Kenngrössen: Geschwindigkeit (Taktfrequenz in Herz), Anzahl der Kerne
+- Wichtige Marken: Intel, AMD
+
+| Frequenz (Hz) | Zeit      | Zeit              | Zeit             | Takte pro Sekunde |
+| ------------- | --------- | ----------------- | ---------------- | ----------------- |
+| 1 Hz          | 1 s       | 1 second          | 10^0 s           | 1 t/s             |
+| 1 kHz         | 1 ms      | 1 millisecond     | 10^-3 s          | 1,000 t/s         |
+| 1 MHz         | 1 µs      | 1 microsecond     | 10^-6 s          | 1,000,000 t/s     |
+| 1 GHz         | 1 ns      | 1 nanosecond      | 10^-9 s          | 1,000,000,000 t/s |
+| 4.7 GHz       | 0.2128 ns | 212.8 picoseconds | 2.128 * 10^-10 s | 4,700,000,000 t/s |
+
+
+**3 Arbeitsspeicher (Random Access Memory, RAM)**
+- Kernfunktion: Temporärer Speicher für aktuell laufende Prozesse und Anwendungen.
+- Kenngrösse: Speicherkapazität (GB), Lese- und Schreibgeschwindigkeit
+- Wichtige Marken: Kingston, Corsair, Crucial
+
+**4 Massenspeicher (z.B. SSD oder Festplatte)**
+- Kernfunktion: Dauerhafter Speicher für Daten und Programme.
+- Kenngrösse: Speicherkapazität (GB/TB), Lese- und Schreibgeschwindigkeit
+- Wichtige Marken: Samsung, Kingston, WD
+- [Video einer offenen Festplatte](https://www.youtube.com/watch?v=yutumxftJeg&ab_channel=PanoramaCircle) zeigt, wieso es eine "Fest"-Platte" genannt wird.
+- [Video einer offenen SSD](https://www.youtube.com/watch?v=QWG3w4yyNCY) zeigt den riesen Unterschied dieser neuen, besseren Technologie.
+
+**5 Grafikkarte**
+- Kernfunktion: Verarbeitet und rendert die grafische Oberfläche oder 3D-Umgebungen
+- Kenngrösse: Welche GPU und Grafikspeicher
+- Wichtige Marken: NVIDIA, AMD
+
+**6 Powersupply (Netzteil)**
+- Kernfunktion: Versorgt alle Komponenten mit Strom.
+- Kenngrösse: Leistung (Watt)
+- Wichtige Marken: Corsair, EVGA, be quiet!, Seasonic
+## Betriebssystem
+
+Das Betriebssystem (z.B. **Windows , MacOS, Linux**) ist eine Software, die den Betrieb des Computers regelt und **"normalen" Anwenderprogrammen eine standardisierte Schnittstelle bietet, damit sie die Hardware des Computers nutzen können**.
+### Ein Beispiel: Word speichert eine Datei
+
+Word **speichert eine Datei nicht selbstständig** auf der Festplatte, sondern es nutzt die **Schnittstelle des Betriebssystems**, um das zu tun. So kann das Betriebssystem die Ordnung wahren: Stellen Sie sich nur einmal vor, was passieren würde, wenn alle Programme wann und wie auch immer auf Ihre Festplatte schreiben könnten - totales Chaos! Das wäre so desorganisiert wie Warteschlangen im Coop Pronto 🤷 Das Betriebssystem überwacht und verhindert, dass sich die Programme beim Laden oder Speichern in die Quere kommen.
+
+Das hat einen weiteren Vorteil: Normale Anwendungsprogramme müssen so **nicht wissen, was für Hardware** in Ihrem Computer eingebaut ist - sei es Speicher, Prozessor, Arbeitsspeicher, oder Bildschirm... Sie schreiben **ein Programm für ein Betriebssystem** und müssen sich nicht um alle möglichen Hardwarekombinationen kümmern.
+
+Diese komplizierte Arbeit wird vom Betriebssystem übernommen und "gegen oben" (im Schichtmodell) bietet es einheitliche Schnittstellen an. In der Informatik sagen wir dazu: **Die Hardware wird vom Betriebssystem "weg-abstrahiert"**.
+
+Um mit Hardwarekomponenten kommunizieren zu können, nutzen Betriebssysteme sogenannte **Treiber** (Englisch: driver). Meistens installiert das Betriebssystem diese automatisch, wenn ein neues Gerät erkannt wird (das nennt man "plug & play"). 
+

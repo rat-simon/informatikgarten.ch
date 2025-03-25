@@ -1,15 +1,16 @@
-import type { ComponentProps, ReactElement } from 'react'
+import type { ComponentProps, ReactElement } from "react";
+import cn from "clsx";
 
 export function IgStrong({
-  children,
-  className,
-  ...props
-}: ComponentProps<'strong'> & { className?: string }): ReactElement {
-  return (
-    <strong className={`text-red-500 ${className ?? ''}`} {...props}>
-      {children}
-    </strong>
-  )
+    children,
+    className,
+    ...props
+}: ComponentProps<"strong"> & { className?: string }): ReactElement {
+    return (
+        <strong className={cn("text-ig-strong", className)} {...props}>
+            {children}
+        </strong>
+    );
 }
 
-export default IgStrong
+export default IgStrong;

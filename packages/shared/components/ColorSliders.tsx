@@ -1,30 +1,30 @@
-"use client"
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
 const onColorChange = (newColor: string) =>
-    (document.body.style.backgroundColor = newColor)
+    (document.body.style.backgroundColor = newColor);
 
 export function ColorSliders() {
-    const [rgb, setRgb] = useState({ r: 0, g: 0, b: 0 })
-    const [hex, setHex] = useState('#000000')
+    const [rgb, setRgb] = useState({ r: 0, g: 0, b: 0 });
+    const [hex, setHex] = useState("#000000");
 
-    const padHex = (n: string): string => (n.length < 2 ? '0' + n : n)
+    const padHex = (n: string): string => (n.length < 2 ? "0" + n : n);
 
     const updateColor = (newRgb: typeof rgb) => {
-        const r_hex = newRgb.r.toString(16)
-        const g_hex = newRgb.g.toString(16)
-        const b_hex = newRgb.b.toString(16)
-        const newHex = `#${padHex(r_hex)}${padHex(g_hex)}${padHex(b_hex)}`
-        setHex(newHex)
-        onColorChange(newHex)
-    }
+        const r_hex = newRgb.r.toString(16);
+        const g_hex = newRgb.g.toString(16);
+        const b_hex = newRgb.b.toString(16);
+        const newHex = `#${padHex(r_hex)}${padHex(g_hex)}${padHex(b_hex)}`;
+        setHex(newHex);
+        onColorChange(newHex);
+    };
 
-    const handleSliderChange = (color: 'r' | 'g' | 'b', value: string) => {
-        const newRgb = { ...rgb, [color]: parseInt(value) }
-        setRgb(newRgb)
-        updateColor(newRgb)
-    }
+    const handleSliderChange = (color: "r" | "g" | "b", value: string) => {
+        const newRgb = { ...rgb, [color]: parseInt(value) };
+        setRgb(newRgb);
+        updateColor(newRgb);
+    };
 
     return (
         <div className="p-4 space-y-4">
@@ -42,7 +42,7 @@ export function ColorSliders() {
                     max="255"
                     id="r"
                     value={rgb.r}
-                    onChange={e => handleSliderChange('r', e.target.value)}
+                    onChange={(e) => handleSliderChange("r", e.target.value)}
                     className="w-4/5 mx-2"
                 />
                 <output
@@ -67,7 +67,7 @@ export function ColorSliders() {
                     max="255"
                     id="g"
                     value={rgb.g}
-                    onChange={e => handleSliderChange('g', e.target.value)}
+                    onChange={(e) => handleSliderChange("g", e.target.value)}
                     className="w-4/5 mx-2"
                 />
                 <output
@@ -92,7 +92,7 @@ export function ColorSliders() {
                     max="255"
                     id="b"
                     value={rgb.b}
-                    onChange={e => handleSliderChange('b', e.target.value)}
+                    onChange={(e) => handleSliderChange("b", e.target.value)}
                     className="w-4/5 mx-2"
                 />
                 <output
@@ -108,5 +108,5 @@ export function ColorSliders() {
                 {hex}
             </output>
         </div>
-    )
+    );
 }

@@ -5,6 +5,7 @@
 	"scripts": {
 		"build": "next build",
 		"dev": "next",
+		"postinstall": "mkdir -p public/sql/wasm && cp node_modules/sql.js/dist/sql-wasm.wasm public/sql/wasm/ && cp node_modules/sql.js/dist/sql-wasm.js public/sql/wasm/",
 		"syncvideo": "pnpm exec next-video sync --dir content/videos/",
 		"postbuild": "next-sitemap && pagefind --site .next/server/app --output-path public/_pagefind",
 		"start": "next start"
@@ -14,6 +15,7 @@
 		"not dead"
 	],
 	"dependencies": {
-		"shared": "workspace:*"
+		"shared": "workspace:*",
+        "sql.js": "^1.13.0"
 	}
 }

@@ -27,7 +27,7 @@ export const remarkPathCorrections: Plugin<[], Root, VFile> = () =>
                     if (foundPath) {
                         node.url = path.relative(basePath, foundPath)
                     } else {
-                        logger.warn(`⚠️ Could not resolve path ${node.url}`)
+                        logger.warn(`⚠️ Could not resolve path ${node.url} in ${filePath}`)
                         node.url = '/img/no-image.svg'
                     }
                 }

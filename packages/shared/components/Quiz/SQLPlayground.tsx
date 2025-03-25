@@ -1,10 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, JSX } from "react";
 import Editor from "@monaco-editor/react";
 import initSqlJs, { Database, SqlJsStatic } from "sql.js";
 import { useTheme } from "next-themes";
-import { Table, Tr, Th, Td } from "nextra/components";
 import styles from "./SQLPlayground.module.scss";
-import { logger } from "@utils";
+import { logger } from "../../utils";
+import { useMDXComponents } from 'nextra-theme-docs'
+
+const {
+    tr: Tr,
+    th: Th,
+    td: Td,
+    table: Table,
+    ...docsComponents
+  } = useMDXComponents()
 
 // Define types for SQL.js results
 interface SqlResultColumn {

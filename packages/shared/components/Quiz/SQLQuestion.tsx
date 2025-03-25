@@ -1,9 +1,17 @@
 import Editor from '@monaco-editor/react'
-import { isTeacherCS, logger } from '@utils'
+import { isTeacherCS, logger } from '../../utils'
 import { useTheme } from 'next-themes'
-import { Table, Td, Th, Tr } from 'nextra/components'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, JSX } from 'react'
 import initSqlJs, { Database, SqlJsStatic } from 'sql.js'
+import { useMDXComponents } from 'nextra-theme-docs'
+
+const {
+    tr: Tr,
+    th: Th,
+    td: Td,
+    table: Table,
+    ...docsComponents
+  } = useMDXComponents()
 
 // Define types for SQL.js results
 interface SqlResultColumn {

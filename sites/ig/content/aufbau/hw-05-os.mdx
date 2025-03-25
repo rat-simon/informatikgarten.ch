@@ -1,0 +1,49 @@
+---
+title: Betriebssystem
+---
+> [!success] Lernziele
+> 
+> - Sie können Benutzer, Anwendungsprogramme, Betriebssystem und Hardware **nach "Abstraktheit" sortieren**.
+> - Sie können erklären, wieso es ein **Betriebssystem als Schnittstelle** zwischen Hardware und Anwenderprogrammen braucht.
+## Ein ganzer Computer aus Modulen
+
+Wir haben gesehen, dass in der Informatik die Komplexität reduziert wird, indem wir das grosse Ganze in einzelne **Module** aufteilen. Bei diesen Modulen unterscheiden wir: 
+- **Abstraktion** (inkl. Schnittstelle): Was tut das Modul? Wie kann man es nutzen?
+- **Implementierung**: Wie funktioniert das Modul?
+
+![[module-single-interface-abstraction.excalidraw]]
+
+Dieses Denken in Modulen hilft uns nun, eine (simplifizierte) Übersicht eines Computers zu wagen und auf den Begriff des Betriebssystems einzugehen.
+
+![[module-os-overview.excalidraw]]
+
+Wenn wir das radikal vereinfachen, können wir uns diese vier Module als Bauteile überlegen, die aufeinander aufbauen.
+
+![[module-os-simplified.excalidraw]]
+
+## Was macht das Betriebssystem?
+
+Das Betriebssystem (z.B. **Windows , MacOS, Linux**) ist eine Software, die den Betrieb des Computers regelt und **"normalen" Anwenderprogrammen eine standardisierte Schnittstelle bietet, damit sie die Hardware des Computers nutzen können**. 
+
+### Ein Beispiel: Word speichert eine Datei
+
+Word **speichert eine Datei nicht selbstständig** auf der Festplatte, sondern es nutzt die **Schnittstelle des Betriebssystems**, um das zu tun. So kann das Betriebssystem die Ordnung wahren: Stellen Sie sich nur einmal vor, was passieren würde, wenn alle Programme wann und wie auch immer auf Ihre Festplatte schreiben könnten - totales Chaos! Das wäre so desorganisiert wie Warteschlangen im Coop Pronto 🤷 Das Betriebssystem überwacht und verhindert, dass sich die Programme beim Laden oder Speichern in die Quere kommen.
+
+Das hat einen weiteren Vorteil: Normale Anwendungsprogramme müssen so **nicht wissen, was für Hardware** in Ihrem Computer eingebaut ist - sei es Speicher, Prozessor, Arbeitsspeicher, oder Bildschirm... Sie schreiben **ein Programm für ein Betriebssystem** und müssen sich nicht um alle möglichen Hardwarekombinationen kümmern.
+
+Diese komplizierte Arbeit wird vom Betriebssystem übernommen und "gegen oben" (im Schichtmodell) bietet es einheitliche Schnittstellen an. In der Informatik sagen wir dazu: **Die Hardware wird vom Betriebssystem "weg-abstrahiert"**.
+
+Um mit Hardwarekomponenten kommunizieren zu können, nutzen Betriebssysteme sogenannte **Treiber** (Englisch: driver). Meistens installiert das Betriebssystem diese automatisch, wenn ein neues Gerät erkannt wird (das nennt man "plug & play"). 
+
+### Beispiele der Schnittstellen-Funktion des Betriebssystems
+
+Diese Kernfunktion des Betriebssystems als Schnittstelle zur Hardware sehen Sie in vielen Aufgaben, die das Betriebssystem übernimmt: 
+- Speicherverwaltung: Es organisiert und verwaltet Speichermedien wie RAM und Festplatte, und bietet geordneten Schreib- und Lesezugriff.
+- Prozessverwaltung: Es regelt den Zugriff von Programmen auf den Prozessor (Central Processing Unit, CPU) und andere Ressourcen, sodass die Hardware optimal ausgelastet ist.
+- Netzwerkkommunikation: Es organisiert den Datenaustausch, implementiert die TCP/IP-Schichten und bietet Programmen eine Schnittstelle dazu.
+- Anwendungsverwaltung: Es installiert, startet, beendet und verwaltet Anwendungsprogramme.
+- Benutzerverwaltung: Es verwaltet Benutzer und deren Rechte.
+- Systemstart und -herunterfahren: Es startet und beendet den Betrieb des Computers.
+- Hardware- und Ressourcensteuerung: Es verwaltet alle Hardwarekomponenten, Peripheriegeräte und Systemressourcen, und bietet Zugriff darauf.
+- GUI-Bereitstellung (optional): Es stellt eine grafische Benutzeroberfläche bereit, über die der Benutzer mit dem Computer interagieren kann.
+

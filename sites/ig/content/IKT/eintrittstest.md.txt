@@ -1,0 +1,58 @@
+---
+title: ⚠️ IKT-Eintrittstest
+display: hidden
+---
+Liebe Schülerinnen und Schüler der KSWE,
+
+Herzlich willkommen! Ich bin Marc Chéhab und organisiere dieses Jahr den **IKT-Eintrittstest, den alle Schülerinnen und Schüler im 1. Gymnasium absolvieren müssen**. IKT-Kompetenzen werden zwar grundsätzlich bereits in der Bezirksschule vermittelt. Trotzdem kommen Schülerinnen und Schüler mit ganz unterschiedlichen IKT-Niveaus an die Kantonsschule. Um zu schauen, wer noch einen IKT-Kurs braucht, machen wir zwischen dem 9. und 20. September diese Tests.
+## Termine und Zimmer
+
+**Tragen Sie sich Ihren Termin ein**, da er nicht in Ihrem Stundenplan vermerkt sein wird!
+
+- G1a, S109, 9. September, 16:50
+- G1b, S109, 10. September, 16:50
+- G1c, S106, 13. September, 13:10
+- G1d, S106, 11. September, 11:20 - 12:05
+- G1e, S109, 9. September, 12:15 - 13:00
+- G1f, S109, 10. September, 16:50 - 17:35
+- G1g, S109, 13. September, 15:00
+- G1h, S109, 13. September, 15:00
+- G1i, S106, 12. September, 10:25
+- G1j, S104, 9. September, 7:40
+## Informationen zum Eintrittstest
+
+- Wichtig: der Test wird **auf dem eigenen Gerät mit Exam.net** absolviert. 
+- 35 Fragen (Multiple Choice) / pro Frage 1 Punkt / max. 35 Punkte
+- Test bestanden: 50% (=17.5 Punkte)
+- 4 Themenbereiche:
+	- **Tabellenkalkulation (10 Fragen)**
+	- **Textverarbeitung (10)** 
+	- **Grundlagen (10)** 
+	- **Präsentationen (5)**
+- Zeit: 25 Minuten
+- Keine Hilfsmittel erlaubt
+
+## Probetest
+
+Auf [exam.net](https://exam.net/) finden Sie einen Probetest mit 14 Fragen. Nutzen Sie dazu oben auf der Webseite den Testschlüssel `CSVGUV`.
+
+## Vorbereitung
+
+Es geht um Ihr Wissen zu IKT-Grundlagen, Textverarbeitung in Word, Tabellenkalkulation in Excel und Präsentationen in Powerpoint. Sie finden **detaillierte Beschreibungen der Schlüsselkonzepte pro Thema** [in diesem Ordner hier](https://kswe-my.sharepoint.com/:f:/g/personal/cha_kswe_ch/Ek1_8r8MiPxMnttfjHDY9KEBkAB7z5EG0qUs12aBOWWddQ).
+
+(Es hat Unterordner mit Übungen, die **völlig freiwillig** sind.)
+## IKT-Kurs
+
+**Schülerinnen und Schüler, die nicht 17.5 Punkte erreichen, müssen an einem IKT-Kurs teilnehmen. Sie werden automatisch eingeteilt. Der IKT-Kurs ist nicht promotionsrelevant.**
+
+Falls Sie trotz bestandenem Test gern einen IKT-Kurs machen würden, um den professionellen Umgang mit dem Computer zu lernen, melden Sie sich bei mir, Marc Chéhab, auf Teams.
+
+Es werden bis zu 4 identische Kurse à 14 Lektionen durchgeführt
+- Zwei Kurse ab den Herbstferien
+- Zwei Kurse ab den Sportferien
+
+Die Termine der Nachschulungskurse sind im Stundenplan der 1. Klassen bereits als FiktA und FiktB verplant. 
+
+Liebe Grüsse,
+
+Marc Chéhab

@@ -1,0 +1,23 @@
+{
+    "status": "ready",
+    "originalFilePath": "pages/videos/barcode-drawing.mp4",
+    "provider": "mux",
+    "providerMetadata": {
+        "mux": {
+            "uploadId": "02S1DpLHWj6SDsajeQVm6NJCUOsL01Sj6v3BIJT7jJzj4",
+            "assetId": "lZQw9WnBhc5YrrFjuibcE3tEl7Rb3s8xUJTb7oEMY4w",
+            "playbackId": "id7XyvOs2oQwvfcdIMXtcoQv5XYp296QbIc4y01K00lPY"
+        }
+    },
+    "createdAt": 1742466262435,
+    "updatedAt": 1742482237790,
+    "size": 563599826,
+    "sources": [
+        {
+            "src": "https://stream.mux.com/id7XyvOs2oQwvfcdIMXtcoQv5XYp296QbIc4y01K00lPY.m3u8",
+            "type": "application/x-mpegURL"
+        }
+    ],
+    "poster": "https://image.mux.com/id7XyvOs2oQwvfcdIMXtcoQv5XYp296QbIc4y01K00lPY/thumbnail.webp",
+    "blurDataURL": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAADQAQCdASoQAAkAAQAcJaQCsAERD+bckAD+/rYlHibBUiJ2/V/RAf/oAkXkFwhHJi2H3hRwS/mcLqcP/cH++pqBf2y7Q2frnOYBhUJnvU9u43ZXbF5wX7v3Pxiff8oUzJCMJHPnLDd02B6rqxIAAA=="
+}

@@ -12,16 +12,16 @@ import Providers from 'shared/lib/Providers'
 // TODO: move to taliwind
 import 'shared/components/TurtleEditor/style/turtle.global.css'
 
-const mainFont = Roboto_Slab({
+const bodyFont = Roboto_Slab({
   subsets: ['latin'],
   weight: '200',
-  variable: '--main-font'
+  variable: '--nextfont-body'
 })
 
-const titleFont = Barlow_Condensed({
+const headingFont = Barlow_Condensed({
   subsets: ['latin'],
   weight: '700',
-  variable: '--title-font'
+  variable: '--nextfont-heading'
 })
 
 export const metadata: Metadata = {
@@ -80,7 +80,7 @@ const navbar = (
         )
       }>
         <IgLogo height="32" />
-        <span className={cn(titleFont.className, "text-3xl text-slate-900 dark:text-white self-center")}>
+        <span className={cn(headingFont.className, "text-3xl text-slate-900 dark:text-white self-center")}>
           informatikgarten.ch
         </span>
       </div>
@@ -96,7 +96,7 @@ const RootLayout: FC<{
 }> = async ({ children }) => {
   const pageMap = await getPageMap()
   return (
-    <html lang="en" dir="ltr" className={cn(mainFont.variable, titleFont.variable)} suppressHydrationWarning>
+    <html lang="en" dir="ltr" className={cn(bodyFont.variable, headingFont.variable)} suppressHydrationWarning>
       <Head />
       <body>
         <Providers>
@@ -104,7 +104,7 @@ const RootLayout: FC<{
             navbar={navbar}
             feedback={{ content: null }}
             pageMap={pageMap}
-            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/docs"
+            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/sites/ig/content"
             editLink="Verbesserung vorschlagen"
             sidebar={{ defaultMenuCollapseLevel: 1 }}
             footer={<></>}

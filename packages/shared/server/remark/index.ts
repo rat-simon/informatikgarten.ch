@@ -3,5 +3,5 @@ export { remarkPathCorrections } from './remarkPathCorrections'
 export { remarkExcalidraw } from './remarkExcalidraw'
 export { remarkVideo } from './remarkVideo'
 export { remarkCustomCodeLangs } from './remarkCustomCodeLangs'
-
+export { remarkCallouts } from './remarkCallouts'
 export { rehypeMuxvideo } from './rehypeMuxvideoBlurup'

@@ -14,8 +14,8 @@
         "packages/*"
     ],
     "prisma": {
-		"schema": "packages/shared/server/prisma/schema.prisma"
-	},
+        "schema": "packages/shared/server/prisma/schema.prisma"
+    },
     "dependencies": {
         "@excalidraw/excalidraw": "^0.18.0",
         "@monaco-editor/react": "^4.7.0",
@@ -36,28 +36,32 @@
         "next": "^15.2.3",
         "next-auth": "^4.24.11",
         "next-themes": "^0.4.6",
-        "nextra": "^4.2.16",
-        "nextra-theme-docs": "^4.2.16",
+        "nextra": "^4.2.17",
+        "nextra-theme-docs": "^4.2.17",
         "prisma": "^6.5.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-textfit": "^1.1.1",
         "shiki": "^3.2.1",
+        "sql.js": "^1.13.0",
         "unified": "^11.0.5",
         "unist-util-visit": "^5.0.0",
         "vfile": "^6.0.3"
     },
     "devDependencies": {
         "@svgr/webpack": "^8.0.1",
-        "@tailwindcss/postcss": "^4.0.0-beta.8",
+        "@tailwindcss/postcss": "^4.0.15",
         "@types/mdast": "^4.0.4",
         "@types/node": "^22.0.0",
         "@types/react": "^19.0.10",
         "@types/unist": "^3.0.3",
         "next-sitemap": "^4.2.3",
         "next-video": "^2.2.0",
+        "null-loader": "^4.0.1",
         "pagefind": "^1.3.0",
-        "tailwindcss": "^4.0.0-beta.8",
+        "postcss": "8.5.3",
+        "svg-parser": "^2.0.4",
+        "tailwindcss": "^4.0.15",
         "turbo": "2.4.4",
         "typescript": "5.8.2"
     },

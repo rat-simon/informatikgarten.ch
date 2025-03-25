@@ -25,6 +25,8 @@ import {
 import type { OfmCalloutProps } from 'shared/components'
 import FeatherIcon from 'feather-icons-react'
 import { Tabs } from 'nextra/components'
+import cn from 'clsx'
+import { createElement } from 'react'
 
 const {
   tr: Tr,
