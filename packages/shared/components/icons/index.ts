@@ -1,8 +1,6 @@
 export { default as IgLogo } from './IgLogo.svg?svgr'
 
 // Animated icons from Lordicon
-export { ThreeDotsWave } from './ThreeDotsWave'
-export { Checkmark } from './Checkmark'
 export { Pin, Unpin } from './Pin'
 
 export { default as FilesIcon } from './files.svg?svgr'

@@ -1,0 +1,41 @@
+@layer components {
+    .menuicon span:first-child {
+        @apply bg-gray-300 text-white rounded-md border-none px-1 py-0.5 mr-1.5 text-center no-underline text-xs font-bold w-[1.15rem] inline-block;
+
+    }
+
+    .menuicon.pink span:first-child {
+        @apply bg-[#ed4662];
+    }
+
+    .menuicon.blue span:first-child {
+        @apply bg-[#00d6d6];
+    }
+}
+
+.nextra-sidebar ul {
+    counter-reset: decCount;
+
+    ul {
+        li ::before {
+            counter-increment: decCount;
+            content: counter(decCount);
+            display: inline-block;
+            flex-shrink: 0;
+            height: 1.25rem;
+            width: 1.25rem;
+            background-color: #77777788;
+            color: white;
+            padding: 0.05rem;
+            margin-right: 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        li.active ::before {
+            background-color: #00d6d6;
+        }
+    }
+}

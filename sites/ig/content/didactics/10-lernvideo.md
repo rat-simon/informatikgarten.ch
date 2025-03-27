@@ -14,17 +14,15 @@ Ihr Auftrag ist es, **mit Scratch oder Python ein altersgerechtes Erklärvideo z
 - Achten Sie darauf, dass Ihre Erklärung fachlich korrekt ist, dass Sie sich einer altersgerechen Sprache bedienen, und dass Sie einleuchtende Metaphern nutzen.
 - Sie können jederzeit Feedback einholen.
 
-|         | Reflektion                                                         | Fachliche Korrektheit        | Didaktik                                                                                                                                         | Machart Video                             |
-| ------- | ------------------------------------------------------------------ | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------- |
-| Gewicht | 20%                                                                | 50%                          | 20%                                                                                                                                              | 10%                                       |
-| Note 4  | Rudimentäre Begründung                                             | Kernkonzepte korrekt erklärt |                                                                                                                                                  | Zeitlimit eingehalten, Video funktioniert |
-| Note 5  | Schlüssige Begründung der gewählten Mittel                         | + treffende Beispiele        | Aufgabe und Lernplattform passen zur Altersstufe, gut strukturiert                                                                               |                                           |
-| Note 6  | + passende Referenzen zu nicht gewählten Alternativen und Lehrplan |                              | Aufgabe, Lernplattform, Metaphern, Sprache passen zur Altersstufe, ausgezeichnete Struktur mit Übersicht und klaren Anweisungen an die Lernenden | Grafisch überzeugend,                     |
+| Note | Fachliche Korrektheit der Kernkonzepte (50%) | Didaktik (30%) | Reflektion (20%) |
+|------|----------------------------------------------|----------------|------------------|
+| 4    | Zwei Kernkonzepte vage oder unvollständig erklärt | Rudimentäre Aufgaben, die die Kernkonzepte gebrauchen | Rudimentäre Begründung der gewählten Inhalte |
+| 5    | Zwei Kernkonzepte klar, genau und vollumfänglich korrekt erklärt | Aufgaben sind strukturiert, gut durchdacht und passend für die gewählten Kernkonzepte; Lernplattform und Metaphern passen zur Altersstufe; gut strukturiert. | Schlüssige, kohärente Begründung der gewählten Inhalte; Erklärung bezeugt eigene kritische Reflektion |
+| 6    | Sinn und Zweck der Kernkonzepte treffend charakterisiert und in grösseren Kontext eingebettet | Kreative eigene Inhalte, die einleuchtend und begeisternd die Materie erklären; ausgezeichnete Struktur mit Übersicht und klaren Anweisungen | Vergleich mit Alternativen, Bezug zu Lehrplan oder anderen Lehrmethoden |
 
 ## Tools für Aufnahmen
 
 Für das Lernvideo müssen Sie Kamera, Ton und Bildschirm **aufnehmen und die Videos dann schneiden**. Dazu gibt es viele Programme, Sie dürfen gerne Alternativen verwenden. Ich zeige Ihnen:
-
 - Eine einfache Rundum-Lösung: Microsoft Stream, weil Sie da die relevanten Funktionen einfach direkt im Browser gebrauchen können.
 - Fürs Aufnehmen: [OBS Studio](https://obsproject.com/), weil es open-source ist und Sie es Ihr ganzes Leben lang frei nutzen werden können. Sie werden sehen: Wir zielen darauf ab, dass wir mit OBS bereits Ton und Bild fertig zusammenmischen, damit wir dann nur ein Video schneiden müssen.
 - Fürs Schneiden: [Davinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve), weil Sie damit eine vollumfängliche Videoschnitt-Software kennenlernen, die kostenlos ist.

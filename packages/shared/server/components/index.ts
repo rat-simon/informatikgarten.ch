@@ -1,0 +1,1 @@
+export { IgStrong } from "./IgStrong";

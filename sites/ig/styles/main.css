@@ -1,4 +1,5 @@
-@import './callouts.css';
+@import 'shared/styles/callouts.css';
+@import 'shared/styles/menu.css';
 
 /* ----------- colors ----------------- */
 

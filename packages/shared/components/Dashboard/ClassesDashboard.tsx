@@ -1,5 +1,4 @@
 import { logger, YearsHSLGradient } from '../../utils'
-import { Checkmark, ThreeDotsWave } from '../icons'
 import { generateHash } from '../../utils'
 import FeatherIcon from 'feather-icons-react'
 import { Fragment, useEffect, useRef, useState } from 'react'
@@ -127,7 +126,7 @@ export const ClassesDashboard = () => {
                         <tr key="loading-classes">
                             <td colSpan={100}>
                                 <div className="flex justify-center items-center w-full">
-                                    <ThreeDotsWave />
+                                    <span>Loading...</span>
                                 </div>
                             </td>
                         </tr>
@@ -247,9 +246,9 @@ export const ClassesDashboard = () => {
                                                 }
                                             >
                                                 {feedback === 'loading' ? (
-                                                    <ThreeDotsWave />
+                                                    <span>Loading...</span>
                                                 ) : feedback === 'success' ? (
-                                                    <Checkmark />
+                                                    '✅'
                                                 ) : feedback === 'error' ? (
                                                     '❌'
                                                 ) : (
@@ -314,9 +313,9 @@ export const ClassesDashboard = () => {
                                         <FeatherIcon icon="plus" size="16" />
                                     </>
                                 ) : feedback === 'loading' ? (
-                                    <ThreeDotsWave />
+                                    <span>Loading...</span>
                                 ) : feedback === 'success' ? (
-                                    <Checkmark />
+                                    '✅'
                                 ) : (
                                     '❌'
                                 )}

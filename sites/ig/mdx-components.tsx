@@ -7,7 +7,6 @@ import {
   ColorSliders,
   Excalidraw,
   Flex,
-  IgStrong,
   IsAuthenticated,
   IsNotAuthenticated,
   IsTeacher,
@@ -24,6 +23,7 @@ import {
   Question,
   Option
 } from 'shared/components'
+import { IgStrong } from 'shared/server/components'
 import type { OfmCalloutProps } from 'shared/components'
 import FeatherIcon from 'feather-icons-react'
 import { Tabs } from 'nextra/components'

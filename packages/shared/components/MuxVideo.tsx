@@ -1,7 +1,11 @@
-import MuxPlayer from '@mux/mux-player-react'
-import type { ReactElement } from 'react'
+"use client"
 
-interface MuxvideoProps {
+import dynamic from 'next/dynamic'
+import type { ReactElement } from 'react'
+import { useState, useEffect } from 'react'
+
+// Define props type outside so it can be used with dynamic import
+interface MuxVideoProps {
     src: string
     className: string
     alt: string
@@ -9,8 +13,36 @@ interface MuxvideoProps {
     aspectRatio?: number | null
 }
 
-export function MuxVideo(props: MuxvideoProps): ReactElement {
+const MuxPlayer = dynamic(
+    () => import('@mux/mux-player-react').then((mod) => mod.default),
+    {
+        ssr: false,
+        loading: () => (
+            <div
+                className="bg-gray-200 animate-pulse"
+                style={{ aspectRatio: '16/9' }}
+            />
+        )
+    }
+)
+
+export function MuxVideo(props: MuxVideoProps): ReactElement {
     const { src: playbackId, blurDataURL, aspectRatio, ...restProps } = props
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+
+    if (!isClient) {
+        return (
+            <div
+                className={`bg-gray-200 ${props.className}`}
+                style={{ aspectRatio: aspectRatio ?? 16 / 9 }}
+            />
+        )
+    }
+
     return (
         <MuxPlayer
             playbackId={playbackId}

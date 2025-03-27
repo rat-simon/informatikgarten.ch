@@ -2,7 +2,7 @@
 title: ✨ Wie sagt man Aliens "Hallo"?
 display: hidden
 ---
-![[Pasted-image-20231217231735.png]]
+![[Pasted-image-20231217231735.webp]]
 *Eine künstlerische Darstellung von Pioneer 10*. Quelle: [nasa.gov](https://science.nasa.gov/mission/pioneer-10/)
 
 ## Pioneer

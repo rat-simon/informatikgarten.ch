@@ -30,14 +30,14 @@ Der Quellcode der Webseite wird künftig als Open-Source-Projekt veröffentlicht
 - [ ] Gamification
 	- [ ] Web-USB für Gamecontroller (und evtl Microbit?)
 	- [ ] Learn Godot
-- [ ] Nextra stuff
-	- [ ] Move to nextra4?
-	- [ ] Possible to remove all nextra modifications?
 - [ ] Backend
 	- [ ] Remove old code storage once UserData model is integrated
 	- [x] Nextauth move to Prisma & Prisma Connector
 		- [x] Remove SQL statements
 		- [x] Remove JWT logics
 		- [x] Testing
+- [X] Nextra stuff
+	- [X] Move to nextra4
+	- [X] Possible to remove all nextra modifications? Yes! 🥳
 - [x] Muxvideo-Blurup für Aspectratio at buildtime
 - [x] Muxvideo build errors?

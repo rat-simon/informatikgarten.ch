@@ -32,7 +32,6 @@
         "idb": "^8.0.2",
         "mdast-util-from-markdown": "^2.0.2",
         "monaco-editor": "^0.52.2",
-        "motion": "^12.5.0",
         "next": "^15.2.3",
         "next-auth": "^4.24.11",
         "next-themes": "^0.4.6",
@@ -49,6 +48,7 @@
         "vfile": "^6.0.3"
     },
     "devDependencies": {
+        "@next/bundle-analyzer": "^15.2.4",
         "@svgr/webpack": "^8.0.1",
         "@tailwindcss/postcss": "^4.0.15",
         "@types/mdast": "^4.0.4",

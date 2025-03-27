@@ -17,16 +17,16 @@ export function AuthBtn() {
             <>
                 <button
                     title="Go to dashboard"
-                    className='cursor-pointer'
+                    className='cursor-pointer w-7 h-7'
                     onClick={() => router.push(`${basePath}/dashboard`)}
                 >
                     {session.user?.image ? (
                         <Image
                             src={session.user.image}
                             alt={session.user.name ?? ''}
-                            width={50}
-                            height={50}
-                            className="w-7 h-7 rounded-full opacity-90 m-4 hover:opacity-100"
+                            width={60}
+                            height={60}
+                            className="rounded-full opacity-90 hover:opacity-100"
                         />
                     ) : (
                         <FeatherIcon size={24} icon="user-check" />

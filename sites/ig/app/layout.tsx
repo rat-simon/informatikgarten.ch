@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     'Informatikgarten'
   ],
   icons: {
-    icon: './img/logo.svg',
-    shortcut: './img/logo.svg',
-    apple: './img/logo.svg'
+    icon: '/img/logo.svg',
+    shortcut: '/img/logo.svg',
+    apple: '/img/logo.svg'
   },
   generator: 'Next.js',
   applicationName: 'informatikgarten.ch',
@@ -85,7 +85,8 @@ const navbar = (
         </span>
       </div>
     }
-    projectLink="https://github.com/marcchehab/nextras25"
+    // projectLink="https://github.com/marcchehab/nextras25"
+    projectIcon={null}
   >
     <AuthBtn />
   </Navbar>
