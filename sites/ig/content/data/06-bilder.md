@@ -50,6 +50,20 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 > 4. Was verkörpert die Datenmenge, die nötig ist, um das Bild zu speichern?
 > 5. Wie könnten Sie diese Datenmenge berechnen?
 
+> [!solution]- Lösung zu den Fragen
+> 
+> 1. Die Pixelanzahl für die Breite und Höhe. Das nennt man zusammengefasst die **Auflösung des Bildes**.
+> 2. Die Farbtiefe.
+> 3. Das Datenquader wird grösser, also erhöht sich die Datenmenge.
+> 4. Das **Volumen** des Quaders ist die Datenmenge.
+> 5. Grundsätzlich:
+> $$Breite \times \text{H\"ohe} \times Tiefe$$
+> In unserem Fall also:
+> $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe pro Kanal} \times \text{Anzahl Farbkan\"ale} )$$
+> Oder:
+> $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe insgesamt} )$$
+> Dass es keine Verwechslung gibt, präzisiert man die Farbtiefe teils mit "bits per channel" (bpc) oder "bits per pixel" (bpp). 8 bpc sind bei RGB 24 bpp.
+
 ```codepen hash=VwgdRrG height=500px
 ```
 
@@ -64,15 +78,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 
 > [!solution]- Lösung zu den Fragen
 > 
-> 1. Das **Volumen** des Quaders ist die Datenmenge.
-> 2. Grundsätzlich:
-> $$Breite \times \text{H\"ohe} \times Tiefe$$
-> In unserem Fall also:
-> $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe pro Kanal} \times \text{Anzahl Farbkan\"ale} )$$
-> Oder:
-> $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe insgesamt} )$$
-> Dass es keine Verwechslung gibt, präzisiert man die Farbtiefe teils mit "bits per channel" (bpc) oder "bits per pixel" (bpp). 8 bpc sind bei RGB 24 bpp.
-> 3. **FullHD** (oder "1080p" genannt) ist 1920x1080 Pixel. **4K** ist 3840x2160 Pixel.
+> 1. **FullHD** (oder "1080p" genannt) ist 1920x1080 Pixel. **4K** ist 3840x2160 Pixel.
 > ![[Pasted-image-20231127000239.png]]
 > 4K ist also eine viermal grössere Fläche als FullHD. Wenn Sie nun auch noch eine doppelt so grosse Farbtiefe haben, haben Sie also **achtmal mehr Daten**, die Sie herunterladen müssen. (Stellen Sie sich das als Datenquader vor!)
 > 4. Rechnen wir von Beginn an in Byte, das ist einfacher. Pro Farbkanal und Pixel haben wir 12 Bit, also 1,5 Byte pro Farbe und Pixel. Mit drei Farben sind das 4,5 Byte pro Pixel. Zudem haben wir 24 Megapixel - also 24 Millionen Pixel!
