@@ -25,7 +25,7 @@ const headingFont = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  description: 'Das offene Informatiklehrmittel.',
+  description: 'Das freie Informatiklehrmittel.',
   metadataBase: new URL('https://informatikgarten.ch'),
   keywords: [
     'Informatik',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'informatikgarten.ch'
   },
   title: {
-    default: 'informatikgarten.ch - Das offene Informatiklehrmittel',
+    default: 'informatikgarten.ch - Das freie Informatiklehrmittel',
     template: '%s - informatikgarten.ch'
   },
   openGraph: {
