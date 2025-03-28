@@ -5,11 +5,11 @@
     }
 
     .menuicon.pink span:first-child {
-        @apply bg-[hsl(340,100%,50%)];
+        @apply bg-ig-h1;
     }
 
     .menuicon.blue span:first-child {
-        @apply bg-[hsl(180,100%,50%)];
+        @apply bg-ig-h2;
     }
 }
 

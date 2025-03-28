@@ -160,7 +160,7 @@ importers:
         specifier: workspace:*
         version: link:../../packages/shared
       sql.js:
-        specifier: ^1.13.0
+        specifier: '*'
         version: 1.13.0
 
 packages:

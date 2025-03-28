@@ -16,6 +16,6 @@
 	],
 	"dependencies": {
 		"shared": "workspace:*",
-        "sql.js": "^1.13.0"
+        "sql.js": "*"
 	}
 }
