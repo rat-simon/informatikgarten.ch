@@ -5,11 +5,11 @@
     }
 
     .menuicon.pink span:first-child {
-        @apply bg-[#ed4662];
+        @apply bg-[hsl(340,100%,50%)];
     }
 
     .menuicon.blue span:first-child {
-        @apply bg-[#00d6d6];
+        @apply bg-[hsl(180,100%,50%)];
     }
 }
 
@@ -24,7 +24,7 @@
             flex-shrink: 0;
             height: 1.25rem;
             width: 1.25rem;
-            background-color: #77777788;
+            background-color: #77777777;
             color: white;
             padding: 0.05rem;
             margin-right: 0.5rem;

@@ -8,34 +8,37 @@ Informatikgarten ist jetzt open-source 🥳! Sie können den kompletten Quellcod
 
 ## Aktueller Stand und Todos
 
-- [ ] Turtle-Editor
+- [ ] Bugs
+	- [ ] StickMe CSS broken
+- [ ] Turtle editor
+	- [ ] Python Language Server for syntax highlighting und autocomplete
+	- [ ] Handin function for persistent code versions
+	- [ ] Optimize touch devices
 	- [ ] Integrate in UserData model
 	- [ ] Feedback by teachers using Excalidraw
 	- [ ] AI feedback for code
-	- [ ] Optimize touch devices
-	- [ ] Python Language Server for syntax highlighting und autocomplete
-	- [ ] Handin function for persistent code versions
-- [ ] LMS-Funktionen
+- [ ] Gamification
+	- [ ] Web-USB für Gamecontroller (und evtl Microbit?)
+	- [ ] Lesson with Godot
+- [ ] LMS
 	- [x] Klassen- und Gruppenverwaltung
 	- [x] Frage-Komponenten mit Feedback-Funktion
 	- [ ] Progress-Reporting
-- [ ] Exam solution with Safe Exam Browser (Exam.net?)
+	- [ ] Exam solution with Safe Exam Browser (Exam.net?)
 - [ ] Hosting platform
 	- [ ] Teacher management
 	- [ ] Payment solution
 	- [ ] Custom exams per teacher?
 	- [ ] Custom content per teacher?
-- [ ] Gamification
-	- [ ] Web-USB für Gamecontroller (und evtl Microbit?)
-	- [ ] Learn Godot
 - [ ] Backend
 	- [ ] Remove old code storage once UserData model is integrated
 	- [x] Nextauth move to Prisma & Prisma Connector
 		- [x] Remove SQL statements
 		- [x] Remove JWT logics
 		- [x] Testing
-- [X] Nextra stuff
-	- [X] Move to nextra4
+
+- [X] Nextra
+	- [X] Update to nextra4
 	- [X] Possible to remove all nextra modifications? Yes! 🥳
 - [x] Muxvideo-Blurup für Aspectratio at buildtime
-- [x] Muxvideo build errors?
+- [x] Muxvideo build errors? (now throttled & catching)
