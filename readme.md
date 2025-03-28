@@ -9,8 +9,8 @@
 - **Turtle-Editor**: Python mit Turtle direkt im Browser.
 - **SQLite**: Interaktive Aufgaben zu SQL direkt im Browser.
 - **Anmeldung mit Microsoft**: Schülerinnen und Schüler können sich mit ihrem Schulaccount anmelden.
-- **Quiz-Fragen**: Schülerinnen und Schüler können interaktiv Fragen beantworten, die lokal und in Postgres-SQL gespeichertw erden.
-- **Video**: Video können mit `pnpm syncvideo` automatisch auf Muxvideo geladen und in Markdown direkt werden.
+- **Quiz-Fragen**: Schülerinnen und Schüler können interaktiv Fragen beantworten, die lokal und in Postgres-SQL gespeichert werden.
+- **Video**: Videos werden mit `pnpm syncvideo` automatisch auf Muxvideo geladen und in Obsidian normal verlinkt.
 
 Den aktuellen Stand und Todos finden Sie auf [informatikgarten.ch](https://www.informatikgarten.ch).
 
@@ -19,7 +19,7 @@ Den aktuellen Stand und Todos finden Sie auf [informatikgarten.ch](https://www.i
 - `sites/ig/`: Hauptwebsite mit Inhalten für informatikgarten.ch.
 - `shared/`: Gemeinsame Komponenten und Hilfsprogramme (künftig werde ich weitere Webseiten hinzufügen).
 
-Weil alle Pakete alle Dependencies teilen, sind sie im Root installiert. So muss man keine separaten package.json führen.
+Weil alle Pakete alle Dependencies teilen, sind sie im Root installiert. So muss man keine separaten package.json-Dateien führen.
 
 ## 🤝 Mitarbeit
 

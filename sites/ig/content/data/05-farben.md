@@ -55,19 +55,6 @@ Sie sehen also: Je nachdem wie viel Informationen Sie pro Farbkanal haben, desto
 
 ![Pasted image 20231119130057](./attachments/Pasted-image-20231119130057.png)
 
-Wieso Farb*tiefe*? Weil Sie sich ein Bild nun als Quader vorstellen können.
-- Die Anzahl Pixel in der Breite ist die Breite.
-- Die Anzahl Pixel in der Höhe ist die Höhe.
-- Die Farbtiefe × Anzahl Kanäle ist die Tiefe.
-
-Die Datenmenge, die Sie benötigen, um das Bild zu speichern, ist dann einfach das Volumen des Quaders.
-
-Wenn Sie wenig Farbtiefe haben, haben Sie wenig Mischfarben, aber auch weniger Daten. Ich habe Ihnen das hier zu visualisieren versucht. 
-- Links haben Sie 1 Bit Farbtiefe - und deswegen nur wenige Farben. 
-- Rechts haben Sie 4 Bit Farbtiefe - und deswegen sehen Sie mehr Farbschattierungen, aber haben auch einen grösseren Block von Daten.
-
-![ginf-b02-colordepth-comparison](./attachments/ginf-b02-colordepth-comparison.png)
-
 Im Webdesign werden eben diese Ideen verwendet, um Farben zu mischen. Verändern Sie mal die Hintergrundfarbe des Informatikgartens und versuchen Sie, die Farbnotation mit Hashtag "#" zu verstehen!
 
 <ColorSliders />

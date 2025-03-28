@@ -1,5 +1,5 @@
 ---
-title: Zahlen zu Farben zu Pixel zu Bilder
+title: Von Farben zu ganzen Bildern
 ---
 
 > [!success]  Lernziele
@@ -19,30 +19,48 @@ Ein Smiley könnte dann so aussehen:
 
 Das ist eine sogenannte **Rastergrafik**. Die Grafik ist einfach eine Tabelle, bei der die Zellen mit Farben gefüllt werden.
 
-Die Datenmenge zu bestimmen, ist bei diesem Beispiel relativ einfach: Es sind pro Reihe jeweils zwei Byte und es gibt 16 Reihen. Also insgesamt brauchen wir 32 Byte (= 256 Bit) Speicherplatz dafür.
+Die **unkomprimierte Datenmenge** zu bestimmen, ist bei diesem Beispiel relativ einfach: Sie brauchen pro Pixel ein Bit. Pro Reihe des Bildes brauchen Sie also zwei Byte. Weil es 16 Reihen hat, bräuchten wir also insgesamt 32 Byte (= 256 Bit) Speicherplatz. Die Rechnung wäre also:
 
-Aber unsere Semantik ist doch etwas zu einfach: Wir haben ja gar keine Farben - nicht einmal Grautöne! Wir müssen also **mehr als nur 1 Bit Speicherplatz pro Pixel**  haben.
-## Interaktiv Farbtiefe verstehen
+$\text{Breite} \times \text{Höhe} \times \text{Datenmenge pro Pixel}$
 
-In der [[05-farben|letzten Lektion]] haben wir die Farbtiefe angeschaut. Jetzt wollen wir das nochmals interaktiv anschauen, ich habe Ihnen dazu etwas programmiert.
+## "Farbtiefe" geometrisch verstehen
 
+Aber natürlich wollen wir mehr Farben! Dafür nutzen wir die Idee des RGB-Farbmodells der letzten Lektion und mischen uns die Farben. Erinnern wir uns: Wir haben uns überlegt, wie viele Farben man mischen könnte, wenn man für Rot, Grün und Blau je 8 Bit zur Verfügung hätte.
+![[05-farben-formel.excalidraw]]
+Jetzt mit den Bildern haben wir alles beisammen, um zu verstehen, wieso man bei der Datenmenge pro Pixel von der **Farbtiefe** spricht. Das hat den einfachen Grund, dass Sie sich die Datenmenge eines Bildes **geometrisch als Quader vorstellen** können. Dann wäre die Farbtiefe nämlich die **dritte Dimension des Bildes** - halt eben die Tiefe.
+
+- Die Anzahl Pixel in der Breite ist die Breite.
+- Die Anzahl Pixel in der Höhe ist die Höhe.
+- Die Datenmenge pro Pixel für die Farben ist die Tiefe des Quaders.
+- Die Datenmenge des ganzen Bildes ist dann $\text{Breite} \times \text{Höhe} \times \text{Tiefe}$ - also das **Volumen des Quaders**. 
+
+Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht einem Bit.
+- Links haben wir 1 Bit Farbtiefe. Das Datenquader ist 3 Bit hoch und wir haben nur sehr wenige Mischfarben (nämlich $2^3 = 8$). 
+- Rechts haben Sie 4 Bit Farbtiefe. Das Datenquader wird jetzt 12 Bit hoch, aber dafür sehen Sie mehr Farbschattierungen, weil wir mehr Farben mischen können.
+
+![ginf-b02-colordepth-comparison](./attachments/ginf-b02-colordepth-comparison.png)
 > [!example] Diskutieren Sie
 > 
+> Ich habe Ihnen die gleiche Idee interaktiv programmiert. Als Originalbild (rechts) sehen Sie hier ein RGB-Bild mit 64 x 64 Pixeln und 2 Bit Farbtiefe. Sie können mit den Reglern die Auflösung (damit meint man die Breite und Höhe) sowie die Farbtiefe verändern. Zudem sehen Sie eine 3D-Visualisierung des Datenquaders. Spielen Sie mit den Reglern, um ein Gefühl für die Effekte der Regler zu erhalten. 
 > 
-> Als Originalbild (rechts) sehen Sie hier ein RGB-Bild mit 64 x 64 Pixeln und 8 Bit Farbtiefe. Sie können mit den Reglern die Auflösung (damit meint man die Breite und Höhe) sowie die Farbtiefe verändern. Zudem sehen Sie eine 3D-Visualisierung aller Bits, die für ein "rohes" solches Bild nötig wären.
-> 
-> Spielen Sie mit den Reglern, um ein Gefühl für die Effekte der Regler zu erhalten. Den Effekt der Farbtiefe können Sie auch mit Ihren eigenen Bildern beim [Image Bit Comparer](https://www.csfieldguide.org.nz/en/interactives/image-bit-comparer/) testen! 
-> 
-> Dann überlegen Sie sich folgende Fragen:
-> 1. Was verkörpert die Datenmenge, die nötig ist, um das Bild zu speichern?
-> 2. Wie könnten Sie diese Datenmenge berechnen?
-> 3. Sie finden zwei Versionen eines Videos: Einmal in *FullHD* und 4 Bit Farbtiefe, und einmal in *4K* mit 8 Bit Farbtiefe (recherchieren Sie die Begriffe selbst). Wie viel länger wird der Download gehen?
-> 4. Sie kaufen eine professionelle Kamera mit 24 Megapixeln und 12 Bit Farbtiefe pro Farbkanal. Zudem hat die Kamera eine Funktion, um die Bilder "roh" unkomprimiert zu speichern. Wie viel Speicher bräuchte so das grösst mögliche Bild (in Megabyte)? 
-> 5. Wie viel mehr Farben kann die Kamera mit 12 Bit Farbtiefe mischen im Vergleich zu den weitverbreiteten Formaten mit 8 Bit Farbtiefe?
-> 6. Wie würde sich die Datenmenge verändern, wenn Sie keine Farben hätten sondern nur Graustufen?
+> Überlegen Sie sich folgende Fragen:
+> 1. Welche Regler machen das Bild schärfer?
+> 2. Welcher Regler gibt Ihnen mehr Farben?
+> 3. Was passiert mit der Datenmenge, wenn Sie ein qualitativ hochwertiges Bild wollen?
+> 4. Was verkörpert die Datenmenge, die nötig ist, um das Bild zu speichern?
+> 5. Wie könnten Sie diese Datenmenge berechnen?
 
 ```codepen hash=VwgdRrG height=500px
 ```
+
+
+> [!example] Diskutieren Sie
+> 
+> Nun haben Sie das Rüstzeug, um sich folgende Fragen zu überlegen:
+> 1.  Sie finden zwei Versionen eines Videos: Einmal in *FullHD* und 4 Bit Farbtiefe, und einmal in *4K* mit 8 Bit Farbtiefe (recherchieren Sie die Begriffe selbst). Wie viel länger wird der Download gehen?
+> 2. Sie kaufen eine professionelle Kamera mit 24 Megapixeln und 12 Bit Farbtiefe pro Farbkanal. Zudem hat die Kamera eine Funktion, um die Bilder "roh" unkomprimiert zu speichern. Wie viel Speicher bräuchte so das grösst mögliche Bild (in Megabyte)? 
+> 3. Wie viel mehr Farben kann die Kamera mit 12 Bit Farbtiefe mischen im Vergleich zu den weitverbreiteten Formaten mit 8 Bit Farbtiefe?
+> 4. Wie würde sich die Datenmenge verändern, wenn Sie keine Farben hätten sondern nur Graustufen?
 
 > [!solution]- Lösung zu den Fragen
 > 
@@ -56,19 +74,18 @@ In der [[05-farben|letzten Lektion]] haben wir die Farbtiefe angeschaut. Jetzt w
 > Dass es keine Verwechslung gibt, präzisiert man die Farbtiefe teils mit "bits per channel" (bpc) oder "bits per pixel" (bpp). 8 bpc sind bei RGB 24 bpp.
 > 3. **FullHD** (oder "1080p" genannt) ist 1920x1080 Pixel. **4K** ist 3840x2160 Pixel.
 > ![Pasted image 20231127000239](./attachments/Pasted-image-20231127000239.png)
-> 4K ist also eine viermal grössere Fläche als FullHD. Wenn Sie nun auch noch eine doppelt so grosse Farbtiefe haben, haben Sie also **achtmal mehr Daten**, die Sie herunterladen müssen. (Stellen Sie sich das als Würfel vor!)
-> 4. Rechnen wir von Beginn an in Byte, das ist einfacher. Pro Farbkanal und Pixel haben wir 12 Bit, also 1,5 Byte pro Farbe und Pixel. Mit drei Farben sind das 4,5 Byte pro Pixel. Nun haben wir 24 Megapixel - also 24 Millionen Pixel!
+> 4K ist also eine viermal grössere Fläche als FullHD. Wenn Sie nun auch noch eine doppelt so grosse Farbtiefe haben, haben Sie also **achtmal mehr Daten**, die Sie herunterladen müssen. (Stellen Sie sich das als Datenquader vor!)
+> 4. Rechnen wir von Beginn an in Byte, das ist einfacher. Pro Farbkanal und Pixel haben wir 12 Bit, also 1,5 Byte pro Farbe und Pixel. Mit drei Farben sind das 4,5 Byte pro Pixel. Zudem haben wir 24 Megapixel - also 24 Millionen Pixel!
 > 	$$4,5 \text{ Byte} \times 24 \text{ Megapixel}$$
 > 	Das macht **108 Megabyte** für ein Bild!
-> 5. Mit 8-Bit hat jeder Farbkanal $2^8 = 256$ mögliche Werte. Mit 12-Bit hat jeder Kanal $2^{12} = 4096$ mögliche Werte.
-> 	
-> 	$\frac{2^{12}}{2^8} = 2^{12-8} = 2^4 = 16$
-> 	
-> 	Das bedeutet, dass mit 12-Bit statt 8-Bit **16-mal mehr Farbabstufungen pro Kanal** möglich sind.
-> 	
-> 	Für die Farbe an sich bedeutet das, Sie haben $16 \times 16 \times 16$ mal mehr Kombinationen, also **4096-mal mehr Farben**! Anstatt "nur" 16,8 Millionen Farben haben Sie **68,7 Milliarden Farben**.
-> 	
-> 6. Ein Bild aus Graustufen hat einfach einen Kanal anstatt drei Kanäle pro Farbe. Das heisst: Die Datenmenge sollte ein Drittel der Datenmenge von RGB sein.
+> 5. Erinnern Sie sich an die Formel für die Anzahl Mischfarben bei 8 Bit Farbtiefe.
+> 	![[05-farben-formel.excalidraw]]
+> 	Wir müssen nun die Anzahl Farben der Kamera und die Farben bei 8 Bit ins Verhältnis setzen:
+> 	$$
+> 	\frac{(2^{12})^3}{(2^8)^3} = \frac{2^{36}}{2^{24}} = 2^{36-24} = 2^{12} = 4096
+> 	$$
+> 	Das bedeutet: Die 12-Bit-Kamera kann 4096-mal mehr Farben mischen als ein normaler Computer! Anstatt "nur" 16,8 Millionen Farben haben Sie **68,7 Milliarden Farben**.
+> 6. Ein Bild aus Graustufen hat einfach einen Kanal anstatt drei Kanäle pro Farbe. Das heisst: Die unkomprimierte Datenmenge ist ein Drittel der Datenmenge von RGB.
 
 ## Vektorgrafiken
 
@@ -89,10 +106,15 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > 1. Vergrössern Sie den Kreis.
 > 2. Geben Sie dem Kreis ein passendes Gelb oder Hellorange.
 > 3. Verschieben Sie den Kreis weiter rechts.
-> 4. Machen Sie das gerundete Quadrat im Hintergrund blau.
-> 5. Fügen Sie einen zweiten, grünen Kreis hinzu
+> 4. Fügen Sie einen zweiten, grünen Kreis hinzu.
+> 5. Machen Sie das gerundete Quadrat im Hintergrund blau.
+> 6. Können Sie sich einen Sinn darauf reimen, wie die Form des gerundeten Quadrats gespeichert ist?
 > 
-> Falls Ihnen noch Zeit bleibt, experimentieren Sie mit weiteren SVG-Grafiken links in der Auswahl.
+> Installieren Sie das Open-Source-Programm [Inkscape](https://inkscape.org/).
+> 7. Speichern Sie sich Ihr SVG von svgviewer.dev als normale Textdatei.
+> 8. Ändern Sie die Dateiendung auf `.svg`.
+> 9. Öffnen Sie die svg-Datei in Inkscape. Jetzt können Sie die Vektorgrafik visuell bearbeiten!
+> 10. Nochmal: Wie wird die Form des gerundeten Quadrats gespeichert?
 
 
 > [!example] Diskutieren Sie 
