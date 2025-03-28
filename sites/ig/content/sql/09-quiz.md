@@ -1,16 +1,15 @@
 ---
 title: Checkpoint-Quiz
 ---
-
 In diesem Quiz arbeiten Sie mit Daten von Netflix ([Quelle](https://github.com/lerocha/netflixdb)), die zeigen, was beim Streaminganbieter wie oft geschaut wird.
 
 ## Datenbankschema und Primärschlüssel
 
 Typischerweise stellt man Datenbanken in einem sogenannten **Schema** dar: Das ist eine Übersicht der Tabellen, ihren Spalten, deren Datentypen, sowie den Beziehungen zwischen den Tabellen - aber ohne Daten! In unserem Beispiel sieht das Schema so aus:
 
-<StickMe>
+
 ![[netflixdb.png]] 
-</StickMe>
+
 
 Einige Beobachtungen, damit Sie sehen, was hier alles dargestellt ist:
 
