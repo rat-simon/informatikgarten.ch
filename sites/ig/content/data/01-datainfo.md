@@ -20,17 +20,15 @@ Dieser Block dreht sich um die Frage: **Wie repräsentieren wir die Welt mit 0 u
 
 Dazu folgendes Beispiel: Überlegen Sie sich, was Sie hier sehen.
 
-![Pasted image 20231105144113](./attachments/Pasted-image-20231105144113.png)
-
-Man muss wissen, wie man diese Rohdaten interpretieren soll - sonst kann man daraus keine Information ziehen.
+![[B13.excalidraw]]
 
 > [!solution]- Lösung
 > 
-> Die **Rohdaten**, die Sie hier sehen, haben keine Bedeutung. Es ist einfach ein Rechteck oder eine gerade Linie, und eine gekrümmte Linie.
+> Die **Rohdaten**, die Sie hier sehen, haben keine inhärente Bedeutung. Objektiv existieren eigentlich einfach zwei dunkle Flecken, die vielleicht Ihr Gedächnis in Schwung bringen, aber die Bedeutung, die Sie eventuell hinein interpretieren, existiert nicht "da draussen" in der Welt.
 > 
-> **Information** wird daraus erst, wenn Sie wissen, wie Sie die Daten interpretieren müssen. Ist es eine Zahl oder ein Buchstabe? Je nachdem ist die Bedeutung ganz anders!
+> **Information** wird daraus erst, wenn Sie sich sicher sind, wie Sie die Daten interpretieren müssen. Ist es eine Zahl oder ein Buchstabe? Je nachdem ist die Bedeutung ganz anders!
 > 
-> ![Pasted image 20231105145319](./attachments/Pasted-image-20231105145319.png)
+> ![[B13-full.excalidraw]]
 
 ## Simple Datentypen und Dateiformate
 

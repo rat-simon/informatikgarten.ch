@@ -39,6 +39,6 @@ Informatikgarten ist jetzt open-source 🥳! Sie können den kompletten Quellcod
 
 - [X] Nextra
 	- [X] Update to nextra4
-	- [X] Possible to remove all nextra modifications? Yes! 🥳
+	- [X] Possible to move all nextra modifications to site and use nextra as normal package? Yes! 🥳
 - [x] Muxvideo-Blurup für Aspectratio at buildtime
 - [x] Muxvideo build errors? (now throttled & catching)
