@@ -75,8 +75,8 @@ export function Codepen(props: any) {
             <div
                 ref={codepenWrapperRef}
                 className={cn(
-                    'codepen-wrapper _relative _w-full _overflow-hidden _z-20',
-                    !isFullscreen && '_resize'
+                    'codepen-wrapper relative w-full overflow-hidden z-20',
+                    !isFullscreen && 'resize'
                 )}
                 style={{ height: props.height ?? '300px' }}
             >
@@ -100,7 +100,7 @@ export function Codepen(props: any) {
                 )}
                 <button
                     onClick={toggleFullscreen}
-                    className="_absolute _bottom-1 _right-2.5 _text-white _rounded _overflow-visible _z-30 _bg-neutral-700 _p-1"
+                    className="absolute bottom-1 right-2.5 text-white rounded overflow-visible z-30 bg-neutral-700 p-1"
                 >
                     {isFullscreen ? (
                         <FeatherIcon size={14} icon="minimize-2" />
@@ -127,7 +127,7 @@ export function RenderHtml(props: any) {
 
     return (
         <>
-            <div className="_w-full _text-center">
+            <div className="w-full text-center">
                 <style dangerouslySetInnerHTML={{ __html: css }} />
                 <div dangerouslySetInnerHTML={{ __html: html }} />
             </div>
