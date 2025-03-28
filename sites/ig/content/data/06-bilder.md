@@ -78,9 +78,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 > 4. Rechnen wir von Beginn an in Byte, das ist einfacher. Pro Farbkanal und Pixel haben wir 12 Bit, also 1,5 Byte pro Farbe und Pixel. Mit drei Farben sind das 4,5 Byte pro Pixel. Zudem haben wir 24 Megapixel - also 24 Millionen Pixel!
 > 	$$4,5 \text{ Byte} \times 24 \text{ Megapixel}$$
 > 	Das macht **108 Megabyte** für ein Bild!
-> 5. Erinnern Sie sich an die Formel für die Anzahl Mischfarben bei 8 Bit Farbtiefe.
-> 	![[05-farben-formel.excalidraw]]
-> 	Wir müssen nun die Anzahl Farben der Kamera und die Farben bei 8 Bit ins Verhältnis setzen:
+> 5. Erinnern Sie sich an die Formel für die Anzahl Mischfarben bei 8 Bit Farbtiefe. Wir müssen nun die Anzahl Farben der Kamera und die Farben bei 8 Bit ins Verhältnis setzen:
 > 	$$
 > 	\frac{(2^{12})^3}{(2^8)^3} = \frac{2^{36}}{2^{24}} = 2^{36-24} = 2^{12} = 4096
 > 	$$
