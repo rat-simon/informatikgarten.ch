@@ -5,6 +5,7 @@ import { useMDXComponents as getDocsMDXComponents } from 'nextra-theme-docs'
 import {
   Codepen,
   ColorSliders,
+  ColorTitle,
   Excalidraw,
   Flex,
   IsAuthenticated,
@@ -57,6 +58,7 @@ export const useMDXComponents: typeof getDocsMDXComponents = components => ({
   ColorSliders,
   Tabs,
   Flex,
+  h1: ColorTitle,
   StickMe,
   blockquote: (props: OfmCalloutProps) =>
     props.className?.includes('callout-foldable') ? (

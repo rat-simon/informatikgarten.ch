@@ -1,6 +1,6 @@
 export { Excalidraw } from './Excalidraw'
 export { MuxVideo } from './MuxVideo'
-
+export { ColorTitle } from './ColorTitle'
 export { TurtleEditor } from './TurtleEditor'
 export { Dashboard as UserDashboard } from './Dashboard/Dashboard'
 export { Codepen, RenderHtml } from './CodeblockCustomLangs'

@@ -150,7 +150,7 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
                         'display: block;'}
                         width: ${dimensionsRef.current.contentWidth}px;
                     }
-                    html.has-sticky-content .nextra-sidebar-container {
+                    html.has-sticky-content .nextra-sidebar {
                         width: 0px;
                     }
                     html.has-sticky-content .nextra-toc div {

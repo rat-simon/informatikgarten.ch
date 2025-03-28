@@ -85,7 +85,6 @@ const navbar = (
         </span>
       </div>
     }
-    // projectLink="https://github.com/marcchehab/nextras25"
     projectIcon={null}
   >
     <AuthBtn />
@@ -105,7 +104,7 @@ const RootLayout: FC<{
             navbar={navbar}
             feedback={{ content: null }}
             pageMap={pageMap}
-            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/sites/ig/content"
+            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/sites/ig"
             editLink="Verbesserung vorschlagen"
             sidebar={{ defaultMenuCollapseLevel: 1 }}
             footer={<></>}

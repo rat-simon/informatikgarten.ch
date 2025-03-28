@@ -2,13 +2,11 @@
 title: Home
 ---
 
-Herzlich willkommen im Informatikgarten! Hier finden Sie alle Unterlagen zu meinem Unterricht.
+# Grüezi und willkommen
 
-Ich entwickle die Webseite fast täglich weiter. Wenn Sie Fehler finden, können Sie mir gerne auf Teams schreiben.
+Informatikgarten ist jetzt open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und Verbesserungen vorschlagen.
 
-Der Quellcode der Webseite wird künftig als Open-Source-Projekt veröffentlicht. Dann können Sie Korrekturen auch direkt auf Github vorschlagen.
-
-## Funktionale Todos
+## Aktueller Stand und Todos
 
 - [ ] Turtle-Editor
 	- [ ] Integrate in UserData model

@@ -1,0 +1,35 @@
+.title {
+    background-image: linear-gradient(to right,
+            #ff0000,
+            #ff8000,
+            #ffff00,
+            #80ff00,
+            #00ff00,
+            #00ff80,
+            #00ffff,
+            #0080ff,
+            #0000ff,
+            #8000ff,
+            #ff00ff,
+            #ff0000);
+    background-size: 300% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow-text-flow 30s linear infinite;
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.125rem;
+    font-size: min(4rem, max(8vw, 2.8rem));
+}
+
+@keyframes rainbow-text-flow {
+    0% {
+        background-position: 0% center;
+    }
+
+    100% {
+        background-position: 300% center;
+    }
+}
