@@ -38,7 +38,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 - Links haben wir 1 Bit Farbtiefe. Das Datenquader ist 3 Bit hoch und wir haben nur sehr wenige Mischfarben (nämlich $2^3 = 8$). 
 - Rechts haben Sie 4 Bit Farbtiefe. Das Datenquader wird jetzt 12 Bit hoch, aber dafür sehen Sie mehr Farbschattierungen, weil wir mehr Farben mischen können.
 
-![ginf-b02-colordepth-comparison](./attachments/ginf-b02-colordepth-comparison.png)
+![[ginf-b02-colordepth-comparison.png]]
 > [!example] Diskutieren Sie
 > 
 > Ich habe Ihnen die gleiche Idee interaktiv programmiert. Als Originalbild (rechts) sehen Sie hier ein RGB-Bild mit 64 x 64 Pixeln und 2 Bit Farbtiefe. Sie können mit den Reglern die Auflösung (damit meint man die Breite und Höhe) sowie die Farbtiefe verändern. Zudem sehen Sie eine 3D-Visualisierung des Datenquaders. Spielen Sie mit den Reglern, um ein Gefühl für die Effekte der Regler zu erhalten. 
@@ -73,7 +73,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 > $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe insgesamt} )$$
 > Dass es keine Verwechslung gibt, präzisiert man die Farbtiefe teils mit "bits per channel" (bpc) oder "bits per pixel" (bpp). 8 bpc sind bei RGB 24 bpp.
 > 3. **FullHD** (oder "1080p" genannt) ist 1920x1080 Pixel. **4K** ist 3840x2160 Pixel.
-> ![Pasted image 20231127000239](./attachments/Pasted-image-20231127000239.png)
+> ![[Pasted-image-20231127000239.png]]
 > 4K ist also eine viermal grössere Fläche als FullHD. Wenn Sie nun auch noch eine doppelt so grosse Farbtiefe haben, haben Sie also **achtmal mehr Daten**, die Sie herunterladen müssen. (Stellen Sie sich das als Datenquader vor!)
 > 4. Rechnen wir von Beginn an in Byte, das ist einfacher. Pro Farbkanal und Pixel haben wir 12 Bit, also 1,5 Byte pro Farbe und Pixel. Mit drei Farben sind das 4,5 Byte pro Pixel. Zudem haben wir 24 Megapixel - also 24 Millionen Pixel!
 > 	$$4,5 \text{ Byte} \times 24 \text{ Megapixel}$$
@@ -93,13 +93,13 @@ Wir haben bislang von Rastergrafiken gesprochen, die ein Bild in Pixel aufteilen
 
 Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch als geometrische Formen. Ein Beispiel eines Kreises, bei dem Rastergrafik denkbar schlecht wegkommen:
 
-![rastervektor 1](./attachments/rastervektor-1.svg)
+![[rastervektor-1.svg]]
 
 > [!example] Editieren Sie eine SVG-Grafik
 > 
 > Gehen Sie zu [svgviewer.dev](https://www.svgviewer.dev/). Dort sehen Sie standardmässig dieses Logo, das vom SVG-Code links kreiert wird.
 > 
-> ![Pasted image 20231203215601](./attachments/Pasted-image-20231203215601.png)
+> ![[Pasted-image-20231203215601.png]]
 > 
 > Versuchen Sie folgende Veränderungen selbst vorzunehmen.
 > 
@@ -120,8 +120,8 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > [!example] Diskutieren Sie 
 > 
 > Was sind wohl die Vor- und Nachteile der beiden Grafiktypen? Hier einige Bilder als Inspiration:
-> ![Pasted image 20231127070546](./attachments/Pasted-image-20231127070546.png)
-> ![Pasted image 20231127070715](./attachments/Pasted-image-20231127070715.png)
+> ![[Pasted-image-20231127070546.webp]]
+> ![[Pasted-image-20231127070715.png]]
 > 
 > 
 > 
@@ -344,7 +344,7 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > $$\text{Anzahl Pixel} \times \text{Farbinformation pro Pixel}$$
 > Wir haben uns die Datenmenge als Quader vorgestellt und für die Farbinformation pro Pixel den Begriff der **Farbtiefe** benutzt.
 > $$Pixelbreite \times \text{Pixelh\"ohe} \times ( \text{Farbtiefe pro Kanal} \times \text{Anzahl Farbkan\"ale} )$$
-> ![ginf-b02-colordepth-comparison](./attachments/ginf-b02-colordepth-comparison.png)
+> ![[ginf-b02-colordepth-comparison.png]]
 > 
 > Aufgepasst: Die Farbtiefe wird teils pro Farbkanal und teils pro Pixel angegeben – das ist ein grosser Unterschied! Gang und gäbe ist z.B. eine Farbtiefe von **8-Bit pro Farbkanal**. Ein RGB-Bild hat drei Farben, also ist die entsprechende **Farbtiefe pro Pixel 24-Bit**.
 > 
@@ -356,6 +356,6 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > 
 > Vektorgrafiken lassen sich **ohne Qualitätsverlust** vergrössern. PDFs bestehen hauptsächlich aus Vektorgrafiken. Typische Beispiele sind Schriftarten, Logos und Grafiken mit scharfen Linien.
 > 
-> ![rastervektor 1](./attachments/rastervektor-1.svg)
+> ![[rastervektor-1.svg]]
 > 
 > Das verbreitetste Grafikformat für Vektoren ist SVG, das Teil der modernen Webstandards ist und sich nahtlos in Webseiten integriert. Als solche können SVG-Elemente direkt animiert werden – wie z.B. der Play-Button bei Youtube.
