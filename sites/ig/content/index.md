@@ -4,9 +4,9 @@ title: Home
 
 # Grüezi und willkommen
 
-Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und Verbesserungen vorschlagen.
+Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen.
 
-Nachdem ich Hunderte Stunden in diese Webseite gesteckt habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲 
+Nachdem ich Hunderte Stunden in diese Webseite gesteckt habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
 
 - *"Informatikgarten ist eine SUPER Webseite und mega hilfreich."*
 - *"Informatikgarten ist sehr gut und machte mir das Lernen einfach."*
