@@ -12,12 +12,12 @@ Nachdem ich Hunderte Stunden in diese Webseite gesteckt habe, hat mich das durch
 - *"Informatikgarten ist sehr gut und machte mir das Lernen einfach."*
 - *"Informatikgarten ist perfekt für mich zum Lernen, denn Sie erklären es sehr verständlich und haben auch gute Videos dazu hochgeladen."*
 - *"Die Lernvideos sind super."*
-- *"Ich finde die Webseite Informatikgarten sehr toll und das man dort schwierige Sachen nachlesen kann, oder auch das die Erklärungen sehr ausführlich sind."*
+- *"Ich finde die Webseite Informatikgarten sehr toll und dass man dort schwierige Sachen nachlesen kann, oder auch das die Erklärungen sehr ausführlich sind."*
 - *"Ich finde es sehr gut, dass auf Informatikgarten alles erklärt ist."*
 
 ## Variowoche: Special Effects mit Blender
 
-In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Videos produziert. Zudem bin ich seit 24 Jahren beim Open-Source-3D-Programm Blender mit dabei. Dieser Jahr mach ich deswegen eine Variowoche zu Blender und Special Effects! (22. September - 26. September 2025)
+In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Videos produziert. Zudem bin ich seit 24 Jahren beim Open-Source-3D-Programm Blender mit dabei. Dieses Jahr mache ich deswegen eine Variowoche zu Blender und Special Effects! (22. September - 26. September 2025)
 
 ![[vario.webp]]
 
