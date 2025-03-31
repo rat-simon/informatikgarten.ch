@@ -33,6 +33,12 @@ Wunderbar. Machen Sie sich das Leben also einfach: Schauen wir bis auf Weiteres 
 
 Selektieren Sie aus der Tabelle `view_summary` die Spalten `id` und `hours_viewed` der zehn Datensätze, die in einem halben Jahr am meisten geschaut wurden.
 
+
+| id                                  | hours_viewed                                  |
+| ----------------------------------- | --------------------------------------------- |
+| `id` aus der Tabelle `view_summary` | `hours_viewed` aus der Tabelle `view_summary` |
+
+
 <SQLQuestion id="most-watched"
 defaultQuery={`SELECT id, hours_viewed
 FROM view_summary 
@@ -45,7 +51,11 @@ LIMIT 10`}/>
 
 ## Frage 2: Meistgeschaute Filme
 
-Finden Sie nun die Filmtitel (`title`) und `hours_viewed` der zehn meistgeschauten **Filme** in einem Halbjahr heraus. Wir selektieren also **nur Filme**, Serien werden ignoriert.
+Finden Sie nun die Filmtitel und `hours_viewed` der zehn meistgeschauten **Filme** in einem Halbjahr heraus. Wir selektieren also **nur Filme**, Serien werden ignoriert.
+
+| title                        | hours_viewed                                  |
+| ---------------------------- | --------------------------------------------- |
+| `title` aus der Tabelle `movie` | `hours_viewed` aus der Tabelle `view_summary` |
 
 <SQLQuestion id="most-watched-movietitle"
 defaultQuery={`SELECT title, hours_viewed 
@@ -62,7 +72,11 @@ LIMIT 10;`}
 
 ## Frage 3: Serien dominieren
 
-Hmm... Jetzt haben sich die Zahlen aber stark verändert. Können Sie sich das erklären? Schauen wir uns doch mal die **50 meistgeschauten Inhalte** in einem Halbjahr an. Selektieren Sie erneut die Filmtitel (`title`) und `hours_viewed`, aber zeigen Sie zusätzlich auch die `hours_viewed` von Serien an - die also keinen `title` in der Tabelle `movie` haben.
+Hmm... Jetzt haben sich die Zahlen stark verändert. Können Sie sich das erklären? Schauen wir uns doch mal die **50 meistgeschauten Inhalte generell** in einem Halbjahr an. Selektieren Sie erneut die Filmtitel (`title`) und `hours_viewed`, aber zeigen Sie zusätzlich auch die `hours_viewed` von Serien an - die also keinen `title` in der Tabelle `movie` haben.
+
+| title                                            | hours_viewed                                  |
+| ------------------------------------------------ | --------------------------------------------- |
+| `title` aus der Tabelle `movie` (kann NULL sein) | `hours_viewed` aus der Tabelle `view_summary` |
 
 <SQLQuestion id="most-watched-thing"
 defaultQuery={`SELECT title, hours_viewed 
@@ -77,20 +91,17 @@ ORDER BY hours_viewed DESC
 LIMIT 50;`}
 />
 
-## Frage 4: Meistgeschaute Staffeln und Serien
+## Frage 4: Meistgeschaute Staffeln und Filme
 
-Sie sehen: Serien dominieren die Ranglisten total! Versuchen wir nun zusätzlich herauszufinden, welche Serien oft geschaut werden.
+Sie sehen: Serien dominieren die Ranglisten total! Versuchen wir nun zusätzlich herauszufinden, welche Serienstaffeln oft geschaut werden.
 
-Erweitern Sie nun die 50 meistgeschauten Inhalte in einem Halbjahr mit den Titeln der Filme und der Serienstaffeln. Ich habe die Spalten mit Alias-Namen vorgegeben.
+Erweitern Sie die 50 meistgeschauten Inhalte in einem Halbjahr mit den Titeln der Filme und der Serienstaffeln. Achtung: Den `title`-Spalten habe im Ergebnis andere Namen gegeben.
+
+| season_title                     | movie_title                     | hours_viewed                                  |
+| -------------------------------- | ------------------------------- | --------------------------------------------- |
+| `title` aus der Tabelle `season` | `title` aus der Tabelle `movie` | `hours_viewed` aus der Tabelle `view_summary` |
 
 <SQLQuestion id="50-most-watched-seasons-and-movies"
-defaultQuery={`SELECT season.title as season_title, movie.title as movie_title, hours_viewed 
-FROM view_summary 
-LEFT JOIN movie ...?
-LEFT JOIN season ...?
-WHERE duration = 'SEMI_ANNUALLY' 
-ORDER BY hours_viewed DESC 
-LIMIT 50;`}
 correctQuery={`SELECT season.title as season_title, movie.title as movie_title, hours_viewed
 FROM view_summary 
 LEFT JOIN movie ON view_summary.movie_id = movie.id 
@@ -102,14 +113,51 @@ LIMIT 50;`}
 
 ## Frage 5: Meistgeschaute Serien
 
-<SQLQuestion id="most-watched-50"
-defaultQuery={`SELECT movie.title AS movie_title, tv_show.title AS tv_show, ? as hours ...`}
-correctQuery={`SELECT movie.title AS movie_title, tv_show.title AS tv_show, sum(hours_viewed) as hours 
-FROM view_summary s LEFT JOIN season ON s.season_id = season.id 
-LEFT JOIN tv_show ON season.tv_show_id = tv_show.id 
-LEFT JOIN movie ON s.movie_id = movie.id 
-WHERE duration = "WEEKLY" 
-GROUP BY movie_title, tv_show 
+Nun nutzen wir eine Aggregatsfunktion, um herauszufinden, welche 10 Serien am meisten geschaut wurde - also über alle Staffeln und Halbjahresperioden hinweg!
+
+Dazu brauchen Sie erstmals einen `JOIN` über zwei Tabellen. Keine Sorge, das ist relativ einfach: Machen Sie einfach einen `JOIN` pro Beziehung - also insgesamt zwei separate `JOIN`s.
+
+| show_title                        | hours                                               |
+| --------------------------------- | --------------------------------------------------- |
+| `title` aus der Tabelle `tv_show` | Summe der `hours_viewed` aller Staffeln einer Serie |
+
+<SQLQuestion id="most-watched-series-alltime"
+defaultQuery={`SELECT tv_show.title as show_title, [...] as hours
+FROM view_summary 
+JOIN season ON [Verknüpfung view_summary - season]
+JOIN tv_show ON [Verknüpfung season - tv_show]
+WHERE duration = 'SEMI_ANNUALLY' 
+GROUP BY [...]
 ORDER BY hours DESC 
-LIMIT 50`}
+LIMIT 10;`}
+correctQuery={`SELECT tv_show.title as show_title, sum(hours_viewed) as hours
+FROM view_summary 
+JOIN season ON view_summary.season_id = season.id
+JOIN tv_show ON season.tv_show_id = tv_show.id
+WHERE duration = 'SEMI_ANNUALLY' 
+GROUP BY show_title
+ORDER BY hours DESC 
+LIMIT 10;`}
+/>
+
+## Frage 6: Meistgeschaute Serie in einem Halbjahr
+
+Bei der vorhergehenden Fragen haben wir alle Halbjahresperioden einer Serie aufaddiert. So haben ältere Serien wie `Suits (2011)` oder `Grey's Anatomy` natürlich einen grossen Vorteil!
+
+Korrigieren wir das. Ändern Sie Ihr Query so ab, dass weiterhin jeweils die Zahlen aller Staffeln einer Serie aufaddiert werden - aber nur innerhalb derselben Halbjahresperiode. Als kleiner Tipp: Daten derselben Periode haben dasselbe `start_date`. Die Änderung im Query ist letztlich minim!
+
+| show_title                        | hours                                               |
+| --------------------------------- | --------------------------------------------------- |
+| `title` aus der Tabelle `tv_show` | Summe der `hours_viewed` aller Staffeln einer Serie |
+
+<SQLQuestion id="most-watched-50"
+defaultQuery={`SELECT [...]`}
+correctQuery={`SELECT tv_show.title as show_title, sum(hours_viewed) as hours
+FROM view_summary 
+JOIN season ON view_summary.season_id = season.id
+JOIN tv_show ON season.tv_show_id = tv_show.id
+WHERE duration = 'SEMI_ANNUALLY' 
+GROUP BY show_title, start_date
+ORDER BY hours DESC 
+LIMIT 10;`}
 />

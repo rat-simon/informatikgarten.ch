@@ -1,9 +1,9 @@
-import Editor from '@monaco-editor/react'
-import { isTeacherCS, logger } from '../../utils'
-import { useTheme } from 'next-themes'
-import { useEffect, useState, JSX } from 'react'
-import initSqlJs, { Database, SqlJsStatic } from 'sql.js'
-import { useMDXComponents } from 'nextra-theme-docs'
+import Editor from "@monaco-editor/react";
+import { isTeacherCS, logger } from "../../utils";
+import { useTheme } from "next-themes";
+import { useEffect, useState, JSX } from "react";
+import initSqlJs, { Database, SqlJsStatic } from "sql.js";
+import { useMDXComponents } from "nextra-theme-docs";
 
 const {
     tr: Tr,
@@ -11,117 +11,119 @@ const {
     td: Td,
     table: Table,
     ...docsComponents
-  } = useMDXComponents()
+} = useMDXComponents();
 
 // Define types for SQL.js results
 interface SqlResultColumn {
-    columns: string[]
-    values: any[][]
+    columns: string[];
+    values: any[][];
 }
 
 // Database singleton for reuse
-let sqlInstance: SqlJsStatic | null = null
-let dbInstance: Database | null = null
+let sqlInstance: SqlJsStatic | null = null;
+let dbInstance: Database | null = null;
 
 // Props for SQLQuestion component
 interface SQLQuestionProps {
-    id: string
-    dbPath?: string
-    defaultQuery?: string
-    correctQuery?: string
-    correctData?: SqlResultColumn[]
-    children?: React.ReactNode
+    id: string;
+    dbPath?: string;
+    defaultQuery?: string;
+    correctQuery?: string;
+    correctData?: SqlResultColumn[];
+    children?: React.ReactNode;
 }
 
 export function SQLQuestion({
     id,
-    dbPath = '/sql/netflixdb.sqlite',
-    defaultQuery = 'SELECT title FROM movie LIMIT 10;',
+    dbPath = "/sql/netflixdb.sqlite",
+    defaultQuery = "SELECT title FROM movie LIMIT 10;",
     correctQuery,
     correctData: providedCorrectData,
-    children
+    children,
 }: SQLQuestionProps): JSX.Element {
-    const [query, setQuery] = useState<string>(defaultQuery)
-    const [results, setResults] = useState<SqlResultColumn[]>([])
+    const [query, setQuery] = useState<string>(defaultQuery);
+    const [results, setResults] = useState<SqlResultColumn[]>([]);
     const [generatedCorrectData, setGeneratedCorrectData] = useState<
         SqlResultColumn[]
-    >([])
-    const [error, setError] = useState<string | null>(null)
-    const [isLoading, setIsLoading] = useState<boolean>(false)
-    const [isDbReady, setIsDbReady] = useState<boolean>(false)
-    const [isCorrect, setIsCorrect] = useState<boolean | null>(null)
-    const [showSolution, setShowSolution] = useState<boolean>(false)
-    const { resolvedTheme } = useTheme()
+    >([]);
+    const [error, setError] = useState<string | null>(null);
+    const [isLoading, setIsLoading] = useState<boolean>(false);
+    const [isDbReady, setIsDbReady] = useState<boolean>(false);
+    const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
+    const [showSolution, setShowSolution] = useState<boolean>(false);
+    const { resolvedTheme } = useTheme();
 
     // Use either provided or generated correct data
-    const correctData = providedCorrectData || generatedCorrectData
+    const correctData = providedCorrectData || generatedCorrectData;
 
     // Initialize database on component mount
     useEffect(() => {
         async function initDatabase(): Promise<void> {
             if (dbInstance) {
-                setIsDbReady(true)
-                return
+                setIsDbReady(true);
+                return;
             }
 
-            setIsLoading(true)
-            setError(null)
+            setIsLoading(true);
+            setError(null);
 
             try {
                 // Initialize SQL.js once
                 if (!sqlInstance) {
                     sqlInstance = await initSqlJs({
-                        locateFile: file => `/sql/wasm/${file}`
-                    })
+                        locateFile: (file) => `/sql/wasm/${file}`,
+                    });
                 }
 
                 // Load database file
-                const response = await fetch(dbPath)
+                const response = await fetch(dbPath);
                 if (!response.ok) {
                     throw new Error(
                         `Failed to load database: ${response.status} ${response.statusText}`
-                    )
+                    );
                 }
 
-                const arrayBuffer = await response.arrayBuffer()
-                const uInt8Array = new Uint8Array(arrayBuffer)
+                const arrayBuffer = await response.arrayBuffer();
+                const uInt8Array = new Uint8Array(arrayBuffer);
 
                 // Create database from file
-                dbInstance = new sqlInstance.Database(uInt8Array)
+                dbInstance = new sqlInstance.Database(uInt8Array);
 
                 // Verify database with a test query
-                const versionQuery = dbInstance.exec('SELECT sqlite_version();')
+                const versionQuery = dbInstance.exec(
+                    "SELECT sqlite_version();"
+                );
                 console.log(
-                    'Database loaded. SQLite version:',
-                    versionQuery[0]?.values[0][0] || 'Unknown'
-                )
+                    "Database loaded. SQLite version:",
+                    versionQuery[0]?.values[0][0] || "Unknown"
+                );
 
-                setIsDbReady(true)
+                setIsDbReady(true);
             } catch (err: any) {
-                console.error('Database initialization failed:', err)
-                setError(`Failed to initialize database: ${err.message}`)
-                setIsDbReady(false)
+                console.error("Database initialization failed:", err);
+                setError(`Failed to initialize database: ${err.message}`);
+                setIsDbReady(false);
 
                 // Clean up if initialization failed
                 if (dbInstance) {
-                    dbInstance.close()
-                    dbInstance = null
+                    dbInstance.close();
+                    dbInstance = null;
                 }
             } finally {
-                setIsLoading(false)
+                setIsLoading(false);
             }
         }
 
-        initDatabase()
+        initDatabase();
 
         // Cleanup when component unmounts
         return () => {
             if (dbInstance) {
-                dbInstance.close()
-                dbInstance = null
+                dbInstance.close();
+                dbInstance = null;
             }
-        }
-    }, [dbPath])
+        };
+    }, [dbPath]);
 
     // Generate correct data from correct query if provided
     useEffect(() => {
@@ -134,143 +136,145 @@ export function SQLQuestion({
             ) {
                 try {
                     // We don't need to apply limits to correct query as it's controlled
-                    const results = dbInstance.exec(correctQuery)
-                    setGeneratedCorrectData(results)
-                    logger.debug('Generated correct data from query')
+                    const results = dbInstance.exec(correctQuery);
+                    setGeneratedCorrectData(results);
+                    logger.debug("Generated correct data from query");
                 } catch (err: any) {
-                    logger.error('Failed to execute correct query:', err)
-                    setGeneratedCorrectData([])
+                    logger.error("Failed to execute correct query:", err);
+                    setGeneratedCorrectData([]);
                 }
             }
         }
 
-        generateCorrectDataFromQuery()
-    }, [isDbReady, correctQuery, providedCorrectData])
-
-    useEffect(() => {
-        if (isDbReady && query) {
-            executeQueryInternal(query)
-        }
-    }, [isDbReady, query, correctData])
+        generateCorrectDataFromQuery();
+    }, [isDbReady, correctQuery, providedCorrectData]);
 
     useEffect(() => {
         if (correctData && correctData.length > 0) {
-            setIsCorrect(checkResults())
+            setIsCorrect(checkResults());
         }
-    }, [correctData, results])
+    }, [correctData, results]);
 
     // Helper function to apply a default LIMIT if one isn't already specified
     const applyDefaultLimit = (sql: string): string => {
         // Skip applying limit for non-SELECT queries
-        if (!sql.trim().toLowerCase().startsWith('select')) {
-            return sql
+        if (!sql.trim().toLowerCase().startsWith("select")) {
+            return sql;
         }
 
         // Check if query already has a LIMIT clause
         const hasLimit = /\bLIMIT\s+\d+(\s+OFFSET\s+\d+)?(?:\s*;)?\s*$/i.test(
             sql
-        )
+        );
 
         if (hasLimit) {
-            return sql // Keep original query if it already has a LIMIT
+            return sql; // Keep original query if it already has a LIMIT
         }
 
         // Add default LIMIT 100
-        const trimmedSql = sql.trim()
-        const endsWithSemicolon = trimmedSql.endsWith(';')
+        const trimmedSql = sql.trim();
+        const endsWithSemicolon = trimmedSql.endsWith(";");
 
         if (endsWithSemicolon) {
-            return trimmedSql.slice(0, -1) + ' LIMIT 100;'
+            return trimmedSql.slice(0, -1) + " LIMIT 100;";
         } else {
-            return trimmedSql + ' LIMIT 100'
+            return trimmedSql + " LIMIT 100";
         }
-    }
+    };
 
     // Execute SQL query against the database
     const executeQueryInternal = async (sql: string): Promise<void> => {
         if (!isDbReady || !dbInstance) {
-            setError('Die Datenbank ist noch nicht bereit.')
-            return
+            setError("Die Datenbank ist noch nicht bereit.");
+            return;
         }
 
-        setIsLoading(true)
-        setError(null)
+        setIsLoading(true);
+        setError(null);
 
         try {
             // Apply default limit of 100 if no LIMIT clause exists
-            const sqlWithLimit = applyDefaultLimit(sql)
+            const sqlWithLimit = applyDefaultLimit(sql);
 
-            const queryResults = dbInstance.exec(sqlWithLimit)
-            setResults(queryResults)
-            setError(null)
+            const queryResults = dbInstance.exec(sqlWithLimit);
+            setResults(queryResults);
+            setError(null);
         } catch (err: any) {
-            logger.error('SQL execution error:', err)
-            setError(`SQL Error: ${err.message}`)
-            setResults([])
+            logger.error("SQL execution error:", err);
+            setError(`SQL Error: ${err.message}`);
+            setResults([]);
         } finally {
-            setIsLoading(false)
+            setIsLoading(false);
         }
-    }
+    };
 
     // Check if results match expected results
     const checkResults = (): boolean => {
         if (!correctData || correctData.length === 0 || results.length === 0) {
-            return false
+            return false;
         }
 
         // Check if number of result sets match
         if (correctData.length !== results.length) {
-            return false
+            return false;
         }
 
         // For each result set
         for (let i = 0; i < correctData.length; i++) {
-            const expected = correctData[i]
-            const actual = results[i]
+            const expected = correctData[i];
+            const actual = results[i];
 
             // Check columns
-            if (!expected || !actual || !arraysEqual(expected.columns, actual.columns)) {
-                return false
+            if (
+                !expected ||
+                !actual ||
+                !arraysEqual(expected.columns, actual.columns)
+            ) {
+                return false;
             }
 
             // Check number of rows
             if (expected.values.length !== actual.values.length) {
-                return false
+                return false;
             }
 
             // Check each row's values
             for (let j = 0; j < expected.values.length; j++) {
-                if (!expected.values[j] || !actual.values[j] || !arraysEqual(expected.values[j]!, actual.values[j]!)) {
-                    return false
+                if (
+                    !expected.values[j] ||
+                    !actual.values[j] ||
+                    !arraysEqual(expected.values[j]!, actual.values[j]!)
+                ) {
+                    return false;
                 }
             }
         }
 
-        return true
-    }
+        return true;
+    };
 
     // Utility function to compare arrays
     const arraysEqual = (a: any[], b: any[]): boolean => {
-        if (a.length !== b.length) return false
+        if (a.length !== b.length) return false;
 
         for (let i = 0; i < a.length; i++) {
             // Handle null/undefined cases
-            if (a[i] === null && b[i] === null) continue
-            if (a[i] === null || b[i] === null) return false
+            if (a[i] === null && b[i] === null) continue;
+            if (a[i] === null || b[i] === null) return false;
 
             // Convert to strings for comparison (handles different number types)
             if (String(a[i]) !== String(b[i])) {
-                return false
+                return false;
             }
         }
 
-        return true
-    }
+        return true;
+    };
 
     // Render result tables
     const renderResults = (): JSX.Element => {
         if (results.length === 0) {
-            return <p>No results returned</p>
+            return <p>No results returned</p>;
         }
 
         return (
@@ -291,7 +295,7 @@ export function SQLQuestion({
                                         {row.map((cell, cellIdx) => (
                                             <Td key={cellIdx}>
                                                 {cell === null
-                                                    ? 'NULL'
+                                                    ? "NULL"
                                                     : String(cell)}
                                             </Td>
                                         ))}
@@ -302,12 +306,12 @@ export function SQLQuestion({
                     </div>
                 ))}
             </div>
-        )
-    }
+        );
+    };
 
     // Render solution section
     const renderSolution = (): JSX.Element | null => {
-        if (!correctData || correctData.length === 0) return null
+        if (!correctData || correctData.length === 0) return null;
 
         if (isCorrect) {
             return (
@@ -340,7 +344,7 @@ export function SQLQuestion({
                         </div>
                     )}
                 </div>
-            )
+            );
         }
 
         return (
@@ -353,9 +357,9 @@ export function SQLQuestion({
 
                         <button
                             onClick={() => setShowSolution(!showSolution)}
-                            className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors"
+                            className="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors cursor-pointer"
                         >
-                            {showSolution ? 'Hide Solution' : 'Show Solution'}
+                            {showSolution ? "Lösung verbergen" : "Lösung anzeigen"}
                         </button>
                     </div>
                 )}
@@ -367,8 +371,8 @@ export function SQLQuestion({
                     </div>
                 )}
             </div>
-        )
-    }
+        );
+    };
 
     return (
         <div className="my-6 border border-gray-200 rounded-md overflow-hidden dark:border-gray-700">
@@ -382,16 +386,16 @@ export function SQLQuestion({
                     height="200px"
                     defaultLanguage="sql"
                     defaultValue={query}
-                    theme={resolvedTheme === 'dark' ? 'vs-dark' : 'light'}
-                    onChange={value => setQuery(value || '')}
+                    theme={resolvedTheme === "dark" ? "vs-dark" : "light"}
+                    onChange={(value) => setQuery(value || "")}
                     options={{
                         minimap: { enabled: false },
-                        scrollbar: { horizontal: 'auto' },
-                        lineNumbers: 'off',
-                        wordWrap: 'on',
-                        wrappingStrategy: 'advanced',
+                        scrollbar: { horizontal: "auto" },
+                        lineNumbers: "off",
+                        wordWrap: "on",
+                        wrappingStrategy: "advanced",
                         automaticLayout: true,
-                        renderWhitespace: 'all'
+                        renderWhitespace: "all",
                     }}
                 />
             </div>
@@ -408,7 +412,14 @@ export function SQLQuestion({
                 </div>
             )}
 
-            {query !== defaultQuery && renderSolution()}
+            <button
+                onClick={() => executeQueryInternal(query)}
+                className="m-2 px-4 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700 transition-colors cursor-pointer"
+            >
+                Query ausführen
+            </button>
+
+            {results.length > 0 && query !== defaultQuery && renderSolution()}
 
             {!error && results.length > 0 && (
                 <div className="p-4 overflow-x-auto">
@@ -416,12 +427,12 @@ export function SQLQuestion({
                         <span>
                             {(results[0]?.values.length || 0) < 100
                                 ? `${results[0]?.values.length || 0} Datensätze`
-                                : '99 oder mehr Datensätze'}
+                                : "99 oder mehr Datensätze"}
                         </span>
                     </div>
                     {renderResults()}
                 </div>
             )}
         </div>
-    )
+    );
 }
