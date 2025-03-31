@@ -56,9 +56,6 @@ export function SQLQuestion({
     // Use either provided or generated correct data
     const correctData = providedCorrectData || generatedCorrectData
 
-    // Check if user is a teacher
-    const isTeacher = isTeacherCS()
-
     // Initialize database on component mount
     useEffect(() => {
         async function initDatabase(): Promise<void> {
@@ -162,31 +159,6 @@ export function SQLQuestion({
         }
     }, [correctData, results])
 
-    // Helper function to convert ISO date strings in queries to timestamps
-    const convertDatesToTimestamps = (sql: string): string => {
-        // Regular expression to match date strings in both single and double quotes
-        // Looks for: 'YYYY-MM-DD' or "YYYY-MM-DD"
-        const dateRegex = /(['"])(\d{4}-\d{2}-\d{2})(['"])/g
-
-        // Replace each date string with its timestamp equivalent
-        return sql.replace(
-            dateRegex,
-            (match, openQuote, dateStr, closeQuote) => {
-                try {
-                    // Convert the date string to a timestamp in milliseconds
-                    const timestamp = new Date(dateStr).getTime()
-
-                    // Return just the timestamp number (no quotes)
-                    return timestamp.toString()
-                } catch (err) {
-                    // If conversion fails, leave the original date string intact
-                    console.warn(`Failed to convert date: ${dateStr}`, err)
-                    return match
-                }
-            }
-        )
-    }
-
     // Helper function to apply a default LIMIT if one isn't already specified
     const applyDefaultLimit = (sql: string): string => {
         // Skip applying limit for non-SELECT queries
@@ -225,10 +197,8 @@ export function SQLQuestion({
         setError(null)
 
         try {
-            // Convert date strings to timestamps
-            const convertedSql = convertDatesToTimestamps(sql)
             // Apply default limit of 100 if no LIMIT clause exists
-            const sqlWithLimit = applyDefaultLimit(convertedSql)
+            const sqlWithLimit = applyDefaultLimit(sql)
 
             const queryResults = dbInstance.exec(sqlWithLimit)
             setResults(queryResults)

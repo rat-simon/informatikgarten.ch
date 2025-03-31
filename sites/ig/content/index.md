@@ -4,9 +4,9 @@ title: Home
 
 # Grüezi und willkommen
 
-Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen.
+Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen. 
 
-Nachdem ich Hunderte Stunden in diese Webseite gesteckt habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
+Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
 
 - *"Informatikgarten ist eine SUPER Webseite und mega hilfreich."*
 - *"Informatikgarten ist sehr gut und machte mir das Lernen einfach."*
@@ -23,9 +23,15 @@ In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Vid
 
 ## Aktueller Stand und Todos
 
+- [ ] LMS
+	- [ ] Connect SQL questions with UserData model
+	- [ ] Progress reporting per student / class
+	- [ ] Exam solution with Safe Exam Browser (Exam.net?)
+	- [x] Klassen- und Gruppenverwaltung
+	- [x] Frage-Komponenten mit Feedback-Funktion
 - [ ] Turtle editor
 	- [ ] Python Language Server for syntax highlighting und autocomplete
-	- [ ] Handin function for persistent code versions
+	- [ ] Hand-in function for persistent code versions
 	- [ ] Optimize touch devices
 	- [ ] Integrate in UserData model
 	- [ ] Feedback by teachers using Excalidraw
@@ -33,11 +39,6 @@ In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Vid
 - [ ] Gamification
 	- [ ] Web-USB für Gamecontroller (und evtl Microbit?)
 	- [ ] Lesson with Godot
-- [ ] LMS
-	- [x] Klassen- und Gruppenverwaltung
-	- [x] Frage-Komponenten mit Feedback-Funktion
-	- [ ] Progress-Reporting
-	- [ ] Exam solution with Safe Exam Browser (Exam.net?)
 - [ ] Hosting platform
 	- [ ] Teacher management
 	- [ ] Payment solution
