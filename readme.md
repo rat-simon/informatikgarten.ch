@@ -4,7 +4,7 @@
 
 ## Implementierte Features
 
-- **Obsidian-kompatibel**: Informatikgarten kann man direkt in Obsidian bearbeiten und Änderungen direkt pushen.
+- **Obsidian-kompatibel**: Informatikgarten kann man direkt in Obsidian bearbeiten und Änderungen direkt übertragen.
 - **Excalidraw**: In Obsidian kann man mit Excalidraw Grafiken bearbeiten, die automatisch als SVG in Light- und Dark-Mode exportiert werden.
 - **Turtle-Editor**: Python mit Turtle direkt im Browser.
 - **SQLite**: Interaktive Aufgaben zu SQL direkt im Browser.
@@ -12,7 +12,7 @@
 - **Quiz-Fragen**: Schülerinnen und Schüler können interaktiv Fragen beantworten, die lokal und in Postgres-SQL gespeichert werden.
 - **Video**: Videos werden mit `pnpm syncvideo` automatisch auf Muxvideo geladen und in Obsidian normal verlinkt.
 
-Den aktuellen Stand und Todos finden Sie auf [informatikgarten.ch](https://www.informatikgarten.ch).
+Den aktuellen Stand und die Aufgabenliste finden Sie auf [informatikgarten.ch](https://www.informatikgarten.ch).
 
 ## 📂 Struktur
 

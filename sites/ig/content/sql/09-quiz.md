@@ -15,24 +15,22 @@ Einige Beobachtungen, damit Sie sehen, was hier alles dargestellt ist:
 
 -   Boxen: Es gibt eine Tabelle `movie` mit den Spalten `title`, `runtime`, `release_date`, etc.
 -   Datentypen rechts: Die Spalte `available_globally` hat den Datentyp `boolean` und ist demzufolge ein Wahr/Falsch-Wert. (Sie müssen die SQL-Datentypen nicht lernen.)
--   Pfeile: Die Tabelle `view_summary` hat eine Relation mit der Tabelle `movie`. Beim Pfeil steht "movie_id:id". Das bedeutet: Die Daten in der Spalte `movie_id` in `view_summary` entsprechen den Daten in der Spalte `id` der Tabelle `movie`.
--   Goldener Schlüssel: Die Tabelle `movie` hat eine Spalte `id` als **Primärschlüssel**. Das bedeutet, dass jeder Datensatz (jede Reihe) dort einen eindeutigen Wert hat. Das Datenbanksystem garantiert uns, dass es keine zwei Filme mit dem gleichen Wert in der Spalte `id` zulassen wird.
--   Blauer Schlüssel: `movie_id` der Tabelle `view_summary` ist ein **Fremdschlüssel**. Das Datenbanksystem kann diese Beziehung überwachen und je nach Konfiguration sicherstellen, dass es keine Einträge mit einer `movie_id` gibt, die es in der Tabelle `movie` unter `id` gar nicht gibt.
+-   Pfeile: Die Tabelle `view_summary` hat eine Relation mit der Tabelle `movie`. Das bedeutet: Die Daten in der Spalte `movie_id` in `view_summary` entsprechen den Daten in der Spalte `id` der Tabelle `movie`. Das Datenbanksystem kann solche Beziehungen überwachen und je nach Konfiguration sicherstellen, dass es keine Einträge mit einer `movie_id` geben kann, die es in der Tabelle `movie` gar nicht gibt.
+-   Schlüssel: Die Tabelle `movie` hat eine Spalte `id` als **Primärschlüssel**. Das bedeutet, dass jeder Datensatz der Tabelle anhand von `id` eindeutig identifiziert werden kann. Das Datenbanksystem garantiert uns, dass es keine zwei Filme mit dem gleichen Wert in der Spalte `id` zulassen wird.
 
 Schauen wir uns nun an, wie die Daten in der Tabelle `view_summary` vorliegen. Eine Frage, die sich stellt: Offenbar werden die Zuschauerzahlen für spezifische Zeitperioden rapportiert. Sind das Stunden, Tage, Wochen, Monate? Ein Beispiel-Query, wie Sie das herausfinden können.
 
-Was gibt es für Zeitperioden? (Diese Lösung ist so korrekt.)
+Was gibt es für Zeitperioden? (Sie können das Query wie vorgegeben einfach ausführen.)
 
 <SQLQuestion id="select-distinct"
 defaultQuery={`SELECT DISTINCT duration
 FROM view_summary;`} />
 
-Wunderbar. Machen Sie sich das Leben also einfach: Schauen wir bis auf Weiteres **Halbjahresperioden** an, also `WHERE duration = 'SEMI_ANNUALLY'{:sql}` . Jetzt sind Sie dran:
+Wunderbar. Jetzt wissen wir, dass es bei `duration` nur zwei mögliche Werte gibt. Machen wir uns das Leben also einfach: Wir schauen in diesem Quiz ausschliesslich **Halbjahresperioden** an, also `WHERE duration = 'SEMI_ANNUALLY'{:sql}` .
 
 ## Frage 1: Meistgeschaute Inhalte
 
-Selektieren Sie aus der Tabelle `view_summary` die Spalten `id` und `hours_viewed` der zehn Datensätze, die in einem halben Jahr am meisten geschaut wurden.
-
+Selektieren Sie aus der Tabelle `view_summary` die Spalten `id` und `hours_viewed` der zehn Datensätze, die in einer Halbjahresperiode am meisten geschaut wurden.
 
 | id                                  | hours_viewed                                  |
 | ----------------------------------- | --------------------------------------------- |
@@ -93,9 +91,9 @@ LIMIT 50;`}
 
 ## Frage 4: Meistgeschaute Staffeln und Filme
 
-Sie sehen: Serien dominieren die Ranglisten total! Versuchen wir nun zusätzlich herauszufinden, welche Serienstaffeln oft geschaut werden.
+Sie sehen: Serien dominieren die Ranglisten total! Versuchen wir nun zusätzlich herauszufinden, welche Serienstaffeln oft geschaut wurden.
 
-Erweitern Sie die 50 meistgeschauten Inhalte in einem Halbjahr mit den Titeln der Filme und der Serienstaffeln. Achtung: Den `title`-Spalten habe im Ergebnis andere Namen gegeben.
+Erweitern Sie die 50 meistgeschauten Inhalte in einem Halbjahr mit den Titeln der Filme und der Serienstaffeln. Achtung: Den `title`-Spalten müssen Sie andere Namen gegeben.
 
 | season_title                     | movie_title                     | hours_viewed                                  |
 | -------------------------------- | ------------------------------- | --------------------------------------------- |
@@ -113,9 +111,9 @@ LIMIT 50;`}
 
 ## Frage 5: Meistgeschaute Serien
 
-Nun nutzen wir eine Aggregatsfunktion, um herauszufinden, welche 10 Serien am meisten geschaut wurde - also über alle Staffeln und Halbjahresperioden hinweg!
+Nun nutzen wir eine Aggregatsfunktion, um herauszufinden, welche 10 Serien über alle Staffeln und Halbjahresperioden hinweg am meisten geschaut wurde. 
 
-Dazu brauchen Sie erstmals einen `JOIN` über zwei Tabellen. Keine Sorge, das ist relativ einfach: Machen Sie einfach einen `JOIN` pro Beziehung - also insgesamt zwei separate `JOIN`s.
+Dazu brauchen Sie erstmals einen `JOIN` über zwei Tabellen - nämlich über `season` zu `tv_show`. Keine Sorge, das ist relativ einfach: Machen Sie einfach einen `JOIN` für jede Beziehung - also insgesamt zwei `JOIN`s. Ich habe Ihnen das Grundgerüst des Querys vorgeschrieben.
 
 | show_title                        | hours                                               |
 | --------------------------------- | --------------------------------------------------- |
@@ -142,9 +140,11 @@ LIMIT 10;`}
 
 ## Frage 6: Meistgeschaute Serie in einem Halbjahr
 
-Bei der vorhergehenden Fragen haben wir alle Halbjahresperioden einer Serie aufaddiert. So haben ältere Serien wie `Suits (2011)` oder `Grey's Anatomy` natürlich einen grossen Vorteil!
+Bei der vorhergehenden Frage haben wir alle Halbjahresperioden einer Serie aufaddiert. So haben ältere Serien wie Suits oder Grey's Anatomy natürlich einen grossen Vorteil!
 
-Korrigieren wir das. Ändern Sie Ihr Query so ab, dass weiterhin jeweils die Zahlen aller Staffeln einer Serie aufaddiert werden - aber nur innerhalb derselben Halbjahresperiode. Als kleiner Tipp: Daten derselben Periode haben dasselbe `start_date`. Die Änderung im Query ist letztlich minim!
+Korrigieren wir das. Ändern Sie Ihr Query so ab, dass weiterhin jeweils die Zahlen aller Staffeln einer Serie aufaddiert werden - aber nur, wenn sie zur selben Halbjahresperiode gehören.
+
+_(Als kleiner Tipp: Daten derselben Periode haben dasselbe `start_date`. Die Änderung im Query ist letztlich minim!)_
 
 | show_title                        | hours                                               |
 | --------------------------------- | --------------------------------------------------- |
@@ -161,3 +161,4 @@ GROUP BY show_title, start_date
 ORDER BY hours DESC 
 LIMIT 10;`}
 />
+
