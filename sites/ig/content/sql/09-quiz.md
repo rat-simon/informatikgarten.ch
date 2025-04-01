@@ -169,7 +169,7 @@ most-watched-alltime
 
 Bei der vorhergehenden Frage haben wir alle Halbjahresperioden einer Serie aufaddiert. So haben ältere Serien wie Suits oder Grey's Anatomy natürlich einen grossen Vorteil!
 
-Korrigieren wir das. Ändern Sie Ihr Query so ab, dass weiterhin jeweils die Zahlen aller Staffeln einer Serie aufaddiert werden - aber nur, wenn sie zur selben Halbjahresperiode gehören. Dazu müssen Sie wissen: `GROUP BY {:sql}` kann auch nach mehreren Spalten gruppieren und Daten derselben Periode haben dasselbe `start_date`.
+Korrigieren wir das. Ändern Sie Ihr Query so ab, dass weiterhin jeweils die Zahlen aller Staffeln einer Serie aufaddiert werden - aber nur, wenn sie zur selben Halbjahresperiode gehören. Dazu müssen Sie wissen: Mit `GROUP BY spalte1, spalte2 {:sql}` können Sie nach mehreren Spalten gruppieren und Daten derselben Periode haben dasselbe `start_date`.
 
 | show_title                        | hours                                               |
 | --------------------------------- | --------------------------------------------------- |
@@ -188,3 +188,21 @@ LIMIT 10;`}>
 most-watched-semiannually
 </SQLQuestion>
 
+## 8. Welche Serie hat die meisten Staffeln erfasst?
+
+Zum Schluss versuchen Sie die fünf Serien zu finden, die (in dieser Datenbank) am meisten Staffeln haben.
+
+| show_title                        | nr                       |
+| --------------------------------- | ------------------------ |
+| `title` aus der Tabelle `tv_show` | Anzahl erfasste Staffeln |
+
+<SQLQuestion
+defaultQuery={`SELECT [...]`}
+correctQuery={`SELECT tv_show.title as show_title, count(*) as nr
+FROM tv_show
+JOIN season ON tv_show.id = season.tv_show_id
+GROUP BY tv_show.id
+ORDER BY nr DESC
+LIMIT 5;`}>
+series-with-most-seasons
+</SQLQuestion>

@@ -31,6 +31,7 @@ interface SQLQuestionProps {
     correctQuery?: string;
     correctData?: SqlResultColumn[];
     children?: React.ReactNode;
+    autoExecute?: boolean;
 }
 
 export function SQLQuestion({
@@ -40,6 +41,7 @@ export function SQLQuestion({
     correctQuery,
     correctData: providedCorrectData,
     children,
+    autoExecute = false,
 }: SQLQuestionProps): JSX.Element {
     // Extract ID from either prop or children
     const id = idProp || (typeof children === 'string' ? children.trim() : undefined);
@@ -155,6 +157,12 @@ export function SQLQuestion({
 
         generateCorrectDataFromQuery();
     }, [isDbReady, correctQuery, providedCorrectData]);
+
+    useEffect(() => {
+        if (isDbReady && autoExecute && dbInstance) {
+            executeQueryInternal(query);
+        }
+    }, [isDbReady, autoExecute]);
 
     useEffect(() => {
         if (correctData && correctData.length > 0) {
