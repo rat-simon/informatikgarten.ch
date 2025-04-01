@@ -33,14 +33,13 @@ Sie können sich oben mit <FeatherIcon size={'1rem'} icon="log-in" className="in
 Um SQL zu lernen, verwenden wir hauptsächlich eine interaktive Webseite namens [SQLBolt](https://sqlbolt.com/).
 
 * In den ersten Wochen EIBE sollten Sie [[01-dbintro|das Intro zu SQL]] durchlesen und bei SQLBolt **bis und mit Lektion 11** durcharbeiten. Ich verspreche Ihnen, dass Sie spätestens in Lektion 6 den Vorteil von Datenbanken erkennen! 👩‍💻 
-- Ich habe Ihnen [[09-quiz|ein unbenotetes Checkpoint-Quiz (CP)]] mit Daten von Netflix aufgeschaltet. Entschuldigen Sie bitte die Verzögerung, ich habe das Quiz interaktiv wie auf SQL-Bolt gemacht. Es kann gut sein, dass ich das Quiz noch erweitere. Falls Sie noch weiter knobeln möchten, schauen Sie in einer Woche nochmal vorbei.
-- Machen Sie sich von Anfang an **Notizen der Befehle** auf Papier. Es gilt weiterhin: Sie müssen keine Befehle auswendig lernen!
+- Ich habe Ihnen [[09-quiz|ein unbenotetes Checkpoint-Quiz (CP)]] mit Daten von Netflix aufgeschaltet. Entschuldigen Sie bitte die Verzögerung, ich habe das Quiz interaktiv wie auf SQL-Bolt gemacht.
+- Machen Sie sich von Anfang an **Notizen der Befehle** auf Papier. Es gilt weiterhin: Sie müssen keine Befehle auswendig lernen - es geht darum, die Logik zu **verstehen**!
 - SQLBolt ist auf **Englisch**. Falls Sie etwas nicht verstehen, versuchen Sie, ob Deepl.com oder ChatGPT weiterhilft, oder kontaktieren Sie mich auf Teams. Ich bin weiterhin sehr oft am Computer... 🤷
 - Fragen Sie ungeniert nach **Videoerklärungen**.
-
 ## Teil 2: Eigenständiges Projekt
 
-*Sie erhalten die Infos zum eigenständigen Projekt bis am 31. März an dieser Stelle*.
+*Sie erhalten die Infos zum eigenständigen Projekt in den Ferien*.
 
 ## Teil 3: Abschlussprojekt
 
