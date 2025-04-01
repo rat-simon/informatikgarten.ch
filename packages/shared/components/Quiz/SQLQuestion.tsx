@@ -32,6 +32,7 @@ interface SQLQuestionProps {
     correctData?: SqlResultColumn[];
     children?: React.ReactNode;
     autoExecute?: boolean;
+    editorHeight?: string;
 }
 
 export function SQLQuestion({
@@ -42,6 +43,7 @@ export function SQLQuestion({
     correctData: providedCorrectData,
     children,
     autoExecute = false,
+    editorHeight = "8rem",
 }: SQLQuestionProps): JSX.Element {
     // Extract ID from either prop or children
     const id = idProp || (typeof children === 'string' ? children.trim() : undefined);
@@ -293,7 +295,7 @@ export function SQLQuestion({
         }
 
         return (
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 text-sm">
                 {results.map((resultSet, index) => (
                     <div key={index} className="">
                         <Table>
@@ -399,7 +401,7 @@ export function SQLQuestion({
         <div className="mb-6 border border-gray-200 rounded-md overflow-hidden dark:border-gray-700">
             <div className="relative min-h-8">
                 <Editor
-                    height="200px"
+                    height={editorHeight}
                     defaultLanguage="sql"
                     defaultValue={query}
                     theme={resolvedTheme === "dark" ? "vs-dark" : "light"}
