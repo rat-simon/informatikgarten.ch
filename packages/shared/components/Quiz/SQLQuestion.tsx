@@ -25,7 +25,7 @@ let dbInstance: Database | null = null;
 
 // Props for SQLQuestion component
 interface SQLQuestionProps {
-    id: string;
+    id?: string;
     dbPath?: string;
     defaultQuery?: string;
     correctQuery?: string;
@@ -34,13 +34,20 @@ interface SQLQuestionProps {
 }
 
 export function SQLQuestion({
-    id,
+    id: idProp,
     dbPath = "/sql/netflixdb.sqlite",
     defaultQuery = "SELECT title FROM movie LIMIT 10;",
     correctQuery,
     correctData: providedCorrectData,
     children,
 }: SQLQuestionProps): JSX.Element {
+    // Extract ID from either prop or children
+    const id = idProp || (typeof children === 'string' ? children.trim() : undefined);
+
+    if (!id) {
+        logger.warn('SQLQuestion: No ID provided through props or children');
+    }
+
     const [query, setQuery] = useState<string>(defaultQuery);
     const [results, setResults] = useState<SqlResultColumn[]>([]);
     const [generatedCorrectData, setGeneratedCorrectData] = useState<
@@ -374,13 +381,14 @@ export function SQLQuestion({
         );
     };
 
-    return (
-        <div className="my-6 border border-gray-200 rounded-md overflow-hidden dark:border-gray-700">
-            {children && (
-                <div className="p-4 border-b border-gray-200 dark:border-gray-700">
-                    {children}
-                </div>
-            )}
+    return (<>
+        {children && (
+            // align right
+            <div className="mt-6 text-xs italic w-full opacity-50 text-right pr-4">
+                {children}
+            </div>
+        )}
+        <div className="mb-6 border border-gray-200 rounded-md overflow-hidden dark:border-gray-700">
             <div className="relative min-h-8">
                 <Editor
                     height="200px"
@@ -433,6 +441,6 @@ export function SQLQuestion({
                     {renderResults()}
                 </div>
             )}
-        </div>
+        </div></>
     );
 }
