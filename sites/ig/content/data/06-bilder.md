@@ -114,7 +114,7 @@ Das verbreitetste Format für solche skalierbaren Vektorgrafik heisst "Scalable 
 > 3. Verschieben Sie den Kreis weiter rechts.
 > 4. Fügen Sie einen zweiten, grünen Kreis hinzu.
 > 5. Machen Sie das gerundete Quadrat im Hintergrund blau.
-> 6. Können Sie sich einen Sinn darauf reimen, wie die Form des gerundeten Quadrats gespeichert ist?
+> 6. Können Sie sich einen Sinn darauf reimen, wie die Form des weissen, gerundeten Dreiecks gespeichert ist?
 > 
 > Installieren Sie das Open-Source-Programm [Inkscape](https://inkscape.org/).
 > 7. Speichern Sie sich Ihr SVG von svgviewer.dev als normale Textdatei.
