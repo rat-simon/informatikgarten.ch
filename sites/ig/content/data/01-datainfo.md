@@ -1,13 +1,6 @@
 ---
 title: Daten und Informationen
 ---
-<TeachingNotes>
-5 Begrüssung und Diskussion
-15 Input Datentypen
-10 Selbst durchlesen
-10 Dateityp Game
-5 Quiz selbst
-</TeachingNotes>
 
 > [!success]  Lernziele
 > 

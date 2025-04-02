@@ -1,7 +1,7 @@
 ---
 title: Visuell programmieren mit Scratch
 ---
-> [!lernziele] Lernziele
+> [!success] Lernziele
 > 
 > - **Scratch anwenden**: Sie lernen die visuelle Programmiersprache Scratch kennen und verstehen, wie sie genutzt wird, um einfache Spiele zu erstellen.
 > - **Vergleich zu Python ziehen**: Sie können grundlegende Programmierkonzepte in Scratch mit denen in Python vergleichen, oder umgekehrt.

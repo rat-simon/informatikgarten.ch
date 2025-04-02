@@ -27,7 +27,7 @@ title: Die Logik der Lehrpläne
 </TeachingNotes>
 
 
-> [!lernziele] Lernziele
+> [!success] Lernziele
 > 
 > - Sie wissen, wie man Lehrplan-Inhalte der ungefähren **Stufe der Bloom-Taxonomie** zuordnen kann. (Aber lernen Sie um Himmels Willen die Tabelle nicht auswendig!)
 > - Sie können die Idee eines **Spiralcurriculum** erklären und kennen seine Vorteile für den Lernprozess.

@@ -2,7 +2,7 @@
 title: Prüfungsvorbereitung für F1e
 display: hidden
 ---
-> [!lernziele] Hinweise zur Prüfung
+> [!success] Hinweise zur Prüfung
 > 
 > Diese Prüfungsvorbereitung ist dazu da, dass Sie die Art der Fragestellungen abschätzen können.
 > - Stoffumfang: bis und mit "5 for-Schleifen verschachteln" im Kapitel "B Programmieren" auf Informatikgarten. Dort finden Sie auch die Lernziele.

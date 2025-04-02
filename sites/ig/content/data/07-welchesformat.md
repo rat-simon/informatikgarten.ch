@@ -4,15 +4,12 @@ title: Wann macht welches Grafikformat Sinn?
 > [!success]  Lernziele
 > 
 > - Sie können erklären, wieso **Bildsensoren** eine Schicht aus Farbfilter haben und was das **Bayer-Muster** ist.
-> - Sie können erläutern, was Schriftarten mit Vektorgrafiken zu tun haben.
-> - Sie verstehen die Begriffe **Pfadpunkt** und **Handler** bei **Bézier-Kurven** in Vektorgrafik-Programmen.
-> - Sie verstehen die Inhalte des Theorieeintrags.
+> - Sie wissen, welches Grafikformat bei **Schriftarten** allermeistens verwendet wird.
 
-## Der Ursprung bestimmt meist das Grafikformat
+Als vereinfachte Fausregel könnte man sagen: **Der Ursprung bestimmt das Grafikformat.** In der Praxis bestimmt meistens die Ursprungstechnologie, ob sich Raster- oder Vektorenformate besser eignen. 
+## Bei Kameras machen Rastergrafiken Sinn
 
-### Bei dieser Technologie machen Rastergrafik Sinn
-
-In der Praxis bestimmt meistens die Ursprungstechnologie, ob sich Raster- oder Vektorenformate besser eignen. Überlegen Sie sich beispielsweise, wie eine Kamera funktioniert:
+Überlegen Sie sich beispielsweise, wie eine Kamera funktioniert:
 
 1. Erkennt eine Kamera Kurven und geometrische Formen in der Welt, und speichert diese ab?
 2. Oder misst sie an ganz vielen Punkten die Farben des Lichts, das ins Objektiv fällt?
@@ -64,37 +61,24 @@ Diese Bayer-Muster sind ein Grund für die Verwendung von Greenscreens, die Sie 
 > 
 > Diese technische Überlegung hat heutzutage an Bedeutung verloren, da moderne Kameras und Software in der Lage sind, mit einer Vielzahl von Farben zu arbeiten. Doch der Greenscreen bleibt aufgrund seiner Effizienz und praktischen Vorteile weiterhin weit verbreitet.
 
-Vor diesem Hintergrund der Ausgangstechnologie macht es nur Sinn, dass Fotos und Videos als Rastergrafik gespeichert werden anstatt als Vektorgrafiken. Schauen Sie sich die vielen Farben in diesem schönen Foto einer Bonobo-Mutter mit ihrem Baby an. (Von [jjjj56cp](https://www.flickr.com/photos/25171569@N02/34025263502))
+Vor diesem Hintergrund der Ausgangstechnologie macht es nur Sinn, dass **Fotos und Videos als Rastergrafik** gespeichert werden anstatt als Vektorgrafiken. Schauen Sie sich die vielen Farben in diesem schönen Foto einer Bonobo-Mutter mit ihrem Baby an (von [jjjj56cp](https://www.flickr.com/photos/25171569@N02/34025263502)). Dieses Bild hat 12 Megapixel (3551px x 3380px) und 8 Bit Farbtiefe. Anstatt die unkomprimierte, theoretische Datenmenge von 36 Megabyte, macht das Grafikformat JPEG das Bild bei nur schon rudimentärer Komprimierung 3.7MB. 
 
 ![[bonobo.jpg]]
-Wir könnten das schon versuchen in eine Vektorgrafik zu konvertieren, aber das macht wenig Sinn.
 
-![[/data/bonobo.svg]]
+Wir könnten das schon versuchen in eine Vektorgrafik zu konvertieren, aber das ganz offenbar wenig Sinn! Auch die Dateigrösse ist enorm im Vergleich: **Das SVG ist 22.8 Megabyte**! 
 
-### Bei dieser Technologie machen Vektorgrafiken Sinn
+![[bonobo.svg]]
 
-Sie haben in der letzten Lektion auf [svgviewer.dev](https://www.svgviewer.dev/) eine SVG-Grafik editiert. Sie könnten diese auch als PNG (eine Rastergrafik) speichern. Genauso wie es wenig Sinn macht, Fotos als Vektorgrafiken zu speichern, macht es oft wenig Sinn, eine Rastergrafik zu speichern, wenn die Originaldaten als Vektoren vorliegen - wieso sollten wir die Information der geometrischen Figuren zerstören?
+## Bei Grafiken mit klaren Formen machen Vektorgrafiken Sinn
 
-Am meisten merken Sie das bei einer Grafik, die Sie sicherlich gar nicht mehr als solche wahrnehmen: Texte und **Schriftarten**. Sie könnten Ihr Dokument natürlich als Rastergrafik verschicken, aber das macht fast nie Sinn.
+Sie haben in der letzten Lektion auf [svgviewer.dev](https://www.svgviewer.dev/) eine SVG-Grafik editiert. Sie könnten diese auch als PNG (eine Rastergrafik) speichern. Genauso wie es wenig Sinn macht, Fotos als Vektorgrafiken zu speichern, macht es oft wenig Sinn, eine Rastergrafik zu speichern, **wenn die Originaldaten als Vektoren vorliegen** - wieso sollten wir die Information der geometrischen Figuren zerstören?
 
+Am meisten merken Sie das bei einer Grafik, die Sie sicherlich gar nicht mehr als solche wahrnehmen: Texte und **Schriftarten**. Sie könnten Ihr Dokument natürlich als Rastergrafiken verschicken, aber das macht fast nie Sinn - und Ihre Empfänger hätten garantiert keine Freude.
 ### TrueType und OpenType Schriftarten
 
 Ein weiterhin populäres Format sind die sogenannten TrueType-Schriftarten, die in den späten 1980er Jahren von Apple entwickelt und später von Microsoft übernommen wurde. Microsoft entwickelte das Format später mit Adobe weiter zu OpenType-Schriftarten.
 
-Diese Schriftarten verwenden vektorbasierte Grafiken für die Definition jedes Zeichens oder "Glyphen". Die Glyphen können so in jeder Grösse klar und scharf dargestellt werden kann. Jede Glyphe wird **durch Kurven definiert**, die typischerweise quadratische Bézier-Kurven sind. Diese Kurven werden durch Kontrollpunkte bestimmt, die die Schriftart-Designer festlegen. Durch die Veränderung dieser Kontrollpunkte kann das Aussehen der Glyphen angepasst werden.
-
-Wie bei allen Vektorgrafiken sind bei den Formen der Buchstaben sogenannte **Bézier-Kurven** wichtig. Sie wurden nach dem französischen Ingenieur Pierre Bézier benannt, der sie in den 1960er Jahren in der Automobil-Designindustrie popularisierte (bei Renault). 
-
-Eine Bézier-Kurve wird durch einen Satz von **Kontrollpunkten** definiert.
-- Eine lineare Bézier-Kurve hat zwei Punkte und ist gerade. 
-- Eine quadratische Bézier-Kurve hat drei Punkte und ist eine symmetrische Kurve zwischen zwei Punkten.
-- Eine kubische Bézier-Kurve hat vier Punkte und ist eine Kurve zwischen den beiden Punkten.
-
-![[Bezier_grad123.svg]]
-
-Bei Vektorgrafik-Programmen wird das meist etwas benutzerfreundlicher dargestellt:
-- Ein Pfadpunkt (oder Eckpunkt), durch den die Linie der Figur geht.
-- Zwei "Handles" (Griffe), mit denen die Krümmung der Kurve bestimmt wird.
+Diese Schriftarten verwenden vektorbasierte Grafiken für die Definition jedes Zeichens oder "**Glyphen**". Die Glyphen können so in jeder Grösse klar und scharf dargestellt werden kann. Jede Glyphe wird **durch Kurven definiert**, die typischerweise quadratische Bézier-Kurven sind. Diese Kurven werden durch Kontrollpunkte bestimmt, die die Schriftart-Designer festlegen. Durch die Veränderung dieser Kontrollpunkte kann das Aussehen der Glyphen angepasst werden.
 
 Schauen Sie sich das selbst in einem Onlineeditor für Schriftarten an. Laden Sie dazu unter "Example" eine Beispielschriftart auf [glyphrstudio.com](https://www.glyphrstudio.com/online/). Sie sehen: Text ist einfach eine Serie von Vektorgrafiken - nämlich Buchstaben.
 
@@ -124,9 +108,7 @@ Schauen Sie sich das selbst in einem Onlineeditor für Schriftarten an. Laden Si
 > 
 > Schriftarten verwenden vektorbasierte Grafiken für die Definition jedes Zeichens oder "Glyphen". Glyphen können so in jeder Grösse klar und scharf dargestellt werden kann.
 > 
-> Jede Glyphe wird durch Kurven definiert. Wie bei allen Vektorgrafiken sind **Bézier-Kurven** wichtig. Eine Bézier-Kurve wird durch einen Satz von Punkten definiert, die als **Kontrollpunkte** bekannt sind. Bei Vektorgrafik-Programmen wird das meist mit drei Punkten dargestellt:
-> - Ein **Pfadpunkt** (oder Eckpunkt), durch den die Linie der Figur geht.
-> - Zwei "**Handles**" (Griffe), mit denen die Krümmung der Kurve bestimmt wird.
+> Jede Glyphe wird durch Kurven definiert. Wie bei allen Vektorgrafiken werden Pfade als **Bézier-Kurven** gespeichert. 
 > 
 > ![[Pasted-image-20231204071017.png]]
 

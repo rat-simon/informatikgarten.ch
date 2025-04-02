@@ -2,9 +2,9 @@
 title: Barcodes
 ---
 
-> [!lernziele] Lernziele
+> [!success] Lernziele
 > 
-> - Sie können einen EAN-13-Barcode selbst kreieren, wenn Sie die Zahlen sowie die Vorlage und die Kodierungstabellen auf dieser Seite erhalten. Im Detail:
+> - Sie können einen **EAN-13-Barcode selbst kreieren**, wenn Sie die Zahlen sowie die Vorlage und die Kodierungstabellen auf dieser Seite erhalten. Im Detail:
 > 	- Sie wissen, wie der Barcode grafisch aufgebaut ist
 > 	- Sie können die Zahlen mit der korrekten Kodierung in den Barcode einfügen
 > 	- Sie können die Prüfziffer selbst berechnen und ebenfalls einfügen

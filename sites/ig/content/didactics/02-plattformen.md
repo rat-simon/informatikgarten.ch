@@ -3,7 +3,7 @@ title: Lernplattformen
 ---
 
 
-> [!lernziele] Lernziele
+> [!success] Lernziele
 > 
 > - Sie kennen mindestens zwei visuelle und zwei textbasierte Werkzeuge, um Programmierkonzepte beizubringen.
 

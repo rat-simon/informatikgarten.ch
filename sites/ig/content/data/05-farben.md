@@ -1,6 +1,12 @@
 ---
 title: Farben
 ---
+
+> [!success] Lernziele
+> 
+> - Sie wissen, wie Displays mit Pixeln und dem RGB-Farbmodell **Farben mischen**.
+> - Sie können **berechnen, wie viele unterschiedliche Farben** bei verschiedenen Farbtiefen und Anzahl Farbkanälen darstellbar sind.
+
 ## Farben in RGB
 
 Gratulation! Jetzt haben Sie das Rüstzeugs, ein grundlegendes Konzept zu verstehen, das Sie täglich umgibt: **Farben und Farbmodelle**!

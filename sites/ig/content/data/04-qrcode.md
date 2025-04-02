@@ -2,13 +2,12 @@
 title: Buchstaben & QR-Codes
 ---
 
-> [!lernziele] Lernziele
+> [!success] Lernziele
 > 
-> - Sie verstehen, wie Binärdaten in einen QR-Code abgefüllt werden.
-> - Sie können mit der ASCII-Tabelle eine Nachricht in einem QR-Code speichern.
-> - Sie wissen, welche drei Schritte anschliessend noch nötig wären, damit der QR-Code komplett und scanbar ist.
-> - Sie kennen den Namen des Error-Correction-Codes, der bei QR-Codes angewandt wird.
-> - Sie können den Einfluss des Error-Correction-Levels auf die Menge der Daten, die abgespeichert werden können, erklären.
+> - Sie können mit der ASCII-Tabelle eine **Nachricht binär in einem QR-Code speichern**.
+> - Sie wissen, welche **drei Schritte** anschliessend noch nötig wären, damit der QR-Code komplett und scanbar ist.
+> - Sie kennen den **Namen des Error-Correction-Codes**, der bei QR-Codes angewandt wird.
+> - Sie können den **Einfluss des Error-Correction-Levels** auf die Menge der Daten, die abgespeichert werden können, erklären. (Sie müssen die EC-Levels nicht auswendig können!)
 
 ## Buchstaben binär speichern
 

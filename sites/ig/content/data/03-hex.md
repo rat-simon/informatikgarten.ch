@@ -1,11 +1,13 @@
 ---
 title: Hexadezimale Zahlen
 ---
+
 > [!success]  Lernziele
 > 
 > *Hinweis: Wir behandeln keine Umwandlungen, die grösser als zwei Byte oder 65'535<sub>10</sub> sind.*
 > 
-> - Sie können Binärzahlen und Hexadezimalzahlen in 4-Bit-Paketen ineinander umwandeln.
+> - Sie können **Hexadezimalzahlen und Dezimalzahlen** ineinander umwandeln.
+> - Sie können **Binärzahlen und Hexadezimalzahlen** in 4-Bit-Paketen ineinander umwandeln.
 
 ## Hexadezimal: Zahlen mit Buchstaben?
 

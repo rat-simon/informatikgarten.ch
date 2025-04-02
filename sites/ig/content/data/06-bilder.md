@@ -6,10 +6,10 @@ title: Von Farben zu ganzen Bildern
 > 
 > *Hinweis: Wir behandeln keine Umwandlungen, die grösser als zwei Byte oder 65'535<sub>10</sub> sind.*
 > 
-> - Sie können berechnen, wie viel Speicherplatz theoretisch für ein unkomprimiertes RGB-Bild mit einer gewissen Auflösung und Farbtiefe nötig wäre.
-> - Sie wissen, wie sich die Berechnung verändert, wenn es ein Graustufen-Bild ist.
-> - Sie können die Prinzipien einer Rastergrafik und einer Vektorgrafik voneinander unterscheiden.
-> - Sie verstehen die Inhalte des Theorieeintrags.
+> - Sie können die **unkomprimierte Datenmenge für ein RGB-Bild** mit einer gewissen Auflösung und Farbtiefe berechnen.
+> - Sie wissen, wie sich die Berechnung verändert, wenn es ein Graustufen-Bild wäre, oder wenn ein Alpha-Kanal hinzugefügt würde.
+> - Sie können die Prinzipien einer **Rastergrafik** und einer **Vektorgrafik** voneinander unterscheiden.
+> - Sie verstehen die Begriffe **Pfadpunkt** und **Handler** bei **Bézier-Kurven** in Vektorgrafik-Programmen.
 
 Stellen Sie sich vor: Bits könnten in Ihrem Speicher könnten ja direkt einzelne Farben sein. 0 wäre schwarz, 1 wäre weiss. 
 
@@ -99,6 +99,8 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 
 ![[rastervektor-1.svg]]
 
+Das verbreitetste Format für solche skalierbaren Vektorgrafik heisst "Scalable Vector Graphic", oder kurz: SVG.
+
 > [!example] Editieren Sie eine SVG-Grafik
 > 
 > Gehen Sie zu [svgviewer.dev](https://www.svgviewer.dev/). Dort sehen Sie standardmässig dieses Logo, das vom SVG-Code links kreiert wird.
@@ -119,6 +121,30 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > 8. Ändern Sie die Dateiendung auf `.svg`.
 > 9. Öffnen Sie die svg-Datei in Inkscape. Jetzt können Sie die Vektorgrafik visuell bearbeiten!
 > 10. Nochmal: Wie wird die Form des gerundeten Quadrats gespeichert?
+
+### Bézier-Kurven
+
+In SVG sind die Grundelemente wie Rechtecke und Kreise relativ einfach verständlich. Aber wir haben auch Pfade gesehen, die im Code von SVG schwer zu verstehen sind - wie z.B. das abgerundete, weisse Dreieck links unten auf svgviewer.dev.
+
+```html
+<path d="M19.375 36.7818V100.625C19.375 102.834 21.1659 104.625 23.375 104.625H87.2181C90.7818 104.625 92.5664 100.316 90.0466 97.7966L26.2034 33.9534C23.6836 31.4336 19.375 33.2182 19.375 36.7818Z" fill="white"/>
+```
+
+Was sind das? Das ist eine Serie von sogenannten **Bézier-Kurven**, die zu einem Pfad verknüpft sind. Diese Kurven wurden nach dem französischen Ingenieur Pierre Bézier benannt, der sie in den 1960er Jahren in der Automobil-Designindustrie popularisierte (bei Renault). 
+
+Eine Bézier-Kurve wird durch einen Satz von **Kontrollpunkten** definiert.
+- Eine lineare Bézier-Kurve hat zwei Punkte und ist gerade.
+- Eine quadratische Bézier-Kurve hat drei Punkte und ist eine symmetrische Kurve zwischen zwei Punkten.
+- Eine kubische Bézier-Kurve hat vier Punkte und ist eine Kurve zwischen den beiden Punkten. Diese Art von Kurve wird bei SVG am meisten verwendet.
+
+![[Bezier_grad123.svg]]
+
+Bei Vektorgrafik-Programmen wie Inkscape wird das meist pro Pfadpunkt und etwas benutzerfreundlicher dargestellt:
+- Ein **Pfadpunkt** (oder Eckpunkt), durch den die Linie der Figur geht.
+- Pfadpunkte können bis zu zwei "**Handles**" (Griffe) haben, mit denen die Krümmung der Kurve vor und nach dem Punkt bestimmt wird.
+
+Wir haben das SVG von Svgviewer.dev in Inkscape geöffnet und editiert. Das sah dann so aus:
+![[06-bilder-pathhandles.excalidraw]]
 
 
 > [!example] Diskutieren Sie 
@@ -363,3 +389,5 @@ Anders als Rastergrafiken beschreiben Vektorgrafiken die Inhalte mathematisch al
 > ![[rastervektor-1.svg]]
 > 
 > Das verbreitetste Grafikformat für Vektoren ist SVG, das Teil der modernen Webstandards ist und sich nahtlos in Webseiten integriert. Als solche können SVG-Elemente direkt animiert werden – wie z.B. der Play-Button bei Youtube.
+> 
+> Neben solch einfachen Formen wie Kreisen und Rechtecken, können Sie mit Vektorgrafiken Pfade aus einer Serie von **Bézier-Kurven** ausdrücken. In Vektorgrafik-Programmen wird jeder **Pfadpunkt** mit bis zu zwei **Handles** dargestellt.
