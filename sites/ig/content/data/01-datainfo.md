@@ -2,6 +2,8 @@
 title: Daten und Informationen
 ---
 
+# Daten und Informationen
+
 > [!success]  Lernziele
 > 
 > - Sie können erklären, **wie aus Rohdaten Informationen entstehen**.

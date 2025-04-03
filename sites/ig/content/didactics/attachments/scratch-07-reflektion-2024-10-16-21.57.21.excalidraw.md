@@ -19,7 +19,7 @@ Teil für Fernbedienung ^jdLwW11F
 
 ## Embedded Files
 6fe7f38c7dd2b85ddcc5540d7399c1e80a14e79f: [[Pasted Image 20240917231003_606.png]]
-28f6849824b73a7f1dfaf57f0f70d956d9a4f26e: [[scratch-05-fernsteuerung 1.png]]
+28f6849824b73a7f1dfaf57f0f70d956d9a4f26e: [[scratch-05-fernsteuerung-solution.png]]
 
 %%
 ## Drawing

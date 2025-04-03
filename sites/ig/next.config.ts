@@ -97,7 +97,7 @@ const nextConfig = withNextra({
         if (process.env.NODE_ENV === "development") {
             config.infrastructureLogging = {
                 level: "verbose",
-                debug: /PackFileCacheStrategy/,
+                debug: /PackFileCacheStrategy|webpack\.FileSystemInfo/,
             };
         }
         // rule.exclude doesn't work starting from Next.js 15
@@ -121,7 +121,7 @@ const nextConfig = withNextra({
         });
 
         config.module.rules.push({
-            test: /\.(tsv|ai|blend|log|backup\.md|excalidraw\.md)$/,
+            test: /\.(tsv|ai|blend|log|mp4|backup\.md|excalidraw\.md)$/,
             use: "null-loader",
         });
 

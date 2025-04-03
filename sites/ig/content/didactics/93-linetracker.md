@@ -23,7 +23,7 @@ if wetter == "sonnig" and hose == "Badehose":
 
 In Scratch und Makecode gibt es diese Verbindung ebenfalls:
 
-![[scratch-03-linetracker-2024-09-03-22.19.45.excalidraw]]
+![[if-logicblocks-scratch.excalidraw]]
 
 Hier werden die beiden Bedingungen mit `and` verknüpft. Das bedeutet, dass der Codeblock nur ausgeführt wird, wenn **beide Bedingungen wahr** sind.
 
@@ -38,7 +38,7 @@ if wetter == "sonnig" or jacke == "Regenjacke":
 
 In diesem Fall wird der Code ausgeführt, wenn **mindestens eine** der beiden Bedingungen wahr ist. Auch das `oder` gibt es in Scratch und Makecode:
 
-![[Pasted%20image%2020240903222654.png]]
+![[if-or-scratch.png]]
 
 ## 2. Programmierung eines Linientrackers
 
@@ -46,7 +46,7 @@ Nun werden wir das Konzept der logischen Verknüpfungen anwenden, um einen Linie
 
 > [!example] Diskussion
 > 
-> Überlegen Sie, welche Kombinationen von `and` und `or` mit unseren zwei Helligkeitssensoren sinnvoll sein könnten und welche Aktionen der Roboter in den verschiedenen Situationen ausführen sollte. Schreiben Sie eine Struktur in Pseudocode. ![[didactics/attachments/microbit-04-linetracker-2024-09-03-11.02.03.excalidraw]]
+> Überlegen Sie, welche Kombinationen von `and` und `or` mit unseren zwei Helligkeitssensoren sinnvoll sein könnten und welche Aktionen der Roboter in den verschiedenen Situationen ausführen sollte. Schreiben Sie eine Struktur in Pseudocode. ![[microbit-linetracker-steeringlogic.excalidraw]]
 
 > [!question]- So könnte das aussehen
 > 
@@ -58,7 +58,7 @@ Nun werden wir das Konzept der logischen Verknüpfungen anwenden, um einen Linie
 > 
 
 Intuitiv würden Sie das in Makecode vielleicht so umsetzen, aber Sie werden merken, dass das Probleme verursacht.
-![[Pasted%20image%2020240903220448.png]]
+![[linetracker-eventblocks-trouble.png]]
 
 > [!example] Diskussion
 > 
@@ -87,7 +87,7 @@ Es ist in der Informatik - und speziell der Robotik - oft so, dass Sie **mit ein
 > 
 > Sie könnten die verschiedenen Geschwindigkeiten am Anfang des Programms in eine **Variabel** speichern. So müssen Sie dann nur noch die Variabel anpassen.
 > 
-> ![[Pasted%20image%2020240903221209.png]]
+> ![[linetracker-speed.png]]
 
 ## 4. Dynamische Geschwindigkeitsanpassung:
 

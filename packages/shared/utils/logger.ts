@@ -7,6 +7,7 @@ const levels = [
     { name: 'warn', style: 'color: #ff9900; font-weight: bold' },  // Orange
     { name: 'info', style: 'color: #00cc00' },                     // Green
     { name: 'debug', style: 'color: #0099ff' },                    // Blue
+    // Only in development 👇
     { name: 'http', style: 'color: #cc00cc' },                     // Purple
     { name: 'verbose', style: 'color: #cccccc' },                  // Gray
     { name: 'silly', style: 'color:rgb(255, 217, 0)' }                     // Light gray
@@ -18,12 +19,18 @@ const isBrowser = typeof window !== 'undefined'
 // Create logger
 export const logger: { [key: string]: any } = {}
 
+// Determine build context
+const isProduction = process.env.NODE_ENV === 'production';
+const isBuildTime = !process.env.NEXT_PUBLIC_RUNTIME_ENV && !isBrowser;
+const limitToDebug = isProduction || isBuildTime;
+
 // Get the index of configured log level
 const configuredLevelIndex = levels.findIndex(l => l.name === logLevel)
+const levelIndex = limitToDebug ? Math.min(configuredLevelIndex, levels.findIndex(l => l.name === "debug")) : configuredLevelIndex
 
 // Create logger functions for each level
 levels.forEach((level, index) => {
-    if (index <= configuredLevelIndex) {
+    if (index <= levelIndex) {
         if (isBrowser) {
             // Browser implementation with CSS styles
             logger[level.name] = (...args: any[]) => {

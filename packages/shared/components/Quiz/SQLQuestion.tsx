@@ -49,7 +49,7 @@ export function SQLQuestion({
     const id = idProp || (typeof children === 'string' ? children.trim() : undefined);
 
     if (!id) {
-        logger.warn('SQLQuestion: No ID provided through props or children');
+        logger.verbose('SQLQuestion: No ID provided through props or children');
     }
 
     const [query, setQuery] = useState<string>(defaultQuery);

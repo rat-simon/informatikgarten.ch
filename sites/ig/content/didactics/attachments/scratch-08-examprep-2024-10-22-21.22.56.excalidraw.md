@@ -18,7 +18,7 @@ display: hidden
 4 ^ZcKMlD3D
 
 ## Embedded Files
-28f6849824b73a7f1dfaf57f0f70d956d9a4f26e: [[scratch-05-fernsteuerung 1.png]]
+28f6849824b73a7f1dfaf57f0f70d956d9a4f26e: [[scratch-05-fernsteuerung-solution.png]]
 
 %%
 ## Drawing

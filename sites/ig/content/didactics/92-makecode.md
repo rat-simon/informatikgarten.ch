@@ -53,4 +53,4 @@ Der Maqueen hat einen Ultraschall-Distanz-Sensor. Versuchen Sie nun einen Staubs
 
 > [!question]- Mögliche Lösung
 > 
-> ![[Pasted%20image%2020240827224314.png]]
+> ![[staubsauger-solution.png]]

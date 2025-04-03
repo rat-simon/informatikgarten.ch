@@ -62,4 +62,4 @@ Vervollständigen Sie das Programm so, dass man dieses Programm auf zwei Microbi
 
 > [!solution]- Lösung
  >
-> ![[scratch-05-fernsteuerung%201.png]]
+> ![[scratch-05-fernsteuerung-solution.png]]

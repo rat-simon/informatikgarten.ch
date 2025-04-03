@@ -25,7 +25,7 @@ Nun stellt sich aber ein Problem: Wenn Sie wie hier im Beispiel **mit Ereignisse
 > 
 > Wie schon zuvor müssen Sie eine eigene Schleife kreieren, um mehr Kontrolle über den Programmablauf zu erlangen.
 > 
-> ![[scratch-05-fernsteuerung%201.png]]
+> ![[scratch-05-fernsteuerung-solution.png]]
 
 ## Segway-Fernsteuerung 
 
