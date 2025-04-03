@@ -29,4 +29,4 @@ Ich freue mich über Beiträge! Kleinere Korrekturen können Sie direkt hier auf
 - Installieren Sie die Dependencies mit `pnpm install`
 - Wechseln Sie ins Verzeichnis `/sites/ig`
 - Starten Sie den Entwicklungsserver mit `pnpm dev`
-- Öffnen Sie `/sites/ig/content` als Vault in Obsidian (installieren Sie die Plugins)
+- Öffnen Sie `/sites/ig/content` als Vault in Obsidian (aktivieren Sie die Plugins)

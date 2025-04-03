@@ -12,7 +12,7 @@ Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das du
 - *"Informatikgarten ist sehr gut und machte mir das Lernen einfach."*
 - *"Informatikgarten ist perfekt für mich zum Lernen, denn Sie erklären es sehr verständlich und haben auch gute Videos dazu hochgeladen."*
 - *"Die Lernvideos sind super."*
-- *"Ich finde die Webseite Informatikgarten sehr toll und dass man dort schwierige Sachen nachlesen kann, oder auch das die Erklärungen sehr ausführlich sind."*
+- *"Ich finde die Webseite Informatikgarten sehr toll und dass man dort schwierige Sachen nachlesen kann, oder auch dass die Erklärungen sehr ausführlich sind."*
 - *"Ich finde es sehr gut, dass auf Informatikgarten alles erklärt ist."*
 
 ## Variowoche: Special Effects mit Blender
@@ -27,30 +27,36 @@ In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Vid
 	- [ ] Connect SQL questions with UserData model
 	- [ ] Progress reporting per student / class
 	- [ ] Exam solution with Safe Exam Browser (Exam.net?)
-	- [x] Klassen- und Gruppenverwaltung
+	- [ ] Klassen- und Gruppenverwaltung
 	- [x] Frage-Komponenten mit Feedback-Funktion
-- [ ] Turtle editor
-	- [ ] Python Language Server for syntax highlighting und autocomplete
-	- [ ] Hand-in function for persistent code versions
-	- [ ] Optimize touch devices
+- [ ] Turtle editor / coding experience
 	- [ ] Integrate in UserData model
-	- [ ] Feedback by teachers using Excalidraw
-	- [ ] AI feedback for code
-- [ ] Gamification
+	- [ ] Pyodide + Turtle module? ([candidate by raspberrypi foundation](https://github.com/RaspberryPiFoundation/turtle))
+	- [ ] Python Language Server for syntax highlighting und autocomplete
+	- [ ] Handin, Feedback
+		- [ ] Hand-in function for persistent code versions
+		- [ ] Feedback by teachers using Excalidraw
+		- [ ] AI feedback for code?
+	- [ ] Optimize touch devices
 	- [ ] Web-USB für Gamecontroller (und evtl Microbit?)
-	- [ ] Lesson with Godot
-- [ ] Hosting platform
+	- [ ] Remove old code storage once UserData model is integrated
+- [ ] Hosting platform 
 	- [ ] Teacher management
 	- [ ] Payment solution
 	- [ ] Custom exams per teacher?
 	- [ ] Custom content per teacher?
-- [ ] Backend
-	- [ ] Remove old code storage once UserData model is integrated
+- [ ] Content
+	- [ ] Split Coding in two chapters?
+	- [ ] Update Network
+	- [ ] Security / Hacking
+	- [ ] Godot games
+	- [ ] Blender vfx
+
+- [x] Backend
 	- [x] Nextauth move to Prisma & Prisma Connector
 		- [x] Remove SQL statements
 		- [x] Remove JWT logics
 		- [x] Testing
-
 - [X] Bugs
 	- [X] StickMe CSS broken
 - [X] Nextra
