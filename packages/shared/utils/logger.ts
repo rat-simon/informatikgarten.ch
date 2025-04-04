@@ -20,9 +20,7 @@ const isBrowser = typeof window !== 'undefined'
 export const logger: { [key: string]: any } = {}
 
 // Determine build context
-const isProduction = process.env.NODE_ENV === 'production';
-const isBuildTime = !process.env.NEXT_PUBLIC_RUNTIME_ENV && !isBrowser;
-const limitToDebug = isProduction || isBuildTime;
+const limitToDebug = process.env.NODE_ENV === 'production';
 
 // Get the index of configured log level
 const configuredLevelIndex = levels.findIndex(l => l.name === logLevel)
@@ -63,5 +61,11 @@ levels.forEach((level, index) => {
         logger[level.name] = () => { }
     }
 })
+
+// Generic test function to see if logging level is matched
+logger.test = (level: string) => {
+    const index = levels.findIndex(l => l.name === level)
+    return index <= levelIndex
+}
 
 export default logger

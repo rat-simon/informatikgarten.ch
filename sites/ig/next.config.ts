@@ -8,6 +8,7 @@ import {
     remarkWikiLinks,
     remarkCallouts,
 } from "shared/server/remark";
+import { logger } from "shared/utils";
 
 function isExportNode(node, varName: string) {
     if (node.type !== "mdxjsEsm") return false;
@@ -94,7 +95,7 @@ const nextConfig = withNextra({
         ignoreDuringBuilds: true,
     },
     webpack(config, { isServer }) {
-        if (process.env.NODE_ENV === "development") {
+        if (logger.test("verbose")) {
             config.infrastructureLogging = {
                 level: "verbose",
                 debug: /PackFileCacheStrategy|webpack\.FileSystemInfo/,
