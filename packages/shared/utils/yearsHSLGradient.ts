@@ -34,7 +34,7 @@ export class YearsHSLGradient {
         return [parseInt(match[0]), parseInt(match[1]!), parseInt(match[2]!)]
     }
 
-    getColor(year: number): string {
+    getColor(year: number, opacity = 1): string {
         if (this.yearLow === this.yearHigh) {
             // If yearLow and yearHigh are the same, return colorLow
             return `hsl(${this.hueLow}, ${this.saturationLow}%, ${this.lightnessLow}%)`
@@ -64,6 +64,6 @@ export class YearsHSLGradient {
         )
 
         // Return the interpolated color in the CSS HSL format
-        return `hsl(${hue}, ${saturation}%, ${lightness}%)`
+        return `hsla(${hue}, ${saturation}%, ${lightness}%, ${opacity})`
     }
 }

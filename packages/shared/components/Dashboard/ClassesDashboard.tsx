@@ -113,7 +113,7 @@ export const ClassesDashboard = () => {
     return (
         <div className="p-4">
             <h2>Meine Klassen</h2>
-            <table className='w-full'>
+            <table className='w-full font-bold'>
                 <thead>
                     <tr key="classes-header">
                         <th>Name</th>
@@ -147,7 +147,8 @@ export const ClassesDashboard = () => {
                                     <tr
                                         style={{
                                             backgroundColor: Gradient.getColor(
-                                                cls.year
+                                                cls.year,
+                                                0.4
                                             )
                                         }}
                                     >
