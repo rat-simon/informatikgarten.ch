@@ -18,9 +18,6 @@
     text-align: center;
     overflow: hidden;
     vertical-align: bottom;
-    height: 0;
-}
-.open .instructions {
     height: 2rem;
 }
 

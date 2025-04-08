@@ -4,9 +4,14 @@ import cn from 'clsx'
 import { useTheme } from 'next-themes'
 import dynamic from 'next/dynamic'
 import styles from './LuzLogo.module.scss'
+import { usePathname } from 'next/navigation'
 
 const LuzLogo = () => {
+    // Don't show logo on homepage
+    if (usePathname() === '/') return <></>
+
     const isDark = useTheme().resolvedTheme === 'dark'
+    
     return (
         <svg
             xmlns="http://www.w3.org/2000/svg"

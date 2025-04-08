@@ -25,7 +25,7 @@ const headingFont = Barlow_Condensed({
 })
 
 export const metadata: Metadata = {
-  description: 'Logik underer Zeit - ein Wissensmagazin mit Haltung',
+  description: 'Logik underer Zeit - ein Wissensgarten zu Politik und internationale Beziehungen.',
   metadataBase: new URL('https://luz.to'),
   keywords: [
     'Politik',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: 'luz.to'
   },
   title: {
-    default: 'luz.to - ein Wissensmagazin mit Haltung',
+    default: 'luz.to - ein Wissensmagazin zu Politik',
     template: '%s - luz.to'
   },
   openGraph: {
@@ -65,8 +65,6 @@ export const metadata: Metadata = {
   }
 }
 
-import { AuthBtn } from 'shared/components'
-
 const navbar = (
   <Navbar
     logo={
@@ -83,7 +81,6 @@ const navbar = (
     }
     projectIcon={null}
   >
-    {/* <AuthBtn /> */}
   </Navbar>
 )
 
