@@ -1,10 +1,7 @@
 ---
 title: Home
 ---
-
 # Grüezi und willkommen
-
-Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen. 
 
 Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
 
@@ -15,6 +12,7 @@ Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das du
 - *"Ich finde die Webseite Informatikgarten sehr toll und dass man dort schwierige Sachen nachlesen kann, oder auch dass die Erklärungen sehr ausführlich sind."*
 - *"Ich finde es sehr gut, dass auf Informatikgarten alles erklärt ist."*
 
+Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen. 
 ## Variowoche: Special Effects mit Blender
 
 In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Videos produziert. Zudem bin ich seit 24 Jahren beim Open-Source-3D-Programm Blender mit dabei. Dieses Jahr mache ich deswegen eine Variowoche zu Blender und Special Effects! (22. September - 26. September 2025)
@@ -49,8 +47,9 @@ In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Vid
 	- [ ] Split Coding in two chapters?
 	- [ ] Update Network
 	- [ ] Security / Hacking
-	- [ ] Godot games
 	- [ ] Blender vfx
+	- [ ] AI
+	- [ ] Godot games
 
 - [x] Backend
 	- [x] Nextauth move to Prisma & Prisma Connector
