@@ -17,7 +17,7 @@
     counter-reset: decCount;
 
     ul {
-        li ::before {
+        li a::before {
             counter-increment: decCount;
             content: counter(decCount);
             display: inline-block;

@@ -1,4 +1,3 @@
-import { logger } from '../../utils'
 import type { Image, Root } from 'mdast'
 import type { Plugin } from 'unified'
 import { visit } from 'unist-util-visit'
@@ -21,7 +20,8 @@ export const remarkExcalidraw: Plugin<[], Root> = () => ast => {
             const darkNode = {
                 type: 'image',
                 url: url + '.dark.svg',
-                alt: node.alt
+                alt: node.alt,
+                width: node.alt?.includes('excalidraw') && node.alt
             }
 
             // Create new node of type 'excalidraw' with lightNode and darkNode as children
@@ -30,10 +30,7 @@ export const remarkExcalidraw: Plugin<[], Root> = () => ast => {
                 tagName: 'excalidraw',
                 children: [lightNode, darkNode],
                 data: {
-                    hName: 'excalidraw',
-                    hProperties: {
-                        className: 'excalidraw'
-                    }
+                    hName: 'excalidraw'
                 }
             }
 

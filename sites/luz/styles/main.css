@@ -41,8 +41,8 @@ main {
     }
 }
 
-blockquote:not(.callout) {
-    border-left: 3px solid var(--color-accent-0);
+.blockquote:not(.callout) {
+    border-left: 3px solid var(--color-ig-h3);
     padding-left: 1rem;
     margin-top: 1rem;
 }

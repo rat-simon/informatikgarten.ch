@@ -7,6 +7,7 @@ import {
     remarkVideo,
     remarkWikiLinks,
     remarkCallouts,
+    remarkYoutube,
 } from "shared/server/remark";
 
 function isExportNode(node, varName: string) {
@@ -72,6 +73,7 @@ const withNextra = nextra({
         format: "mdx",
         remarkPlugins: [
             remarkWikiLinks, // before Excalidraw
+            remarkYoutube, // before path corrections
             remarkExcalidraw, // before path corrections
             remarkVideo, // before path corrections
             remarkPathCorrections,
