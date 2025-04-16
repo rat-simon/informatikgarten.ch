@@ -60,6 +60,21 @@ Wunderbar! Eine Ziffer aus dem Hexadezimalsystem ist genau vier Bit lang! Das he
 - Sie können ein Byte immer in genau zwei Hex-Ziffern ausdrucken. 
 - Anders als beim Dezimalsystem können Sie beide Hex-Ziffern getrennt umwandeln.
 
+### Erklärvideo
+
+In diesem Video wird diese Grundlage des Hexadezimalsystems erklärt.
+
+![[hex1.mp4]]
+
+## Umwandeln
+
+### Erklärvideo
+
+Hier noch ein Erklärvideo, das die Umwandlung zwischen den Zahlensystemen zeigt.
+
+![[hex2.mp4]]
+
+
 > [!info] Zusammenfassung Binär, Dezimal, Hexadezimal
 > 
 > Den Theorieeintrag erstellen wir zusammen in Onenote. Wir lernen:

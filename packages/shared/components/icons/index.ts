@@ -1,5 +1,4 @@
 export { default as IgLogo } from './IgLogo.svg?svgr'
-export { default as LuzLogo } from './LuzLogo'
 
 // Animated icons from Lordicon
 export { Pin, Unpin } from './Pin'
