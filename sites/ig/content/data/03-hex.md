@@ -72,7 +72,7 @@ In diesem Video wird diese Grundlage des Hexadezimalsystems erklärt.
 
 Hier noch ein Erklärvideo, das die Umwandlung zwischen den Zahlensystemen zeigt.
 
-![[hex2.mp4]]
+![[hex2_corr.mp4]]
 
 
 > [!info] Zusammenfassung Binär, Dezimal, Hexadezimal

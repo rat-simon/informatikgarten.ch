@@ -4,8 +4,6 @@ title: Home
 
 # Grüezi und willkommen
 
-Informatikgarten ist open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen. 
-
 Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
 
 - *"Informatikgarten ist eine SUPER Webseite und mega hilfreich."*
@@ -14,6 +12,8 @@ Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das du
 - *"Die Lernvideos sind super."*
 - *"Ich finde die Webseite Informatikgarten sehr toll und dass man dort schwierige Sachen nachlesen kann, oder auch dass die Erklärungen sehr ausführlich sind."*
 - *"Ich finde es sehr gut, dass auf Informatikgarten alles erklärt ist."*
+
+Informatikgarten ist übrigens open-source 🥳! Sie können den kompletten Quellcode der Webseite [auf Github](https://github.com/marcchehab/informatikgarten.ch) anschauen und zu jeder Lektion direkt Verbesserungen vorschlagen. 
 
 ## Variowoche: Special Effects mit Blender
 
