@@ -1,0 +1,10 @@
+{
+  "alwaysUpdateLinks": true,
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "newFileLocation": "root",
+  "newLinkFormat": "shortest",
+  "attachmentFolderPath": "./attachments",
+  "promptDelete": false,
+  "readableLineLength": false
+}

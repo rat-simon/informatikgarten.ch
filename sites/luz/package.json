@@ -1,0 +1,24 @@
+{
+	"name": "ig",
+	"author": "Marc Chéhab",
+	"license": "AGPL-3.0-only",
+	"scripts": {
+		"build": "next build",
+		"dev": "next",
+		"postinstall": "mkdir -p public/sql/wasm && cp node_modules/sql.js/dist/sql-wasm.wasm public/sql/wasm/ && cp node_modules/sql.js/dist/sql-wasm.js public/sql/wasm/",
+		"syncvideo": "pnpm exec next-video sync --dir content/videos/",
+		"postbuild": "next-sitemap && pagefind --site .next/server/app --output-path public/_pagefind",
+		"start": "next start"
+	},
+	"browserslist": [
+		">= .25%",
+		"not dead"
+	],
+	"dependencies": {
+		"shared": "workspace:*",
+		"sql.js": "*"
+	},
+	"devDependencies": {
+		"postcss-nesting": "^13.0.1"
+	}
+}

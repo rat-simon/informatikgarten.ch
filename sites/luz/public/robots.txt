@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.informatikgarten.ch
+
+# Sitemaps
+Sitemap: https://www.informatikgarten.ch/sitemap.xml

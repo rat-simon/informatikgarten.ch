@@ -1,7 +1,6 @@
 ---
 title: Home
 ---
-
 # Grüezi und willkommen
 
 Nachdem ich Hunderte Stunden an dieser Webseite gearbeitet habe, hat mich das durchwegs positive Feedback zu Informatikgarten in den Unterrichtsbefragungen sehr gefreut - herzlichen Dank! 🥲
@@ -49,8 +48,9 @@ In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Vid
 	- [ ] Split Coding in two chapters?
 	- [ ] Update Network
 	- [ ] Security / Hacking
-	- [ ] Godot games
 	- [ ] Blender vfx
+	- [ ] AI
+	- [ ] Godot games
 
 - [x] Backend
 	- [x] Nextauth move to Prisma & Prisma Connector

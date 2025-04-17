@@ -3,6 +3,7 @@
 import dynamic from 'next/dynamic'
 import type { ReactElement } from 'react'
 import { useState, useEffect } from 'react'
+import { logger } from '../utils'
 
 // Define props type outside so it can be used with dynamic import
 interface MuxVideoProps {
@@ -27,8 +28,10 @@ const MuxPlayer = dynamic(
 )
 
 export function MuxVideo(props: MuxVideoProps): ReactElement {
-    const { src: playbackId, blurDataURL, aspectRatio, ...restProps } = props
+    const { src: playbackId, blurDataURL, aspectRatio, alt, ...restProps } = props
     const [isClient, setIsClient] = useState(false)
+
+    logger.debug('MuxVideo', alt ? alt.includes('autoplay') : false)
 
     useEffect(() => {
         setIsClient(true)
@@ -49,6 +52,8 @@ export function MuxVideo(props: MuxVideoProps): ReactElement {
             placeholder={blurDataURL ?? ''}
             accentColor="hsl(204deg, 100%, 55%)"
             style={{ aspectRatio: aspectRatio ?? 16 / 9 }}
+            autoPlay={alt ? alt.includes('autoplay') : false}
+            loop={alt ? alt.includes('loop') : false}
             {...restProps}
         />
     )
