@@ -1,7 +1,7 @@
 "use client"
 
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 type YoutubeProps = {
     id: string;
@@ -14,6 +14,8 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
 
     // Render thumbnail until it's clicked on
     const [isOpen, setIsOpen] = useState(false)
+    const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null)
+    const [isLoading, setIsLoading] = useState(true)
     const handleClick = () => setIsOpen(true)
 
     // Build the YouTube URL parameters
@@ -32,16 +34,80 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
         return `https://www.youtube.com/embed/${id}?${params.toString()}`;
     }
 
+    // Check if thumbnail exists and find the best available one
+    useEffect(() => {
+        // Try to get video metadata for correct aspect ratio
+        const fetchVideoMetadata = async () => {
+            try {
+                const oembedUrl = `https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v=${id}&format=json`;
+                const metadataResponse = await fetch(oembedUrl);
+                // If we can get metadata, proceed with thumbnails
+                if (metadataResponse.ok) {
+                    checkThumbnail(0);
+                } else {
+                    checkThumbnail(0);
+                }
+            } catch (error) {
+                // Fallback to regular thumbnail check
+                checkThumbnail(0);
+            }
+        };
+
+        const thumbnailQualities = [
+            'maxresdefault.jpg',
+            'sddefault.jpg',
+            'hqdefault.jpg',
+            'mqdefault.jpg',
+            'default.jpg'
+        ];
+        
+        const checkThumbnail = async (index = 0) => {
+            if (index >= thumbnailQualities.length) {
+                // If we've tried all thumbnails without success, use a placeholder
+                setThumbnailUrl('/images/video-placeholder.jpg');
+                setIsLoading(false);
+                return;
+            }
+            
+            const url = `https://img.youtube.com/vi/${id}/${thumbnailQualities[index]}`;
+            
+            try {
+                const response = await fetch(url, { method: 'HEAD' });
+                if (response.ok) {
+                    setThumbnailUrl(url);
+                    setIsLoading(false);
+                } else {
+                    // Try next quality
+                    checkThumbnail(index + 1);
+                }
+            } catch (error) {
+                // Try next quality on error
+                checkThumbnail(index + 1);
+            }
+        };
+        
+        fetchVideoMetadata();
+    }, [id]);
+
     if (!isOpen) {
         return (
-            <div className="relative cursor-pointer" onClick={handleClick}>
-                <Image
-                    src={`https://img.youtube.com/vi/${id}/maxresdefault.jpg`}
-                    width={1280}
-                    height={720}
-                    alt="Youtube thumbnail"
-                    className="rounded-lg"
-                />
+            <div className="relative cursor-pointer aspect-video" onClick={handleClick}>
+                {isLoading ? (
+                    <div className="absolute inset-0 bg-gray-200 animate-pulse rounded-lg flex items-center justify-center">
+                        <span>Loading thumbnail...</span>
+                    </div>
+                ) : (
+                    <div className="absolute inset-0 overflow-hidden rounded-lg">
+                        <Image
+                            src={thumbnailUrl || `https://img.youtube.com/vi/${id}/hqdefault.jpg`}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            alt="Youtube thumbnail"
+                            className="object-cover"
+                            priority
+                        />
+                    </div>
+                )}
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="bg-black bg-opacity-50 rounded-full p-4 transition-transform transform hover:scale-110">
                         <svg

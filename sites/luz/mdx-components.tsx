@@ -102,12 +102,15 @@ export const useMDXComponents: typeof getDocsMDXComponents = components => ({
     />
   ),
   table: props => <Table className="w-full text-sm" {...props} />,
-  img: props => (
-    <Image
-      {...props}
-      className="nextra-border rounded-xl border drop-shadow-sm"
+  img: props => {
+    const { alt, ...restprops } = props
+    return <Image
+      {...restprops}
+      style={{ width: /^\d+$/.test(alt) ? `${alt}px` : alt }}
+      alt={alt}
+      className="nextra-border rounded-xl border drop-shadow-sm mx-auto"
     />
-  ),
+  },
   figure: props => <figure className="mt-6" {...props} />,
   figcaption: props => (
     <figcaption className="mt-2 text-center text-sm" {...props} />

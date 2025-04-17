@@ -7,7 +7,6 @@ import './globals.css'
 import { LuzLogo } from 'shared/components/icons'
 import { Barlow_Condensed, Roboto_Slab } from 'next/font/google'
 import cn from 'clsx'
-import Providers from 'shared/lib/Providers'
 
 // TODO: move to taliwind
 import 'shared/components/TurtleEditor/style/turtle.global.css'
@@ -98,7 +97,6 @@ const RootLayout: FC<{
         <link rel="manifest" href="/img/site.webmanifest" />
       </Head>
       <body>
-        <Providers>
           <Layout
             navbar={navbar}
             feedback={{ content: null }}
@@ -110,7 +108,6 @@ const RootLayout: FC<{
           >
             {children}
           </Layout>
-        </Providers>
       </body>
     </html>
   )

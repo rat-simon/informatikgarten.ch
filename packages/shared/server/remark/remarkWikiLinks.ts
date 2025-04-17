@@ -140,13 +140,7 @@ export const remarkWikiLinks: Plugin<[], Root> = () => (ast) => {
 
     // Helper function to process wiki links text
     function processWikiLinks(text) {
-        // Handle image/media wikilinks first
-        let processed = text.replace(/!\[\[(.+?)\]\]/g, (match, link) => {
-            return `![](${link})`;
-        });
-
-        // Handle regular wiki links
-        return processed.replace(
+        return text.replace(
             /\[\[(.+?)(?:\|(.+?))?\]\]/g,
             (match, link, text) => {
                 link = link.replace(/(\/)?index$/g, '');
