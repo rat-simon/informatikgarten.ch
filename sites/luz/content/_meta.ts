@@ -10,6 +10,5 @@ export default {
       title: 'Writings'
     },
     venezuela: {},
-    usa: { title: 'USA' },
-    notes: {},
+    usa: { title: 'USA' }
 }
