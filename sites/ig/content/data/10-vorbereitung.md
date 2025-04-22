@@ -3,15 +3,17 @@ title: Aufgaben für die Prüfungsvorbereitung
 display: hidden
 ---
 
-## Prüfungsumfang
+## Bemerkungen zum Prüfungsumfang
 
-Es gelten die Lernziele der behandelten Lektionen, wenn nichts anderes angegeben ist.
+Es gelten die Lernziele der behandelten Lektionen, sofern hier nichts anderes angegeben ist.
 
 [[01-datainfo|Theorieteil über Daten, Kodierung und Information]]
 - Achtung: Simple Datentypen & Semantikfehler haben wir kurz behandelt, unbedingt nochmal anschauen! Von den simplen Datentypen müssen Sie einfach die Namen kennen.
 
 [[02-barcode|Kapitel über Barcodes]]
 - Berechnung der Prüfziffer kommt nicht, aber Sie sollten wissen, wozu die Prüfziffer da ist (Fehlererkennung).
+
+[[03-hex|Kapitel zum hexadezimalen Zahlensystem]]
 
 [[04-qrcode|Kapitel über QR-Codes und Buchstaben]]
 - ACHTUNG: Die Vorlage des QR-Codes, die Sie erhalten werden, enthält keine Hilfsmuster!
@@ -21,7 +23,7 @@ Es gelten die Lernziele der behandelten Lektionen, wenn nichts anderes angegeben
 [[06-bilder|Kapitel über Bilder (Rastergrafiken & Vektorgrafiken)]]
 
 [[07-welchesformat|Kapitel, wann welches Grafikformat Sinn macht]]
-- Wir haben den Inhalt anders abgedeckt, aber die Inhalte auf Informatikgarten zu Kameras und Schriftarten haben wir nicht angeschaut.
+- Wir haben den Inhalt anders abgedeckt, aber die Inhalte auf Informatikgarten zu Kameras und Schriftarten haben wir *nicht* angeschaut und sie sind nicht Teil der Prüfung.
 
 ## Syntax und Semantik
 
@@ -63,7 +65,7 @@ print("Das Ergebnis ist", ergebnis)
 > - **Syntaxfehler**: Auf Linie 1 fehlt das Anführungszeichen am Ende.
 > - **Semantikfehler**: Das Programm würde keine Summe bilden, weil "5" und "7" Strings sind. Es würde einfach die Symbole aneinanderhängen, also "57".
 
-### Zahlensysteme umrechnen
+## Zahlensysteme umrechnen
 1. Schreiben Sie 2C4<sub>16</sub> als Dezimalzahl. 
 2. Notieren Sie dieses Byte hexadezimal: 0111'1100<sub>2</sub>
 
