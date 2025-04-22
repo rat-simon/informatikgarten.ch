@@ -6,7 +6,7 @@ import { visit } from 'unist-util-visit'
 import { logger } from '../../utils'
 import { searchFileInSubdirectories } from '../utils'
 
-async function fetchPlaybackIdFromJson(videoSrcString: string) {
+async function fetchPlaybackIdAndPosterFromJson(videoSrcString: string): Promise<[string, string] | null> {
     try {
         // Assuming videoSrcString is e.g. /videos/my-video.mp4 inside /content
         const jsonFilename = path.basename(videoSrcString + '.json')
@@ -20,7 +20,7 @@ async function fetchPlaybackIdFromJson(videoSrcString: string) {
             return null
         }
         const jsonData = JSON.parse(await fsPromises.readFile(videoJsonPath, 'utf-8'))
-        return jsonData.providerMetadata.mux.playbackId
+        return [jsonData.providerMetadata.mux.playbackId, jsonData.poster]
     } catch (error) {
         console.error('Failed to fetch JSON data:', error)
         return null
@@ -40,8 +40,9 @@ export const remarkVideo: Plugin<[], Root> = () => async (ast) => {
 
     // Then process them asynchronously
     for (const { node, index, parent } of nodesToProcess) {
-        const playbackId = await fetchPlaybackIdFromJson(node.url)
-        if (playbackId) {
+        const result = await fetchPlaybackIdAndPosterFromJson(node.url)
+        if (result) {
+            const [playbackId, poster] = result
             const muxvideoNode = {
                 type: 'muxvideo',
                 data: {
@@ -49,6 +50,7 @@ export const remarkVideo: Plugin<[], Root> = () => async (ast) => {
                     hProperties: {
                         className: 'muxvideo',
                         src: playbackId,
+                        poster: poster,
                         alt: node.alt || ''
                     }
                 }

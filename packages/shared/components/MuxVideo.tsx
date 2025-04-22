@@ -8,6 +8,7 @@ import { logger } from '../utils'
 // Define props type outside so it can be used with dynamic import
 interface MuxVideoProps {
     src: string
+    poster: string
     className: string
     alt: string
     blurDataURL?: string | null
@@ -28,7 +29,7 @@ const MuxPlayer = dynamic(
 )
 
 export function MuxVideo(props: MuxVideoProps): ReactElement {
-    const { src: playbackId, blurDataURL, aspectRatio, alt, ...restProps } = props
+    const { src: playbackId, poster, blurDataURL, aspectRatio, alt, ...restProps } = props
     const [isClient, setIsClient] = useState(false)
 
     logger.debug('MuxVideo', alt ? alt.includes('autoplay') : false)
@@ -49,6 +50,7 @@ export function MuxVideo(props: MuxVideoProps): ReactElement {
     return (
         <MuxPlayer
             playbackId={playbackId}
+            poster={poster}
             placeholder={blurDataURL ?? ''}
             accentColor="hsl(204deg, 100%, 55%)"
             style={{ aspectRatio: aspectRatio ?? 16 / 9 }}

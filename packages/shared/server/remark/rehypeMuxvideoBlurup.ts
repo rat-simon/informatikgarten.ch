@@ -49,7 +49,7 @@ async function throttledQueue(
                     }
                 }
             })()
-        )
+        )rehypeMuxvideo
     }
 
     while (running < concurrency && index < muxvideoNodes.length) {
