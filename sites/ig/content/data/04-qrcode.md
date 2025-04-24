@@ -44,6 +44,12 @@ Als Reaktion auf die Beschränkungen von ASCII wurde Unicode entwickelt, um alle
 
 ## QR-Codes
 
+### Erklärvideo
+
+![[qrcode_full.mp4]]
+
+### Schritt für Schritt
+
 Nun zeichnen Sie den Beginn Ihres eigenen QR-Codes. Wir haben im Video gesehen: Wir können binäre Bytes in einen QR-Code schreiben. Standardmässig werden **Binärdaten von Lesern als ASCII-Charaktere interpretiert**. 
 
 > [!NOTE]- Bilder und Audio auf QR-Codes speichern? Und wieso verwenden wir nicht "alphanumerisch"?
