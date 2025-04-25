@@ -39,7 +39,7 @@ Um SQL zu lernen, verwenden wir hauptsächlich eine interaktive Webseite namens 
 - Fragen Sie ungeniert nach **Videoerklärungen**.
 ## Teil 2: Eigenständiges Projekt
 
-*Sie erhalten die Infos zum eigenständigen Projekt in den Ferien*.
+Die Infos finden Sie im [[10-task|Auftrag]].
 
 ## Teil 3: Abschlussprojekt
 
