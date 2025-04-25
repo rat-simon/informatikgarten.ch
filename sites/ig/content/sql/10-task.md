@@ -9,7 +9,10 @@ SQL ist eine mächtige Sprache zur Datenabfrage und -manipulation, die sowohl in
 ## Auftrag
 Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält wertvolle Informationen zu zahlreichen Aspekten der globalen Entwicklung wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
 
-**Wichtiger Hinweis:** Die Daten sind bei Weitem nicht immer vollständig! Ein wichtiger Teil der Datenanalyse besteht darin, mit unvollständigen Datensätzen umzugehen.
+**Wichtige Hinweise:** 
+- Die Daten sind bei Weitem nicht immer vollständig! Ein wichtiger Teil der Datenanalyse besteht darin, mit unvollständigen Datensätzen umzugehen.
+- Sie dürfen ChatGPT verwenden, wenn Sie Ihren Code am Schluss nachvollziehen können und die Verwendung in Ihrer Readme-Datei offenlegen. 
+- Bei Fragen oder Wünschen nach Erklärvideos können Sie mich jederzeit erreichen.
 
 ## Ihre Aufgabe
 Entwickeln Sie innerhalb von 6 EIBE-Lektionen ein Python-Projekt, das diese SQLite-Datenbank nutzt, um interessante Erkenntnisse zu gewinnen oder eine interaktive Anwendung zu erstellen. Ihr Projekt sollte SQL-Abfragen beinhalten und die Daten in einer sinnvollen Weise verarbeiten.
@@ -94,7 +97,7 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 4. **Python-Beispielcode ausführen:** Erstellen Sie eine Python-Datei namens `example.py` und fügen Sie den Beispielcode ein, um sicherzustellen, dass alles funktioniert.
 5. **Python-Datei erstellen:** Erstellen Sie eine neue Python-Datei, z.B. `main.py`, in Ihrem Projektordner
 
-> [!code]- Beispiel-Code mit Erklärungen
+> [!code]- Beispiel-Code mit Erklärungen für `example.py`
 > 
 > ```python
 > import sqlite3
