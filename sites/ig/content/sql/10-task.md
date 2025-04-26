@@ -99,6 +99,8 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 
 > [!code]- Beispiel-Code mit Erklärungen für `example.py`
 > 
+> Im Beispiel werden für Strings oft sogenannte f-Strings verwendet, die vorne an den Anführungszeichen noch ein f haben, also z.B. f"ein Beispiel". F-Strings sind eine einfache Art, den Wert von Variabeln im String schön zu formatieren. Falls Sie das interessiert, schauen Sie sich die [f-Strings-Dokumentation](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) an. (Generell ist die Python-Dokumentation Spitze!)
+> 
 > ```python
 > import sqlite3
 > 
@@ -235,14 +237,14 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 >         print("Ungültige Eingabe! Bitte geben Sie ein Jahr zwischen 1960 und 2022 ein.")
 >         return
 >     
->     # Parametrisierte Abfrage mit ? als Platzhalter (schützt vor SQL-Injection)
+>     # Parametrisierte Abfrage
 >     cursor.execute("""
 >         SELECT country, literacy_total
 >         FROM indicators
 >         WHERE year = ? AND literacy_total IS NOT NULL
 >         ORDER BY literacy_total DESC
 >         LIMIT 3
->     """, (jahr,))  # Parameter als Tupel übergeben
+>     """, [jahr])  # Parameter als Liste (oder Tupel) übergeben
 >     
 >     results = cursor.fetchall()
 >     
