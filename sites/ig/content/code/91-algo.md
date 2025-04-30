@@ -70,4 +70,4 @@ Algorithmen können aber auch einer **Programmiersprache implementiert oder umge
 > 
 > Falls Sie zu viel Zeit haben, können Sie anschliessend je eine eigene Pixelgrafik zeichnen und dann erklären. Das könnte dann so aussehen.
 > 
-> ![Pasted image 20230815060449](./attachments/Pasted-image-20230815060449.png)
+> ![Pasted image 20230815060449](Pasted-image-20230815060449.png)

@@ -69,7 +69,7 @@ blume()
 
 ## Übungen
 
-![Pasted image 20230904192011](./attachments/Pasted-image-20230904192011.png)
+![Pasted image 20230904192011](Pasted-image-20230904192011.png)
 
 > [!question]- Schreiben Sie eine Funktion `rechteck()`, die ein Rechteck wie
 > oben zeichnet 👆.
@@ -91,7 +91,7 @@ blume()
 
 Eine Funktion kann alle anderen Funktionen gebrauchen.
 
-![Pasted image 20230904192315](./attachments/Pasted-image-20230904192315.png)
+![Pasted image 20230904192315](Pasted-image-20230904192315.png)
 
 > [!question]- Nutzen Sie Ihre Funktion `rechteck()` in einer zweiten Funktion
 > `treppe(stufen)`, die uns eine Treppe mit Anzahl `stufen` zeichnet – oben
@@ -127,7 +127,7 @@ for i in range(6):
     eva.right(360/6)
 ```
 
-![Pasted image 20230904183640](./attachments/Pasted-image-20230904183640.png)
+![Pasted image 20230904183640](Pasted-image-20230904183640.png)
 
 > [!question]- Erstellen Sie eine Funktion `sechseck()` und führen Sie sie
 > zweimal so aus, dass die Form einer Acht wie oben 👆 entsteht.
@@ -145,7 +145,7 @@ for i in range(6):
 
 ---
 
-![Pasted image 20230904183937](./attachments/Pasted-image-20230904183937.png)
+![Pasted image 20230904183937](Pasted-image-20230904183937.png)
 
 > [!question]- Nutzen Sie `sechseck()` und machen Sie eine Blume 🌺 aus 10
 > gleichmässig rotierten Sechsecken.
@@ -163,7 +163,7 @@ for i in range(6):
 
 ---
 
-![Pasted image 20230904184720](./attachments/Pasted-image-20230904184720.png)
+![Pasted image 20230904184720](Pasted-image-20230904184720.png)
 
 > [!question]- Verändern Sie die Funktion zu einer Funktion `xeck(ecken)`, bei
 > der man die Anzahl Ecken der Figur als Argument übergeben kann. Machen Sie
@@ -185,7 +185,7 @@ for i in range(6):
 Für folgende Aufgabe müssen Sie wissen, wie man Variabeln während einer
 Wiederholungsschleife verändert.
 
-![Pasted image 20230904190230](./attachments/Pasted-image-20230904190230.png)
+![Pasted image 20230904190230](Pasted-image-20230904190230.png)
 
 > [!question]- Nutzen Sie Ihre Funktion `xeck(ecken)` und schreiben Sie eine
 > **Wiederholungsschleife**, die alle Figuren von einem Dreieck bis zu einem
@@ -219,7 +219,7 @@ Wiederholungsschleife verändert.
 >     style={{backgroundColor: "#12C2FF", color: "black", padding:"2px", borderRadius:"3px"}}>Namens</span>
 >     (Linie 5).
 >
-> ![Pasted image 20230904194355](./attachments/Pasted-image-20230904194355.png)
+> ![Pasted image 20230904194355](Pasted-image-20230904194355.png)
 >
 > Manchmal möchten wir einer Funktion **Informationen übergeben**. Hier wird
 > beispielsweise der Wert <span
@@ -228,7 +228,7 @@ Wiederholungsschleife verändert.
 > style={{backgroundColor: "#15FF74", color: "black", padding:"2px", borderRadius:"3px"}}>ecken</span>
 > der Funktion abgefüllt.
 >
-> ![Pasted image 20230904194406](./attachments/Pasted-image-20230904194406.png)
+> ![Pasted image 20230904194406](Pasted-image-20230904194406.png)
 > Wichtig: Parameter (<span
 > style={{backgroundColor: "#15FF74", color: "black", padding:"2px", borderRadius:"3px"}}>ecken</span>)
 > werden bei jeder Ausführung **temporär** kreiert und wieder zerstört!

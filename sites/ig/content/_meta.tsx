@@ -13,7 +13,7 @@ export default {
     code: {
         title: (
             <span className="menuicon pink">
-                <span>B</span>Programmieren
+                <span>B</span>Programmieren 1
             </span>
         )
     },
@@ -24,38 +24,45 @@ export default {
             </span>
         )
     },
+    code2: {
+        title: (
+            <span className="menuicon pink">
+                <span>D</span>Programmieren 2
+            </span>
+        )
+    },
     net: {
         title: (
             <span className="menuicon pink">
-                <span>D</span>Netzwerke & Internet
+                <span>E</span>Netzwerke & Internet
             </span>
         )
     },
     crypto: {
         title: (
             <span className="menuicon pink">
-                <span>E</span>Kryptologie
+                <span>F</span>Kryptologie
             </span>
         )
     },
     microbit: {
         title: (
             <span className="menuicon pink">
-                <span>F</span>Robotik
+                <span>G</span>Robotik
             </span>
         )
     },
     didactics: {
         title: (
             <span className="menuicon pink">
-                <span>G</span>Didaktik
+                <span>H</span>Didaktik
             </span>
         )
     },
     sql: {
         title: (
             <span className="menuicon pink">
-                <span>H</span>Datenbanken
+                <span>I</span>Datenbanken
             </span>
         )
     },
