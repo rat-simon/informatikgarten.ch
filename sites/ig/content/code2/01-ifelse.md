@@ -209,7 +209,7 @@ print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
 print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
 ```
 
-Schreiben Sie ein Programm, dass alle Zahlen von 1 bis 10 ausdruckkt, die restlos durch 3 teilbar sind.
+Schreiben Sie ein Programm, dass alle Zahlen von 1 bis 10 ausdruckt, die restlos durch 3 teilbar sind.
 
 > [!solution]- Lösung
 >
