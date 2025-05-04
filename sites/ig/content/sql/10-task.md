@@ -215,7 +215,7 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 >         AVG(gdp_growth) AS durchschnitt_wachstum,
 >         COUNT(gdp_growth) AS anzahl_datenpunkte
 >     FROM indicators
->     WHERE year BETWEEN 2012 AND 2021
+>     WHERE year BETWEEN 2012    AND 2021
 >       AND gdp_growth IS NOT NULL
 >     GROUP BY country
 >     HAVING COUNT(gdp_growth) >= 5

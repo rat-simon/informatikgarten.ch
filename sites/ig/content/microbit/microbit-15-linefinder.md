@@ -15,7 +15,7 @@ Schreiben Sie ein Programm so, dass Sie nicht von Anfang an den Roboter auf die 
 
 Dazu folgende Tipps und Annahmen:
 - Sie erhalten kleine "Wände", um einen Raum auf dem Tisch zu bauen.
-- Schauen Sie sich die [Staubsauger-Aufgabe](microbit-03-maqueen-intro.md) an.
+- Schauen Sie sich die [Staubsauger-Aufgabe](microbit-10-maqueen-intro.md) an.
 - Nehmen Sie an, Sie würden sich in einem komplett weissen Raum befinden, der nur eine Linie am Boden hat.
 
 > [!solution]- Lösung

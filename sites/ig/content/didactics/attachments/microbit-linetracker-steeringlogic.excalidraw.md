@@ -22,7 +22,7 @@ display: hidden
 0 ^HuM7QH7w
 
 ## Embedded Files
-b42d6e046a7e2f56043a61343f779df17aad475c: [[Pasted Image 20240903144541_329.png]]
+b42d6e046a7e2f56043a61343f779df17aad475c: [[maqueen-top.png]]
 
 %%
 ## Drawing

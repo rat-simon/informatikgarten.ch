@@ -8,6 +8,7 @@ title: ✨ Einzelne LEDs und return-Statement
 > `return` kann nur innerhalb einer Funktion verwendet werden. Damit kann man dem Hauptprogramm einen Wert zurückgeben. Aber für dieses Design pattern viel wichtiger: Es beendet die Ausführung der Funktion.
 > 
 > So konnten wir in unserer Funktion `fill()` die LEDs füllen, bis die Summe der LEDs gleich gross war, wie die gewünschte Anzahl, und dann einfach die Funktion beenden.
+> 
 > ```python {hl_lines="2 6-8"}
 > def fill(nr, wartezeit):
 >     sum = 0
@@ -84,7 +85,7 @@ Speichern Sie sich diese Funktion `fill()` irgendwo ab, wir werden die sicher no
 
 ### L5: Knacknuss
 
-Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen.
+Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 
 ### L6: Knacknuss: "Kitt, I need you pal!
 

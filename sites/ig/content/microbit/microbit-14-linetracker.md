@@ -58,7 +58,7 @@ while RUNNING:
 > 
 > Überlegen Sie, welche Kombinationen von `and` und `or` mit unseren zwei Helligkeitssensoren sinnvoll sein könnten und welche Aktionen der Roboter in den verschiedenen Situationen ausführen sollte. Schreiben Sie eine Struktur direkt in Python und/oder Pseudocode.
 > 
-> ![[microbit/attachments/microbit-04-linetracker-2024-09-03-11.02.03.excalidraw]]
+> ![[04-linetracker-logictop.excalidraw.light.svg]]
 
 > [!question]- So könnte das aussehen
 > 

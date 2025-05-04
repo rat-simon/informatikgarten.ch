@@ -18,8 +18,8 @@ V1 ^EbMxckmw
 (zur Illustration, lernen Sie das nicht auswendig!) ^i6n3wsXa
 
 ## Embedded Files
-c706143421ab5350e9c4dd4ab50ec678e7e949fa: [[attachments/Pasted Image 20240827203206_460.png]]
-e19a3922c3a37a721e7d0118aec8faa3ba431e50: [[attachments/Pasted Image 20240827203245_485.png]]
+c706143421ab5350e9c4dd4ab50ec678e7e949fa: [[pinout.png]]
+e19a3922c3a37a721e7d0118aec8faa3ba431e50: [[pinout2.png]]
 
 %%
 ## Drawing

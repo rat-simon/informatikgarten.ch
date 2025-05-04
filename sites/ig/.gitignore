@@ -5,4 +5,4 @@ content/videos/*
 !content/videos/*.ts
 .vercel
 
-ig-content
+ig_content

@@ -12,15 +12,17 @@ title: "Unser Roboter: Maqueen"
 Der Roboter und unser Microbit werden von verschiedenen Firmen produziert. Es ist also nur logisch, dass Ihr Microbit **keine fertigen Befehle für den Roboter** hat. 
 
 
-![[microbit-03-maqueen-intro-2024-08-27-10.37.02.excalidraw]]
+![[maqueen-intro-hwinterface.excalidraw]]
 
-Der Microbit und der Roboter kommunizieren über die **Hardware-Schnittstelle** des Microbit mit **digitalen Signalen aus 1 (high) und 0 (low)**. Wie kann das nur funktionieren? Stellen Sie sich das so vor: Die Macher des Microbit haben eine genaue Auflistung veröffentlicht, für was welche Pins der Schnittstelle benutzt werden können. Diese Auflistung nennt man ein "pinout".
+Der Microbit und der Roboter kommunizieren über die **Hardware-Schnittstelle** des Microbit mit **digitalen Signalen aus 1 (high) und 0 (low)**. Zwei verschiedene Firmen haben Hardware entwickelt, die nur über Nullen und Einsen kommuniziert - und das funktioniert!? Wieso?
 
-![[microbit-03-maqueen-intro-2024-08-27-20.31.51.excalidraw]]
+Die Antwort ist relativ einfach: Die Macher des Microbit (BBC) haben eine genaue Auflistung veröffentlicht, wie welche Pins der Schnittstelle benutzt werden können. Diese Auflistung nennt man ein "pinout".
 
-Die Macher bei DFrobot haben sich dann entschlossen, **einen Roboter für diese Schnittstelle zu bauen**. Sie wussten, welche Art von Signalen der Microbit über welche Pins abgeben oder lesen kann. Also bauten Sie den Roboter so, dass er auf die Schnittstelle passt.
+![[maqueen-intro-pinout.excalidraw|400]]
 
-Sie könnten mit dem Microbit-Paket allein z.B. ein Befehl an den Roboter schicken, um das linke Blinker-LED anzustellen, indem Sie das digitale Signal auf Pin 8 auf "high" (also 1) setzen. Diese Angaben müssten Sie im Handbuch des Roboters nachschauen.
+Die Macher bei DFrobot haben sich dann entschlossen, **einen Roboter für diese Schnittstelle zu bauen**. Sie wussten, welche Art von Signalen der Microbit über welche Pins mit welchen Befehlen abgeben oder lesen kann. Also bauten Sie den Roboter so, dass er auf die Schnittstelle passt.
+
+Sie können selbst mit dem Microbit-Paket allein ein Befehl an den Roboter schicken, z.B. um das linke Blinker-LED anzustellen. Das tun Sie, indem Sie das digitale Signal auf Pin 8 auf "high" (also 1) setzen. Diese Angaben müssten Sie im Handbuch des Maqueen-Roboters nachschauen.
 
 ```python
 from microbit import *
@@ -79,16 +81,14 @@ Natürlich wäre es sehr mühsam, den Maqueen so zu programmieren. Sie erhalten 
 
 ## Aufgaben
 
-### Zwei Tests mit einer kleinen Spritztour 
+### Eine kleine Spritztour
 
-Schliessen Sie den Microbit an Ihrem Computer an und erstellen Sie ein Testprogramm, um zu wissen, ob der Microbit funktioniert - z.B. **zeigen Sie ein Herz an**.
-
-Wenn das funktioniert, können Sie nun versuchen den Maqueen-Roboter zu steuern. Fahren Sie zum Test mit dem Roboter mal ein Stück **vorwärts und wieder rückwärts**.
+Versuchen Sie, den Maqueen-Roboter zu steuern. Fahren Sie mit dem Roboter ein Stück **vorwärts und wieder rückwärts**.
 ### Fahren, bis Sie Schwarz sehen
 
-Der Maqueen-Roboter hat zwei Infrarotsensoren, die die **Helligkeit des Untergrunds erkennen** kann. Leider geben sie kein genaues Resultat, sondern nur hell (high) oder dunkel (low).
+Der Maqueen-Roboter hat zwei Infrarotsensoren, die die **Helligkeit des Untergrunds erkennen** kann. Leider geben sie kein genaues Resultat, sondern nur "hell" (1) oder "dunkel" (0).
 
-Fahren Sie vorwärts, solange der linke Helligkeitssensor "high" misst. Wenn er "low" misst, fahren Sie ganz vorsichtig (langsam) zurück und beenden das Programm.
+Fahren Sie vorwärts, solange der linke Helligkeitssensor "hell" misst. Wenn er "dunkel" misst, fahren Sie ganz vorsichtig (langsam) zurück und beenden das Programm.
 
 > [!solution]- Mögliche Lösung
 > 
@@ -110,9 +110,9 @@ Fahren Sie vorwärts, solange der linke Helligkeitssensor "high" misst. Wenn er 
 >         running = False
 > ```
 
-### Zusatz: Programmieren Sie einen Staubsauger
+### Knacknuss: Programmieren Sie einen Staubsauger
 
-Der Maqueen hat einen Ultraschall-Distanz-Sensor. Versuchen Sie nun einen Staubsaugers zu programmieren: 
+Der Maqueen hat einen Ultraschall-Distanz-Sensor. Versuchen Sie nun die Fahrlogik eines Staubsaugers zu programmieren: 
 1. Fahren Sie geradeaus, bis Sie kurz vor einem Hindernis sind, 
 2. dann stoppen Sie, drehen sich um eine zufällige Zahl und machen wieder Schritt 1.
 
