@@ -15,7 +15,7 @@
 		"not dead"
 	],
 	"dependencies": {
-		"shared": "workspace:*",
-        "sql.js": "*"
+				"shared": "workspace:*",
+		"sql.js": "*"
 	}
 }
