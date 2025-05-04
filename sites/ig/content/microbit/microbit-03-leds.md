@@ -1,6 +1,13 @@
 ---
-title: ✨ Einzelne LEDs und return-Statement
+title: Einzelne LEDs und return-Statement
 ---
+> [!success]  Lernziele
+> 
+> - **LEDs anstellen**: Sie können LEDs gezielt ansteuern und mit `for`-Schleifen das Display füllen.
+> - **Funktionen und return**: Sie haben Funktionen mit Parametern repetiert und können mit `return` die Ausführung einer Funktion beenden.
+> - **`if ... elif ... else`**: Sie können mehrere Bedingungen mit `and` und `or` verknüpfen, und haben die `if ... elif ... else`-Verkettung repetiert.
+> - **Modulo-Operator `%`**: Sie können den Modulo-Operator `%` verwenden, um den Rest einer Division zu berechnen oder in einer `if`-Selektion zu überprüfen.
+
 > [!example] Theorie
 > 
 > ### Design pattern: Funktion ausführen bis `return`
@@ -25,7 +32,7 @@ title: ✨ Einzelne LEDs und return-Statement
 ## LEDs auffüllen
 
 Der Microbit hat ein 5x5 Screen mit insgesamt 25 LEDs, die wir mit `microbit.display` ansteuern können.
-### L1: Reihe auffüllen
+### Aufgabe: Reihe auffüllen
 Schreiben Sie ein Programm, bei dem man sieht, wie es die erste Reihe Pixel um Pixel auffüllt.
 
 > [!solution]- Lösung
@@ -35,7 +42,7 @@ Schreiben Sie ein Programm, bei dem man sieht, wie es die erste Reihe Pixel um P
 > 			display.set_pixel(x, 0, 9)
 > 			sleep(500)
 > ```
-### L2: Gesamten Screen auffüllen
+### Aufgabe: Gesamten Screen auffüllen
 Erweitern Sie das Programm so, dass nicht nur die erste Reihe, sondern der gesamte Screen aufgefüllt wird.
 > [!solution]- Lösung
 > 
@@ -45,7 +52,7 @@ Erweitern Sie das Programm so, dass nicht nur die erste Reihe, sondern der gesam
 > 		display.set_pixel(x, y, 9)
 >         sleep(500)
 > ```
-### L3: Zusatz: Diagonale
+#### Zusatz: Diagonale
 Erweitern Sie das Programm so, dass die Pixel der Diagonale **nicht** angestellt werden - alle andern aber schon! 😊
 > [!solution]- Lösung
 > 
@@ -57,14 +64,12 @@ Erweitern Sie das Programm so, dass die Pixel der Diagonale **nicht** angestellt
 >         sleep(500)
 > ```
 
-### L4: Funktion fill
+### Aufgabe: Funktion fill
 Jetzt lagern wir diese Funktionalität in eine Funktion aus. Das nennt man **Refaktorierung**: Ein bisschen wie bei Multiplikationen extrahieren wir einen Teil unsere Programms als "Faktor" in eine Funktion.
 
 Schreiben Sie eine Funktion `fill(nr, wartezeit)`, die die Anzahl `nr` LEDs auf dem Display auffüllt und zwischen den Pixeln immer `wartezeit` wartet. Also fill(7, 0) soll sofort das hier anzeigen:
 
 ![[hw-00-purpose-20240812074841.png]]
-
-Speichern Sie sich diese Funktion `fill()` irgendwo ab, wir werden die sicher nochmals gebrauchen!
 
 *Tipp: Das `return`-Statement ist dazu da, Werte aus einer Funktion zurück ans Hauptprogramm zu übergeben. Hier werden Sie `return` aber nur gebrauchen, **weil `return` die Funktion beendet**.*
 
@@ -83,11 +88,27 @@ Speichern Sie sich diese Funktion `fill()` irgendwo ab, wir werden die sicher no
 >             sleep(wartezeit)
 > ```
 
-### L5: Knacknuss
+### Aufgabe: Mehrere Bedingungen überprüfen
+
+Schreiben Sie ein Programm, dass im Sekundentakt von 1 bis 25 hoch zählt. 
+- Falls die aktuelle Zahl restlos sowie durch Drei **und** durch Vier teilbar ist, zeigen Sie ein Herz auf dem Display an.
+- Falls die aktuelle Zahl restlos durch Drei teilbar ist, aber nicht durch Vier, zeigen Sie das Bild CLOCK3 auf dem Display an.
+- Falls die aktuelle Zahl restlos durch Vier teilbar ist, aber nicht durch Drei, zeigen Sie das Bild CLOCK4 auf dem DIsplay an.
+- Ansonsten nutzen Sie Ihre `fill()`-Funktion, um die aktuelle Anzahl LEDs ohne Verzögerung anzustellen.
+
+Diese Aufgabe ist von einem Lernvideo inspiriert. Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` berechnen.
+
+```turtle
+print ("8 % 3:", 8 % 3 ) # 8 durch 3 hat einen Rest von 2
+print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
+print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
+```
+
+### Knacknuss: LEDs wieder abstellen
 
 Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 
-### L6: Knacknuss: "Kitt, I need you pal!
+### Knacknuss: "Kitt, I need you pal!"
 
 In den 1980ern und 1990ern waren viele aus dem Häuschen wegen einer Serie, in der ein junger Schönling mit seinem schwarzen, künstlich-intelligenten Auto für Gerechtigkeit kämpft. Die Rede ist von "Knight Rider" mit David Hasselhoff. Zu Ihrer Belustigung, hier ein Trailer:
 
@@ -95,7 +116,7 @@ In den 1980ern und 1990ern waren viele aus dem Häuschen wegen einer Serie, in d
 
 Jetzt wollen Sie natürlich Ihren Microbit genau so cool machen wie K.I.T.T., das intelligente Auto... Beginnen wir also ganz vorne: Machen Sie die Animation der roten Lichter in K.I.T.T.s Kühlerhaube mit Ihrem Microbit nach.
 
-> [!solution]- Lösung
+> [!solution]- Mögliche Lösung
 > 
 > ```python
 > from microbit import *
