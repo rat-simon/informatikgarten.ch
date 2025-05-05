@@ -1,6 +1,7 @@
 ---
 title: while-Schleife
 ---
+## `While`-Schleifen in Python
 
 In dieser Lektion schauen wir uns die while-Schleife an. Das ist eine Schleife, die Ihren Code ausführt, **solange eine bestimmte Bedingung wahr ist**.
 
