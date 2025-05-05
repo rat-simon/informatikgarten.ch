@@ -1,64 +1,75 @@
 ---
 title: Weltbank-Indikatoren Projekt
 ---
-# Weltbank-Indikatoren Projekt: Datenanalyse mit SQL in Python
+# Weltbank-Indikatoren Projekt: Daten mit SQL in Python
 
 ## Einführung
-SQL ist eine mächtige Sprache zur Datenabfrage und -manipulation, die sowohl in grossen Datenbanksystemen als auch in kleineren Anwendungen eingesetzt wird. Mit Python und SQLite können Sie komplexe Datenanalysen durchführen, ohne einen separaten Datenbankserver einrichten zu müssen - alles in einer einzigen Anwendung!
+SQL ist eine mächtige Sprache zur Datenabfrage und -manipulation, die sowohl in grossen Datenbanksystemen als auch in kleineren Anwendungen eingesetzt wird. Mit Python und SQLite könnten Sie komplexe Datenanalysen durchführen, ohne einen separaten Datenbankserver einrichten zu müssen - alles in einer einzigen Anwendung.
 
 ## Auftrag
-Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält wertvolle Informationen zu zahlreichen Aspekten der globalen Entwicklung wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
+Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält Informationen zu zahlreichen Aspekten der globalen Entwicklung wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
 
-**Wichtige Hinweise:** 
-- Die Daten sind bei Weitem nicht immer vollständig! Ein wichtiger Teil der Datenanalyse besteht darin, mit unvollständigen Datensätzen umzugehen.
-- Sie dürfen ChatGPT verwenden, wenn Sie Ihren Code am Schluss nachvollziehen können und die Verwendung in Ihrer Readme-Datei offenlegen. 
-- Bei Fragen oder Wünschen nach Erklärvideos können Sie mich jederzeit erreichen.
+Die Datenbank enthält bloss **eine Tabelle namens *indicators***. Ein kleiner Auszug dieser Tabelle, damit Sie sich das vorstellen können: Hier habe ich die Daten der Schweiz im Jahr 2020 selektiert. Jedes Land hat für jedes Jahr seit 1960 eine solche Reihe, die für jeden Entwicklungsindikator eine Spalte hat - also über 200 Spalten! Sie finden am Schluss dieses Dokuments eine Erklärung aller [[#Spalten in der Tabelle "indicators"]].
+
+![[10-task-dataview.png]]
+
+Sie könnten diese Reihe mit folgendem SQL-Query selektieren:
+
+```sql
+SELECT *
+FROM indicators
+WHERE year = 2020
+AND country = "che"
+```
 
 ## Ihre Aufgabe
-Entwickeln Sie innerhalb von 6 EIBE-Lektionen ein Python-Projekt, das diese SQLite-Datenbank nutzt, um interessante Erkenntnisse zu gewinnen oder eine interaktive Anwendung zu erstellen. Ihr Projekt sollte SQL-Abfragen beinhalten und die Daten in einer sinnvollen Weise verarbeiten.
+Entwickeln Sie innerhalb von 6 EIBE-Lektionen ein eigenes Python-Projekt, das diese SQLite-Datenbank nutzt, um interessante Erkenntnisse zu gewinnen oder eine interaktive Anwendung zu erstellen. Ihr Projekt sollte mindestens fünf SQL-Abfragen beinhalten und die Daten in einer sinnvollen Weise verarbeiten.
 
+**Wichtige Hinweise:** 
+- Die Daten sind nicht immer vollständig, speziell wenn Sie in der Zeit vor 1990 zurückgehen.
+- Sie dürfen ChatGPT verwenden, wenn Sie Ihren Code am Schluss nachvollziehen können und die Verwendung transparent offenlegen.
+- Bei Fragen oder Wünschen nach Erklärvideos können Sie mich jederzeit erreichen.
 ## Projektideen
 Hier sind einige Vorschläge, die als Inspiration dienen können:
-
-### 1. Interaktives Trivia-Spiel
-Entwickeln Sie ein Konsolenanwendung, die zufällige oder thematisch gruppierte Fragen stellt und die Antworten des Benutzers überprüft.
-- Beispielfragen: "Welches Land hatte 1980 am meisten Einwohner?", "In welchem Land hatte der kleinste Teil der Bevölkerung Zugang zu Elektrizität im Jahr 2015?"
-- Implementieren Sie verschiedene Schwierigkeitsgrade und einen Punktestand
-- Fügen Sie eine Funktion hinzu, die dem Benutzer nach der Beantwortung zusätzliche Informationen anzeigt
-
-### 2. Interaktive Datenanalyse-Präsentation
+### Interaktive Daten-Präsentation
 Erstellen Sie eine textbasierte Präsentation, die den Benutzer durch eine Datenanalyse zu einem bestimmten Thema führt.
 - Beispiel: "Ich habe mich für die Geburtenrate im Nahen Osten interessiert und wollte das genauer untersuchen. Willkommen zu meiner interaktiven Präsentation - drücken Sie Enter, wenn Sie bereit sind."
-- Präsentieren Sie schrittweise Statistiken, Vergleiche und Schlussfolgerungen
-- Arbeiten Sie mit aussagekräftigen SQL-Abfragen, die verschiedene Aspekte des Themas beleuchten
+- Präsentieren Sie schrittweise Daten, Vergleiche und Schlussfolgerungen.
+- Tipp: Sie können die Funktion `input()` gebrauchen, um Benutzereingaben zu speichern - oder auch einfach, um Ihr Programm anzuhalten, bis die Benutzer Enter drücken.
+### Interaktives Trivia-Spiel
+Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte Fragen stellt und die Antworten des Benutzers überprüft.
+- Beispielfragen: "Welches Land hatte im Jahr 2000 am meisten Einwohner?", "In welchem Land hatte der kleinste Teil der Bevölkerung Zugang zu Elektrizität im Jahr 2015?"
+- Fügen Sie eine Funktion hinzu, die dem Benutzer nach der Beantwortung zusätzliche Informationen anzeigt.
+- Sie könnten auch verschiedene Schwierigkeitsgrade und einen Punktestand implementieren.
 
-### 3. Datenvisualisierung
-Erstellen Sie eine Anwendung, die ausgewählte Daten aus der Datenbank visualisiert.
-- Nutzen Sie Turtle für einfache Grafiken oder recherchieren Sie fortgeschrittenere Bibliotheken wie Matplotlib oder Plotly
-- Visualisieren Sie Trends über Zeit, geografische Verteilungen oder Korrelationen zwischen verschiedenen Indikatoren
-- Ermöglichen Sie dem Benutzer, verschiedene Visualisierungsoptionen auszuwählen
-
-### 4. Grafische Benutzeroberfläche (GUI)
-Für fortgeschrittene Lernende: Entwickeln Sie mit TkInter eine grafische Oberfläche für die Datenbank.
-- Erstellen Sie Suchfunktionen, Filter und Sortieroptionen
-- Zeigen Sie Ergebnisse in Tabellen an
-- Bieten Sie die Möglichkeit, ausgewählte Daten zu exportieren oder zu visualisieren
-
-### 5. Webbasierte Anwendung
-Für sehr ambitionierte Lernende: Entwickeln Sie mit Flask eine einfache Webanwendung.
-- Stellen Sie eine Suchoberfläche bereit
-- Visualisieren Sie Daten im Browser
-- Bieten Sie interaktive Elemente wie Karten oder Diagramme an
-
-### 6. Eigene Idee
-Entwickeln Sie ein eigenes Konzept, das Ihren Interessen entspricht und die Datenbank sinnvoll nutzt.
+> [!NOTE]- Hinweis für ambitionierte Programmierer
+> 
+> Sie können dieses Projekt gern nutzen, um sich neue Kenntnisse im Programmieren beizubringen. Diese Ideen werden Ihr Zeitbudget sprengen. Tun Sie das nur, wenn Sie Spass daran haben.
+> 
+> ### Datenvisualisierung
+> Erstellen Sie eine Anwendung, die ausgewählte Daten aus der Datenbank visualisiert.
+> - Nutzen Sie Turtle für einfache Grafiken oder recherchieren Sie fortgeschrittenere Bibliotheken wie Matplotlib oder Plotly
+> - Visualisieren Sie Trends über Zeit, geografische Verteilungen oder Korrelationen zwischen verschiedenen Indikatoren
+> - Ermöglichen Sie dem Benutzer, verschiedene Visualisierungsoptionen auszuwählen
+> 
+> ### Grafische Benutzeroberfläche (GUI)
+> Für fortgeschrittene Lernende: Entwickeln Sie mit TkInter eine grafische Oberfläche für die Datenbank.
+> - Erstellen Sie Suchfunktionen, Filter und Sortieroptionen
+> - Zeigen Sie Ergebnisse in Tabellen an
+> - Bieten Sie die Möglichkeit, ausgewählte Daten zu exportieren oder zu visualisieren
+> 
+> ### Webbasierte Anwendung
+> Entwickeln Sie mit Flask eine Webanwendung.
+> - Stellen Sie eine Suchoberfläche bereit
+> - Visualisieren Sie Daten im Browser
+> - Bieten Sie interaktive Elemente wie Karten oder Diagramme an
 
 ## Erwartete Projektelemente
 Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten sein:
 
 1. **SQL-Abfragen:** Mindestens 5 verschiedene SQL-Abfragen unterschiedlicher Komplexität, 2 davon mit Aggregatsfunktionen
 2. **Datenverarbeitung:** Verarbeitung der abgefragten Daten mit print, if ... else oder Ähnlichem.
-3. **Benutzerinteraktion:** Eine Methode, mit der Benutzer mit Ihrem Programm interagieren können, z.B. mit input()
+3. **Benutzerinteraktion:** Eine Methode, mit der Benutzer mit Ihrem Programm interagieren können, z.B. mit `input()`
 4. **Dokumentation:** Kommentare im Code und eine README-Datei, die das Projekt erklärt
 5. **Fehlerbehandlung:** Denken Sie daran, dass Daten fehlen können, oder Ihre Nutzer auf eine Frage ungültiges Kauderwelsch eingeben könnten.
 
@@ -84,7 +95,6 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 3. **Planung (1. Lektion):** Skizzieren Sie Ihr Projekt und definieren Sie die benötigten SQL-Abfragen
 4. **Implementierung (2-3 Lektionen):** Programmieren Sie Ihr Projekt
 5. **Test und Optimierung (1 Lektion):** Testen Sie Ihr Projekt und nehmen Sie Verbesserungen vor
-
 ## Setup
 
 1. **Projektordner erstellen:** Erstellen Sie einen neuen, leeren Ordner für Ihr Projekt, z.B. `worldbank_project`
@@ -269,10 +279,11 @@ Sie geben mir über ein Team-Assignment am Schluss *eine* ZIP-Datei mit all Ihre
 - Alle anderen Dateien, die Sie für Ihr Projekt benötigen
 
 Viel Erfolg und Spass bei Ihrem Projekt!
+## Spalten in der Tabelle "indicators"
 
-## Erklärungstabelle
+Die Datenbank enthält nur eine Tabelle namens *indicators*. Es folgt eine Tabelle der Spalten mit einer Erklärung, was diese Daten sind.
 
-Ich habe Ihnen als Inspiration einige Indikatoren markiert, die ich interessant finde. Sie können natürlich die Daten verwenden, die Sie interessant finden!
+*Ich habe Ihnen als Inspiration einige Indikatoren markiert, die ich interessant finde.*
 
 | Spalte in der Datenbank      | Erklärung                                                                                                                         |
 | ---------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
