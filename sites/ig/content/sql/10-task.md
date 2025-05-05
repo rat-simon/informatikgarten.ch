@@ -65,23 +65,19 @@ Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten 
 ## Bewertungskriterien
 Ihr Projekt wird nach folgenden Kriterien bewertet:
 
-### 1. Readme-Datei: Präsentation, Design, Konzept (40%)
-- Qualität der Projektpräsentation und Dokumentation
-- Relevanz der ausgewählten Daten und Fragestellungen
-- Tiefe der Analyse und Interpretation der Ergebnisse
+### 1. Präsentation, Design, Konzept (40%)
+- Eine Readme-Datei erklärt mindestens, was das Programm ist und wie man es ausführt. Die Datei kann als readme.txt, readme.md, oder readme.pdf vorliegen. Sie können jedwede Informationen hinzufügen, die Sie als relevant erachten.
 - Benutzerfreundlichkeit und Gestaltung der Anwendung
-
+- Originalität der Projektidee
 ### 2. Programm: SQL-Abfragen (30%)
 - Korrektheit und Funktionalität der SQL-Abfragen
 - Sinnvolle Verwendung von Aggregatfunktionen
 - Komplexität und Vielfalt der verwendeten SQL-Queries
-
 ### 3. Programm: Python-Code Qualität (30%)
 - Korrekte Syntax und Funktionalität
 - Lesbarkeit, Strukturierung, Organisation des Codes
+- Nivea der Programmierkonzepte
 - Fehlerbehandlung und Programmrobustheit
-- Niveau (z.B. Verwendung von Funktionen, oder neuen Modulen)
-
 ## Arbeitsschritte
 1. **Analyse der Datenbank (1. Lektion):** Erkunden Sie die Struktur der Datenbank und die verfügbaren Indikatoren, schauen Sie den Beispielcode an
 2. **Konzeptentwicklung (1. Lektion):** Entscheiden Sie, welche Art von Projekt Sie umsetzen möchten
