@@ -42,7 +42,7 @@ Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte
 - Fügen Sie eine Funktion hinzu, die dem Benutzer nach der Beantwortung zusätzliche Informationen anzeigt.
 - Sie könnten auch verschiedene Schwierigkeitsgrade und einen Punktestand implementieren.
 
-> [!NOTE]- Hinweis für ambitionierte Programmierer
+> [!success]- Ideen für ambitionierte Programmierer
 > 
 > Sie können dieses Projekt gern nutzen, um sich neue Kenntnisse im Programmieren beizubringen. Diese Ideen werden Ihr Zeitbudget sprengen. Tun Sie das nur, wenn Sie Spass daran haben.
 > 
@@ -64,31 +64,6 @@ Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte
 > - Visualisieren Sie Daten im Browser
 > - Bieten Sie interaktive Elemente wie Karten oder Diagramme an
 
-## Erwartete Projektelemente
-Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten sein:
-
-1. **SQL-Abfragen:** Mindestens 5 verschiedene SQL-Abfragen unterschiedlicher Komplexität, 2 davon mit Aggregatsfunktionen
-2. **Datenverarbeitung:** Verarbeitung der abgefragten Daten mit print, if ... else oder Ähnlichem.
-3. **Benutzerinteraktion:** Eine Methode, mit der Benutzer mit Ihrem Programm interagieren können, z.B. mit `input()`
-4. **Dokumentation:** Kommentare im Code und eine README-Datei, die das Projekt erklärt
-5. **Fehlerbehandlung:** Denken Sie daran, dass Daten fehlen können, oder Ihre Nutzer auf eine Frage ungültiges Kauderwelsch eingeben könnten.
-
-## Bewertungskriterien
-Ihr Projekt wird nach folgenden Kriterien bewertet:
-
-### 1. Präsentation, Design, Konzept (40%)
-- Eine Readme-Datei erklärt mindestens, was das Programm ist und wie man es ausführt. Die Datei kann als readme.txt, readme.md, oder readme.pdf vorliegen. Sie können jedwede Informationen hinzufügen, die Sie als relevant erachten.
-- Benutzerfreundlichkeit und Gestaltung der Anwendung
-- Originalität der Projektidee
-### 2. Programm: SQL-Abfragen (30%)
-- Korrektheit und Funktionalität der SQL-Abfragen
-- Sinnvolle Verwendung von Aggregatfunktionen
-- Komplexität und Vielfalt der verwendeten SQL-Queries
-### 3. Programm: Python-Code Qualität (30%)
-- Korrekte Syntax und Funktionalität
-- Lesbarkeit, Strukturierung, Organisation des Codes
-- Nivea der Programmierkonzepte
-- Fehlerbehandlung und Programmrobustheit
 ## Arbeitsschritte
 1. **Analyse der Datenbank (1. Lektion):** Erkunden Sie die Struktur der Datenbank und die verfügbaren Indikatoren, schauen Sie den Beispielcode an
 2. **Konzeptentwicklung (1. Lektion):** Entscheiden Sie, welche Art von Projekt Sie umsetzen möchten
@@ -271,6 +246,31 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 > print("\nViel Erfolg bei Ihrem Projekt!")
 > ```
 
+## Erwartete Projektelemente
+Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten sein:
+
+1. **SQL-Abfragen:** Mindestens 5 verschiedene SQL-Abfragen unterschiedlicher Komplexität, 2 davon mit Aggregatsfunktionen
+2. **Datenverarbeitung:** Verarbeitung der abgefragten Daten mit print, if ... else oder Ähnlichem.
+3. **Benutzerinteraktion:** Eine Methode, mit der Benutzer mit Ihrem Programm interagieren können, z.B. mit `input()`
+4. **Dokumentation:** Kommentare im Code und eine README-Datei, die das Projekt erklärt
+5. **Fehlerbehandlung:** Denken Sie daran, dass Daten fehlen können, oder Ihre Nutzer auf eine Frage ungültiges Kauderwelsch eingeben könnten.
+
+## Bewertungskriterien
+Ihr Projekt wird nach folgenden Kriterien bewertet:
+
+### 1. Präsentation, Design, Konzept (40%)
+- Eine Readme-Datei erklärt mindestens, was das Programm ist und wie man es ausführt. Die Datei kann als readme.txt, readme.md, oder readme.pdf vorliegen. Sie können jedwede Informationen hinzufügen, die Sie als relevant erachten.
+- Benutzerfreundlichkeit und Gestaltung der Anwendung
+- Originalität der Projektidee
+### 2. Programm: SQL-Abfragen (30%)
+- Korrektheit und Funktionalität der SQL-Abfragen
+- Sinnvolle Verwendung von Aggregatfunktionen
+- Komplexität und Vielfalt der verwendeten SQL-Queries
+### 3. Programm: Python-Code Qualität (30%)
+- Korrekte Syntax und Funktionalität
+- Lesbarkeit, Strukturierung, Organisation des Codes
+- Nivea der Programmierkonzepte
+- Fehlerbehandlung und Programmrobustheit
 ## Abgabe
 Sie geben mir über ein Team-Assignment am Schluss *eine* ZIP-Datei mit all Ihren Projektdateien ab namens `Nachname_Vorname.zip`. Im ZIP-Archiv sollten sich befinden:
 - Eine README-Datei mit Erläuterungen zu Ihrem Projekt (Textdatei, Markdown oder PDF)
@@ -279,6 +279,7 @@ Sie geben mir über ein Team-Assignment am Schluss *eine* ZIP-Datei mit all Ihre
 - Alle anderen Dateien, die Sie für Ihr Projekt benötigen
 
 Viel Erfolg und Spass bei Ihrem Projekt!
+
 ## Spalten in der Tabelle "indicators"
 
 Die Datenbank enthält nur eine Tabelle namens *indicators*. Es folgt eine Tabelle der Spalten mit einer Erklärung, was diese Daten sind.
