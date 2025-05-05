@@ -9,7 +9,7 @@ SQL ist eine mächtige Sprache zur Datenabfrage und -manipulation, die sowohl in
 ## Auftrag
 Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält Informationen zu zahlreichen Aspekten der globalen Entwicklung wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
 
-Die Datenbank enthält bloss **eine Tabelle namens *indicators***. Ein kleiner Auszug dieser Tabelle, damit Sie sich das vorstellen können: Hier habe ich die Daten der Schweiz im Jahr 2020 selektiert. Jedes Land hat für jedes Jahr seit 1960 eine solche Reihe, die für jeden Entwicklungsindikator eine Spalte hat - also über 200 Spalten! Sie finden am Schluss dieses Dokuments eine Erklärung aller [[#Spalten in der Tabelle "indicators"]].
+Die Datenbank enthält bloss **eine Tabelle namens *indicators***. Ein kleiner Auszug dieser Tabelle, damit Sie sich das vorstellen können: Hier habe ich die Daten der Schweiz im Jahr 2020 selektiert. Jedes Land hat für jedes Jahr seit 1960 eine solche Reihe, die für jeden Entwicklungsindikator eine Spalte hat - also über 200 Spalten! Sie finden am Schluss dieses Dokuments eine Erklärung aller Spalten in der Tabelle "indicators".
 
 ![[10-task-dataview.png]]
 
