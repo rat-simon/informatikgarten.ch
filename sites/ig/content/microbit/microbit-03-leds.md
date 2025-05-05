@@ -52,7 +52,7 @@ Erweitern Sie das Programm so, dass nicht nur die erste Reihe, sondern der gesam
 > 		display.set_pixel(x, y, 9)
 >         sleep(500)
 > ```
-#### Zusatz: Diagonale
+#### Erweiterung: Diagonale
 Erweitern Sie das Programm so, dass die Pixel der Diagonale **nicht** angestellt werden - alle andern aber schon! 😊
 > [!solution]- Lösung
 > 
@@ -88,6 +88,7 @@ Schreiben Sie eine Funktion `fill(nr, wartezeit)`, die die Anzahl `nr` LEDs auf 
 >             sleep(wartezeit)
 > ```
 
+
 ### Aufgabe: Mehrere Bedingungen überprüfen
 
 Schreiben Sie ein Programm, dass im Sekundentakt von 1 bis 25 hoch zählt. 
@@ -104,6 +105,9 @@ print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
 print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
 ```
 
+### Aufgabe: Mit den Knöpfen A und B auffüllen
+
+Erweitern Sie das Programm so, dass das Display nicht automatisch auffüllt, sondern dass man die Knöpfe A und B drücken kann, und dann jeweils ein LED mehr (Knopf B) oder weniger (Knopf A) anstellt. Achtung: Beachten Sie die "Edge-Cases" - d.h. die Randfälle, wenn Sie beispielsweise bereits keine (also 0) LEDs angestellt haben und nochmal A drücken.
 ### Knacknuss: LEDs wieder abstellen
 
 Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
