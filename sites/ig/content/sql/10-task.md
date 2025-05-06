@@ -231,6 +231,9 @@ Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte
 - Beispielfragen: "Welches Land hatte im Jahr 2000 am meisten Einwohner?", "In welchem Land hatte der kleinste Teil der Bevölkerung Zugang zu Elektrizität im Jahr 2015?"
 - Fügen Sie eine Funktion hinzu, die dem Benutzer nach der Beantwortung zusätzliche Informationen anzeigt.
 - Sie könnten auch verschiedene Schwierigkeitsgrade und einen Punktestand implementieren.
+### Erste Schritte und Beispiele im Erklärvideo
+
+![[wb_firststeps.mp4]]
 
 > [!success]- Ideen für ambitionierte Programmierer
 > 
