@@ -18,7 +18,7 @@ Informatikgarten ist übrigens open-source 🥳! Sie können den kompletten Quel
 
 In einem früheren Leben war ich selbstständig und habe Dokumentarfilme und Videos produziert. Zudem bin ich seit 24 Jahren beim Open-Source-3D-Programm Blender mit dabei. Dieses Jahr mache ich deswegen eine Variowoche zu Blender und Special Effects! (22. September - 26. September 2025)
 
-![[vario.webp]]
+![[vario.webp|500]]
 
 ## Aktueller Stand und Todos
 
