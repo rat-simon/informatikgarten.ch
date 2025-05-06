@@ -72,6 +72,10 @@ Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte
 5. **Test und Optimierung (1 Lektion):** Testen Sie Ihr Projekt und nehmen Sie Verbesserungen vor
 ## Setup
 
+### Erklärvideo
+
+![[wb_setup.mp4]]
+
 1. **Projektordner erstellen:** Erstellen Sie einen neuen, leeren Ordner für Ihr Projekt, z.B. `worldbank_project`
 2. **SQLite-Datenbank:** Laden Sie [die SQLite-Datenbank herunter](/sql/world_bank_indicators.db) und speichern Sie die Datei im Projektordner als `world_bank_indicators.db`
 3. **Öffnen Sie den Ordner in Visual Studio Code:** Über Datei (File) > Ordner öffnen (Open Folder)

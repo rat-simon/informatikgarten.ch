@@ -6,3 +6,4 @@ content/videos/*
 .vercel
 
 ig_content
+.env*.local
