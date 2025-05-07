@@ -52,6 +52,9 @@ Erweitern Sie das Programm so, dass nicht nur die erste Reihe, sondern der gesam
 > 		display.set_pixel(x, y, 9)
 >         sleep(500)
 > ```
+> 
+> ![[microbit-03-leds-iterationen.excalidraw]]
+
 #### Erweiterung: Diagonale
 Erweitern Sie das Programm so, dass die Pixel der Diagonale **nicht** angestellt werden - alle andern aber schon! 😊
 > [!solution]- Lösung

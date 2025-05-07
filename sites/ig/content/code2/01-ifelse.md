@@ -141,7 +141,8 @@ for i in range(6):
 	print(i)
 	if i > 2:
 		print("Grösser als 2")
-	if i > 4: print("Grösser als 4")
+	if i > 4:
+        print("Grösser als 4")
 ```
 ### Aufgabe Modulo
 
