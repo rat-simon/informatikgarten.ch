@@ -75,6 +75,8 @@ else:
 ```
 
 In diesem Beispiel wird die erste Nachricht ausgegeben, wenn das Wetter "sonnig" ist. Falls das Wetter jedoch nicht "sonnig" ist (also die Bedingung `wetter == "sonnig"` nicht erfüllt ist), wird die zweite Nachricht ausgegeben.
+
+## Aufgabenteil 1
 ### Aufgabe for-print
 
 Schreiben Sie ein Programm, dass alle Zahlen von 0 bis 10 durchgeht und mit `print()` ausdruckt.
@@ -207,6 +209,7 @@ Sie kennen die Logik von `or`, `and` und `not` von den Logikgates, die wir zu ei
 
 Entsprechend heissen die Datentypen von `True` und `False` auch "boolesche Werte" oder einfach "bool".
 
+## Aufgabenteil 2
 ### Aufgabe mit zwei Modulo
 
 Finden Sie alle Zahlen bis 50, die restlos sowie durch 3 als auch durch 4 teilbar sind.
