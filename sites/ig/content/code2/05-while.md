@@ -1,7 +1,8 @@
 ---
 title: while-Schleife
 ---
-# `while`-Schleifen in Python
+
+# <nobr>Solange-Schleifen:</nobr> `while`
 
 Nun schauen wir uns die while-Schleife an. Das ist eine Schleife, die Ihren Code ausführt, **solange eine bestimmte Bedingung wahr ist**. Das ist sinnvoll, wenn Sie im vornherein nicht wissen, wie oft etwas getan werden soll.
 
