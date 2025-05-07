@@ -254,6 +254,7 @@ Sie kennen die Logik von `or`, `and` und `not` von den Logikgates, die wir zu ei
 
 Entsprechend heissen die Datentypen von `True` und `False` auch "boolesche Werte" oder einfach "bool".
 
+## Aufgaben
 ### Aufgabe mit mehreren Modulo
 
 Finden Sie alle Zahlen bis 50, die restlos sowie durch 3 als auch durch 4 teilbar sind.
@@ -338,9 +339,11 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 >         print(i, "restlose Zahl")
 > ```
 
+## Zusammenfassung
+
 > [!info] Zusammenfassung
 > 
-> ## Theorie: `if ... elif ... else`-Selektion
+> ### Theorie: `if ... elif ... else`-Selektion
 > 
 > Selektionen funktionieren immer mit **Bedingungen**, oft auch Wahrheitstests genannt, die entweder True (wahr) oder False (falsch) sind. Je nachdem werden andere Teile des Programms ausgeführt.
 > 
@@ -357,7 +360,7 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 > 
 > Bei `if ... elif ... else`-Ketten wird jeweils **nur die erste wahre Bedingung ausgeführt**.
 > 
-> ## Bedingungen
+> ### Bedingungen
 > 
 > Einzelne Bedingungen können mit logischen `AND` und  `OR` zu einer Bedingung verknüpft werden. Mit `NOT` können Sie eine Bedingung ins Gegenteil umkehren.
 > 
@@ -380,7 +383,7 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 > 	print(y > 3) # Das wertet zu True aus
 > 	print(y <= 4) # Das wertet zu False aus 
 > 	
-> ## Modulo
+> ### Modulo
 > 
 > Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` ausrechnen.
 > 
