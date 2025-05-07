@@ -1,7 +1,7 @@
 ---
 title: If ... else ... in Python
 ---
-# Entscheidungen treffen mit `if ... else`
+# Entscheidungen treffen: <nobr>`if ... else`</nobr>
 
 Wenn wir in Python programmieren, nutzen wir oft `if`-Anweisungen, um Entscheidungen zu treffen. Das ist so, als würden wir im echten Leben sagen: "Wenn es regnet, dann nehme ich einen Regenschirm mit."
 
@@ -30,9 +30,8 @@ In diesem Beispiel wird die Nachricht nur dann ausgegeben, wenn die Variabel Wet
 Beachten Sie, dass **zwei Gleichheitszeichen** verwendet werden:
 - Ein einzelnes Gleichheitszeichen `=` ist beim Programmieren **kein *Ver*gleich**, sondern eine **Wert*zuweisung*** - es ist ein Befehl.
 - Zwei Gleichheitsszeichen `==` sind ein **Vergleich**. Also eine Frage, **ob** zwei Werte gleich sind.
-- **Vergleichsoperatoren** `>`, `>=`, `<=`, `<` können Zahlenwerte vergleichen.
 
-Die boolschen Werte dieser Bedingungen oder Tests beim `if`-Statement können Sie direkt mit `print()` ausdrucken.
+Die boolschen Werte von Bedingungen können Sie direkt mit `print()` ausdrucken.
 
 ```turtle
 wetter = "sonnig"
@@ -49,6 +48,9 @@ if False:
 	print("Naja, False ist halt immer False.")
 ```
 
+Neben der Gleichheit können Sie in Bedingungen Werte auch anderweitig überprüfen:
+- `!=` überprüft die **Ungleichkeit** von zwei Werten. Also `"dies" != "das"` ist `True`, weil die zwei Werte tatsächlich ungleich sind.
+- **Vergleichsoperatoren** `>`, `>=`, `<=`, `<` können Zahlenwerte vergleichen. Also `5 > 2` ist `True`.
 ## Und sonst? `if ... else`
 
 Manchmal möchten wir nicht nur eine Aktion ausführen, wenn eine Bedingung wahr ist, sondern auch **eine alternative Aktion, falls die Bedingung nicht erfüllt wird**. Für solche Fälle verwenden wir die `if ... else`-Struktur.
@@ -95,55 +97,6 @@ Schreiben Sie ein Programm, dass alle Zahlen von 0 bis 10 durchgeht und mit `pri
 >         print("Fast geschafft!")
 > ```
 
-## Komplett: `if ... elif ... else`
-
-Es gibt auch Fälle, in denen wir mehr als zwei Möglichkeiten haben und mehrere Bedingungen prüfen wollen. Wir können mit `if ... elif ... else` **mehrere Bedingungen verketten**. Sobald eine 
-
-### Syntax
-
-```python
-if Bedingung1:
-    # Auszuführende Anweisungen, wenn Bedingung1 True ist
-elif Bedingung2:
-    # Auszuführende Anweisungen, wenn Bedingung2 True ist (und alle vorherigen Bedingungen False)
-elif Bedingung3:
-    # Auszuführende Anweisungen, wenn Bedingung3 True ist (und alle vorherigen Bedingungen False)
-else:
-    # Auszuführende Anweisungen, wenn keine der Bedingungen True ist
-```
-
-### Beispiel
-
-```python
-wetter = "bewölkt"
-
-if wetter == "sonnig":
-    print("Vergessen Sie nicht, Sonnencreme aufzutragen!")
-elif wetter == "regnerisch":
-    print("Besser einen Regenschirm mitnehmen!")
-else:
-    print("Das Wetter ist unklar. Seien Sie auf alles vorbereitet!")
-```
-
-In diesem Beispiel wird die entsprechende Nachricht ausgegeben, abhängig vom Wert der Variable `wetter`. Es werden mehrere Bedingungen nacheinander geprüft:
-1. Ist das Wetter "sonnig"?
-2. Wenn nicht, ist es "regnerisch"?
-3. Wenn keines von beiden zutrifft, wird der Text im `else`-Block ausgegeben.
-
-So können wir eine Reihe von Bedingungen prüfen und für jeden Fall unterschiedliche Anweisungen ausführen.
-
-Beachten Sie, dass bei `if ... elif ... else`-Ketten jeweils **nur die erste wahre Bedingung ausgeführt** wird. Eine kleine Demonstration hierzu: 
-- Führen Sie das Programm aus und schauen Sie den Output an.
-- Ändern Sie das zweite `if` zu einem `elif`. Führen Sie das Programm erneut aus. Was hat sich verändert?
-
-```turtle
-for i in range(10):
-	print(i)
-	if i > 2:
-		print("Grösser als 2")
-	if i > 4:
-        print("Grösser als 4")
-```
 ### Aufgabe Modulo
 
 Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` ausrechnen.
@@ -181,7 +134,7 @@ Addieren Sie alle Zahlen bis 100, die restlos durch 3 teilbar sind und geben Sie
 
 ## Boolesche Algebra
 
-Sie können mehrere Wahrheitstests verbinden. Dazu helfen Ihnen folgende Schlagwörter:
+Sie können **mehrere Wahrheitstests verbinden**. Dazu helfen Ihnen folgende Schlagwörter:
 
 ### `and` fragt, ob **beide** Wahrheitstests wahr sind
 
@@ -254,8 +207,7 @@ Sie kennen die Logik von `or`, `and` und `not` von den Logikgates, die wir zu ei
 
 Entsprechend heissen die Datentypen von `True` und `False` auch "boolesche Werte" oder einfach "bool".
 
-## Aufgaben
-### Aufgabe mit mehreren Modulo
+### Aufgabe mit zwei Modulo
 
 Finden Sie alle Zahlen bis 50, die restlos sowie durch 3 als auch durch 4 teilbar sind.
 
@@ -267,7 +219,7 @@ Finden Sie alle Zahlen bis 50, die restlos sowie durch 3 als auch durch 4 teilba
 > 		print(i)
 > ```
 
-### Aufgabe Modulo-Kette
+### Modulo Bingo 1
 
 Schreiben Sie ein Programm, dass alle Zahlen bis 20 überprüft.
 - Wenn die Zahl nur durch 3 teilbar ist, drucken Sie "Drei" aus
@@ -293,19 +245,7 @@ Schreiben Sie ein Programm, dass alle Zahlen bis 20 überprüft.
 > 		print(i)
 > ```
 > 
-> Das ist nicht sehr elegant und ineffizient: Der Computer überprüft immer alle Bedingungen! Die bessere Lösung nutzt dem Umstand, dass `if ... elif ... else`-Ketten immer nur die erste Bedingung selektieren, die zutrifft.
-> 
-> ```python
-> for i in range(1, 21):
-> 	if i % 3 == 0 and i % 4 == 0:
-> 		print("BINGO!")
-> 	elif i % 3 == 0:
-> 		print("Drei")
-> 	elif i % 4 == 0:
-> 		print("Vier")
-> 	else:
-> 		print(i)
-> ```
+> Das ist nicht sehr elegant und ineffizient: Der Computer überprüft immer alle Bedingungen! In der nächsten Lektion finden Sie eine elegantere Lösung.
 
 ### Aufgabe kompliziertere Modulo-Summe
 
@@ -343,22 +283,16 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 
 > [!info] Zusammenfassung
 > 
-> ### Theorie: `if ... elif ... else`-Selektion
+> ### `if ... else`-Selektion
 > 
 > Selektionen funktionieren immer mit **Bedingungen**, oft auch Wahrheitstests genannt, die entweder True (wahr) oder False (falsch) sind. Je nachdem werden andere Teile des Programms ausgeführt.
 > 
 > ```python
-> if Bedingung1:
->     # Auszuführende Anweisungen, wenn Bedingung1 True ist
-> elif Bedingung2:
->     # Auszuführende Anweisungen, wenn Bedingung2 True ist (und alle vorherigen Bedingungen False)
-> elif Bedingung3:
->     # Auszuführende Anweisungen, wenn Bedingung3 True ist (und alle vorherigen Bedingungen False)
+> if Bedingung:
+>     # Auszuführende Anweisungen, wenn die Bedingung True ist
 > else:
->     # Auszuführende Anweisungen, wenn keine der Bedingungen True ist
+>     # Auszuführende Anweisungen, wenn die Bedingung False ist
 > ```
-> 
-> Bei `if ... elif ... else`-Ketten wird jeweils **nur die erste wahre Bedingung ausgeführt**.
 > 
 > ### Bedingungen
 > 
@@ -367,14 +301,14 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 > Vergleichsoperatoren für Tests:
 > - Zwei Gleichheitszeichen (`==`) sind ein **Vergleich**: 
 > 	```python
-> 	x = "beispiel" # Ein Gleichheitszeichen ist eine Wertzuweisung. 
+> 	x = "beispielwert" # Ein Gleichheitszeichen ist eine Wertzuweisung. 
 > 	
 > 	# Zwei Gleichheitszeichen sind ein Vergleich
-> 	if x == "beispiel":
+> 	if x == "beispielwert":
 > 		print("x hat den gleichen Wert wie 'Beispiel'!")
 > 	
 > 	Wir können das Ergebnis dieses Vergleichs auch direkt anzeigen:
-> 	print(x == "beispiel") # Das druck True aus
+> 	print(x == "beispielwert") # Das druck True aus
 > 	print(x == "sonstetwas") # Das druck False aus
 > 	```
 > - Vergleichszeichen (`<`, `>`, `<=`, `>=`) vergleichen Zahlen
@@ -396,60 +330,3 @@ Was ist die kleinste Zahl $i$, bei der gilt:
 > print (10 % 3 == 0) # False, weil 10%3 gibt 1
 > print (8 % 4 == 0) # True, weil 8%4 gibt tatsächlich 0
 > ```
-
-## Alte Aufgaben mit Turtle
-
-### Aufgabe Inputtreppe
-Schreiben Sie ein Turtle-Programm, dass die User **10-mal** mit `input(...)` aus [[../code/01-turtleintro|dieser Lektion]] um eine Eingabe bittet und die Nummer des aktuellen Durchgangs anzeigt. Wenn die Nutzer "treppe" eingeben, zeichnet eva eine Treppe der Länge vier. Ansonsten soll das Programm eine nette Nachricht mit dem Input der User anzeigen.
-
-```turtle
-import turtle
-eva = turtle.Turtle()
-
-# Ihr Code
-```
-
-> [!solution]- Mögliche Lösung
-> 
-> ```python
-> import turtle
-> eva = turtle.Turtle()
->  
-> for i in range(1,11):
->     eingabe = input("Wir sind bei Durchgang " + str(i) + ". Ihre Eingabe bitte:")
->     if eingabe == "treppe":
->         for i in range(4):
->             eva.left(90)
->             eva.forward(20)
->             eva.right(90)
->             eva.forward(20)
->     else:
->         print("Sie haben '" + eingabe + "' eingegeben.")
-> ```
-
-### Aufgabe Inputfiguren
-
-Erweitern Sie Ihr Turtle-Treppenprogramm mit weiteren Figuren.
-- Die Turtle soll Drei- bis und mit Siebeneck ("dreieck", "viereck", etc.) zeichnen.
-- Die Turtle soll einen "kreis" zeichnen können, wenn die User das eingeben.
-### Aufgabe Input Anzahl Ecken
-
-Erweitern Sie Ihr Turtle-Programm weiter, sodass Ihre User eine Zahl eingeben können, und ein entsprechendes Xeck gezeichnet wird - also ein Eingabe von "5" zeichnet ein Fünfeck. 
-
-Im nächsten Block lernen Sie, was Datentypen sind. Für diese Aufgabe ist bereits folgende Info wichtig: Eine Eingabe wird immer als **Zeichenkette / String** interpretiert, **nicht als Zahl**. Hierzu zwei Tipps:
-
-1) Python hängt an Zeichenketten viele Funktion an, sogenannte "Methoden". `variabelname.isdigit()` testet beispielsweise, ob eine Zeichenkette nur Zahlen enthält, und wird je nachdem als `True` oder `False` ausgewertet. Ein Beispiel:
-```turtle
-zahlenmittext = "123hallo" # Zahlen und Buchstaben
-nurzahlen = "41232" # Nur Zahlen
-
-print( zahlenmittext.isdigit() )
-if zahlenmittext.isdigit():
-	print("zahlenmittest.isdigit() wurde als wahr ausgewertet! Schauen Sie:", zahlenmittext.isdigit())
-
-print( nurzahlen.isdigit() )
-if nurzahlen.isdigit():
-	print("nurzahlen.isdigit() wurde als wahr ausgewertet! Schauen Sie:" nurzahlen.isdigit())
-```
-
-2) Sie können eine Eingabe mit der Funktion `int()` in eine natürliche Zahl umwandeln.
