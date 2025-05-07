@@ -4,7 +4,7 @@
     "license": "AGPL-3.0-only",
     "scripts": {
         "dev": "pnpm --filter=ig dev",
-        "build": "pnpm build",
+        "build": "turbo run build --filter=ig",
         "start": "pnpm --filter=ig start",
         "postinstall": "prisma generate"
     },
@@ -72,6 +72,13 @@
             "esbuild": "0.25.1",
             "vite": "6.2.2",
             "next": "15.2.3"
-        }
+        },
+        "onlyBuiltDependencies": [
+            "@prisma/client",
+            "@prisma/engines",
+            "esbuild",
+            "prisma",
+            "sharp"
+        ]
     }
 }

@@ -1,11 +1,13 @@
 ---
 title: If ... else ... in Python
 ---
+# Entscheidungen treffen mit `if ... else`
+
 Wenn wir in Python programmieren, nutzen wir oft `if`-Anweisungen, um Entscheidungen zu treffen. Das ist so, als würden wir im echten Leben sagen: "Wenn es regnet, dann nehme ich einen Regenschirm mit."
 
 ## Vergleich mit `if`
 
-Wie setzen wir das in Python um? 
+Wie setzen wir das in Python um?
 ### Syntax
 
 ```python
@@ -26,11 +28,11 @@ if wetter == "regnerisch":
 In diesem Beispiel wird die Nachricht nur dann ausgegeben, wenn die Variabel Wetter den String "sonnig" enthält. Die **Bedingung `wetter == "sonnig"` wird ausgewertet und ist entweder `True` (wahr) oder `False` (falsch)**. Die Befehle im `if`-Block werden ausgeführt, wenn die Bedingung `True` ist, nicht aber, wenn sie `False` ist.
 
 Beachten Sie, dass **zwei Gleichheitszeichen** verwendet werden:
-- Ein einzelnes Gleichheitszeichen `=` ist beim Programmieren **kein *Ver*gleich**, sondern eine **Wert*zuweisung*** - z.B. oft für eine Variabel.
+- Ein einzelnes Gleichheitszeichen `=` ist beim Programmieren **kein *Ver*gleich**, sondern eine **Wert*zuweisung*** - es ist ein Befehl.
 - Zwei Gleichheitsszeichen `==` sind ein **Vergleich**. Also eine Frage, **ob** zwei Werte gleich sind.
 - **Vergleichsoperatoren** `>`, `>=`, `<=`, `<` können Zahlenwerte vergleichen.
 
-Die Werte dieser Bedingungen oder Tests beim `if`-Statement können Sie direkt mit `print()` ausdrucken.
+Die boolschen Werte dieser Bedingungen oder Tests beim `if`-Statement können Sie direkt mit `print()` ausdrucken.
 
 ```turtle
 wetter = "sonnig"
@@ -47,12 +49,9 @@ if False:
 	print("Naja, False ist halt immer False.")
 ```
 
-
-
 ## Und sonst? `if ... else`
 
 Manchmal möchten wir nicht nur eine Aktion ausführen, wenn eine Bedingung wahr ist, sondern auch **eine alternative Aktion, falls die Bedingung nicht erfüllt wird**. Für solche Fälle verwenden wir die `if ... else`-Struktur.
-
 ### Syntax
 
 ```python
@@ -94,34 +93,6 @@ Schreiben Sie ein Programm, dass alle Zahlen von 0 bis 10 durchgeht und mit `pri
 >         print("Wir sind in der Hälfte!")
 >     if i > 7:
 >         print("Fast geschafft!")
-> ```
-
-### Aufgabe Inputtreppe
-Schreiben Sie ein Turtle-Programm, dass die User **10-mal** mit `input(...)` aus [[../code/01-turtleintro|dieser Lektion]] um eine Eingabe bittet und die Nummer des aktuellen Durchgangs anzeigt. Wenn die Nutzer "treppe" eingeben, zeichnet eva eine Treppe der Länge vier. Ansonsten soll das Programm eine nette Nachricht mit dem Input der User anzeigen.
-
-```turtle
-import turtle
-eva = turtle.Turtle()
-
-# Ihr Code
-```
-
-> [!solution]- Mögliche Lösung
-> 
-> ```python
-> import turtle
-> eva = turtle.Turtle()
->  
-> for i in range(1,11):
->     eingabe = input("Wir sind bei Durchgang " + str(i) + ". Ihre Eingabe bitte:")
->     if eingabe == "treppe":
->         for i in range(4):
->             eva.left(90)
->             eva.forward(20)
->             eva.right(90)
->             eva.forward(20)
->     else:
->         print("Sie haben '" + eingabe + "' eingegeben.")
 > ```
 
 ## Komplett: `if ... elif ... else`
@@ -172,6 +143,263 @@ for i in range(6):
 		print("Grösser als 2")
 	if i > 4: print("Grösser als 4")
 ```
+### Aufgabe Modulo
+
+Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` ausrechnen.
+
+```turtle
+print ("8 % 3:", 8 % 3 ) # 8 durch 3 hat einen Rest von 2
+print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
+print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
+```
+
+Schreiben Sie ein Programm, dass alle Zahlen von 1 bis 10 ausdruckt, die restlos durch 3 teilbar sind.
+
+> [!solution]- Lösung
+>
+> ```python
+> for i in range(1, 11):
+> 	if i % 3 == 0:
+> 		print(i)
+> ```
+
+### Aufgabe Modulo-Summe
+
+Addieren Sie alle Zahlen bis 100, die restlos durch 3 teilbar sind und geben Sie das Ergebnis aus!
+
+> [!solution]- Lösung
+> 
+> ```python
+> sum = 0
+> 
+> for i in range(101):
+> 	if i % 3 == 0:
+> 		sum = sum + i
+> print(sum)
+> ```
+
+## Boolesche Algebra
+
+Sie können mehrere Wahrheitstests verbinden. Dazu helfen Ihnen folgende Schlagwörter:
+
+### `and` fragt, ob **beide** Wahrheitstests wahr sind
+
+```turtle
+x = 5
+print("x < 10:", x < 10 ) # True
+print("x % 2  0:", x % 2 == 0) # False
+print("Beides zusammen:", x < 10 and x % 2 == 0) # False, weil nicht beides True ist.
+
+# Noch ein Beispiel
+print("x < 10 or x % 5 == 0:", x < 10 or x % 5 == 0) # True, weil x ist sowohl kleiner als 10 als auch restlos durch 5 teilbar.
+```
+
+### `or` fragt, ob einer der Wahrheitstests wahr ist
+
+```turtle
+x = 5
+
+print ( x < 10 or x % 2 == 0 ) # True, weil x ist kleiner als 10. Das reicht für or bereits.
+
+print ( x < 3 or x % 5 == 0 ) # True, weil x ist zwar nicht kleiner als 3, aber dafür restlos durch 5 teilbar.
+```
+
+### `not` kehrt den Wahrheitswert um
+```turtle
+x = 5
+print ("normal:", x == 5 )
+print ("mit not:", not x == 5 )
+```
+
+### Klammern
+
+Sie können auch Klammern verwenden, um die Reihenfolge der Auswertung zu steuern. Das ist besonders wichtig, wenn Sie mehrere Bedingungen kombinieren.
+
+```turtle
+for i in range(51):
+    if (i % 3 == 0 or i % 4 == 0) and i > 10:
+        print(i)
+```
+In diesem Beispiel wird zuerst die Bedingung in den Klammern ausgewertet. Wenn diese wahr ist, wird die zweite Bedingung geprüft.
+
+### Mengenlehre
+
+Sie kennen die Logik von `or`, `and` und `not` von den Logikgates, die wir zu einem Addierer verbaut haben. In der Mathematik kennen Sie das vielleicht aus der Mengelehre unter dem Schlagwort "boolesche Algebra".
+
+![[ifelse-bool-algebra.excalidraw]]
+
+Entsprechend heissen die Datentypen von `True` und `False` auch "boolesche Werte" oder einfach "bool".
+
+### Aufgabe mit mehreren Modulo
+
+Finden Sie alle Zahlen bis 50, die restlos sowie durch 3 als auch durch 4 teilbar sind.
+
+> [!solution]- Lösung
+> 
+> ```python
+> for i in range(1, 51):
+> 	if i % 3 == 0 and i % 4 == 0:
+> 		print(i)
+> ```
+
+### Aufgabe Modulo-Kette
+
+Schreiben Sie ein Programm, dass alle Zahlen bis 20 überprüft.
+- Wenn die Zahl nur durch 3 teilbar ist, drucken Sie "Drei" aus
+- Wenn die Zahl nur durch 4 teilbar ist, drucken Sie "Vier" aus
+- Wenn die Zahl sowie durch 3 als auch durch 4 teilbar ist, drucken Sie "BINGO!" aus
+- Ansonsten drucken Sie die Zahl selbst aus
+
+*Beachten Sie: Es gibt grundsätzlich zwei mögliche Lösungen.*
+
+> [!solution]- Lösung
+> 
+> Eine Lösung wäre, unabhängige `if`-Selektionen zu machen.
+> 
+> ```python
+> for i in range(1, 21):
+> 	if i % 3 == 0 and not i % 4 == 0:
+> 		print("Drei")
+> 	if i % 4 == 0 and not i % 3 == 0:
+> 		print("Vier")
+> 	if i % 3 == 0 and i % 4 == 0:
+> 		print("BINGO!")
+> 	if not i % 3 == 0 and not i % 4 == 0:
+> 		print(i)
+> ```
+> 
+> Das ist nicht sehr elegant und ineffizient: Der Computer überprüft immer alle Bedingungen! Die bessere Lösung nutzt dem Umstand, dass `if ... elif ... else`-Ketten immer nur die erste Bedingung selektieren, die zutrifft.
+> 
+> ```python
+> for i in range(1, 21):
+> 	if i % 3 == 0 and i % 4 == 0:
+> 		print("BINGO!")
+> 	elif i % 3 == 0:
+> 		print("Drei")
+> 	elif i % 4 == 0:
+> 		print("Vier")
+> 	else:
+> 		print(i)
+> ```
+
+### Aufgabe kompliziertere Modulo-Summe
+
+Addieren Sie alle Zahlen bis 100 auf, die zwar restlos durch 5 teilbar sind, aber **nicht** restlos durch 3 teilbar sind!
+
+> [!solution]- Lösung
+> 
+> ```python
+> sum = 0
+> 
+> for i in range(101):
+> 	if i % 5 == 0 and not i % 3 == 0:
+> 		sum = sum + i
+> print(sum)
+> ```
+
+### Aufgabe mit grossen Zahlen
+
+Was ist die kleinste Zahl $i$, bei der gilt:
+- $i \mod{113} = 1$
+- $i \mod{213} = 2$
+- $i \mod{313} = 3$
+
+> [!solution]- Lösung
+> 
+> $i = 2184743$
+> 
+> ```python
+> for i in range(10000000):
+>     if i % 113 == 1 and i % 213 == 2 and i % 313 == 3:
+>         print(i, "restlose Zahl")
+> ```
+
+> [!info] Zusammenfassung
+> 
+> ## Theorie: `if ... elif ... else`-Selektion
+> 
+> Selektionen funktionieren immer mit **Bedingungen**, oft auch Wahrheitstests genannt, die entweder True (wahr) oder False (falsch) sind. Je nachdem werden andere Teile des Programms ausgeführt.
+> 
+> ```python
+> if Bedingung1:
+>     # Auszuführende Anweisungen, wenn Bedingung1 True ist
+> elif Bedingung2:
+>     # Auszuführende Anweisungen, wenn Bedingung2 True ist (und alle vorherigen Bedingungen False)
+> elif Bedingung3:
+>     # Auszuführende Anweisungen, wenn Bedingung3 True ist (und alle vorherigen Bedingungen False)
+> else:
+>     # Auszuführende Anweisungen, wenn keine der Bedingungen True ist
+> ```
+> 
+> Bei `if ... elif ... else`-Ketten wird jeweils **nur die erste wahre Bedingung ausgeführt**.
+> 
+> ## Bedingungen
+> 
+> Einzelne Bedingungen können mit logischen `AND` und  `OR` zu einer Bedingung verknüpft werden. Mit `NOT` können Sie eine Bedingung ins Gegenteil umkehren.
+> 
+> Vergleichsoperatoren für Tests:
+> - Zwei Gleichheitszeichen (`==`) sind ein **Vergleich**: 
+> 	```python
+> 	x = "beispiel" # Ein Gleichheitszeichen ist eine Wertzuweisung. 
+> 	
+> 	# Zwei Gleichheitszeichen sind ein Vergleich
+> 	if x == "beispiel":
+> 		print("x hat den gleichen Wert wie 'Beispiel'!")
+> 	
+> 	Wir können das Ergebnis dieses Vergleichs auch direkt anzeigen:
+> 	print(x == "beispiel") # Das druck True aus
+> 	print(x == "sonstetwas") # Das druck False aus
+> 	```
+> - Vergleichszeichen (`<`, `>`, `<=`, `>=`) vergleichen Zahlen
+> 	```` 
+> 	y = 5
+> 	print(y > 3) # Das wertet zu True aus
+> 	print(y <= 4) # Das wertet zu False aus 
+> 	
+> ## Modulo
+> 
+> Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` ausrechnen.
+> 
+> ```python
+> # 10 / 3 gibt 2 Rest 1 
+> print ( 10 % 3 ) # printet 1
+> # 8 / 4 gibt 2 Rest 0
+> print ( 8 % 4 ) # printet 0
+> # Ist der Rest 0?
+> print (10 % 3 == 0) # False, weil 10%3 gibt 1
+> print (8 % 4 == 0) # True, weil 8%4 gibt tatsächlich 0
+> ```
+
+## Alte Aufgaben mit Turtle
+
+### Aufgabe Inputtreppe
+Schreiben Sie ein Turtle-Programm, dass die User **10-mal** mit `input(...)` aus [[../code/01-turtleintro|dieser Lektion]] um eine Eingabe bittet und die Nummer des aktuellen Durchgangs anzeigt. Wenn die Nutzer "treppe" eingeben, zeichnet eva eine Treppe der Länge vier. Ansonsten soll das Programm eine nette Nachricht mit dem Input der User anzeigen.
+
+```turtle
+import turtle
+eva = turtle.Turtle()
+
+# Ihr Code
+```
+
+> [!solution]- Mögliche Lösung
+> 
+> ```python
+> import turtle
+> eva = turtle.Turtle()
+>  
+> for i in range(1,11):
+>     eingabe = input("Wir sind bei Durchgang " + str(i) + ". Ihre Eingabe bitte:")
+>     if eingabe == "treppe":
+>         for i in range(4):
+>             eva.left(90)
+>             eva.forward(20)
+>             eva.right(90)
+>             eva.forward(20)
+>     else:
+>         print("Sie haben '" + eingabe + "' eingegeben.")
+> ```
+
 ### Aufgabe Inputfiguren
 
 Erweitern Sie Ihr Turtle-Treppenprogramm mit weiteren Figuren.
@@ -198,124 +426,3 @@ if nurzahlen.isdigit():
 ```
 
 2) Sie können eine Eingabe mit der Funktion `int()` in eine natürliche Zahl umwandeln.
-
-### Aufgabe Modulo
-
-Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` ausrechnen.
-
-```turtle
-print ("8 % 3:", 8 % 3 ) # 8 durch 3 hat einen Rest von 2
-print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
-print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
-```
-
-Schreiben Sie ein Programm, dass alle Zahlen von 1 bis 10 ausdruckt, die restlos durch 3 teilbar sind.
-
-> [!solution]- Lösung
->
-> ```python
-> for i in range(1, 11):
-> 	if i % 3 == 0:
-> 		print(i)
-> ```
-
-### Aufgabe Modulosum
-
-Addieren Sie alle Zahlen bis 100, die restlos durch 3 teilbar sind und geben Sie das Ergebnis aus!
-
-> [!solution]- Lösung
-> 
-> ```python
-> sum = 0
-> 
-> for i in range(101):
-> 	if i % 3 == 0:
-> 		sum = sum + i
-> print(sum)
-> ```
-
-## Einfache boolesche Algebra
-
-Sie können mehrere Wahrheitstests verbinden. Dazu helfen Ihnen folgende Schlagwörter:
-### `not` kehrt den Wahrheitswert um
-```turtle
-x = 5
-print ("normal:", x == 5 )
-print ("mit not:", not x == 5 )
-```
-
-### `and` fragt, ob **beide** Wahrheitstests wahr sind
-
-```turtle
-x = 5
-print("x < 10:", x < 10 ) # True
-print("x % 2  0:", x % 2 == 0) # False
-print("Beides zusammen:", x < 10 and x % 2 == 0) # False, weil nicht beides True ist.
-
-# Noch ein Beispiel
-print("x < 10 or x % 5 == 0:", x < 10 or x % 5 == 0) # True, weil x ist sowohl kleiner als 10 als auch restlos durch 5 teilbar.
-```
-
-### `or` fragt, ob einer der Wahrheitstests wahr ist
-
-```turtle
-x = 5
-
-print ( x < 10 or x % 2 == 0 ) # True, weil x ist kleiner als 10. Das reicht für or bereits.
-
-print ( x < 3 or x % 5 == 0 ) # True, weil x ist zwar nicht kleiner als 3, aber dafür restlos durch 5 teilbar.
-```
-
-Sie kennen die Logik von `or`, `and` und `not` von den Logikgates, die wir zu einem Addierer verbaut haben. In der Mathematik kennen Sie das vielleicht aus der Mengelehre unter dem Schlagwort "boolesche Algebra".
-
-![[ifelse-bool-algebra.excalidraw]]
-
-Entsprechend heissen die Datentypen von `True` und `False` auch "boolean".
-### Aufgabe 5
-
-Ändern Sie Ihre Lösung von Aufgabe 4 so ab, dass Sie alle Zahlen bis 100 aufaddieren, die zwar restlos durch 5 teilbar sind, aber **nicht** restlos durch 3 teilbar sind!
-
-> [!solution]- Lösung
-> 
-> ```python
-> sum = 0
-> 
-> for i in range(101):
-> 	if i % 5 == 0 and not i % 3 == 0:
-> 		sum = sum + i
-> print(sum)
-> ```
-
-> [!info] Zusammenfassung
-> 
-> ## Theorie: `if ... elif ... else`-Selektion
-> 
-> Selektionen funktionieren immer mit **Bedingungen**, oft auch Wahrheitstests genannt, die als Gesamtheit entweder True (wahr) oder False (falsch) sind. Je nachdem werden andere Teile des Programms ausgeführt.
-> 
-> ```python
-> if Bedingung1:
->     # Auszuführende Anweisungen, wenn Bedingung1 True (wahr) ist
-> elif Bedingung2:
->     # Auszuführende Anweisungen, wenn Bedingung2 True (wahr) ist
-> else:
->     # Auszuführende Anweisungen, wenn keine der Bedingungen True (wahr) ist
-> ```
-> Vergleichsoperatoren für Tests:
-> - Zwei Gleichheitszeichen (`==`) sind ein **Vergleich**: 
-> 	```python
-> 	x = "beispiel" # Ein Gleichheitszeichen ist eine Wertzuweisung. 
-> 	
-> 	# Zwei Gleichheitszeichen sind ein Vergleich
-> 	if x == "beispiel":
-> 		print("x hat den gleichen Wert wie 'Beispiel'!")
-> 	
-> 	Wir können das Ergebnis dieses Vergleichs auch direkt anzeigen:
-> 	print(x == "beispiel") # Das druck True aus
-> 	print(x == "sonstetwas") # Das druck False aus
-> 	```
-> - Vergleichszeichen (`<`, `>`, `<=`, `>=`) vergleichen Zahlen
-> 	```` 
-> 	y = 5
-> 	print(y > 3) # Das wertet zu True aus
-> 	print(y <= 4) # Das wertet zu False aus 
-
