@@ -137,7 +137,7 @@ Beachten Sie, dass bei `if ... elif ... else`-Ketten jeweils **nur die erste wah
 - Ändern Sie das zweite `if` zu einem `elif`. Führen Sie das Programm erneut aus. Was hat sich verändert?
 
 ```turtle
-for i in range(6):
+for i in range(10):
 	print(i)
 	if i > 2:
 		print("Grösser als 2")
@@ -222,6 +222,29 @@ for i in range(51):
         print(i)
 ```
 In diesem Beispiel wird zuerst die Bedingung in den Klammern ausgewertet. Wenn diese wahr ist, wird die zweite Bedingung geprüft.
+
+### Präzedenzregeln
+
+Es gelten bei Bedingungen klare **Präzedenzregeln** für logische Operatoren, ähnlich wie "Punkt vor Strich" in der Mathematik:
+
+* **Klammern** `()` haben immer die höchste Priorität (und können auch verwendet werden, um die Lesbarkeit und Logik eindeutig zu machen).
+* Danach kommt **`not`** (höchste Präzedenz unter den logischen Operatoren),
+* dann **`and`**,
+* und zuletzt **`or`** (niedrigste Präzedenz).
+
+**Beispiel:**
+
+```python
+if a == 1 or b == 2 and c == 3:
+```
+
+Das wird interpretiert als:
+
+```python
+if a == 1 or (b == 2 and c == 3):
+```
+
+Denn `and` wird vor `or` ausgewertet.
 
 ### Mengenlehre
 
