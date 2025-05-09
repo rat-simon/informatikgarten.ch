@@ -57,50 +57,29 @@ not (i % 113 == 1 and i % 213 == 2 and i % 313 == 3)
 i % 113 != 1 or i % 213 != 2 or i % 313 != 3
 ```
 
-## Altes Beispiel mit Turtle
+## Aufgabe: Ein Ratespiel entwickeln mit while
 
-```turtle
-import turtle
+Im folgenden Beispiel entwickeln wir ein kleines Ratespiel. Der Computer denkt sich eine Zahl zwischen 1 und 100 aus, und der Spieler muss sie erraten. Der Computer gibt dem Spieler Hinweise, ob die geratene Zahl zu hoch oder zu niedrig ist.
+
+### Zufallszahlen ziehen
+
+Um eine Zufallszahl zu ziehen, verwenden wir die Funktion `randint` aus dem Modul `random`. Diese Funktion zieht eine ganze Zahl zwischen zwei Werten (inklusive der beiden Werte). Wir importieren das Modul mit dem Befehl `import random`.
+
+```python
 import random
+# Zufallszahl zwischen 1 und 100
+zahl = random.randint(1, 100)
+print(zahl)
+```
 
-# Initialisieren der Turtle und des Fensters
-eva = turtle.Turtle("turtle")
-eva.speed(5)
-screen = turtle.Screen()
+### Input abfragen
 
-# Begrenzungen des Fensters
-x_limit = screen.window_width() / 2 - 100
-y_limit = screen.window_height() / 2 - 100
+Um den Spieler nach einer Zahl zu fragen, verwenden wir die Funktion `input`. Diese Funktion gibt den eingegebenen Text als String zurück. Um ihn in eine Ganzzahl umzuwandeln, verwenden wir die Funktion `int`.
 
-# Unsichtbare Turtle um Text anzuzeigen
-textturtle = turtle.Turtle()
-textturtle.hideturtle()
-textturtle.penup()
-textturtle.setposition(0,y_limit/2)
-
-# Rahmen zeichnen
-eva.penup()
-eva.setposition(x_limit, y_limit)
-eva.color("red")
-eva.pensize(3)
-eva.pendown()
-eva.setposition(-x_limit, y_limit)
-eva.setposition(-x_limit, -y_limit)
-eva.setposition(x_limit, -y_limit)
-eva.setposition(x_limit, y_limit)
-eva.penup()
-eva.setposition(0,0)
-eva.color("black")
-eva.pensize(1)
-eva.pendown()
-
-# Solange die Koordinaten kleiner als die Limiten sind
-while abs(eva.xcor()) < x_limit and abs(eva.ycor()) < y_limit:
-
-    eva.setheading(random.randint(0, 360))  # Zufallssrichtung
-    eva.forward(50) 
-
-textturtle.write("Lauf Eva, lauf! 😍", align="center", font=("Arial", 60, "bold"))
-turtle.done()
-
+```python
+# Eingabe abfragen
+eingabe = input("Gib eine Zahl zwischen 1 und 100 ein: ")
+# Eingabe von Zeichenkette/String in Ganzzahl/Integer umwandeln
+zahl = int(eingabe)
+print(zahl)
 ```
