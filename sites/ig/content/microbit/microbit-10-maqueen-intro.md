@@ -83,12 +83,14 @@ Natürlich wäre es sehr mühsam, den Maqueen so zu programmieren. Sie erhalten 
 
 ### Eine kleine Spritztour
 
-Versuchen Sie, den Maqueen-Roboter zu steuern. Fahren Sie mit dem Roboter ein Stück **vorwärts und wieder rückwärts**.
+Versuchen Sie, den Maqueen-Roboter zu steuern. Fahren Sie mit dem Roboter **drei Sekunden gerade vorwärts und wieder rückwärts**.
 ### Fahren, bis Sie Schwarz sehen
 
 Der Maqueen-Roboter hat zwei Infrarotsensoren, die die **Helligkeit des Untergrunds erkennen** kann. Leider geben sie kein genaues Resultat, sondern nur "hell" (1) oder "dunkel" (0).
 
 Fahren Sie vorwärts, solange der linke Helligkeitssensor "hell" misst. Wenn er "dunkel" misst, fahren Sie ganz vorsichtig (langsam) zurück und beenden das Programm.
+
+![[maqueen-stoponblack.excalidraw.light.svg]]
 
 > [!solution]- Mögliche Lösung
 > 
@@ -110,11 +112,26 @@ Fahren Sie vorwärts, solange der linke Helligkeitssensor "hell" misst. Wenn er 
 >         running = False
 > ```
 
+### Hürdenlauf
+
+Der Maqueen hat einen Ultraschall-Distanz-Sensor, der die Distanz in Zentimetern misst. 
+
+Programmieren Sie Ihren Roboter nun so, dass er über schwarze Stellen langsam fährt und über weisse Stellen schnell, und wenn er auf eine Wand stösst, kehrt er prompt 180 Grad und fährt wieder zurück.
+
+![[maqueen-huerdenlauf.excalidraw.light.svg]]
 ### Knacknuss: Programmieren Sie einen Staubsauger
 
-Der Maqueen hat einen Ultraschall-Distanz-Sensor. Versuchen Sie nun die Fahrlogik eines Staubsaugers zu programmieren: 
+Versuchen Sie nun die Fahrlogik eines Staubsaugers zu programmieren: 
 1. Fahren Sie geradeaus, bis Sie kurz vor einem Hindernis sind, 
 2. dann stoppen Sie, drehen sich um eine zufällige Zahl und machen wieder Schritt 1.
+
+Tipp: Eine zufällige Zahl zwischen 20 und 60 erhalten Sie so:
+```python
+import random
+
+zufallszahl = random.randint(20,60)
+
+```
 
 > [!solution]- Mögliche Lösung
 > 
