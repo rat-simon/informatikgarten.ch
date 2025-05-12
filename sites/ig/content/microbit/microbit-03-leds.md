@@ -42,6 +42,43 @@ Schreiben Sie ein Programm, bei dem man sieht, wie es die erste Reihe Pixel um P
 > 			display.set_pixel(x, 0, 9)
 > 			sleep(500)
 > ```
+### Aufgabe: Muster in Code nachmachen
+
+Schreiben Sie das kürzest mögliche Programm, dass folgendes Muster zeichnet.
+
+![[microbit-ledpattern-1.png]]
+
+> [!solution]- Lösung
+> 
+> from microbit import *
+> 
+> for x in range(1,4):
+>     display.set_pixel(x,0, 9)
+> 
+> for y in range(2,4):
+>     display.set_pixel(3,y, 9)
+
+### Aufgabe: Muster selbst zeichnen
+
+Was für ein Muster generiert folgenden Code? Sagen Sie voraus, welche LEDs nach diesem Programm angestellt sein werden.
+
+```python
+from microbit import *
+
+for x in range(1,4):
+    display.set_pixel(x, 1, 9)
+
+for x in range(0,3):
+    display.set_pixel(x, 2, 9)
+
+for y in range(0,3):
+    display.set_pixel(2, y, 0)
+```
+
+> [!solution]- Lösung
+> 
+> ![[microbit-ledpattern-2.png]]
+
 ### Aufgabe: Gesamten Screen auffüllen
 Erweitern Sie das Programm so, dass nicht nur die erste Reihe, sondern der gesamte Screen aufgefüllt wird.
 > [!solution]- Lösung
@@ -79,19 +116,79 @@ Schreiben Sie eine Funktion `fill(nr, wartezeit)`, die die Anzahl `nr` LEDs auf 
 > [!solution]- Lösung
 > 
 > ```python
-> def fill(nr, wartezeit):
-> 	display.clear()
->     sum = 0
+> from microbit import *
+> 
+> def fill(anzahl, wartezeit):
+>     summe = 0
 >     for y in range(5):
 >         for x in range(5):
->             if sum == nr:
->                 return
 >             display.set_pixel(x, y, 9)
->             sum = sum + 1
+>             summe = summe + 1
+>             if summe == anzahl:
+>                 return
 >             sleep(wartezeit)
+> 
+> fill(7, 500)
 > ```
 
+### Aufgabe: Mit den Knöpfen A und B auffüllen
 
+Erweitern Sie das Programm so, dass das Display nicht automatisch auffüllt, sondern dass man die Knöpfe A und B drücken kann, und dann jeweils ein LED mehr (Knopf B) oder weniger (Knopf A) anstellt. Achtung: Beachten Sie die "Edge-Cases" - d.h. die Randfälle, wenn Sie beispielsweise bereits keine (also 0) LEDs angestellt haben und nochmal A drücken.
+
+> [!solution]- Mögliche Lösungen
+> 
+> Eine Version ohne die "Edge-Cases":
+> ```python
+> from microbit import *
+> 
+> def fill(anzahl, wartezeit):
+>     summe = 0
+>     display.clear()
+>     for y in range(5):
+>         for x in range(5):
+>             if summe == anzahl:
+>                 return
+>             display.set_pixel(x, y, 9)
+>             summe = summe + 1
+>             sleep(wartezeit)
+> 
+> aktuelle_anzahl = 0
+> while True:
+>     if button_a.was_pressed():
+>         aktuelle_anzahl = aktuelle_anzahl - 1
+>         fill(aktuelle_anzahl, 0)
+>     if button_b.was_pressed():
+>         aktuelle_anzahl = aktuelle_anzahl + 1
+>         fill(aktuelle_anzahl, 0)
+> ```
+> 
+> Eine Version, die die "Edge-Cases" berücksichtigt:
+> ```python
+> from microbit import *
+> 
+> def fill(anzahl, wartezeit):
+>     summe = 0
+>     display.clear()
+>     for y in range(5):
+>         for x in range(5):
+>             if summe == anzahl:
+>                 return
+>             display.set_pixel(x, y, 9)
+>             summe = summe + 1
+>             sleep(wartezeit)
+> 
+> aktuelle_anzahl = 0
+> while True:
+>     if button_a.was_pressed() and aktuelle_anzahl > 0:
+>         aktuelle_anzahl = aktuelle_anzahl - 1
+>         fill(aktuelle_anzahl, 0)
+>     if button_b.was_pressed() and aktuelle_anzahl <= 24:
+>         aktuelle_anzahl = aktuelle_anzahl + 1
+>         fill(aktuelle_anzahl, 0)
+> ```
+### Knacknuss: LEDs wieder abstellen
+
+Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 ### Aufgabe: Mehrere Bedingungen überprüfen
 
 Schreiben Sie ein Programm, dass im Sekundentakt von 1 bis 25 hoch zählt. 
@@ -107,13 +204,6 @@ print ("8 % 3:", 8 % 3 ) # 8 durch 3 hat einen Rest von 2
 print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
 print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
 ```
-
-### Aufgabe: Mit den Knöpfen A und B auffüllen
-
-Erweitern Sie das Programm so, dass das Display nicht automatisch auffüllt, sondern dass man die Knöpfe A und B drücken kann, und dann jeweils ein LED mehr (Knopf B) oder weniger (Knopf A) anstellt. Achtung: Beachten Sie die "Edge-Cases" - d.h. die Randfälle, wenn Sie beispielsweise bereits keine (also 0) LEDs angestellt haben und nochmal A drücken.
-### Knacknuss: LEDs wieder abstellen
-
-Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 
 ### Knacknuss: "Kitt, I need you pal!"
 
