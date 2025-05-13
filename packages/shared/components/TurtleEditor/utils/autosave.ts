@@ -115,7 +115,13 @@ export const saveToRemote = async (c: TurtleConfigType) => {
     if (sendRemoteList.length === 0) return
 
     const editorId = c.idRef.current
+    if (typeof editorId !== 'string' || editorId === '') {
+        // If editorId is not a string or empty, do not save to remote
+        logger.error('No valid editorId found, not saving to remote')
+        return
+    }
     const queryStart = performance.now()
+    logger.debug('Saving to remote', editorId)
     fetch('/api/savecode', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },

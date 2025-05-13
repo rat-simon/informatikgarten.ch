@@ -32,8 +32,6 @@ export function MuxVideo(props: MuxVideoProps): ReactElement {
     const { src: playbackId, poster, blurDataURL, aspectRatio, alt, ...restProps } = props
     const [isClient, setIsClient] = useState(false)
 
-    logger.debug('MuxVideo', alt ? alt.includes('autoplay') : false)
-
     useEffect(() => {
         setIsClient(true)
     }, [])

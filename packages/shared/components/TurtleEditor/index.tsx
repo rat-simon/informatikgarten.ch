@@ -70,7 +70,7 @@ export const TurtleEditor = ({
             })
 
         // Register the turtle editor
-        const editorNr = registerTurtleEditor(configRef)
+        const editorNr = registerTurtleEditor(configRef as React.RefObject<TurtleConfigType>)
         idRef.current = sanitizeIdString(id ?? path + '-' + editorNr)
 
         // Function to handle the beforeunload event
@@ -83,7 +83,7 @@ export const TurtleEditor = ({
         return () => {
             if (!configRef.current) return
             saveBeforeUnload(configRef.current)
-            unregisterTurtleEditor(configRef)
+            unregisterTurtleEditor(configRef as React.RefObject<TurtleConfigType>)
             window.removeEventListener('beforeunload', handleBeforeUnload)
         }
     }, [])

@@ -1,30 +1,39 @@
 import { ExtendedSession } from '../../types/AuthTypes'
-// import { Signal, signal } from '@preact/signals-react'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { logger } from '../../utils'
 import { useSession } from 'next-auth/react'
-import { createContext, RefObject, useState } from 'react'
+import { createContext, RefObject, useRef, useState, useEffect } from 'react'
 import { TurtleConfigType } from './types/TurtleTypes'
+import { usePathname } from 'next/navigation' // Updated import for App Router
 
 const queryClient = new QueryClient()
 
 type TurtleEditorData = {
     id: number
-    configRef: RefObject<TurtleConfigType | null>
+    configRef: RefObject<TurtleConfigType>
+    path: string
 }
 
-// const signaltest = signal(0)
-// setInterval(() => (signaltest.value = Math.random()), 1000)
-
 export const TurtleContext = createContext({
-    registerTurtleEditor: (c: RefObject<TurtleConfigType | null>) =>
-        -1 as number,
-    unregisterTurtleEditor: (c: RefObject<TurtleConfigType | null>) => {},
-    // signaltest: signal(0)
+    registerTurtleEditor: (c: RefObject<TurtleConfigType>) => -1 as number,
+    unregisterTurtleEditor: (c: RefObject<TurtleConfigType>) => [] as TurtleEditorData[],
 })
 
 export function TurtleProvider({ children }) {
     const [editors, setEditors] = useState<TurtleEditorData[]>([])
+    const editorIdCounterRef = useRef(0)
+    const pathname = usePathname() // App Router hook for current path
+
+    // Reset counter when the path changes
+    useEffect(() => {
+        // Reset counter for each new page
+        editorIdCounterRef.current = 0;
+
+        // Also clear editors from previous pages
+        setEditors([]);
+
+        logger.debug('Path changed, reset editors counter:', pathname);
+    }, [pathname]); // This effect runs when the pathname changes
 
     const playall = () => {
         for (const editor of editors) {
@@ -46,23 +55,25 @@ export function TurtleProvider({ children }) {
         <TurtleContext.Provider
             value={{
                 registerTurtleEditor: configRef => {
-                    const id = editors.length
+                    const idNr = editorIdCounterRef.current++
                     setEditors(prevEditors => [
                         ...prevEditors,
-                        { id, configRef }
+                        {
+                            id: idNr,
+                            configRef,
+                            path: pathname ?? ''
+                        }
                     ])
-                    return id
+                    return idNr
                 },
                 unregisterTurtleEditor: configRef => {
+                    let filtered: TurtleEditorData[] = []
                     setEditors(prev => {
-                        const filtered = prev.filter(
-                            e => e.configRef !== configRef
-                        )
-                        logger.silly('filtered 🐢', filtered)
+                        filtered = prev.filter(e => e.configRef !== configRef)
                         return filtered
                     })
+                    return filtered
                 },
-                // signaltest
             }}
         >
             <QueryClientProvider client={queryClient}>
