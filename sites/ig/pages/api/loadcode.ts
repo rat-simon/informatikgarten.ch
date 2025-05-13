@@ -26,17 +26,11 @@ export default async function handler(
             return res.status(400).json({ error: 'Invalid editor identifier' })
         }
 
-        // Check if local timestamps supplied
-        if (
-            !req.query.localTimestamps ||
-            typeof req.query.localTimestamps !== 'string'
-        ) {
-            return res.status(400).json({ error: 'Invalid timestamps' })
-        }
-
         // Get local timestamps
-        const localTimestamps = req.query.localTimestamps.split(',').map(Number)
-        logger.debug('Received local timestamps by API:', localTimestamps)
+        const localTimestamps = req.query.localTimestamps && typeof req.query.localTimestamps === 'string'
+            ? req.query.localTimestamps.split(',')?.map(Number)
+            : []
+        logger.debug('API received these local timestamps:', localTimestamps)
 
         // Get user's email from session
         const userEmail = session.user.email
