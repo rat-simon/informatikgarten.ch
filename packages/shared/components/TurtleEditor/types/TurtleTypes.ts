@@ -10,11 +10,11 @@ export interface TurtleConfigType {
     editorPanelRef: React.RefObject<HTMLDivElement | null>
     graphicswrapperRef: React.RefObject<HTMLDivElement | null>
     graphicspanelRef: React.RefObject<HTMLDivElement | null>
-    historyRef: React.MutableRefObject<HistoryEntry[]>
-    historyIndexRef: React.MutableRefObject<number | null>
+    historyRef: React.RefObject<HistoryEntry[]>
+    historyIndexRef: React.RefObject<number | null>
     initCode: string
     runPythonCode: (pythonCode: string) => void
-    autosaveCounterRef: React.MutableRefObject<number>
+    autosaveCounterRef: React.RefObject<number>
     codeControlRef: React.RefObject<HTMLDivElement | null>
     remoteTimestampsRef: React.RefObject<Set<number>>
     setUndo?: React.Dispatch<React.SetStateAction<boolean>>

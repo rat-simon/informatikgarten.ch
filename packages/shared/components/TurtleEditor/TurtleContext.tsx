@@ -3,23 +3,23 @@ import { ExtendedSession } from '../../types/AuthTypes'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { logger } from '../../utils'
 import { useSession } from 'next-auth/react'
-import { createContext, MutableRefObject, useRef, useState } from 'react'
+import { createContext, RefObject, useState } from 'react'
 import { TurtleConfigType } from './types/TurtleTypes'
 
 const queryClient = new QueryClient()
 
 type TurtleEditorData = {
     id: number
-    configRef: MutableRefObject<TurtleConfigType | null>
+    configRef: RefObject<TurtleConfigType | null>
 }
 
 // const signaltest = signal(0)
 // setInterval(() => (signaltest.value = Math.random()), 1000)
 
 export const TurtleContext = createContext({
-    registerTurtleEditor: (c: MutableRefObject<TurtleConfigType | null>) =>
+    registerTurtleEditor: (c: RefObject<TurtleConfigType | null>) =>
         -1 as number,
-    unregisterTurtleEditor: (c: MutableRefObject<TurtleConfigType | null>) => {},
+    unregisterTurtleEditor: (c: RefObject<TurtleConfigType | null>) => {},
     // signaltest: signal(0)
 })
 
