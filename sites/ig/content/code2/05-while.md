@@ -124,37 +124,39 @@ zahl = int(eingabe)
 print(zahl)
 ```
 
-## Mögliche Lösung
 
-```python
-import random
-
-# Generiere eine Zufallszahl zwischen 1 und 100
-geheimzahl = random.randint(1, 100)
-
-# Variablen für das Spiel initialisieren
-versuchsrunde = 0
-geratete_zahl = -1
-
-# Begrüssung und Spielerklärung
-print("Willkommen zum Zahlenratespiel!")
-print("Ich habe mir eine Zahl zwischen 1 und 100 ausgedacht.")
-
-# Solange die Zahl nicht erraten wurde, weiterspielen
-while geratete_zahl != geheimzahl:
-    eingabe = input("Rate eine Zahl zwischen 1 und 100: ")
-    geratete_zahl = int(eingabe)
-    versuchsrunde += 1
-    
-    # Prüfen, ob die geratene Zahl korrekt ist
-    if geratete_zahl < geheimzahl:
-        print("Zu niedrig! Versuch es mit einer höheren Zahl.")
-    elif geratete_zahl > geheimzahl:
-        print("Zu hoch! Versuch es mit einer niedrigeren Zahl.")
-
-# Wenn die Zahl erraten wurde, gratulieren
-# Hint: Wir nutzen hier einen sogenannten f-String, um Variablen in Strings einzufügen,
-#       Sie könnten natürlich auch den String mit '+' verketten oder mit Kommas getrennt drucken.
-#       f-Strings sind eine moderne Möglichkeit, die Ihnen viele Formatierungsprobleme lösen wird.
-print(f"Gratuliere! Du hast die Zahl {geheimzahl} in {versuchsrunde} Versuchen erraten!")
-```
+> [!solution]- Mögliche Lösung
+> 
+> ```python
+> import random
+> 
+> # Generiere eine Zufallszahl zwischen 1 und 100
+> geheimzahl = random.randint(1, 100)
+> 
+> # Variablen für das Spiel initialisieren
+> versuchsrunde = 0
+> geratete_zahl = -1
+> 
+> # Begrüssung und Spielerklärung
+> print("Willkommen zum Zahlenratespiel!")
+> print("Ich habe mir eine Zahl zwischen 1 und 100 ausgedacht.")
+> 
+> # Solange die Zahl nicht erraten wurde, weiterspielen
+> while geratete_zahl != geheimzahl:
+>     eingabe = input("Rate eine Zahl zwischen 1 und 100: ")
+>     geratete_zahl = int(eingabe)
+>     versuchsrunde += 1
+>     
+>     # Prüfen, ob die geratene Zahl korrekt ist
+>     if geratete_zahl < geheimzahl:
+>         print("Zu niedrig! Versuch es mit einer höheren Zahl.")
+>     elif geratete_zahl > geheimzahl:
+>         print("Zu hoch! Versuch es mit einer niedrigeren Zahl.")
+> 
+> # Wenn die Zahl erraten wurde, gratulieren
+> # Hint: Wir nutzen hier einen sogenannten f-String, um Variablen in Strings einzufügen,
+> #       Sie könnten natürlich auch den String mit '+' verketten oder mit Kommas getrennt drucken.
+> #       f-Strings sind eine moderne Möglichkeit, die Ihnen viele Formatierungsprobleme lösen wird.
+> print(f"Gratuliere! Du hast die Zahl {geheimzahl} in {versuchsrunde} Versuchen erraten!")
+> ```
+> 
