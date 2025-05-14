@@ -22,14 +22,18 @@ while Bedingung:
 
 ## Beispiele
 
+### Zählen mit `while`
+
 Beginnen wir mit einem einfachen Beispiel, das ähnlich einer for-Schleife von 0 bis 9 zählt. Das gilt nur zur Veranschaulichung der Logik, praktisch sinnvoll ist das kaum.
 
 ```turtle
 i = 0
 while i < 10:
     print(i)
-    i = i + 1 # Sie könnten auch die Verkürzung i += 1 schreiben
+    i += 1 # Das ist die verkürzte Schreibweise für i = i + 1
 ```
+
+### Elegante Lösung, um kleinste Zahl zu finden
 
 Kehren wir uns damit nochmal der Aufgabe aus dem letzten Teil zu. Unsere Lösung war:
 
@@ -51,15 +55,51 @@ print(i, "restlose Zahl")
 Die Bedingung der while-Schleife könnten Sie auch ausklammern.
 
 ```python
-# "Solange die Bedingung als Ganzes nicht erfüllt ist"
+# "Solange alle Bedingungen erfüllt sind" ...
 not (i % 113 == 1 and i % 213 == 2 and i % 313 == 3)
-# ist in diesem Fall dasselbe, wie: "Solange eine der Bedingungen nicht erfüllt ist"
+# ... ist dasselbe wie: "Solange eine der Bedingungen nicht erfüllt ist"
 i % 113 != 1 or i % 213 != 2 or i % 313 != 3
 ```
+
+### Endlosschleife mit `while`
+
+Eine Endlosschleife ist eine `while`-Schleife, die nie endet. Das passiert, wenn die Bedingung immer wahr ist.
+
+```python
+while True:
+    print("Das ist eine Endlosschleife!")
+```
+Das ist eine Endlosschleife, die immer "Das ist eine Endlosschleife!" ausgibt. Um sie zu beenden, müssen Sie das Programm entweder manuell stoppen (z.B. mit `Ctrl/Strg + C` in der Konsole) oder das Schlagwort `break` verwenden.
+
+```python
+while True:
+    eingabe = input("Eben Sie eine Zahl ein (oder 'exit' zum Beenden): ")
+    if eingabe == "exit":
+        break
+    else:
+        print(f"Sie haben die Zahl {eingabe} eingegeben.")
+```
+
+Wann ist eine Endlosschleife sinnvoll? Bei echten Computerprogrammen eher selten. Aber bei kleinen Robotern oder Microcontrollern, die immer dasselbe tun sollten, solange sie Strom haben, kann eine Endlosschleife durchaus sinnvoll sein. Sie werden das in der Robotik später selbst nutzen.
 
 ## Aufgabe: Ein Ratespiel entwickeln mit while
 
 Im folgenden Beispiel entwickeln wir ein kleines Ratespiel. Der Computer denkt sich eine Zahl zwischen 1 und 100 aus, und der Spieler muss sie erraten. Der Computer gibt dem Spieler Hinweise, ob die geratene Zahl zu hoch oder zu niedrig ist.
+
+### Pseudocode
+
+Die Idee etwas genauer in Pseudocode gefasst:
+
+```text
+Zufallszahl zwischen 1 und 100 ziehen
+Solange die Zahl nicht erraten wurde
+    Eingabe abfragen
+    Wenn die Zahl zu hoch ist:
+        Hinweis geben: "Zu hoch!"
+    Wenn die Zahl zu niedrig ist:
+        Hinweis geben: "Zu niedrig!"
+Hinweis geben: "Gratuliere!"
+```
 
 ### Zufallszahlen ziehen
 
@@ -82,4 +122,39 @@ eingabe = input("Gib eine Zahl zwischen 1 und 100 ein: ")
 # Eingabe von Zeichenkette/String in Ganzzahl/Integer umwandeln
 zahl = int(eingabe)
 print(zahl)
+```
+
+## Mögliche Lösung
+
+```python
+import random
+
+# Generiere eine Zufallszahl zwischen 1 und 100
+geheimzahl = random.randint(1, 100)
+
+# Variablen für das Spiel initialisieren
+versuchsrunde = 0
+geratete_zahl = -1
+
+# Begrüssung und Spielerklärung
+print("Willkommen zum Zahlenratespiel!")
+print("Ich habe mir eine Zahl zwischen 1 und 100 ausgedacht.")
+
+# Solange die Zahl nicht erraten wurde, weiterspielen
+while geratete_zahl != geheimzahl:
+    eingabe = input("Rate eine Zahl zwischen 1 und 100: ")
+    geratete_zahl = int(eingabe)
+    versuchsrunde += 1
+    
+    # Prüfen, ob die geratene Zahl korrekt ist
+    if geratete_zahl < geheimzahl:
+        print("Zu niedrig! Versuch es mit einer höheren Zahl.")
+    elif geratete_zahl > geheimzahl:
+        print("Zu hoch! Versuch es mit einer niedrigeren Zahl.")
+
+# Wenn die Zahl erraten wurde, gratulieren
+# Hint: Wir nutzen hier einen sogenannten f-String, um Variablen in Strings einzufügen,
+#       Sie könnten natürlich auch den String mit '+' verketten oder mit Kommas getrennt drucken.
+#       f-Strings sind eine moderne Möglichkeit, die Ihnen viele Formatierungsprobleme lösen wird.
+print(f"Gratuliere! Du hast die Zahl {geheimzahl} in {versuchsrunde} Versuchen erraten!")
 ```

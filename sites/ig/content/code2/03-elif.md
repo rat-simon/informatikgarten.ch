@@ -17,38 +17,22 @@ else:
     # Auszuführende Anweisungen, wenn keine der Bedingungen True ist
 ```
 
-### Beispiel
-
-```python
-wetter = "bewölkt"
-
-if wetter == "sonnig":
-    print("Vergessen Sie nicht, Sonnencreme aufzutragen!")
-elif wetter == "regnerisch":
-    print("Besser einen Regenschirm mitnehmen!")
-else:
-    print("Das Wetter ist unklar. Seien Sie auf alles vorbereitet!")
-```
-
-In diesem Beispiel wird die entsprechende Nachricht ausgegeben, abhängig vom Wert der Variable `wetter`. Es werden mehrere Bedingungen nacheinander geprüft:
-1. Ist das Wetter "sonnig"?
-2. Wenn nicht, ist es "regnerisch"?
-3. Wenn keines von beiden zutrifft, wird der Text im `else`-Block ausgegeben.
-
-So können wir eine Reihe von Bedingungen prüfen und für jeden Fall unterschiedliche Anweisungen ausführen.
-
-Beachten Sie, dass bei `if ... elif ... else`-Ketten jeweils **nur die erste wahre Bedingung ausgeführt** wird. Eine kleine Demonstration hierzu: 
+Bei `if ... elif ... else`-Ketten jeweils **nur die erste wahre Bedingung ausgeführt** wird. Eine kleine Demonstration: 
 - Führen Sie das Programm aus und schauen Sie den Output an.
 - Ändern Sie das zweite `if` zu einem `elif`. Führen Sie das Programm erneut aus. 
 
 ```turtle
 for i in range(10):
 	print(i)
-	if i > 2:
-		print("Grösser als 2")
 	if i > 4:
 		print("Grösser als 4")
+	if i > 2:
+		print("Grösser als 2")
 ```
+
+Was Ihnen auffallen sollte: 
+- Wenn es zwei `if`-Bedingungen sind, werden sie unabhängig voneinander ausgewertet und ausgeführt.
+- Mit einer `elif`-Bedingung **verketten** Sie die Bedingungen. Wenn die erste Bedingung wahr ist, wird die zweite nicht mehr geprüft - geschweige denn ausgeführt.
 
 ### Modulo Bingo 2
 
