@@ -56,6 +56,11 @@ export const TurtleEditor = ({
 
     useEffect(() => {
         if (!configRef.current) return
+
+        // Register the turtle editor
+        const editorNr = registerTurtleEditor(configRef as React.RefObject<TurtleConfigType>)
+        idRef.current = sanitizeIdString(id ?? path + '-' + editorNr)
+
         // Restore
         restoreHandler(configRef.current)
         // Load skulpt and skulpt-stdlib
@@ -68,10 +73,6 @@ export const TurtleEditor = ({
             .catch(() => {
                 logger.error('Script loading skulpt.min.js failed!')
             })
-
-        // Register the turtle editor
-        const editorNr = registerTurtleEditor(configRef as React.RefObject<TurtleConfigType>)
-        idRef.current = sanitizeIdString(id ?? path + '-' + editorNr)
 
         // Function to handle the beforeunload event
         function handleBeforeUnload() {
