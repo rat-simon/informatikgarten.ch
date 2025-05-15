@@ -76,6 +76,7 @@ export const restoreHandler = (c: TurtleConfigType) => {
     if (!c.idRef.current) return
     let localHistory = [] as HistoryEntry[]
     const localString = localStorage.getItem(c.idRef.current)
+    logger.verbose('localString for', c.idRef.current, ':', localString)
     if (
         localString !== null &&
         localString !== undefined &&
