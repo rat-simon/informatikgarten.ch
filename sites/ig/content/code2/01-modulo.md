@@ -40,8 +40,12 @@ Sie sehen, der Modulo wiederholt periodisch immer wieder die gleichen Werte. Wen
 
 ![[01-modulo-plot.excalidraw]]
 
-Im Alltag treffen Sie den Modulo immer an, wenn Sie eine analoge Uhr anschauen. Denn eine analoge Uhr ist eigentlich nichts anderes als eine Visualisierung des Modulo 12. Wenn es 9 Uhr ist und Sie 4 Stunden später schauen, ist es 1 Uhr. Das ist $(9 + 4) \mod(12) = 1$. 
+Im Alltag treffen Sie den Modulo immer an, wenn Sie eine analoge Uhr anschauen. Denn eine analoge Uhr ist eigentlich nichts anderes als eine Visualisierung des Modulo 12. Wenn es 9 Uhr ist und Sie 4 Stunden später schauen, ist es 1 Uhr. Mathematisch gesprochen: $(9 + 4) \mod(12) = 1$. 
 
 
 ![[modulo_clock.svg]]
+
+Die Rechenoperationen mit Modulo werden in der Mathematik in der "**modularen Arithmetik**" untersucht. Dieses Feld ist in der Informatik speziell im Bereich der Kryptographie von Bedeutung.
+
+Der normale Modulo ist beim Programmieren oft hilfreich, um z.B. eine Liste von Elementen zyklisch zu durchlaufen. Wenn Sie z.B. das Alphabet durchlaufen wollen, möchten Sie nach "Z" wahrscheinlich wieder bei "A" anfangen. Das würden Sie mit der ASCII-Tabelle und dem Modulo erreichen. Genauere Informationen dazu finden Sie im Kapitel zur [[../crypto/crypto-02-caesar|Caesar-Verschlüsselung]].
 
