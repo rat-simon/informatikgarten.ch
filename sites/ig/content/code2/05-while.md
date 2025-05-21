@@ -1,18 +1,16 @@
 ---
 title: while-Schleife
 ---
-
 # <nobr>Solange-Schleifen:</nobr> `while`
 
-Nun schauen wir uns die while-Schleife an. Das ist eine Schleife, die Ihren Code ausführt, **solange eine bestimmte Bedingung wahr ist**. Das ist sinnvoll, wenn Sie im vornherein nicht wissen, wie oft etwas getan werden soll.
+Nun schauen wir uns die while-Schleife an. Das ist eine Schleife, die Ihren Körper wiederholt, **solange eine bestimmte Bedingung wahr ist**. Das ist sinnvoll, wenn Sie im vornherein nicht wissen, wie oft etwas getan werden soll.
 
-Beginnen wir gleich mit dem Beispiel im letzten Teil. Wir suchten da die kleinste Zahl $i$, bei der gilt:
+Beginnen wir gleich mit dem Beispiel im letzten Teil. Wir suchten da die kleinste Zahl $i$, alle diese Bedingungen erfüllt:
 - $i \mod{113} = 1$
 - $i \mod{213} = 2$
 - $i \mod{313} = 3$
 
-Die Lösung haben wir gefunden, indem wir bei der `for`-Schleife manuell die Zahl erhöht haben. Das ist natürlich sehr unpraktisch - und genau das löst die `while`-Schleife!
-
+Die Lösung haben wir gefunden, indem wir bei der `for`-Schleife manuell den Zahlenbereich schrittweise erhöht haben. Das ist natürlich sehr unpraktisch - und genau das löst die `while`-Schleife!
 ## Syntax
 
 ```python
@@ -20,18 +18,25 @@ while Bedingung:
     # Code, der ausgeführt wird, solange die Bedingung wahr ist
 ```
 
-## Beispiele
-
 ### Zählen mit `while`
 
-Beginnen wir mit einem einfachen Beispiel, das ähnlich einer for-Schleife von 0 bis 9 zählt. Das gilt nur zur Veranschaulichung der Logik, praktisch sinnvoll ist das kaum.
+Zur Veranschaulichung beginnen wir mit einem Beispiel, das ähnlich einer for-Schleife von 0 bis 9 zählt. 
 
 ```turtle
 i = 0
 while i < 10:
-    print(i)
+    print("Anfang der Iteration:", i)
     i += 1 # Das ist die verkürzte Schreibweise für i = i + 1
+    print("Schluss der Iteration:", i)
+    print("*************************") # Ein einfacher Trennstrich
+print("Ein print-Statement am Schluss, das nicht mehr zur Schleife gehört")
 ```
+
+Beachten Sie folgende Aspekte:
+- Für den Codeblock gilt die typische Syntax: Ein Doppelpunkt schliesst den Kopf des Blocks ab, der Einzug links definiert, was zur Schleife gehört.
+- Die Bedingung der while-Schleife wird wie bei if-Statements geschrieben.
+- Die Bedingung wird nur **zu Beginn einer Iteration überprüft**. Wenn die Bedingung `True{:python}` ist, wird der **gesamte Körper der Schleife wiederholt**. Das sehen Sie beim letzten "Schluss der Iteration", das ausgeführt wird, obwohl `i` bereits den Wert `10` hat und die Bedingung nicht mehr erfüllt.
+## Beispiele
 
 ### Elegante Lösung, um kleinste Zahl zu finden
 
@@ -43,7 +48,7 @@ for i in range(10000000):
         print(i, "restlose Zahl")
 ```
 
-Jetzt mit `while`-Schleife lassen wir das einfach laufen, solange wir die Zahl **nicht** gefunden haben. Das geht auf zwei Arten:
+Jetzt mit `while`-Schleife lassen wir das einfach laufen, solange wir die Zahl **nicht** gefunden haben. Sobald wir die Zahl gefunden haben, wiederholt sich die Schleife nicht mehr - und `i` ist unsere gesuchte Zahl!
 
 ```python
 i = 0
@@ -52,12 +57,12 @@ while not (i % 113 == 1 and i % 213 == 2 and i % 313 == 3):
 print(i, "restlose Zahl")
 ```
 
-Die Bedingung der while-Schleife könnten Sie auch ausklammern.
+Die einzelnen Teilbedingungen der while-Schleife könnten Sie auch ausklammern. 
 
 ```python
-# "Solange alle Bedingungen erfüllt sind" ...
+# "Solange die gesamte Bedingung nicht erfüllt ist", ist logisch dasselbe wie...
 not (i % 113 == 1 and i % 213 == 2 and i % 313 == 3)
-# ... ist dasselbe wie: "Solange eine der Bedingungen nicht erfüllt ist"
+# "Solange eine der Bedingungen nicht erfüllt ist"
 i % 113 != 1 or i % 213 != 2 or i % 313 != 3
 ```
 
@@ -69,7 +74,7 @@ Eine Endlosschleife ist eine `while`-Schleife, die nie endet. Das passiert, wenn
 while True:
     print("Das ist eine Endlosschleife!")
 ```
-Das ist eine Endlosschleife, die immer "Das ist eine Endlosschleife!" ausgibt. Um sie zu beenden, müssen Sie das Programm entweder manuell stoppen (z.B. mit `Ctrl/Strg + C` in der Konsole) oder das Schlagwort `break` verwenden.
+Das ist eine Endlosschleife, die immer "Das ist eine Endlosschleife!" ausgibt. Um sie zu beenden, müssen Sie das Programm entweder manuell stoppen (z.B. mit `Ctrl/Strg + C` in der Konsole) oder das Schlagwort `break` verwenden. Ein weiteres Beispiel:
 
 ```python
 while True:
@@ -80,7 +85,7 @@ while True:
         print(f"Sie haben die Zahl {eingabe} eingegeben.")
 ```
 
-Wann ist eine Endlosschleife sinnvoll? Bei echten Computerprogrammen eher selten. Aber bei kleinen Robotern oder Microcontrollern, die immer dasselbe tun sollten, solange sie Strom haben, kann eine Endlosschleife durchaus sinnvoll sein. Sie werden das in der Robotik später selbst nutzen.
+Wann ist eine Endlosschleife sinnvoll? Bei echten Computerprogrammen eher selten. Aber bei kleinen Robotern oder Microcontrollern, die immer dasselbe tun sollten, solange sie Strom haben, kann eine Endlosschleife unter Umständen sinnvoll sein. 
 
 ## Aufgabe: Ein Ratespiel entwickeln mit while
 

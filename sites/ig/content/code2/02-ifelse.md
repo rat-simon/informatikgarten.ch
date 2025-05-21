@@ -1,5 +1,5 @@
 ---
-title: If ... else ... in Python
+title: If ... else ...
 ---
 # Entscheidungen treffen: <nobr>`if ... else`</nobr>
 

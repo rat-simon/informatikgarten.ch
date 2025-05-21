@@ -3,7 +3,7 @@ title: Entscheidungsketten mit `if ... elif ... else`
 ---
 # Entscheidungsketten: <nobr>`if ... elif ... else`</nobr>
 
-Es gibt auch Fälle, in denen wir mehr als zwei Möglichkeiten haben und mehrere Bedingungen prüfen wollen. Eine elegante Struktur: Mit `if ... elif ... else` können Sie eine **Kette aus mehrere Bedingungen** bilden. Dann wird die **die erste wahre Bedingung ausgeführt**.
+Es gibt Fälle, in denen wir mehr als zwei Möglichkeiten haben und mehrere Bedingungen prüfen wollen. Eine elegante Struktur: Mit `if ... elif ... else` können Sie eine **Kette aus mehrere Bedingungen** bilden. Dann wird die **die erste wahre Bedingung ausgeführt**.
 ### Syntax
 
 ```python

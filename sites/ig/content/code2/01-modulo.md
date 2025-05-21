@@ -27,7 +27,7 @@ print("89 % 10 =", 89 % 10) # 9
 print("100 % 10 =", 100 % 10) # 0
 ```
 
-Überlegen wir uns, wie sich der Modulo verhält. Stellen uns hierzu eine Funktion $f(x) = x \mod(5)$. Was für Zahlen kommen da raus?
+Überlegen wir uns, wie sich der Modulo verhält. Stellen wir uns hierzu eine Funktion $f(x) = x \mod(5)$ vor, also eine Funktion, die für alle $x$ den Rest der Division durch $5$ berechnet. Was für Zahlen kommen da raus?
 
 ```turtle
 print("x % 5 =  y")
@@ -39,4 +39,9 @@ for x in range(30):
 Sie sehen, der Modulo wiederholt periodisch immer wieder die gleichen Werte. Wenn Sie $f(x) = x \mod(5)$ als Graphen zeichnen würde, sähe das so aus:
 
 ![[01-modulo-plot.excalidraw]]
+
+Im Alltag treffen Sie den Modulo immer an, wenn Sie eine analoge Uhr anschauen. Denn eine analoge Uhr ist eigentlich nichts anderes als eine Visualisierung des Modulo 12. Wenn es 9 Uhr ist und Sie 4 Stunden später schauen, ist es 1 Uhr. Das ist $(9 + 4) \mod(12) = 1$. 
+
+
+![[modulo_clock.svg]]
 

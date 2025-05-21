@@ -45,9 +45,9 @@ Which are the most relevant pillars of support that prop up the Venezuelan dicta
 
 The dictatorship reactivated its **repressive apparatus**, resulting in at least 25 deaths and hundreds of people injured or detained. "Most of the arbitrary detentions were carried out by the intelligence services, both civilian (SEBIN) and military (DGCIM), the Bolivarian National Police (PNB), including its new Directorate of Strategic and Tactical Action (FAES), ... and the Bolivarian National Guard (GNB). The last two institutions also carried out arbitrary detentions, in particular, in the context of the protests after 28 July 2024."[^unreport] 
 
-The regime repressed protests with its notorious Operación Tun Tun (Operation Knock Knock), in which often unidentified and masked security personell knocked on doors and abducted people who participated in protests. All of this has the **deliberate effect of sowing fear** to express discontent and oppose the dictatorship. Horrible as it is, this reaction was to be expected. Brutality a requirement for the dictatorial control they seek.
+The regime repressed protests with its notorious Operación Tun Tun (Operation Knock Knock), in which often unidentified and masked security personnel knocked on doors and abducted people who participated in protests. All of this has the **deliberate effect of sowing fear** to express discontent and oppose the dictatorship. Horrible as it is, this reaction was to be expected. Brutality a requirement for the dictatorial control they seek.
 
-Sadly, this is a reaction by the dictatorship that was to be expected and planned for. The regime is not going to give up power without a fight. The repressive apparatus is the dictatorship's most important pillar of support, and it is crucial to undermine its cooperation with the regime.
+Sadly, this is a reaction by the dictatorship that **was to be expected and planned for**. The regime is not going to give up power without a fight. The repressive apparatus is the dictatorship's most important pillar of support, and it is crucial to undermine its cooperation with the regime.
 
 ## The strategy
 

@@ -1,16 +1,15 @@
 ---
-title: Funktionen in Python
+title: Funktionen
 ---
+# Funktionen
 
-# Funktionen in Python
+Wenn man ein Problem endlich gelöst hat, wäre es doch schön, diese Lösung immer wieder verwenden zu können. Das geht mit Funktionen! 
 
-Wenn man ein Problem endlich gelöst hat, wäre es doch schön, diese Lösung immer wieder verwenden zu können. Das geht - mit Funktionen! 
-
-Funktionen sind kleine Unterprogramme des Hauptprogramms, die eine bestimmte Aufgabe erledigen. Sie können also eigene Befehle kreieren, die Sie dann immer wieder verwenden können, wann immer Sie diese Funktion brauchen.
+Funktionen sind **Unterprogramme des Hauptprogramms**, die eine bestimmte Aufgabe erledigen. Sie können so **eigene Befehle kreieren und immer wieder verwenden**, wann immer Sie diese Funktion brauchen.
 
 ## Syntax
 
-Um die Syntax einer Funktion zu verstehen, schauen wir ein Beispiel an: Sagen wir, wir wollen eine Funktion schreiben, die den Flächeninhalt eines Quadrats berechnet. Diese Funktion könnte so aussehen:
+Um die Syntax einer Funktion zu verstehen, schauen wir ein Beispiel an: Sagen wir, wir müssen immer wieder den Flächeninhalt eines Quadrats berechnen. Anstatt die Rechnung immer wieder aufzuschreiben, bietet es isch an, eine Funktion zu schreiben. Das könnte so aussehen:
 
 ```turtle
 # Funktion zur Berechnung des Flächeninhalts eines Quadrats
@@ -39,6 +38,7 @@ Beachten Sie:
 - Mit `return` geben Sie den Wert zurück, den die Funktion berechnet hat. So können Sie den Wert im Hauptprogramm weiterverwenden.
 - Im Hauptprogramm nutzen wir die Funktion, indem wir ihren Namen aufrufen und die Seitenlänge als Argument in den runden Klammern übergeben. Das Argument wird dann in der Funktion ins Parameter `seitenlaenge` abgefüllt.
 
+![[10-funktionen-block.excalidraw]]
 ## Beispiele
 
 ### Würfeln (eine Funktion ohne Parameter und ohne `return`-Wert)
@@ -119,4 +119,34 @@ Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrech
 > print("20 Grad Celsius sind", celsius_in_fahrenheit(20), "Grad Fahrenheit.")
 > print("100 Grad Celsius sind", celsius_in_fahrenheit(100), "Grad Fahrenheit.")
 > ```
+
+## Das return-Statement für Funktionen
+
+Sie haben gesehen, wie man Funktionen definiert und Werte als Argumente in die Parameter einer Funktion abfüllt. Aber wie könnten wir **Werte von der Funktion wieder ins Hauptprogramm zurückgeben**?
+
+In den meisten Programmiersprachen dient dazu das `return`-Statement. Sobald in einer Funktion `return` aufgerufen wird, gibt die Funktion sofort angegebenen Wert zurück. `return` **beendet die Funktion** sofort und alle Anweisungen oder Schleifenwiederholungen, die danach kämen, werde nicht mehr ausgeführt.
+
+Ein einfaches erstes Beispiel:
+```turtle
+def addieren(a, b):
+	ergebnis = a + b
+	return ergebnis
+
+resultat = addieren(3, 5)
+print("Das Resultat ist", resultat)
+```
+
+Hier wird der Variabel `resultat` also **der Wert von `addieren(3, 5)` zugewiesen**. Das geht, weil die Funktion auch tatsächlich mit `return` einen Wert zurückgibt. Man sagt: **`addieren(3, 5)` wertet zu `8` aus**. In der Variabel wird also nur noch der retournierte **Wert** `8` gespeichert, nicht die Funktion `addieren(3, 5)` selbst.
+
+
+> [!example] Grösser als 5?
+> 
+> Schreiben Sie eine Funktion `biggerthanfive(zahl)`, die `True` zurückgibt, wenn `zahl` grösser ist als 5, und ansonsten `False`. 
+
+
+> [!example] Gerade?
+> 
+> Schreiben Sie eine Funktion `gerade(zahl)`, die `True` zurückgibt, wenn `zahl` gerade ist, und ansonsten `False`. 
+> 
+> Tipp: Mit `%` (Modulo) erhalten Sie den **Rest einer Division**. `17 % 3` gibt 2.
 
