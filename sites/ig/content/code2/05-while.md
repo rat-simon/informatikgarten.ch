@@ -136,6 +136,9 @@ zahl = int(eingabe)
 print(zahl)
 ```
 
+### Erklärvideo
+
+![[while-ratespiel.mp4]]
 
 > [!solution]- Mögliche Lösung
 > 
