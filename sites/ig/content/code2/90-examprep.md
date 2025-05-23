@@ -94,7 +94,8 @@ for i in range(10):
 > [!solution]- Lösung
 >
 > `1:4:7:10`
-
+#### Erklärvideo
+![[code2-prep5.mp4]]
 ### Beispiel 6
 
 ```turtle
