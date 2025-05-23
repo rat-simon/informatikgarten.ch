@@ -18,7 +18,6 @@ def flaeche_quadrat(seitenlaenge):
     return flaeche
 
 # Hauptprogramm
-
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", flaeche_quadrat(5))
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 10 ist:", flaeche_quadrat(10))
 
@@ -38,7 +37,7 @@ Beachten Sie:
 - Mit `return` geben Sie den Wert zurück, den die Funktion berechnet hat. So können Sie den Wert im Hauptprogramm weiterverwenden.
 - Im Hauptprogramm nutzen wir die Funktion, indem wir ihren Namen aufrufen und die Seitenlänge als Argument in den runden Klammern übergeben. Das Argument wird dann in der Funktion ins Parameter `seitenlaenge` abgefüllt.
 
-![[10-funktionen-block.excalidraw]]
+![[10-funktionen-block.excalidraw.light.svg]]
 ## Beispiele
 
 ### Würfeln (eine Funktion ohne Parameter und ohne `return`-Wert)
@@ -120,33 +119,30 @@ Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrech
 > print("100 Grad Celsius sind", celsius_in_fahrenheit(100), "Grad Fahrenheit.")
 > ```
 
-## Das return-Statement für Funktionen
+### Aufgabe: Boolescher `return`-Wert
 
-Sie haben gesehen, wie man Funktionen definiert und Werte als Argumente in die Parameter einer Funktion abfüllt. Aber wie könnten wir **Werte von der Funktion wieder ins Hauptprogramm zurückgeben**?
+Eine Funktion kann auch einen Wahr/Falsch-Wert als Rückgabewert haben. So können Sie die Funktion direkt in einer `if`-Selektion gebrauchen.
 
-In den meisten Programmiersprachen dient dazu das `return`-Statement. Sobald in einer Funktion `return` aufgerufen wird, gibt die Funktion sofort angegebenen Wert zurück. `return` **beendet die Funktion** sofort und alle Anweisungen oder Schleifenwiederholungen, die danach kämen, werde nicht mehr ausgeführt.
+Schreiben Sie eine Funktion istGerade(zahl), die überprüft, ob eine Zahl gerade ist. Die Funktion soll `True` zurückgeben, wenn die Zahl gerade ist, und `False`, wenn sie ungerade ist.
 
-Ein einfaches erstes Beispiel:
-```turtle
-def addieren(a, b):
-	ergebnis = a + b
-	return ergebnis
+Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 ausgibt.
 
-resultat = addieren(3, 5)
-print("Das Resultat ist", resultat)
+```turtle id="istGerade"
+# Ihr Code
 ```
 
-Hier wird der Variabel `resultat` also **der Wert von `addieren(3, 5)` zugewiesen**. Das geht, weil die Funktion auch tatsächlich mit `return` einen Wert zurückgibt. Man sagt: **`addieren(3, 5)` wertet zu `8` aus**. In der Variabel wird also nur noch der retournierte **Wert** `8` gespeichert, nicht die Funktion `addieren(3, 5)` selbst.
-
-
-> [!example] Grösser als 5?
-> 
-> Schreiben Sie eine Funktion `biggerthanfive(zahl)`, die `True` zurückgibt, wenn `zahl` grösser ist als 5, und ansonsten `False`. 
-
-
-> [!example] Gerade?
-> 
-> Schreiben Sie eine Funktion `gerade(zahl)`, die `True` zurückgibt, wenn `zahl` gerade ist, und ansonsten `False`. 
-> 
-> Tipp: Mit `%` (Modulo) erhalten Sie den **Rest einer Division**. `17 % 3` gibt 2.
+> [!solution]- Mögliche Lösung
+>
+> ```python
+> def istGerade(zahl):
+>     if zahl % 2 == 0:
+>         return True
+>     # Das else ist hier optional, weil return die Funktion abbricht
+>     return False
+>
+> # Hauptprogramm
+> for i in range(11):
+>     if istGerade(i):
+>         print(i, "ist eine gerade Zahl.")
+> ```
 
