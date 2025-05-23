@@ -256,6 +256,9 @@ Schreiben Sie ein Programm, dass alle Zahlen bis 20 überprüft.
 > 
 > Das ist nicht sehr elegant und ineffizient: Der Computer überprüft immer alle Bedingungen! In der nächsten Lektion finden Sie eine elegantere Lösung.
 
+#### Erklärvideo
+
+![[elif-bingo.mp4]]
 ### Aufgabe kompliziertere Modulo-Summe
 
 Addieren Sie alle Zahlen bis 100 auf, die zwar restlos durch 5 teilbar sind, aber **nicht** restlos durch 3 teilbar sind!

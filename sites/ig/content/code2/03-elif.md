@@ -77,3 +77,6 @@ Eine elegantere Lösung nutzt dem Umstand, dass `if ... elif ... else`-Ketten im
 > 		print(i)
 > ```
 
+#### Erklärvideo
+
+![[elif-bingo.mp4]]

@@ -27,6 +27,12 @@ main {
     h3 {
         color: var(--color-ig-h3);
     }
+    h4 {
+        color: var(--color-ig-h4)
+    }
+    h5 {
+        color: var(--color-ig-h5)
+    }
 }
 
 /* ----------- fonts ----------------- */
