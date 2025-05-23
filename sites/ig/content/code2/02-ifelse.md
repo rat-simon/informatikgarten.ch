@@ -3,6 +3,12 @@ title: If ... else ...
 ---
 # Entscheidungen treffen: <nobr>`if ... else`</nobr>
 
+> [!success] Lernziele
+> 
+> - Sie verstehen, wie Sie mit `if ... else` Entscheidungen in Python treffen können.
+> - Sie können Bedingungen mit `and`, `or` und `not` kombinieren.
+> - Sie kennen die Präzedenzregeln für logische Operatoren: Klammern `()` vor `not`, `not` vor `and`, `and` vor `or`.
+
 Wenn wir in Python programmieren, nutzen wir oft `if`-Anweisungen, um Entscheidungen zu treffen. Das ist so, als würden wir im echten Leben sagen: "Wenn es regnet, dann nehme ich einen Regenschirm mit."
 
 ## Vergleich mit `if`

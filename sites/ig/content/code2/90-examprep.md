@@ -10,6 +10,7 @@ Die Prüfung setzt die Inhalte des ersten Semesters als Vorkenntnisse voraus. Ko
 - Sie sollten Variabeln definieren und nutzen können.
 - Sie sollten for-Schleifen mit range() und eigenen Listen kennen.
 - Sie sollten die Namen der primitiven Datentypen kennen (int, float, str, bool).
+- Sie können mit `input()` Benutzereingaben abfragen und mit `int()` oder `float()` in Zahlen umwandeln.
 - Sie sollten die Grundoperationen der Mathematik in Python anwenden können (Addition `+`, Subtraktion `-`, Multiplikation `*`, Division `/`).
 
 ## Auswertung verstehen
