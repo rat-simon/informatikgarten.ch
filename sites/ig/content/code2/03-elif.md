@@ -3,6 +3,11 @@ title: Entscheidungsketten mit `if ... elif ... else`
 ---
 # Entscheidungsketten: <nobr>`if ... elif ... else`</nobr>
 
+> [!success] Lernziele
+> 
+> - Sie verstehen, wie Sie mit `if ... elif ... else` eine Kette von Bedingungen bilden können.
+> - Sie verstehen die Logik, wie die Bedingungen in diesen Ketten nacheinander geprüft werden.
+
 Es gibt Fälle, in denen wir mehr als zwei Möglichkeiten haben und mehrere Bedingungen prüfen wollen. Eine elegante Struktur: Mit `if ... elif ... else` können Sie eine **Kette aus mehrere Bedingungen** bilden. Dann wird die **die erste wahre Bedingung ausgeführt**.
 ### Syntax
 
@@ -72,3 +77,6 @@ Eine elegantere Lösung nutzt dem Umstand, dass `if ... elif ... else`-Ketten im
 > 		print(i)
 > ```
 
+#### Erklärvideo
+
+![[elif-bingo.mp4]]
