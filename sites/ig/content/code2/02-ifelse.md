@@ -3,6 +3,12 @@ title: If ... else ...
 ---
 # Entscheidungen treffen: <nobr>`if ... else`</nobr>
 
+> [!success] Lernziele
+> 
+> - Sie verstehen, wie Sie mit `if ... else` Entscheidungen in Python treffen können.
+> - Sie können Bedingungen mit `and`, `or` und `not` kombinieren.
+> - Sie kennen die Präzedenzregeln für logische Operatoren: Klammern `()` vor `not`, `not` vor `and`, `and` vor `or`.
+
 Wenn wir in Python programmieren, nutzen wir oft `if`-Anweisungen, um Entscheidungen zu treffen. Das ist so, als würden wir im echten Leben sagen: "Wenn es regnet, dann nehme ich einen Regenschirm mit."
 
 ## Vergleich mit `if`
@@ -250,6 +256,9 @@ Schreiben Sie ein Programm, dass alle Zahlen bis 20 überprüft.
 > 
 > Das ist nicht sehr elegant und ineffizient: Der Computer überprüft immer alle Bedingungen! In der nächsten Lektion finden Sie eine elegantere Lösung.
 
+#### Erklärvideo
+
+![[elif-bingo.mp4]]
 ### Aufgabe kompliziertere Modulo-Summe
 
 Addieren Sie alle Zahlen bis 100 auf, die zwar restlos durch 5 teilbar sind, aber **nicht** restlos durch 3 teilbar sind!
