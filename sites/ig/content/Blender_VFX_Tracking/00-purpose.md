@@ -1,0 +1,18 @@
+---
+title: 🏗️ Was erschaffen wir?
+---
+## Was machen wir?
+
+In diesem Abschnitt werden sie die Steuerungsgrundlagen von Blender lernen und  wie man Camera Tracking benutzt mit simplen Objekten und Formen in Blender!
+
+ 
+Video von Camera tracking hier rein
+
+
+Eine Vorwarnung, Blender kann recht ressourcenintensiv sein also schlage ich ihnen stark vor, ihren Laptop an den Strom angehängt zu haben.
+
+Viel Spass! 😉
+
+Diese Abschnitte basieren auf die Tutorials von [Blender Guru](https://www.youtube.com/@blenderguru)und [Jacob Zirkle](https://www.youtube.com/watch?v=ui0JUHE12k8).
+
+Bild von Blender logo vielleicht
