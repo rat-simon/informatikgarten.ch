@@ -10,7 +10,7 @@ tags: [excalidraw]
 # Excalidraw Data
 ## Text Elements
 ## Embedded Files
-9b2a184f7df0e6fa491436ec5d6f81df69afc558: [[diagram.svg]]
+9b2a184f7df0e6fa491436ec5d6f81df69afc558: [[sites/luz/content/usa/attachments/attachments/diagram.svg]]
 
 %%
 ## Drawing

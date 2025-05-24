@@ -132,7 +132,9 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 ```
 
 > [!solution]- Mögliche Lösung
->
+> 
+> Diese Lösung ist wohl gut nachvollziehbar...
+> 
 > ```python
 > def istGerade(zahl):
 >     if zahl % 2 == 0:
@@ -144,5 +146,11 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 > for i in range(11):
 >     if istGerade(i):
 >         print(i, "ist eine gerade Zahl.")
+> ```
+> 
+> ...aber Sie könnten die Funktion enorm vereinfachen.
+> ```python
+> def istGerade(zahl):
+>     return zahl % 2 == 0
 > ```
 

@@ -3,7 +3,17 @@ title: Rest mit Modulo
 ---
 # Was übrig bleibt: Modulo
 
+<<<<<<< HEAD
 Heutzutage würden Sie wohl sagen $6 \div 5$ gibt $\frac{6}{5}$, $1\ \frac{1}{5}$, oder 1.2. Aber in der Primarschule haben Sie dividieren zuerst anders gelernt: Wenn Sie 6 Äpfel auf 5 Personen aufteilen müssten, hätten Sie gesagt, dass jede Person einen Apfel erhält und ein Apfel übrig bleibt. Kurz: $6 \div 5 = 1 \text{ Rest } 1$ .
+=======
+
+> [!success] Lernziele
+> 
+> - Sie verstehen den Modulo und können den Modulo-Operator in Python verwenden.
+
+
+Heutzutage würden Sie wohl sagen $6 \div 5$ gibt $1.2$, $1\ \frac{1}{5}$, oder $\frac{6}{5}$. Aber in der Primarschule haben Sie dividieren zuerst anders gelernt: Wenn Sie 6 Äpfel auf 5 Personen aufteilen müssten, hätten Sie gesagt, dass jede Person einen Apfel erhält und **ein Apfel übrig bleibt**. Kurz: $6 \div 5 = 1 \text{ Rest } 1$ .
+>>>>>>> a95ac13392137bde1eb617567d7f15ca06c31132
 
 In der Mathematik gibt es eine Operation, die diesen Rest einer Divison produziert: den **Modulo**. Einige Beispiele:
 
