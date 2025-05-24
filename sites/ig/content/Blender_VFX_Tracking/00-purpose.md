@@ -9,10 +9,10 @@ In diesem Abschnitt werden sie die Steuerungsgrundlagen von Blender lernen und  
 Video von Camera tracking hier rein
 
 
-Eine Vorwarnung, Blender kann recht ressourcenintensiv sein also schlage ich ihnen stark vor, ihren Laptop an den Strom angehängt zu haben.
+Ich schlage ihnen vor eine Maus zu nutzen und ihren Laptop an den Strom angehängt zu haben. Blender kann recht ressourcenintensiv sein!
 
 Viel Spass! 😉
 
-Diese Abschnitte basieren auf die Tutorials von [Blender Guru](https://www.youtube.com/@blenderguru)und [Jacob Zirkle](https://www.youtube.com/watch?v=ui0JUHE12k8).
+Diese Abschnitte basieren auf den Tutorials von [Blender Guru](https://www.youtube.com/@blenderguru) und [Jacob Zirkle](https://www.youtube.com/watch?v=ui0JUHE12k8).
 
 Bild von Blender logo vielleicht
