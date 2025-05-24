@@ -3,12 +3,6 @@ title: Funktionen
 ---
 # Funktionen
 
-> [!success] Lernziele
->
-> - Sie verstehen, was eine Funktion ist und wie Sie diese in Python definieren.
-> - Sie können eine Funktion mit Parametern definieren und verwenden.
-> - Sie verstehen, wie Sie mit `return` einen Wert zurückgeben können.
-
 Wenn man ein Problem endlich gelöst hat, wäre es doch schön, diese Lösung immer wieder verwenden zu können. Das geht mit Funktionen! 
 
 Funktionen sind **Unterprogramme des Hauptprogramms**, die eine bestimmte Aufgabe erledigen. Sie können so **eigene Befehle kreieren und immer wieder verwenden**, wann immer Sie diese Funktion brauchen.

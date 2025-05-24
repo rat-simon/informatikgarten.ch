@@ -3,13 +3,6 @@ title: while-Schleife
 ---
 # <nobr>Solange-Schleifen:</nobr> `while`
 
-> [!success] Lernziele
-> 
-> - Sie verstehen, wie Sie mit `while` eine Schleife erstellen können, die solange läuft, wie eine Bedingung `True` ist.
-> - Sie können mit einer `while`-Schleife zählen und die kleinste Zahl finden, die eine bestimmte Bedingung erfüllt.
-> - Sie können mit `break` eine Schleife vorzeitig beenden.
-> - Sie haben repetiert, wie man mit `input()` Benutzereingaben abfragen und mit `int()` in Zahlen umwandeln kann.
-
 Nun schauen wir uns die while-Schleife an. Das ist eine Schleife, die Ihren Körper wiederholt, **solange eine bestimmte Bedingung wahr ist**. Das ist sinnvoll, wenn Sie im vornherein nicht wissen, wie oft etwas getan werden soll.
 
 Beginnen wir gleich mit dem Beispiel im letzten Teil. Wir suchten da die kleinste Zahl $i$, alle diese Bedingungen erfüllt:
@@ -136,9 +129,6 @@ zahl = int(eingabe)
 print(zahl)
 ```
 
-### Erklärvideo
-
-![[while-ratespiel.mp4]]
 
 > [!solution]- Mögliche Lösung
 > 
