@@ -43,7 +43,7 @@ print("100 % 10 =", 100 % 10) # 0
 print("x % 5 =  y")
 print("----------")
 for x in range(30):
-	print(x, "% 5 =", x%5)
+	print(x, "% 5 =", + x%5)
 ```
 
 Sie sehen, der Modulo wiederholt periodisch immer wieder die gleichen Werte. Wenn Sie $f(x) = x \mod(5)$ als Graphen zeichnen würde, sähe das so aus:

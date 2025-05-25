@@ -6,6 +6,7 @@ Der aktuelle Überblick zu EIBE-Informatik im Frühlingssemester 2025:
 - Falls Sie eine **vierte Note** möchten oder bräuchten, können Sie sich bei mir zu einer **freiwilligen** SQL-Prüfung anmelden, die anfangs Juli stattfinden würde.
 
 ![[00-eibeorg.png|500]]
+
 ## Aktueller Stand dem Lehrer mitteilen
 
 <IsNotAuthenticated>
