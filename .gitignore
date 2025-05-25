@@ -10,7 +10,7 @@ out/
 .vercel/
 .idea/
 .eslintcache
-.env
+.env*
 
 tsup.config.bundled*
 tsconfig.tsbuildinfo
