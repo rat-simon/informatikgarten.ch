@@ -125,7 +125,7 @@ Versuchen Sie nun die Fahrlogik eines Staubsaugers zu programmieren:
 1. Fahren Sie geradeaus, bis Sie kurz vor einem Hindernis sind, 
 2. dann stoppen Sie, drehen sich um eine zufällige Zahl und machen wieder Schritt 1.
 
-Tipp: Eine zufällige Zahl zwischen 20 und 60 erhalten Sie so:
+Tipp: Eine zufällige Zahl können Sie mit der Funktion `randint()` aus dem Modul `random` generieren. Hier als Beispiel ziehen wir eine Zahl zwischen 20 und 60.
 ```python
 import random
 
