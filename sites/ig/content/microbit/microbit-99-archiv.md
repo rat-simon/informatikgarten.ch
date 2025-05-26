@@ -259,19 +259,6 @@ Schreiben Sie die fehlenden Linien. Der Einzug ist irrelevant.
 >             maqueen.motor_stop_all()
 > ```
 
-## Dem Rand einer Figur folgen
-
-Hilfe! Ich habe meinen Maqueen-Roboter so programmiert, dass er dem Rand einer Figur im Uhrzeiger folgt. Aber dann hat ein Sonnensturm meine Daten korrumpiert! Bitte reparieren Sie mein Programm!
-
-*(Für Leute im Darkmode: Die Figur ist schwarz, die Umgebung weiss.)*
-
-![[microbit-06-examprep-2024-10-21-12.26.52.excalidraw]]
-
-> [!solution]- Lösung
-> 
-> 1. `left == 1 and right == 0`
-> 2. `left == 0 and right == 0`
-> 3. `left == 1 and right == 1`
 
 ## Zufällige Geschwindigkeit
 
