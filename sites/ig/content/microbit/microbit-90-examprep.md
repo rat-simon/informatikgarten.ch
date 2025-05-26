@@ -10,7 +10,7 @@ title: Prüfungsvorbereitung
 > 	- Bei der Lektion [[microbit-02-buttons|zu den Knöpfen]] haben wir das Abbrechen der while-Schleife nicht behandelt.
 > 	- Bei der Lektion [[microbit-03-leds|zu den LEDs]] haben wir die Knacknuss-Aufgaben nicht behandelt.
 > 	- Beim [[microbit-10-maqueen-intro|Intro zum Maqueen-Roboter]] haben wir den Staubsauger mit der Zufallszahl nicht programmiert.
-> 	- Beim [[93-linetracker|Linientracker]] haben wir die Geschwindigkeit nicht dynamisch angepasst.
+> 	- Beim [[microbit-14-linetracker|Linientracker]] haben wir die Geschwindigkeit nicht dynamisch angepasst.
 > 	- Linienfinder & Radio haben wir gar nicht behandelt.
 
 ## Herz pocht nicht
