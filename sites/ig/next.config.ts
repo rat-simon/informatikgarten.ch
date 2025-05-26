@@ -95,12 +95,6 @@ const nextConfig = withNextra({
         ignoreDuringBuilds: true,
     },
     webpack(config, { isServer }) {
-        if (logger.test("verbose")) {
-            config.infrastructureLogging = {
-                level: "verbose",
-                debug: /PackFileCacheStrategy|webpack\.FileSystemInfo/,
-            };
-        }
 
         // Add this rule before other rules to exclude Obsidian files
         config.module.rules.push({
@@ -109,7 +103,7 @@ const nextConfig = withNextra({
             },
             use: "null-loader",
         });
-        
+
         // rule.exclude doesn't work starting from Next.js 15
         const { test: _test, ...imageLoaderOptions } = config.module.rules.find(
             (rule) => rule.test?.test?.(".svg")

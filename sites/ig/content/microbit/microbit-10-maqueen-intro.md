@@ -119,7 +119,7 @@ Der Maqueen hat einen Ultraschall-Distanz-Sensor, der die Distanz in Zentimetern
 Programmieren Sie Ihren Roboter nun so, dass er über schwarze Stellen langsam fährt und über weisse Stellen schnell, und wenn er auf eine Wand stösst, kehrt er prompt 180 Grad und fährt wieder zurück.
 
 ![[maqueen-huerdenlauf.excalidraw.light.svg]]
-### Knacknuss: Programmieren Sie einen Staubsauger
+### Programmieren Sie einen Staubsauger
 
 Versuchen Sie nun die Fahrlogik eines Staubsaugers zu programmieren: 
 1. Fahren Sie geradeaus, bis Sie kurz vor einem Hindernis sind, 

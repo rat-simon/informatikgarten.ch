@@ -38,9 +38,9 @@ Schreiben Sie ein Programm, bei dem man sieht, wie es die erste Reihe Pixel um P
 > [!solution]- Lösung
 > 
 > ```python
-> 	for x in range(5):
-> 			display.set_pixel(x, 0, 9)
-> 			sleep(500)
+> for x in range(5):
+> 		display.set_pixel(x, 0, 9)
+> 		sleep(500)
 > ```
 ### Aufgabe: Muster in Code nachmachen
 
@@ -50,13 +50,13 @@ Schreiben Sie das kürzest mögliche Programm, dass folgendes Muster zeichnet.
 
 > [!solution]- Lösung
 > 
+> ```python
 > from microbit import *
-> 
 > for x in range(1,4):
 >     display.set_pixel(x,0, 9)
-> 
 > for y in range(2,4):
 >     display.set_pixel(3,y, 9)
+> ```
 
 ### Aufgabe: Muster selbst zeichnen
 
@@ -186,9 +186,7 @@ Erweitern Sie das Programm so, dass das Display nicht automatisch auffüllt, son
 >         aktuelle_anzahl = aktuelle_anzahl + 1
 >         fill(aktuelle_anzahl, 0)
 > ```
-### Knacknuss: LEDs wieder abstellen
 
-Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 ### Aufgabe: Mehrere Bedingungen überprüfen
 
 Schreiben Sie ein Programm, dass im Sekundentakt von 1 bis 25 hoch zählt. 
@@ -205,6 +203,10 @@ print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
 print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
 ```
 
+
+### Knacknuss: LEDs wieder abstellen
+
+Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
 ### Knacknuss: "Kitt, I need you pal!"
 
 In den 1980ern und 1990ern waren viele aus dem Häuschen wegen einer Serie, in der ein junger Schönling mit seinem schwarzen, künstlich-intelligenten Auto für Gerechtigkeit kämpft. Die Rede ist von "Knight Rider" mit David Hasselhoff. Zu Ihrer Belustigung, hier ein Trailer:
