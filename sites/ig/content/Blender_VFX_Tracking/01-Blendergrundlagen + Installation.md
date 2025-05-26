@@ -36,5 +36,6 @@ Nun werden wir unseren Würfel verändern. Platzieren sie ihren Cursor auf den W
 - All dies können sie auch mit den Knöpfen links oben am Rand. nachdem sie einen Knopf gedrückt habt, müssen sie einfach auf die Pfeile/Achsen klicken um den Würfel zu verändern
 ![[Alternative Scale, Move und Rotate.svg]]
 
-Sie können während dem bewegen, drehen und vergrössern auch **Shift oder Control** drücken. Mit shift können sie genauer bewegen, drehen und vergrössern. Mit Control können sie in bestimmten Schritten diese Aktionen vollführen.
+Sie können während dem Bewegen, Drehen und Vergrössern auch **Shift oder Control** drücken. Mit shift können sie genauer bewegen, drehen und vergrössern und mit Control können sie in bestimmten Abständen bewegen, drehen und vergrössern.
 ![[Shift + Control aktion.svg]]
+Als nächstes werden wir mit dem Camera Tracking beginnen

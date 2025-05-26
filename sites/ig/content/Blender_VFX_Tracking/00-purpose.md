@@ -1,9 +1,10 @@
 ---
 title: 🏗️ Was erschaffen wir?
 ---
+# Blender VFX
 ## Was machen wir?
 
-In diesem Abschnitt werden sie die Steuerungsgrundlagen von Blender lernen und  wie man Camera Tracking benutzt mit simplen Objekten und Formen in Blender!
+In diesem Abschnitt werden sie die Steuerungsgrundlagen von Blender lernen und  wie man Camera Tracking benutzt mit simplen Objekten und Formen in Blender! (vielleicht werden wir es auch mit Feuer machen)
 
  
 Video von Camera tracking hier rein
