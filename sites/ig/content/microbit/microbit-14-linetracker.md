@@ -40,18 +40,22 @@ Nun werden wir das Konzept der logischen Verknüpfungen anwenden, um einen Linie
 from microbit import *
 import maqueen
 
-RUNNING = True
+# Konstanten, die uns das Leben erleichtern
+LEFT = 0
+RIGHT = 1
+DARK = 0
+LIGHT = 1
 
-while RUNNING:
+while True:
 
 	# Liest den linken und den rechten Helligkeitssensor. 1 = hell, 0 = dunkel.
-    left = maqueen.read_patrol(0)
-    right = maqueen.read_patrol(1)
+    left_sensor = maqueen.read_patrol(LEFT)
+    right_sensor = maqueen.read_patrol(RIGHT)
     
     # Hier müssen Sie auf den Zustand der Sensoren reagieren
 ```
-- `maqueen.read_patrol(0)` liest den Wert des linken Sensors (`left`), und `maqueen.read_patrol(1)` liest den Wert des rechten Sensors (`right`).
-- Der `while RUNNING:`-Block sorgt dafür, dass der Roboter kontinuierlich die Sensoren ausliest und die entsprechenden Aktionen ausführt.
+- `maqueen.read_patrol(LEFT)` liest den Wert des linken Sensors (`left_sensor`), und `maqueen.read_patrol(RIGHT)` liest den Wert des rechten Sensors (`right_sensor`).
+- Der `while True:`-Block sorgt dafür, dass der Roboter kontinuierlich die Sensoren ausliest und die entsprechenden Aktionen ausführt.
 
 
 > [!example] Diskussion
@@ -63,24 +67,32 @@ while RUNNING:
 > [!question]- So könnte das aussehen
 > 
 > ```python
->     if left == 1 and right == 1:
->         maqueen.set_motor(0, ???)
->         maqueen.set_motor(1, ???)
->     elif left == 0 and right == 1:
->         maqueen.set_motor(0, ???)
->         maqueen.set_motor(1, ???)
->     elif left == 1 and right == 0:
->         maqueen.set_motor(0, ???)
->         maqueen.set_motor(1, ???)
+> 
+> # Konstanten, die uns das Leben erleichtern
+> LEFT = 0
+> RIGHT = 1
+> DARK = 0
+> LIGHT = 1
+> 
+> while True:
+>     if left_sensor == LIGHT and right_sensor == LIGHT:
+> 		maqueen.set_motor(LEFT, ???)
+> 		maqueen.set_motor(RIGHT, ???)
+>     elif left_sensor == DARK and right_sensor == LIGHT:
+>         maqueen.set_motor(LEFT, ???)
+>         maqueen.set_motor(RIGHT, ???)
+>     elif left_sensor == LIGHT and right_sensor == DARK:
+>         maqueen.set_motor(LEFT, ???)
+>         maqueen.set_motor(RIGHT, ???)
 >     else:
->         maqueen.set_motor(0, ???)
->         maqueen.set_motor(1, ???)
+>         maqueen.set_motor(LEFT, ???)
+>         maqueen.set_motor(RIGHT, ???)
 > ```
 > 
 > Die Geschwindigkeiten wissen wir noch nicht, aber grundsätzlich ist die Logik:
-> - Wenn beide Sensoren (`left` und `right`) hell messen (`left == 1 and right == 1`), fährt der Roboter **geradeaus**.
-> - Wenn der linke Sensor dunkel misst und der rechte hell (`left == 0 and right == 1`), dreht sich der Roboter nach **links**.
-> - Wenn nur der linke Sensor hell misst und der rechte dunkel (`left == 1 and right == 0`), dreht sich der Roboter nach **rechts**.
+> - Wenn beide Sensoren (`left_sensor` und `right_sensor`) hell messen (`left_sensor == LIGHT and right_sensor == LIGHT`), fährt der Roboter **geradeaus**.
+> - Wenn der linke Sensor dunkel misst und der rechte hell (`left_sensor == DARK and right_sensor == LIGHT`), dreht sich der Roboter nach **links**.
+> - Wenn nur der linke Sensor hell misst und der rechte dunkel (`left_sensor == LIGHT and right_sensor == DARK`), dreht sich der Roboter nach **rechts**.
 > - Wenn beide Sensoren dunkel messen, gibt es sicher ein gröberes Problem. Stoppen wir dann doch am besten einfach beide Motoren.
 > 
 
