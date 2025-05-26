@@ -6,7 +6,6 @@ title: Einzelne LEDs und return-Statement
 > - **LEDs anstellen**: Sie können LEDs gezielt ansteuern und mit `for`-Schleifen das Display füllen.
 > - **Funktionen und return**: Sie haben Funktionen mit Parametern repetiert und können mit `return` die Ausführung einer Funktion beenden.
 > - **`if ... elif ... else`**: Sie können mehrere Bedingungen mit `and` und `or` verknüpfen, und haben die `if ... elif ... else`-Verkettung repetiert.
-> - **Modulo-Operator `%`**: Sie können den Modulo-Operator `%` verwenden, um den Rest einer Division zu berechnen oder in einer `if`-Selektion zu überprüfen.
 
 > [!example] Theorie
 > 
@@ -187,23 +186,6 @@ Erweitern Sie das Programm so, dass das Display nicht automatisch auffüllt, son
 >         fill(aktuelle_anzahl, 0)
 > ```
 
-### Aufgabe: Mehrere Bedingungen überprüfen
-
-Schreiben Sie ein Programm, dass im Sekundentakt von 1 bis 25 hoch zählt. 
-- Falls die aktuelle Zahl restlos sowie durch Drei **und** durch Vier teilbar ist, zeigen Sie ein Herz auf dem Display an.
-- Falls die aktuelle Zahl restlos durch Drei teilbar ist, aber nicht durch Vier, zeigen Sie das Bild CLOCK3 auf dem Display an.
-- Falls die aktuelle Zahl restlos durch Vier teilbar ist, aber nicht durch Drei, zeigen Sie das Bild CLOCK4 auf dem DIsplay an.
-- Ansonsten nutzen Sie Ihre `fill()`-Funktion, um die aktuelle Anzahl LEDs ohne Verzögerung anzustellen.
-
-Diese Aufgabe ist von einem Lernvideo inspiriert. Den Rest einer Division können Sie mit dem "Modulo"-Operator `%` berechnen.
-
-```turtle
-print ("8 % 3:", 8 % 3 ) # 8 durch 3 hat einen Rest von 2
-print ("8 % 4:", 8 % 4 ) # 8 durch 4 hat einen Rest von 0
-print ("Ist der Rest 0?", 8 % 4 == 0) # True, weil das stimmt ja
-```
-
-
 ### Knacknuss: LEDs wieder abstellen
 
 Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe nach abstellen (das letzte LED .
@@ -211,7 +193,7 @@ Modifizieren Sie die Funktion `fill()` so, dass die LEDs auch wieder der Reihe n
 
 In den 1980ern und 1990ern waren viele aus dem Häuschen wegen einer Serie, in der ein junger Schönling mit seinem schwarzen, künstlich-intelligenten Auto für Gerechtigkeit kämpft. Die Rede ist von "Knight Rider" mit David Hasselhoff. Zu Ihrer Belustigung, hier ein Trailer:
 
-<Youtube id="oNyXYPhnUIs" />
+<Youtube id="oNyXYPhnUIs">Knight Rider YT Video</Youtube>
 
 Jetzt wollen Sie natürlich Ihren Microbit genau so cool machen wie K.I.T.T., das intelligente Auto... Beginnen wir also ganz vorne: Machen Sie die Animation der roten Lichter in K.I.T.T.s Kühlerhaube mit Ihrem Microbit nach.
 

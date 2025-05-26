@@ -16,7 +16,7 @@ display: hidden
 3 ^HgA9YoYt
 
 ## Embedded Files
-cbf2e8cc3372cf3c72a469dec7e841a103040c46: [[../Pasted Image 20241021122722_922.png]]
+cbf2e8cc3372cf3c72a469dec7e841a103040c46: [[Pasted Image 20241021122722_922.png]]
 
 %%
 ## Drawing
