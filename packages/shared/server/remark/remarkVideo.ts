@@ -33,7 +33,7 @@ export const remarkVideo: Plugin<[], Root> = () => async (ast) => {
     // First, collect all nodes to process
     visit(ast, 'image', (_node, index, parent: any) => {
         const node = _node as Image
-        if (!node.url.startsWith('http') && node.url.endsWith('.mp4')) {
+        if (!node.url.startsWith('http') && (node.url.endsWith('.mp4') || node.url.endsWith('.mov'))) {
             nodesToProcess.push({ node, index, parent })
         }
     })
