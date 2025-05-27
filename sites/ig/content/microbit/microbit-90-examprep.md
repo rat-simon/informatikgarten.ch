@@ -11,8 +11,9 @@ title: Prüfungsvorbereitung
 > 	- Bei der Lektion [[microbit-03-leds|zu den LEDs]] haben wir die Knacknuss-Aufgaben nicht behandelt.
 > 	- Beim [[microbit-10-maqueen-intro|Intro zum Maqueen-Roboter]] haben wir den Staubsauger mit der Zufallszahl nicht programmiert.
 > 	- Beim [[microbit-14-linetracker|Linientracker]] haben wir die Geschwindigkeit nicht dynamisch angepasst.
-> 	- Linienfinder & Radio haben wir gar nicht behandelt.
+> 	- [[microbit-15-linefinder|Linienfinder]] & [[microbit-20-radio|Radio]] haben wir nicht behandelt und das ist **nicht Teil des Prüfungsstoffs**.
 
+Folgende Übungsaufgaben sollten Ihnen zur Prüfungsvorbereitung hilfreich sein. 
 ## Herz pocht nicht
 
 Hilfe! Folgendes Programm zeigt immer nur ein grosses Herz an. Erklären Sie meinen Fehler und was man auf welchen Linien hinzufügen müsste.
