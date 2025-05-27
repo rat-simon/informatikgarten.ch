@@ -91,6 +91,9 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 > 	Das bedeutet: Die 12-Bit-Kamera kann 4096-mal mehr Farben mischen als ein normaler Computer! Anstatt "nur" 16,8 Millionen Farben haben Sie **68,7 Milliarden Farben**.
 > 6. Ein Bild aus Graustufen hat einfach einen Kanal anstatt drei Kanäle pro Farbe. Das heisst: Die unkomprimierte Datenmenge ist ein Drittel der Datenmenge von RGB.
 
+### Demonstration: Was bringen 14 bit Farbtiefe bei einer Kamera?
+
+![[bitdepth_demo.mov]]
 ## Vektorgrafiken
 
 Wir haben bislang von Rastergrafiken gesprochen, die ein Bild in Pixel aufteilen. Der andere Haupttyp von Grafiken sind die sogenannten **Vektorgrafiken**.

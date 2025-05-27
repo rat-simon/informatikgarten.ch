@@ -3,5 +3,9 @@
     "luzstyle"
   ],
   "baseFontSizeAction": true,
+<<<<<<< HEAD
   "baseFontSize": 24
+=======
+  "baseFontSize": 18
+>>>>>>> 2260894c956b81af187071d21d9b4557e63fe0d1
 }

@@ -1,5 +1,5 @@
 ---
-title: ✨ Radiomodul & Sensoren
+title: Radiomodul & Sensoren
 ---
 > [!success] Lernziele
 > 
