@@ -17,7 +17,7 @@ Sobald sie Blender öffnen, sollten sie sofort eine ziemlich leere Szene haben. 
 ![Blender Screenshot](Blender_screenshot.png)
 
 
-Um zu Zoomen könne sie wie gewohnt das Mausrad drehen. Um ihre Kamera zu drehen müssen sie **Scroll Wheel gedrückt halten** und ihre Maus bewegen. Wichtig zu erwähnen ist, das Scroll Wheel oft als mittlere Maustaste bezeichnet wird.
+Um zu Zoomen können sie wie gewohnt das Mausrad drehen. Um ihre Kamera zu drehen müssen sie **Scroll Wheel gedrückt halten** und ihre Maus bewegen. Wichtig zu erwähnen ist, das Scroll Wheel oft als mittlere Maustaste bezeichnet wird.
 ![Middle mouse.svg](Middle_mouse.svg)
 
 Wenn sie nun **Shift und mittlere Maustaste gedrückt halten** und ihre Maus bewegen, sollten sie sich in der Szene bewegen können!

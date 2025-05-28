@@ -10,7 +10,7 @@ In diesem Abschnitt werden sie die Steuerungsgrundlagen von Blender lernen und  
 Video von Camera tracking hier rein
 
 
-Ich schlage ihnen vor eine Maus zu nutzen und ihren Laptop an den Strom angehängt zu haben. Blender kann recht ressourcenintensiv sein!
+Ich schlage ihnen vor eine Maus zu nutzen und ihren Laptop an den Strom angehängt zu haben oder am besten einen PC zu nutzen. Blender kann recht ressourcenintensiv sein!
 
 Viel Spass! 😉
 
