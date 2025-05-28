@@ -95,6 +95,13 @@ export default {
             </span>
         )
     },
+    Blender_VFX_Tracking: {
+	title: (
+	    <span className="menuicon blue">
+		<span>D</span>Blender VFX
+	    </span>
+	)
+    }
     kurse: {},
     // Navbar items
     dashboard: {
