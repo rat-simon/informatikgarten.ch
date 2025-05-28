@@ -5,7 +5,7 @@ title: Camera Tracking in Blender
 
 Wir werden nun den Tutorials von [Jacob Zirkle](https://www.youtube.com/watch?v=ui0JUHE12k8&t=29s) und Y folgen um Camera tracking zu lernen!
 
-![[camera_tracking.gif]]
+![Bild von camera tracking](camera_tracking.gif)
 
 (Als erstes Würfel tracken)
 
