@@ -114,6 +114,10 @@ for i in range(5,10):
 >
 > `4:6:6:8:10`
 
+### Erklärvideo
+
+![[elif2-examprep.mp4]]
+
 ### Beispiel 7
 
 ```turtle
