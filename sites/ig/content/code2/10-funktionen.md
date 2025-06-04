@@ -105,6 +105,23 @@ Schreiben Sie eine Funktion, die das Volumen eines Würfels berechnet.
 > print("Das Volumen eines Würfels mit Seitenlänge 10 ist:", volumen_wuerfel(10))
 > ```
 
+### Aufgabe: Volumen eines Quaders
+Schreiben Sie eine Funktion, die das Volumen eines Quaders berechnet. Die Funktion soll drei Parameter für die Länge, Breite und Höhe des Quaders haben.
+
+```turtle id="volumen_quader"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```python
+> def volumen_quader(lange, breite, hoehe):
+>     volumen = lange * breite * hoehe
+>     return volumen
+> # Hauptprogramm
+> print("Das Volumen eines Quaders mit Länge 5, Breite 10 und Höhe 2 ist:", volumen_quader(5, 10, 2))
+> print("Das Volumen eines Quaders mit Länge 3, Breite 4 und Höhe 5 ist:", volumen_quader(3, 4, 5))
+> ```
+
 ### Aufgabe: Umrechnung von Celsius in Fahrenheit
 
 Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrechnet. Die Formel zur Umrechnung lautet: `F = C * 9/5 + 32`
@@ -123,6 +140,31 @@ Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrech
 > # Hauptprogramm
 > print("20 Grad Celsius sind", celsius_in_fahrenheit(20), "Grad Fahrenheit.")
 > print("100 Grad Celsius sind", celsius_in_fahrenheit(100), "Grad Fahrenheit.")
+> ```
+
+### Aufgabe: Umrechnung von Fahrenheit in Celsius
+Schreiben Sie nun die Umkehrfunktion, die eine Temperatur in Fahrenheit in Celsius umrechnet.
+
+Danach versuchen Sie im Hauptprogramm, die beiden Funktionen aneinander zu koppeln, sodass Sie eine Temperatur in Celsius eingeben, in Fahrenheit umgerechnet und ausgegeben wird. Und dann soll der Wert auch gleich wieder zurück in Celsius umwandelt und ausgegeben werden.
+
+```turtle id="fahrenheit_in_celsius"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```python
+> def celsius_in_fahrenheit(celsius): # Von der Aufgabe zuvor
+>     fahrenheit = celsius * 9/5 + 32
+>     return fahrenheit
+> def fahrenheit_in_celsius(fahrenheit):
+>     celsius = (fahrenheit - 32) * 5/9
+>     return celsius
+> # Hauptprogramm
+> celsius = 20
+> fahrenheit = celsius_in_fahrenheit(celsius)
+> print(celsius, "Grad Celsius sind", fahrenheit, "Grad Fahrenheit.")
+> wieder_celsius = fahrenheit_in_celsius(fahrenheit)
+> print(fahrenheit, "Grad Fahrenheit sind wieder", wieder_celsius, "Grad Celsius.")
 > ```
 
 ### Aufgabe: Boolescher `return`-Wert
@@ -159,4 +201,36 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 > def istGerade(zahl):
 >     return zahl % 2 == 0
 > ```
+
+## Funktionen aus anderen Dateien importieren
+
+In Python können Sie Funktionen aus anderen Dateien importieren, um Ihren Code zu organisieren und wiederverwendbar zu machen. Dazu speichern Sie Ihre Funktionen in einer separaten Datei, z.B. `useful.py`, und importieren diese in Ihrem Hauptprogramm.
+
+Hier ist ein Beispiel, wie Sie das machen können:
+```python name="useful.py"
+def flaeche_quadrat(seitenlaenge):
+    flaeche = seitenlaenge * seitenlaenge
+    return flaeche
+def flaeche_rechteck(breite, laenge):
+    flaeche = breite * laenge
+    return flaeche
+```
+
+Eine Art, diese Funktionen in Ihrem Hauptprogramm zu verwenden, kennen Sie bereits: `import useful`, genau wie Sie `import turtle` oder `import random` verwenden. Dann können Sie die Funktionen unter dem Namen `useful` aufrufen, z.B. `useful.flaeche_quadrat(5)`.
+
+```python name="main.py"
+import useful
+
+print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", useful.flaeche_quadrat(5))
+print("Der Flächeninhalt eines Rechtecks mit Breite 5 und Länge 10 ist:", useful.flaeche_rechteck(5, 10))
+```
+
+Es gibt aber auch eine Art, die Funktionen direkt in Ihr Hauptprogramm zu importieren, sodass Sie sie ohne den Präfix `useful.` verwenden können. Dazu verwenden Sie das Schlüsselwort `from`:
+
+```python name="main.py"
+from useful import flaeche_quadrat, flaeche_rechteck
+
+print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", flaeche_quadrat(5))
+print("Der Flächeninhalt eines Rechtecks mit Breite 5 und Länge 10 ist:", flaeche_rechteck(5, 10))
+```
 
