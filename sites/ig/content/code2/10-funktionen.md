@@ -207,7 +207,7 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 In Python können Sie Funktionen aus anderen Dateien importieren, um Ihren Code zu organisieren und wiederverwendbar zu machen. Dazu speichern Sie Ihre Funktionen in einer separaten Datei, z.B. `useful.py`, und importieren diese in Ihrem Hauptprogramm.
 
 Hier ist ein Beispiel, wie Sie das machen können:
-```python name="useful.py"
+```python filename="useful.py"
 def flaeche_quadrat(seitenlaenge):
     flaeche = seitenlaenge * seitenlaenge
     return flaeche
@@ -218,7 +218,7 @@ def flaeche_rechteck(breite, laenge):
 
 Eine Art, diese Funktionen in Ihrem Hauptprogramm zu verwenden, kennen Sie bereits: `import useful`, genau wie Sie `import turtle` oder `import random` verwenden. Dann können Sie die Funktionen unter dem Namen `useful` aufrufen, z.B. `useful.flaeche_quadrat(5)`.
 
-```python name="main.py"
+```python filename="main.py"
 import useful
 
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", useful.flaeche_quadrat(5))
@@ -227,7 +227,7 @@ print("Der Flächeninhalt eines Rechtecks mit Breite 5 und Länge 10 ist:", usef
 
 Es gibt aber auch eine Art, die Funktionen direkt in Ihr Hauptprogramm zu importieren, sodass Sie sie ohne den Präfix `useful.` verwenden können. Dazu verwenden Sie das Schlüsselwort `from`:
 
-```python name="main.py"
+```python filename="main.py"
 from useful import flaeche_quadrat, flaeche_rechteck
 
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", flaeche_quadrat(5))
