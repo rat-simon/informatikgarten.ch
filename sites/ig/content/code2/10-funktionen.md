@@ -190,7 +190,7 @@ Danach versuchen Sie im Hauptprogramm, die beiden Funktionen aneinander zu koppe
 > print(fahrenheit, "Grad Fahrenheit sind wieder", wieder_celsius, "Grad Celsius.")
 > ```
 
-### Aufgabe: Boolescher `return`-Wert
+### Aufgabe: `istGerade(zahl)` mit booleschem `return`-Wert
 
 Eine Funktion kann auch einen Wahr/Falsch-Wert als Rückgabewert haben. So können Sie die Funktion direkt in einer `if`-Selektion gebrauchen.
 
@@ -224,6 +224,31 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 > def istGerade(zahl):
 >     return zahl % 2 == 0
 > ```
+
+### Aufgabe: `istPrimzahl(zahl)` mit booleschem `return`-Wert
+Schreiben Sie eine Funktion `istPrimzahl(zahl)`, die überprüft, ob eine Zahl eine Primzahl ist. Die Funktion soll `True` zurückgeben, wenn die Zahl eine Primzahl ist, und `False`, wenn sie keine Primzahl ist.
+
+Nutzen Sie die Funktion in einem Hauptprogramm, das alle Primzahlen bis 100 ausgibt.
+
+```turtle id="istPrimzahl"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```turtle id="istPrimzahl_solution"
+> def istPrimzahl(zahl):
+>    if zahl < 2:
+>        return False
+>    # Einfacher wäre: range(2, zahl), aber das ist ineffizient
+>    for divisor in range(2, int(zahl**0.5) + 1):
+>        if zahl % divisor == 0:
+>            return False
+>    return True
+> 
+> # Hauptprogramm
+> for i in range(101):
+>     if istPrimzahl(i):
+>         print(i, "ist eine Primzahl.")
 
 ## Funktionen aus anderen Dateien importieren
 
