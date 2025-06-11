@@ -122,6 +122,29 @@ Schreiben Sie eine Funktion, die das Volumen eines Quaders berechnet. Die Funkti
 > print("Das Volumen eines Quaders mit Länge 3, Breite 4 und Höhe 5 ist:", volumen_quader(3, 4, 5))
 > ```
 
+### Aufgabe: Volumen eines Kegels
+Schreiben Sie eine Funktion, die das Volumen eines Kegels berechnet. Die Funktion soll zwei Parameter für den Radius der Basis und die Höhe des Kegels haben. Die Formel für das Volumen eines Kegels lautet: $V = \frac{1}{3} \pi r^2 h$, wobei Sie für $\pi$ die Konstante `math.pi` aus dem Modul `math` verwenden können.
+
+```turtle id="volumen_kegel"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```turtle
+> import math
+> def volumen_kegel(radius, hoehe):
+>     volumen = (1/3) * math.pi * (radius ** 2) * hoehe
+>     return volumen
+> # Hauptprogramm
+> print("Das Volumen eines Kegels mit Radius 3 und Höhe 5 ist:", volumen_kegel(3, 5))
+> print("Das Volumen eines Kegels mit Radius 2 und Höhe 10 ist:", volumen_kegel(2, 10))
+
+### Berechnung des Volumens eines komischen Hauses
+
+Nutzen Sie Ihre zuvor erstellten Funktionen, um das Volumen dieses Hauses zu berechnen.
+
+![[10-funktionen-hausvolumen.excalidraw]]
+
 ### Aufgabe: Umrechnung von Celsius in Fahrenheit
 
 Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrechnet. Die Formel zur Umrechnung lautet: `F = C * 9/5 + 32`
