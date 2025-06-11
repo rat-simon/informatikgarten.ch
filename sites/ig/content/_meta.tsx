@@ -3,6 +3,11 @@ export default {
     index: {},
     inspiration: {},
     faq: {},
+    kurse: {},
+    '--': {
+        type: 'separator',
+        title: 'Grundjahr'
+    },
     aufbau: {
         title: (
             <span className="menuicon pink">
@@ -38,30 +43,35 @@ export default {
             </span>
         )
     },
+    // Weitere Inhalte
+    '---': {
+        type: 'separator',
+        title: 'Weitere Inhalte'
+    },
     crypto: {
         title: (
-            <span className="menuicon pink">
+            <span className="menuicon blue">
                 <span>F</span>Kryptologie
             </span>
         )
     },
     microbit: {
         title: (
-            <span className="menuicon pink">
+            <span className="menuicon blue">
                 <span>G</span>Robotik
             </span>
         )
     },
     didactics: {
         title: (
-            <span className="menuicon pink">
+            <span className="menuicon blue">
                 <span>H</span>Didaktik
             </span>
         )
     },
     sql: {
         title: (
-            <span className="menuicon pink">
+            <span className="menuicon blue">
                 <span>I</span>Datenbanken
             </span>
         )
@@ -69,33 +79,28 @@ export default {
     privacy: {
         display: 'hidden'
     },
-    // Weitere Inhalte
-    '--': {
-        type: 'separator',
-        title: 'Weitere Inhalte'
-    },
-    IKT: {
-        title: (
-            <span className="menuicon blue">
-                <span>A</span>IKT
-            </span>
-        )
-    },
     turtleinvaders: {
         title: (
             <span className="menuicon blue">
-                <span>B</span>Turtle Invaders
+                <span>J</span>Turtle Invaders
             </span>
         )
     },
     webdev: {
         title: (
             <span className="menuicon blue">
-                <span>C</span>Web-Dev
+                <span>K</span>Web-Dev
             </span>
         )
     },
-    kurse: {},
+    IKT: {
+        title: (
+            <span className="menuicon blue">
+                <span>L</span>IKT
+            </span>
+        )
+    },
+    // -- Hidden stuff ---
     // Navbar items
     dashboard: {
         display: 'hidden'
@@ -108,7 +113,6 @@ export default {
             typesetting: 'article'
         }
     },
-    // -- Hidden stuff ---
     attachments: {
         display: 'hidden'
     },

@@ -74,6 +74,15 @@ blockquote:not(.callout) {
     display: none;
 }
 
+.katex-display {
+    display: block;
+    margin-top: calc(var(--x-spacing) * 6);
+}
+
+main img {
+    margin: auto;
+}
+
 [role="tabpanel"] h3:first-child {
     display: none;
 }
