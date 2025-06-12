@@ -17,7 +17,7 @@ Sobald sie Blender öffnen, sollten sie sofort eine ziemlich leere Szene haben. 
 ![Blender Screenshot](Blender_screenshot.png)
 
 
-Um zu Zoomen können sie wie gewohnt das Mausrad drehen. Um ihre Kamera zu drehen müssen sie **Scroll Wheel gedrückt halten** und ihre Maus bewegen. Wichtig zu erwähnen ist, das Scroll Wheel oft als mittlere Maustaste bezeichnet wird.
+Um zu Zoomen können sie wie gewohnt das Mausrad drehen. Um ihre Kamera zu drehen müssen sie **Scroll Wheel gedrückt halten** und ihre Maus zu bewegen. Wichtig zu erwähnen ist, das Scroll Wheel oft als mittlere Maustaste bezeichnet wird.
 ![Middle mouse.svg](Middle_mouse.svg)
 
 Wenn sie nun **Shift und mittlere Maustaste gedrückt halten** und ihre Maus bewegen, sollten sie sich in der Szene bewegen können!
@@ -26,7 +26,7 @@ Wenn sie nun **Shift und mittlere Maustaste gedrückt halten** und ihre Maus bew
 Falls sie keine Maus haben können sie mit den Knöpfen oben rechts ihre Kamera steuern.
 ![Keine Maus.svg](Keine_Maus.svg)
 
-Nun werden wir unseren Würfel verändern. Platzieren sie ihren Cursor auf den Würfel und **drücken die linke Maustaste** um den Würfel auszuwählen.
+Nun werden wir unseren Würfel verändern. Platzieren sie ihren Cursor auf den Würfel und **drücken sie die linke Maustaste** um den Würfel auszuwählen.
 
 - **Drücken sie G** um den Würfel zu bewegen. Währenddessen können sie auch **X, Y oder Z drücken** um den Würfel entlang einer Achse zu bewegen
 ![move buttons](Move_buttons.svg)
@@ -38,6 +38,6 @@ Nun werden wir unseren Würfel verändern. Platzieren sie ihren Cursor auf den W
 
 ![Alternative Scale,Move,Rotate](Alternative_Scale_Move_und_Rotate.svg)
 
-Sie können während dem Bewegen, Drehen und Vergrössern auch **Shift oder Control** drücken. Mit shift können sie genauer bewegen, drehen und vergrössern und mit Control können sie in bestimmten Abständen bewegen, drehen und vergrössern.
+Noch zusätzlich, können sie während dem Bewegen, Drehen und Vergrössern auch **Shift oder Control** drücken. Mit shift können sie genauer bewegen, drehen und vergrössern und mit Control können sie in bestimmten Abständen bewegen, drehen und vergrössern.
 ![[Shift_+_Control_aktion.svg]]
-Als nächstes werden wir mit dem Camera Tracking beginnen
+Als nächstes werden wir mit dem Camera Tracking beginnen 📷
