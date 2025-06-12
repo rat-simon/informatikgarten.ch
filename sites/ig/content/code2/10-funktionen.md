@@ -116,6 +116,29 @@ Schreiben Sie eine Funktion, die das Volumen eines Quaders berechnet. Die Funkti
 > print("Das Volumen eines Quaders mit Länge 3, Breite 4 und Höhe 5 ist:", volumen_quader(3, 4, 5))
 > ```
 
+### Aufgabe: Volumen eines Kegels
+Schreiben Sie eine Funktion, die das Volumen eines Kegels berechnet. Die Funktion soll zwei Parameter für den Radius der Basis und die Höhe des Kegels haben. Die Formel für das Volumen eines Kegels lautet: $V = \frac{1}{3} \pi r^2 h$, wobei Sie für $\pi$ die Konstante `math.pi` aus dem Modul `math` verwenden können.
+
+```turtle id="volumen_kegel"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```turtle
+> import math
+> def volumen_kegel(radius, hoehe):
+>     volumen = (1/3) * math.pi * (radius ** 2) * hoehe
+>     return volumen
+> # Hauptprogramm
+> print("Das Volumen eines Kegels mit Radius 3 und Höhe 5 ist:", volumen_kegel(3, 5))
+> print("Das Volumen eines Kegels mit Radius 2 und Höhe 10 ist:", volumen_kegel(2, 10))
+
+### Berechnung des Volumens eines komischen Hauses
+
+Nutzen Sie Ihre zuvor erstellten Funktionen, um das Volumen dieses Hauses zu berechnen.
+
+![[10-funktionen-hausvolumen.excalidraw]]
+
 ### Aufgabe: Umrechnung von Celsius in Fahrenheit
 
 Schreiben Sie eine Funktion, die eine Temperatur in Celsius in Fahrenheit umrechnet. Die Formel zur Umrechnung lautet: `F = C * 9/5 + 32`
@@ -161,7 +184,7 @@ Danach versuchen Sie im Hauptprogramm, die beiden Funktionen aneinander zu koppe
 > print(fahrenheit, "Grad Fahrenheit sind wieder", wieder_celsius, "Grad Celsius.")
 > ```
 
-### Aufgabe: Boolescher `return`-Wert
+### Aufgabe: `istGerade(zahl)` mit booleschem `return`-Wert
 
 Eine Funktion kann auch einen Wahr/Falsch-Wert als Rückgabewert haben. So können Sie die Funktion direkt in einer `if`-Selektion gebrauchen.
 
@@ -196,12 +219,37 @@ Nutzen Sie die Funktion in einem Hauptprogramm, das alle geraden Zahlen bis 10 a
 >     return zahl % 2 == 0
 > ```
 
+### Aufgabe: `istPrimzahl(zahl)` mit booleschem `return`-Wert
+Schreiben Sie eine Funktion `istPrimzahl(zahl)`, die überprüft, ob eine Zahl eine Primzahl ist. Die Funktion soll `True` zurückgeben, wenn die Zahl eine Primzahl ist, und `False`, wenn sie keine Primzahl ist.
+
+Nutzen Sie die Funktion in einem Hauptprogramm, das alle Primzahlen bis 100 ausgibt.
+
+```turtle id="istPrimzahl"
+# Ihr Code
+```
+> [!solution]- Mögliche Lösung
+>
+> ```turtle id="istPrimzahl_solution"
+> def istPrimzahl(zahl):
+>    if zahl < 2:
+>        return False
+>    # Einfacher wäre: range(2, zahl), aber das ist ineffizient
+>    for divisor in range(2, int(zahl**0.5) + 1):
+>        if zahl % divisor == 0:
+>            return False
+>    return True
+> 
+> # Hauptprogramm
+> for i in range(101):
+>     if istPrimzahl(i):
+>         print(i, "ist eine Primzahl.")
+
 ## Funktionen aus anderen Dateien importieren
 
 In Python können Sie Funktionen aus anderen Dateien importieren, um Ihren Code zu organisieren und wiederverwendbar zu machen. Dazu speichern Sie Ihre Funktionen in einer separaten Datei, z.B. `useful.py`, und importieren diese in Ihrem Hauptprogramm.
 
 Hier ist ein Beispiel, wie Sie das machen können:
-```python name="useful.py"
+```python filename="useful.py"
 def flaeche_quadrat(seitenlaenge):
     flaeche = seitenlaenge * seitenlaenge
     return flaeche
@@ -212,7 +260,7 @@ def flaeche_rechteck(breite, laenge):
 
 Eine Art, diese Funktionen in Ihrem Hauptprogramm zu verwenden, kennen Sie bereits: `import useful`, genau wie Sie `import turtle` oder `import random` verwenden. Dann können Sie die Funktionen unter dem Namen `useful` aufrufen, z.B. `useful.flaeche_quadrat(5)`.
 
-```python name="main.py"
+```python filename="main.py"
 import useful
 
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", useful.flaeche_quadrat(5))
@@ -221,7 +269,7 @@ print("Der Flächeninhalt eines Rechtecks mit Breite 5 und Länge 10 ist:", usef
 
 Es gibt aber auch eine Art, die Funktionen direkt in Ihr Hauptprogramm zu importieren, sodass Sie sie ohne den Präfix `useful.` verwenden können. Dazu verwenden Sie das Schlüsselwort `from`:
 
-```python name="main.py"
+```python filename="main.py"
 from useful import flaeche_quadrat, flaeche_rechteck
 
 print("Der Flächeninhalt eines Quadrats mit Seitenlänge 5 ist:", flaeche_quadrat(5))
