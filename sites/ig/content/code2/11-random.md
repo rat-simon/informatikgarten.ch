@@ -4,13 +4,6 @@ In dieser Lektion simulieren wir Wahrscheinlichkeiten und Zufall.
 
 Wir verwenden die `random`-Bibliothek, um Zufallszahlen zu generieren und Wahrscheinlichkeiten zu simulieren.
 
-```turtle
-import random
-# Simuliere einen Würfelwurf
-wurf = random.randint(1, 6)
-print(f"Der Würfel zeigt: {wurf}")
-```
-
 ## Wichtige Funktionen der random-Bibliothek
 
 Die `random`-Bibliothek stellt verschiedene Funktionen bereit:
@@ -18,20 +11,26 @@ Die `random`-Bibliothek stellt verschiedene Funktionen bereit:
 ```python
 import random
 
-# Zufällige Ganzzahl zwischen a und b (inklusive)
-random.randint(a, b)
+# Zufällige Ganzzahl zwischen 1 und 6 (inklusive), wie ein Würfelwurf
+zahl = random.randint(1, 6)
+print(f"Zufällige Zahl: {zahl}")
 
 # Zufällige Gleitkommazahl zwischen 0.0 und 1.0
-random.random()
+zahl = random.random()
+print(f"Zufällige Gleitkommazahl: {zahl}")
 
-# Zufällige Gleitkommazahl zwischen a und b
-random.uniform(a, b)
+karten = ['Herz', 'Ecken', 'Schaufel', 'Kreuz']
 
-# Zufällige Auswahl aus einer Liste
-random.choice(['Kopf', 'Zahl'])
+# Mischen einer Liste
+random.shuffle(karten)
+print(f"Gemischte Karten: {karten}")
+
+# Zufällige Auswahl eines Elements aus einer Liste
+karte = random.choice(karten)
+print(f"Zufällige Karte: {karte}")
 ```
 
-## Aufgabe 1: wuerfeln()-Funktion
+## Aufgabe 1: wuerfeln()-Funktion für einen 6-seitigen Würfel
 
 Schreiben Sie nun eine Funktion, mit der wir alle Grössen von Würfel simulieren können. Ein normaler sechseitiger Würfel sollen wir so würfeln können: `wuerfeln(6)`.
 
@@ -42,12 +41,12 @@ Schreiben Sie nun eine Funktion, mit der wir alle Grössen von Würfel simuliere
 > [!solution]- Mögliche Lösung
 > 
 > ```python
-> def wuerfeln(wuerfelgroesse):
->     return random.randint(1, wuerfelgroesse)
+> def wuerfeln():
+>     return random.randint(1, 6)
 >     
-> # Testaufruf
-> print(f"Würfelwurf (6-seitig): {wuerfeln(6)}")
-> print(f"Würfelwurf (20-seitig): {wuerfeln(20)}")
+> # Einige Testaufrufe
+> for i in range(1,21):
+>   print(f"Würfelwurf {i}: {wuerfeln()}")
 > ```
 
 ## Aufgabe 2: Was ist die Wahrscheinlichkeit einen 6er zu würfeln?
@@ -63,21 +62,3 @@ Versuchen Sie nun, eine Million Würfelwürfe zu simulieren und rechnen Sie aus,
 ```turtle id="aufgabe2"
 # Ihre Lösung hier
 ```
-
-> [!solution]- Mögliche Lösung
-> 
-> ```python
-> import random
-> 
-> anzahl_wuerfe = 1000000
-> sechser_zaehler = 0
-> 
-> for _ in range(anzahl_wuerfe):
->     wurf = random.randint(1, 6)
->     if wurf == 6:
->         sechser_zaehler += 1
->         
-> wahrscheinlichkeit = sechser_zaehler / anzahl_wuerfe
-> print(f"Theoretische Wahrscheinlichkeit: 1/6 ≈ {1/6:.4f}")
-> print(f"Experimentelle Wahrscheinlichkeit: {wahrscheinlichkeit:.4f}")
-> ```
