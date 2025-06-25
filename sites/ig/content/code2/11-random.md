@@ -32,7 +32,7 @@ print(f"Zufällige Karte: {karte}")
 
 ## Aufgabe 1: wuerfeln()-Funktion für einen 6-seitigen Würfel
 
-Schreiben Sie nun eine Funktion, mit der wir alle Grössen von Würfel simulieren können. Ein normaler sechseitiger Würfel sollen wir so würfeln können: `wuerfeln()`.
+Schreiben Sie nun eine Funktion `wuerfeln()`, mit der wir einen sechseitigen Würfel simulieren.
 
 ```turtle id="aufgabe1"
 # Ihre Lösung hier
