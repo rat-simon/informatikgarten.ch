@@ -23,7 +23,7 @@ Nun beachten Sie etwas an dieser Adresse, das wir auch bei Computernetzwerken se
 
 Wieso macht man das so? Besprechen Sie das kurz.
 
-> [!question] Lösung
+> [!question]- Lösung
 > 
 > Das ist wieder eine Art, wie man ein grosses Problem in kleinere Probleme zerlegt. 
 > - Anstatt alle Adressen der Schweiz anzuschauen, engt die Ortsangabe dies ein auf alle Adressen eines Ortes.
