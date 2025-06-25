@@ -71,7 +71,7 @@ Schreiben Sie nun ein Programm, das eine Million Mal versucht, drei 6er hinterei
 # Ihre Lösung hier
 ```
 
-## Aufgabe 4: Ein Spiel mit Würfeln simulieren (einfach)
+## Aufgabe 4: Ein Spiel mit Würfeln simulieren (einfache Variante)
 
 Mit meinen Freunden haben wir das Brettspiel Siedler mit Soldaten erweitert, damit man sich gegenseitig die Dörfer und Städte zerstören kann. Dabei haben wir das Kampfsystem des Brettspiels "Risiko" übernommen. Im Folgenden versuchen wir heruaszufinden, wie gross die Wahrscheinlichkeit ist, dass der Angreifer gewinnt und ein Dorf zerstören kann.
 
@@ -85,3 +85,14 @@ Versuchen Sie nun, die Wahrscheinlichkeit herauszufinden, dass der Angreifer gew
 # Ihre Lösung hier
 ```
 
+## Aufgabe 5: Ein Spiel mit Würfeln simulieren (erweiterte Variante)
+
+Nehmen wir nun an, dass der Angreifer zwei Soldaten hat und desegen zwei Würfel werfen kann. Der Verteidiger hat aber immer noch nur ein Dorf mit einem Leben. Das heisst, der Angreifer würfelt zwei Würfel und der Verteidiger einen Würfel. Es wird jeweils der höchste Würfel des Angreifers mit dem Würfel des Verteidigers verglichen.
+
+Wenn der Verteidiger einmal gewinnt, bleibt das Dorf stehen und der Angreifer verliert einen Soldaten. Der Angreifer kann die Angriffswelle aber mit nur einem Soldaten und nur noch einem Würfel weiterführen.
+
+Versuchen Sie nun, die Wahrscheinlichkeit herauszufinden, dass der Angreifer gewinnt. Simulieren Sie dazu eine Million Angriffswellen und zählen Sie, wie oft der Angreifer gewonnen hat.
+
+```turtle id="aufgabe5"
+# Ihre Lösung hier
+```
