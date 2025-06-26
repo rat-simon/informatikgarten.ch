@@ -3,12 +3,14 @@ title: Weltbank-Indikatoren Projekt
 ---
 # Weltbank-Indikatoren Projekt: Daten mit SQL in Python
 
-## Einführung
-Mit Python und SQLite könnten Sie komplexe Datenanalysen durchführen, ohne einen separaten Datenbankserver einrichten zu müssen - alles in einer einzigen Anwendung und mit normalem SQL.
-## Auftrag
-Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält Informationen zu zahlreichen Aspekten der globalen Entwicklung wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
+## Einführung: Ihre Mission
+Mit Python und dem Modul `sqlite3` kann man sich mit einer SQL-Datenbank verbinden, die als Datei vorliegt. SO kann man komplexe Datenanalysen durchführen, ohne einen separaten Datenbankserver einrichten zu müssen - alles in einer einzigen Python-Anwendung und mit normalem SQL.
 
-Die Datenbank enthält bloss **eine Tabelle namens *indicators***. Ein kleiner Auszug dieser Tabelle, damit Sie sich das vorstellen können: Hier habe ich die Daten der Schweiz im Jahr 2020 selektiert. Jedes Land hat für jedes Jahr seit 1960 eine solche Reihe, die ganz viele Spalten für jeden Entwicklungsindikator - das sind über 200 Spalten! Sie finden am Ende dieser Seite eine Erklärung aller Spalten in der Tabelle "indicators".
+Für diesen Auftrag erhalten Sie die ultimative Trivia-Datenbank in SQLite: **Über 200 Entwicklungsindikatoren der Weltbank für alle Länder der Welt seit 1960**. Diese Datenbank enthält Informationen zu zahlreichen Aspekten der Entwicklung der Menschheit - wie Wirtschaftswachstum, Bildung, Gesundheit, Umwelt und vieles mehr.
+
+Entwickeln Sie **ein eigenes Python-Projekt, das diese Datenbank mit SQL nutzt**, um interessante Erkenntnisse zu gewinnen und/oder eine interaktive Anwendung zu erstellen. Sie sind sehr frei und dürfen Ihre Anwendung gestalten, wie Sie wollen!
+## Die Datenbank
+Die wichtigste Tabelle der Datenbank heisst **indicators**. Ein kleiner Auszug dieser Tabelle, damit Sie sich das vorstellen können: Hier habe ich die Daten der Schweiz im Jahr 2020 selektiert. Jedes Land hat für jedes Jahr seit 1960 einen solchen Datensatz mit ganz vielen Spalten für jeden Entwicklungsindikator - über 200 Attribute! Sie finden am Ende dieser Seite eine Erklärung aller Indikatoren der Tabelle "indicators".
 
 ![[10-task-dataview.png]]
 
@@ -21,27 +23,18 @@ WHERE year = 2020
 AND country = "che"
 ```
 
-Entwickeln Sie innerhalb von 6 EIBE-Lektionen ein eigenes Python-Projekt, das diese Datenbank nutzt, um interessante Erkenntnisse zu gewinnen oder eine interaktive Anwendung zu erstellen. Ihr Projekt sollte mindestens fünf SQL-Abfragen beinhalten und die Daten in einer sinnvollen Weise rudimentär verarbeiten.
-
-**Nützliche Hinweise:** 
-- Die Daten sind nicht immer vollständig, speziell wenn Sie in der Zeit vor 1990 zurückgehen.
-- Nutzen Sie künstliche Intelligenz, um den Beispielcode nachzuvollziehen. z.B. "Wir machen in den Schule ein Projekt mit SQLite in Python und ich verstehe diese Zeilen im Beispielcode nicht: 
+**Nützliche Hinweise zur Datenbank:** 
+- Die Daten sind nicht immer vollständig, speziell wenn Sie in der Zeit vor 1990 zurückgehen. `WHERE ... NOT NULL{:sql}` is your friend.
+- Nutzen Sie künstliche Intelligenz, um den Beispielcode nachzuvollziehen. z.B. "Wir machen in den Schule ein Projekt mit SQLite in Python und ich verstehe diese Zeilen im Beispielcode nicht": 
 	```
 	conn = sqlite3.connect('world_bank_indicators.db')
 	cursor = conn.cursor()
 	```
-- Wenn Sie von KI generierten Code abgeben, müssen Sie die Verwendung transparent mitteilen.
-- Bei Fragen oder Wünschen nach Erklärvideos können Sie mich jederzeit erreichen.
-
-## Arbeitsschritte
-1. **Analyse der Datenbank (1. Lektion):** Erkunden Sie die Struktur der Datenbank und die verfügbaren Indikatoren, schauen Sie den Beispielcode an
-2. **Konzeptentwicklung (1. Lektion):** Entscheiden Sie, welche Art von Projekt Sie umsetzen möchten
-3. **Planung (1. Lektion):** Skizzieren Sie Ihr Projekt und definieren Sie die benötigten SQL-Abfragen
-4. **Implementierung (2-3 Lektionen):** Programmieren Sie Ihr Projekt
-5. **Test und Optimierung (1 Lektion):** Testen Sie Ihr Projekt und nehmen Sie Verbesserungen vor
 ## Setup
 
 ### Erklärvideo
+
+Ich erklären Ihnen hier, wie Sie das grundsätzliche Setup machen, damit Sie in Python Daten aus der Datenbank abrufen können. Die Struktur meines Beispielprogramms ist sehr einfach.
 
 ![[wb_setup.mp4]]
 
@@ -220,7 +213,7 @@ Entwickeln Sie innerhalb von 6 EIBE-Lektionen ein eigenes Python-Projekt, das di
 > ```
 
 ## Projektideen
-Hier sind einige Vorschläge als Inspiration:
+Hier sind einige Vorschläge als Inspiration. 
 ### Interaktive Daten-Präsentation
 Erstellen Sie eine textbasierte Präsentation, die den Benutzer durch eine Datenanalyse zu einem bestimmten Thema führt.
 - Beispiel: "Ich habe mich für die Geburtenrate im Nahen Osten interessiert und wollte das genauer untersuchen. Willkommen zu meiner interaktiven Präsentation - drücken Sie Enter, wenn Sie bereit sind."
@@ -257,7 +250,7 @@ Entwickeln Sie eine Konsolenanwendung, die zufällige oder thematisch gruppierte
 > - Visualisieren Sie Daten im Browser
 > - Bieten Sie interaktive Elemente wie Karten oder Diagramme an
 
-## Erwartete Projektelemente
+## Anforderungen und erwartete Projektelemente
 Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten sein:
 
 1. **SQL-Abfragen:** Mindestens 5 verschiedene SQL-Abfragen unterschiedlicher Komplexität, 2 davon mit Aggregatsfunktionen
@@ -265,27 +258,68 @@ Unabhängig von Ihrer gewählten Projektart sollten folgende Elemente enthalten 
 3. **Benutzerinteraktion:** Eine Methode, mit der Benutzer mit Ihrem Programm interagieren können, z.B. mit `input()`
 4. **Dokumentation:** Kommentare im Code und eine README-Datei, die das Projekt erklärt
 5. **Fehlerbehandlung:** Denken Sie daran, dass Daten fehlen können, oder Ihre Nutzer auf eine Frage ungültiges Kauderwelsch eingeben könnten.
+## Bewertung
+Ihre Gesamtnote wird durch die Multiplikation zweier Faktoren bestimmt:
+1. Die Qualität Ihres Produkts, das Sie abgeben.
+2. Eine schriftliche Verständnisprüfung über Ihren abgegebenen Code.
 
-## Bewertungskriterien
+Was sind die **Effekte der Multiplikation**?
+- Die mathematisch optimale Strategie ist, dass beide Faktoren symmetrisch sind. (z.B. $80\% \text{ Codequalität} \times 80\% \text{ Verständnis}  = 64\%$, aber $60\% \text{ Codequalität} \times 100\% \text{ Verständnis}  = 60\%$).
+- Auf Deutsch übersetzt: Nutzen Sie alle Hilfsmittel, um **so guten Code zu abzugeben, wie Sie nur schreiben und verstehen können**. Fordern Sie sich und bewegen Sie sich an der Grenze Ihres Verständnisses! 
+- Fremden Code abzugeben, den Sie nicht verstehen, ist eine denkbar schlechte Strategie (z.B. $95\% \text{ Codequalität} \times 5\% \text{ Verständnis}  = 4.75\%$)
+- Sehr anspruchslosen Code abzugeben, lohnt sich auch nicht (z.B. $40\% \text{ Codequalität} \times 100\% \text{ Verständnis}  = 40\%$)
+
+Ich möchte Sie ausdrücklich ermuntern: Nutzen Sie künstliche Intelligenz und bringen Sie sich neue Dinge bei, die wir im Unterricht nicht behandelt haben. Solange Sie Ihren Code verstehen, können Sie mit Wagemut also nur gewinnen! 
+
+Achtung: Wenn Sie KI-Code verwenden, den Sie nicht verstehen, müssen Sie das mit Kommentaren im Code dokumentieren - sonst stelle ich Ihnen Fragen dazu!
+### 1. Bewertung des Produkts
 Ihr Projekt wird nach folgenden Kriterien bewertet:
-
-### 1. Präsentation, Design, Konzept (40%)
-- Eine Readme-Datei erklärt mindestens, was das Programm ist und wie man es ausführt. Die Datei kann als readme.txt, readme.md, oder readme.pdf vorliegen. Sie können jedwede Informationen hinzufügen, die Sie als relevant erachten.
+#### a. Konzept/Design, Originalität, Readme (40%)
 - Benutzerfreundlichkeit und Gestaltung der Anwendung
 - Originalität der Projektidee
-### 2. Programm: SQL-Abfragen (30%)
+- Eine Readme-Datei, die mindestens erklärt, was das Programm ist und wie man es ausführt, sowie eine Beschreibung Ihrer Verwendung von KI. Die Datei kann als readme.txt, readme.pdf, oder readme.md vorliegen. (Für proprietäre Formate - z.B. Word .docx - gibt es Abzug!)
+- Sie können der Readme jedwede Informationen hinzufügen, die Sie als relevant erachten. Z.B. könnten Sie Notizen machen, wie Ihr Code funktioniert.
+- **Sie erhalten Ihre Readme als Hilfe an der Prüfung zu Ihrem Code!**
+#### b. Programm: SQL-Abfragen (30%)
 - Korrektheit und Funktionalität der SQL-Abfragen
 - Sinnvolle Verwendung von Aggregatfunktionen
 - Komplexität und Vielfalt der verwendeten SQL-Queries
-### 3. Programm: Python-Code Qualität (30%)
+#### c. Programm: Python-Code Qualität (30%)
 - Korrekte Syntax und Funktionalität
 - Lesbarkeit, Strukturierung, Organisation des Codes
 - Nivea der Programmierkonzepte
 - Fehlerbehandlung und Programmrobustheit
+- Sie können einzelne Codeteile mit Kommentaren als "Verstehe ich nicht." markieren, dann ignoriere ich diese bei der Bewertung und stelle Ihnen keine Fragen dazu in der Prüfung.
+#### d. Abzüge
+- Pünktliche Abgabe des Projekts (5% Abzug pro angebrochenem Tag Verspätung)
+- Erfüllung der erwähnten Mindestanforderungen
+
+### 2. Verständnisprüfung zu Ihrem Code
+- Ich stelle Ihnen 5 Fragen zu den **schwierigsten Konzepten**, die Sie in Ihrem abgegebenen Code verwenden. 
+- Die Prüfung findet ohne KI-Hilfe auf Papier statt.
+- Sie erhalten Ihre Readme ausgedruckt als Hilfe.
+
+Ein Beispiel, damit Sie sich die Fragen vorstellen können:
+
+```python filename="main.py"
+# Beispielcode, den Sie abgegeben hätten
+eingabe = input("Deine Antwort: ").strip().lower()
+if eingabe == "schweiz":
+	print(f"✅ Richtig!")
+```
+
+Eine Frage könnte sein: _"Erklären Sie, was dieser Code macht. Was passiert, wenn Ihre User 'Schweiz', ' schweiz', oder 'Shcweiz' eingeben?"_
+
+## Mögliche Arbeitsschritte
+1. **Analyse der Datenbank:** Erkunden Sie die Struktur der Datenbank und die verfügbaren Indikatoren, schauen Sie den Beispielcode an
+2. **Konzeptentwicklung:** Entscheiden Sie, welche Art von Projekt Sie umsetzen möchten
+3. **Planung:** Skizzieren Sie Ihr Projekt und definieren Sie die benötigten SQL-Abfragen
+4. **Implementierung:** Programmieren Sie Ihr Projekt
+5. **Test und Optimierung:** Testen Sie Ihr Projekt und nehmen Sie Verbesserungen vor
 ## Abgabe
 Sie geben mir über ein Team-Assignment am Schluss *eine* ZIP-Datei mit all Ihren Projektdateien ab namens `Nachname_Vorname.zip`. Im ZIP-Archiv sollten sich befinden:
 - Eine README-Datei mit Erläuterungen zu Ihrem Projekt (Textdatei, Markdown oder PDF)
-- Ihre Python-Datei(en) (z.B. `main.py`, `functions.py`, etc.)
+- Ihre Python-Datei(en), das Hauptprogramm soll `main.py` heissen
 - NICHT die SQLite-Datenbank (ausser Sie verändern sie, z.B. durch das Erstellen einer neuen Tabelle)
 - Alle anderen Dateien, die Sie für Ihr Projekt benötigen
 
