@@ -25,7 +25,7 @@ AND country = "che"
 
 **Nützliche Hinweise zur Datenbank:** 
 - Die Daten sind nicht immer vollständig, speziell wenn Sie in der Zeit vor 1990 zurückgehen. `WHERE ... NOT NULL{:sql}` is your friend.
-- Nutzen Sie künstliche Intelligenz, um den Beispielcode nachzuvollziehen. z.B. "Wir machen in den Schule ein Projekt mit SQLite in Python und ich verstehe diese Zeilen im Beispielcode nicht": 
+- **Nutzen Sie künstliche Intelligenz**, um den Beispielcode nachzuvollziehen. z.B. "Wir machen in den Schule ein Projekt mit SQLite in Python und ich verstehe diese Zeilen im Beispielcode nicht": 
 	```
 	conn = sqlite3.connect('world_bank_indicators.db')
 	cursor = conn.cursor()
@@ -265,21 +265,19 @@ Ihre Gesamtnote wird durch die Multiplikation zweier Faktoren bestimmt:
 
 Was sind die **Effekte der Multiplikation**?
 - Die mathematisch optimale Strategie ist, dass beide Faktoren symmetrisch sind. (z.B. $80\% \text{ Codequalität} \times 80\% \text{ Verständnis}  = 64\%$, aber $60\% \text{ Codequalität} \times 100\% \text{ Verständnis}  = 60\%$).
-- Auf Deutsch übersetzt: Nutzen Sie alle Hilfsmittel, um **so guten Code zu abzugeben, wie Sie nur schreiben und verstehen können**. Fordern Sie sich und bewegen Sie sich an der Grenze Ihres Verständnisses! 
-- Fremden Code abzugeben, den Sie nicht verstehen, ist eine denkbar schlechte Strategie (z.B. $95\% \text{ Codequalität} \times 5\% \text{ Verständnis}  = 4.75\%$)
+- Auf Deutsch übersetzt: Nutzen Sie alle Hilfsmittel, um **so guten Code zu abzugeben, wie Sie nur schreiben und verstehen können**. Fordern Sie sich und bewegen Sie sich an der Grenze Ihres Verständnisses!
+- Code abzugeben, den Sie nicht verstehen, ist eine denkbar schlechte Strategie (z.B. $95\% \text{ Codequalität} \times 5\% \text{ Verständnis}  = 4.75\%$)
 - Sehr anspruchslosen Code abzugeben, lohnt sich auch nicht (z.B. $40\% \text{ Codequalität} \times 100\% \text{ Verständnis}  = 40\%$)
 
-Ich möchte Sie ausdrücklich ermuntern: Nutzen Sie künstliche Intelligenz und bringen Sie sich neue Dinge bei, die wir im Unterricht nicht behandelt haben. Solange Sie Ihren Code verstehen, können Sie mit Wagemut also nur gewinnen! 
-
-Achtung: Wenn Sie KI-Code verwenden, den Sie nicht verstehen, müssen Sie das mit Kommentaren im Code dokumentieren - sonst stelle ich Ihnen Fragen dazu!
+Ich möchte Sie ausdrücklich ermuntern: **Nutzen Sie künstliche Intelligenz** und bringen Sie sich neue Dinge bei, die wir im Unterricht nicht behandelt haben. Solange Sie Ihren Code verstehen, können Sie mit Wagemut also nur gewinnen! Sie müssen aber Ihren gesamten abgegebenen Code verstehen - das wird geprüft.
 ### 1. Bewertung des Produkts
 Ihr Projekt wird nach folgenden Kriterien bewertet:
 #### a. Konzept/Design, Originalität, Readme (40%)
 - Benutzerfreundlichkeit und Gestaltung der Anwendung
 - Originalität der Projektidee
-- Eine Readme-Datei, die mindestens erklärt, was das Programm ist und wie man es ausführt, sowie eine Beschreibung Ihrer Verwendung von KI. Die Datei kann als readme.txt, readme.pdf, oder readme.md vorliegen. (Für proprietäre Formate - z.B. Word .docx - gibt es Abzug!)
-- Sie können der Readme jedwede Informationen hinzufügen, die Sie als relevant erachten. Z.B. könnten Sie Notizen machen, wie Ihr Code funktioniert.
-- **Sie erhalten Ihre Readme als Hilfe an der Prüfung zu Ihrem Code!**
+- Eine Readme-Datei, die mindestens erklärt, was das Programm ist und wie man es ausführt. Die Datei kann als readme.txt, readme.pdf, oder readme.md vorliegen. (Für proprietäre Formate - z.B. Word .docx - gibt es Abzug!)
+- Sie können der Readme jedwede Informationen hinzufügen, die Sie als relevant erachten. Z.B. könnten Sie Notizen machen, was Sie gelernt haben und wie Ihr Code funktioniert. Das macht Sinn, weil...
+- ...**Sie erhalten Ihre Readme als Hilfe an der Prüfung zu Ihrem Code!**
 #### b. Programm: SQL-Abfragen (30%)
 - Korrektheit und Funktionalität der SQL-Abfragen
 - Sinnvolle Verwendung von Aggregatfunktionen
@@ -287,7 +285,7 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 #### c. Programm: Python-Code Qualität (30%)
 - Korrekte Syntax und Funktionalität
 - Lesbarkeit, Strukturierung, Organisation des Codes
-- Nivea der Programmierkonzepte
+- Niveau der Programmierkonzepte
 - Fehlerbehandlung und Programmrobustheit
 - Sie können einzelne Codeteile mit Kommentaren als "Verstehe ich nicht." markieren, dann ignoriere ich diese bei der Bewertung und stelle Ihnen keine Fragen dazu in der Prüfung.
 #### d. Abzüge
@@ -308,8 +306,7 @@ if eingabe == "schweiz":
 	print(f"✅ Richtig!")
 ```
 
-Eine Frage könnte sein: _"Erklären Sie, was dieser Code macht. Was passiert, wenn Ihre User 'Schweiz', ' schweiz', oder 'Shcweiz' eingeben?"_
-
+Eine Frage könnte sein: _"Erklären Sie .strip().lower(). Was passiert, wenn Ihre User 'Schweiz', ' schweiz', oder 'Shcweiz' eingeben?"_
 ## Mögliche Arbeitsschritte
 1. **Analyse der Datenbank:** Erkunden Sie die Struktur der Datenbank und die verfügbaren Indikatoren, schauen Sie den Beispielcode an
 2. **Konzeptentwicklung:** Entscheiden Sie, welche Art von Projekt Sie umsetzen möchten
@@ -324,7 +321,6 @@ Sie geben mir über ein Team-Assignment am Schluss *eine* ZIP-Datei mit all Ihre
 - Alle anderen Dateien, die Sie für Ihr Projekt benötigen
 
 Viel Erfolg und Spass bei Ihrem Projekt!
-
 ## Spalten in der Tabelle "indicators"
 
 Die Datenbank enthält nur eine Tabelle namens *indicators*. Es folgt eine Tabelle der Spalten mit einer Erklärung, was diese Daten sind.
