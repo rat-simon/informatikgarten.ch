@@ -125,7 +125,7 @@ const nextConfig = withNextra({
         });
 
         config.module.rules.push({
-            test: /\.(tsv|ai|rnote|blend|log|mp4|mov|backup\.md|excalidraw\.md)$/,
+            test: /\.(tsv|ai|rnote|blend|log|mp4|mov|blend|blend1|backup\.md|excalidraw\.md)$/,
             use: "null-loader",
         });
 
