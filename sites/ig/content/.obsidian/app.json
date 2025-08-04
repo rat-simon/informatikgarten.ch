@@ -6,5 +6,6 @@
   "newLinkFormat": "shortest",
   "attachmentFolderPath": "./attachments",
   "promptDelete": false,
-  "readableLineLength": false
+  "readableLineLength": false,
+  "spellcheck": false
 }

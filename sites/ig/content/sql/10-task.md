@@ -287,7 +287,6 @@ Ihr Projekt wird nach folgenden Kriterien bewertet:
 - Lesbarkeit, Strukturierung, Organisation des Codes
 - Niveau der Programmierkonzepte
 - Fehlerbehandlung und Programmrobustheit
-- Sie können einzelne Codeteile mit Kommentaren als "Verstehe ich nicht." markieren, dann ignoriere ich diese bei der Bewertung und stelle Ihnen keine Fragen dazu in der Prüfung.
 #### d. Abzüge
 - Pünktliche Abgabe des Projekts (5% Abzug pro angebrochenem Tag Verspätung)
 - Erfüllung der erwähnten Mindestanforderungen

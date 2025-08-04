@@ -9,7 +9,7 @@ import { Cards, Image } from 'nextra/components'
 
 <InteractiveLogo />
 
-Hier zelebrieren wir das **Handwerk der Wahrheitssuche**! Ich bin Marc und das ist mein Wissensgarten zu Politik und internationalen Beziehungen. Ich gärtnere in der Sprache, die gerade passt - meist Deutsch und Englisch, ab und zu auch Spanisch. Sollten Sie in einer Ecke landen, die Sie der Sprache wegen nicht verstehen, nutzen Sie doch einen Übersetzungsdienst wie [Google Translate](https://www-luz-to.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp). (Das ist übrigens auch bei Recherchen über Sprachgrenzen hinweg ganz nützlich.)
+Here we celebrate the **craft of investigating what's true**! I am Marc, and this is my knowledge garden on politics and international relations. I write in the language that best fits the occasion - mostly English and German, occasionally Spanish. If you find yourself in a corner of the garden you don't understand because of the language, feel free to use a translation service like [Google Translate](https://www-luz-to.translate.goog/?_x_tr_sl=auto&_x_tr_tl=en&_x_tr_hl=en-US&_x_tr_pto=wapp). (This is also quite useful for research across language barriers.)
 
 <Cards num={2}>
   <Cards.Card arrow title="My 2015 documentary about Venezuela" href="2015-venezuela-documentary">
@@ -19,6 +19,4 @@ Hier zelebrieren wir das **Handwerk der Wahrheitssuche**! Ich bin Marc und das i
     <>![Brexit explanation](teaser_brexit.jpg)</>
   </Cards.Card>
 </Cards>
-
-*Ich portiere zurzeit noch meine Essays von einer alten Seite, das kann eine Weile dauern...*
 
