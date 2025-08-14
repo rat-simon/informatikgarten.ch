@@ -26,7 +26,7 @@ Alle Tests finden in der **Spinnerei im S109** statt.
 
 Falls Sie **krank sind oder Freifächer / Instrumentalunterricht** haben, können Sie bei einer anderen Klasse reinsitzen und den Test mitschreiben. Bitte schreiben Sie mir kurz auf Teams. Hier die Übersicht der Termine, damit das für Sie einfacher ist, eine Möglichkeit zu finden.
 
-![[eintrittstest-termine.png]]
+![[eintrittstest-plan.png]]
 ## Informationen zum Eintrittstest
 
 - Wichtig: der Test wird **auf dem eigenen Gerät mit Exam.net** absolviert. 
