@@ -1,6 +1,5 @@
 ---
 title: ⚠️ IKT-Eintrittstest
-display: hidden
 ---
 Liebe Schülerinnen und Schüler der KSWE,
 
@@ -9,20 +8,18 @@ Herzlich willkommen! Ich bin der Informatiklehrer Marc Chéhab und organisiere d
 
 Es ist Ihre **Eigenverantwortung**, dass Sie den IKT-Test schreiben. **Tragen Sie sich Ihren Termin ein**, da er nicht in Ihrem Stundenplan vermerkt sein wird!
 
-Alle Tests finden in der **Spinnerei im S109** statt. 
-
-- G1a, 10. Sept., 15:55
-- G1b, 10. Sept., 11:20
-- G1c, 8. Sept., 15:00
-- G1d, 10. Sept., 15:00
-- G1e, 11. Sept., 12:15
-- G1f, 10. Sept., 15:00
-- G1g, 10. Sept., 11:20
-- G1h, 19. Sept., 12:15
-- G1I, 8. Sept., 15:55
-- G1j, 11. Sept., 11:20
-- G1k, 17. Sept., 11:20
-- G1l, 17. Sept., 11:20
+- G1a, 10. Sept., 15:55, Spinnerei S109
+- G1b, 10. Sept., 11:20, Spinnerei S109
+- G1c, 8. Sept., 15:00, Spinnerei S109
+- G1d, 10. Sept., 15:00, Spinnerei S109
+- G1e, 11. Sept., 12:15, Spinnerei S109
+- G1f, 10. Sept., 15:00, Spinnerei S109
+- G1g, 10. Sept., 11:20, Spinnerei S109
+- G1h, 19. Sept., 12:15, Spinnerei S109
+- G1I, 8. Sept., 15:55, Spinnerei S109
+- G1j, 11. Sept., 11:20, Spinnerei S109
+- G1k, 17. Sept., 11:20, Langbau L15
+- G1l, 17. Sept., 11:20, Langbau L15
 
 Falls Sie **krank sind oder Freifächer / Instrumentalunterricht** haben, können Sie bei einer anderen Klasse reinsitzen und den Test mitschreiben. Bitte schreiben Sie mir kurz auf Teams. Hier die Übersicht der Termine, damit das für Sie einfacher ist, eine Möglichkeit zu finden.
 
