@@ -4,8 +4,33 @@ title: Farben
 
 > [!success] Lernziele
 > 
+> - Sie können **additive und subtraktive Farbmodelle** erklären und zwei Beispiele nennen.
 > - Sie wissen, wie Displays mit Pixeln und dem RGB-Farbmodell **Farben mischen**.
 > - Sie können **berechnen, wie viele unterschiedliche Farben** bei verschiedenen Farbtiefen und Anzahl Farbkanälen darstellbar sind.
+
+## Farben mischen - aber durch Subtraktion oder Addition?
+
+Die meisten natürlichen Objekte der Welt produzieren selbst kein Licht - Sie leuchten nicht. Stattdessen absorbieren sie bestimmte Wellenlängen des auftreffenden Lichts und reflektieren andere. Ein rotes Objekt absorbiert beispielsweise grünes und blaues Licht, reflektiert aber rotes Licht zurück zu unseren Augen. Dieses Prinzip nennt man das **subtraktive Farbmodell** - je mehr Farben gemischt werden, desto dunkler wird das Ergebnis, weil mehr und mehr Lichtfarben absorbiert werden. Kurz zusammengefasst: **Beim Mischen werden Farben voneinander subtrahiert**.
+
+![[05-farben-farbmodelle-physik-sub.excalidraw.light.svg]]
+
+Das Gegenteil dazu ist das **additive Farbmodell**, wie es bei Bildschirmen oder farbigen Scheinwerfern verwendet wird. Das Licht selbst in von Anfang an farbig und wenn man verschiedenfarbige Lichter miteinander mischt, werden die Farben heller, weil mehr und mehr Lichtfarben hinzugefügt werden. **Beim Mischen werden also Farben zueinander addiert**.
+
+![[05-farben-farbmodelle-mischen-add.excalidraw.light.svg]]
+
+Das gängigste additive Farbmodell ist Rot-Grün-Blau (**RGB**). 
+- Addiert man Rot und Grün, nehmen wir das als Gelb wahr.
+- Addiert man Grün und Blau, nehmen wir das als Cyan wahr.
+- Addiert man Blau und Rot, nehmen wir das als Magenta wahr.
+
+![[05-farben-farbmodelle-mischfarben.excalidraw.light.svg]]
+
+Das gängigste subtraktive Farbmodell ist Cyan-Magenta-Gelb-Schwarz (**CMYK**).
+- Mischt man Cyan und Magenta, wird die Farbe dunkler - nämlich Blau.
+- Mischt man Magenta und Gelb, wird die Farbe dunkler - nämlich Rot.
+- Mischt man Gelb und Cyan, wird die Farbe dunkler - nämlich Grün.
+
+Im Folgenden schauen wir uns an, wie RGB-Farben auf Ihrem Bildschirm gemischt werden.
 
 ## Farben in RGB
 
