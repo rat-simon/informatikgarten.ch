@@ -19,16 +19,20 @@ Das Gegenteil dazu ist das **additive Farbmodell**, wie es bei Bildschirmen oder
 ![[05-farben-farbmodelle-mischen-add.excalidraw.light.svg]]
 
 Das gängigste additive Farbmodell ist Rot-Grün-Blau (**RGB**). 
-- Addiert man Rot und Grün, nehmen wir das als Gelb wahr.
-- Addiert man Grün und Blau, nehmen wir das als Cyan wahr.
-- Addiert man Blau und Rot, nehmen wir das als Magenta wahr.
+- Addiert man Rot und Grün, sehen wir Gelb.
+- Addiert man Grün und Blau, sehen wir Cyan.
+- Addiert man Blau und Rot, sehen wir Magenta.
+
+Beachten Sie: Alle wahrgenommenen Mischfarben sind heller als die Ausgangsfarben.
 
 ![[05-farben-farbmodelle-mischfarben.excalidraw.light.svg]]
 
 Das gängigste subtraktive Farbmodell ist Cyan-Magenta-Gelb-Schwarz (**CMYK**).
-- Mischt man Cyan und Magenta, wird die Farbe dunkler - nämlich Blau.
-- Mischt man Magenta und Gelb, wird die Farbe dunkler - nämlich Rot.
-- Mischt man Gelb und Cyan, wird die Farbe dunkler - nämlich Grün.
+- Mischt man Cyan und Magenta, sehen wir Blau.
+- Mischt man Magenta und Gelb, sehen wir Rot.
+- Mischt man Gelb und Cyan, sehen wir Grün.
+
+Beachten Sie: Alle wahrgenommenen Mischfarben sind dunkler als die Ausgangsfarben.
 
 Im Folgenden schauen wir uns an, wie RGB-Farben auf Ihrem Bildschirm gemischt werden.
 
