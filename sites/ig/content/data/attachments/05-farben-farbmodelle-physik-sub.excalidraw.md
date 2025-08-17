@@ -14,10 +14,12 @@ Eine rote Oberfläche reflektiert rotes Licht und absorbiert den Rest. ^PJdYgfui
 
 Sonne ^VvXJBXGP
 
+Inside Brain Vectors by Vecteezy ^UsQOmGw1
+
 ## Embedded Files
 91512898af2dcbc0a79a02b2f1fe7edd0431fe73: [[Rainbow Gradient saturated seamless.svg]]
 
-9b47de82188ca0dce1018587cf1e8e366df6feb2: [[Pasted Image 20250817184341_553.png]]
+8b7c4e971c652a1e8adbce1e62f799ef30e8ada2: [[vecteezy_human-brain-sagittal-view-illustration-anatomy_68049472_0.svg]]
 
 %%
 ## Drawing
@@ -30,9 +32,9 @@ Sonne ^VvXJBXGP
 		{
 			"id": "ThsJApwF8R4eLo5Ajz-9I",
 			"type": "image",
-			"x": -215.81511703531436,
-			"y": -652.8333492834582,
-			"width": 10,
+			"x": -216.09430776957134,
+			"y": -652.1420916459713,
+			"width": 11.990698541478537,
 			"height": 572.9339768209428,
 			"angle": 0.7677073753371699,
 			"strokeColor": "transparent",
@@ -47,11 +49,11 @@ Sonne ^VvXJBXGP
 			"index": "Zy",
 			"roundness": null,
 			"seed": 1444344255,
-			"version": 1001,
-			"versionNonce": 1332787711,
+			"version": 1127,
+			"versionNonce": 227897215,
 			"isDeleted": false,
 			"boundElements": [],
-			"updated": 1755448681522,
+			"updated": 1755462260610,
 			"link": null,
 			"locked": false,
 			"status": "pending",
@@ -63,7 +65,7 @@ Sonne ^VvXJBXGP
 			"crop": {
 				"x": 0,
 				"y": 0,
-				"width": 10.000000000000018,
+				"width": 5.147005369814225,
 				"height": 50,
 				"naturalWidth": 50,
 				"naturalHeight": 50
@@ -92,7 +94,7 @@ Sonne ^VvXJBXGP
 			"version": 651,
 			"versionNonce": 340160049,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1755448634247,
 			"link": null,
 			"locked": false,
@@ -258,6 +260,79 @@ Sonne ^VvXJBXGP
 			"lineHeight": 1.15
 		},
 		{
+			"id": "GolKjakPcnAE4WQXCrLdk",
+			"type": "image",
+			"x": -82.20472721955392,
+			"y": -808.8515195483549,
+			"width": 498.7405625199241,
+			"height": 513.8948022968041,
+			"angle": 0,
+			"strokeColor": "transparent",
+			"backgroundColor": "#ffdd00",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a4",
+			"roundness": null,
+			"seed": 573665297,
+			"version": 461,
+			"versionNonce": 1863638129,
+			"isDeleted": false,
+			"boundElements": [],
+			"updated": 1755462241772,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "8b7c4e971c652a1e8adbce1e62f799ef30e8ada2",
+			"scale": [
+				1,
+				1
+			],
+			"crop": null
+		},
+		{
+			"id": "UsQOmGw1",
+			"type": "text",
+			"x": 310.5690644886508,
+			"y": -468.6843633532698,
+			"width": 130.3819177179796,
+			"height": 9.598426502395048,
+			"angle": 5.480787005707073,
+			"strokeColor": "#1e1e1e",
+			"backgroundColor": "#1971c2",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 50,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a5",
+			"roundness": null,
+			"seed": 1938507249,
+			"version": 569,
+			"versionNonce": 1040328273,
+			"isDeleted": false,
+			"boundElements": [],
+			"updated": 1755462241772,
+			"link": null,
+			"locked": false,
+			"text": "Inside Brain Vectors by Vecteezy",
+			"rawText": "Inside Brain Vectors by Vecteezy",
+			"fontSize": 8.346457828169608,
+			"fontFamily": 2,
+			"textAlign": "left",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Inside Brain Vectors by Vecteezy",
+			"autoResize": false,
+			"lineHeight": 1.15
+		},
+		{
 			"id": "Dby8qt6kMYc0u8Ht78zJv",
 			"type": "image",
 			"x": -56.976222494045146,
@@ -274,14 +349,14 @@ Sonne ^VvXJBXGP
 			"opacity": 100,
 			"groupIds": [],
 			"frameId": null,
-			"index": "a3",
+			"index": "a6",
 			"roundness": null,
 			"seed": 857245151,
-			"version": 141,
-			"versionNonce": 1238120913,
-			"isDeleted": false,
-			"boundElements": null,
-			"updated": 1755449018989,
+			"version": 143,
+			"versionNonce": 356802449,
+			"isDeleted": true,
+			"boundElements": [],
+			"updated": 1755462218625,
 			"link": null,
 			"locked": false,
 			"status": "pending",
@@ -309,10 +384,10 @@ Sonne ^VvXJBXGP
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
-		"scrollX": 1493.2467286621295,
-		"scrollY": 1444.3042012377527,
+		"scrollX": 886.5125585432219,
+		"scrollY": 1132.8244183887577,
 		"zoom": {
-			"value": 0.982509
+			"value": 1.168253
 		},
 		"currentItemRoundness": "round",
 		"gridSize": 20,

@@ -56,7 +56,7 @@ Gelb ^VkiusyFT
 			"version": 279,
 			"versionNonce": 737924785,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1755460375516,
 			"link": null,
 			"locked": false,
