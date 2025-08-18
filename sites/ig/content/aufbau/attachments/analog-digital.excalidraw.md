@@ -36,8 +36,6 @@ t ^jb0VEX8g
 
 1 ^2gWUwDce
 
-= 371 ^9fNHvXbH
-
 %%
 ## Drawing
 ```json
@@ -1404,10 +1402,10 @@ t ^jb0VEX8g
 		},
 		{
 			"type": "text",
-			"version": 204,
-			"versionNonce": 1700079337,
+			"version": 205,
+			"versionNonce": 530921405,
 			"index": "aV",
-			"isDeleted": false,
+			"isDeleted": true,
 			"id": "9fNHvXbH",
 			"fillStyle": "solid",
 			"strokeWidth": 0.5,
@@ -1426,7 +1424,7 @@ t ^jb0VEX8g
 			"frameId": null,
 			"roundness": null,
 			"boundElements": [],
-			"updated": 1732457840673,
+			"updated": 1755548077008,
 			"link": null,
 			"locked": false,
 			"fontSize": 20,
@@ -1457,8 +1455,8 @@ t ^jb0VEX8g
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
-		"scrollX": 684.4166259765625,
-		"scrollY": 356.38411712646484,
+		"scrollX": 1264.54638671875,
+		"scrollY": 652.6568222045898,
 		"zoom": {
 			"value": 2
 		},
