@@ -45,6 +45,9 @@ Sie kennen Turtle so, dass sich automatisch ein Fenster öffnet. Bei diesem Spie
 
 ```python
 import turtle
+import os
+
+os.chdir(os.path.dirname(__file__))
 
 # Wir kontrollieren das Fenster selbst
 window = turtle.Screen()
@@ -56,6 +59,8 @@ window.title("Turtle Invaders") # Titel des Fensters
 turtle.done()
 ```
 
+Die Zeilen `import os` und `os.chdir(os.path.dirname(__file__))` sorgen dafür, dass das **Arbeitsverzeichnis** auf den Ordner gesetzt wird, in dem sich die Python-Datei befindet. Das ist wichtig, damit Python später Bilder wie `spaceship.gif` im richtigen Ordner findet, auch wenn das Programm aus einem anderen Verzeichnis gestartet wird.
+
 ### Raumschiff
 
 Jetzt bauen wir unser Raumschiff. Dazu können Sie sich ein gif-Bild im Internet suchen oder dieses Beispielbild verwenden. 
@@ -65,6 +70,9 @@ Speichern Sie das Bild als `spaceship.gif` in Ihrem Projektordner ab. Wir fügen
 
 ```diff
   import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
   # Wir kontrollieren das Fenster selbst
   window = turtle.Screen() # Das Fenster kreieren
@@ -128,6 +136,9 @@ Jetzt möchten wir das Raumschiff am unteren Rand positionieren, 5% der Fensterh
  > 
 > ```diff
 >   import turtle
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
 >   # Wir kontrollieren das Fenster selbst
 >   window = turtle.Screen()
@@ -161,6 +172,9 @@ Wir lösen das, indem wir die automatischen Animationen mit `window.tracer(0)` k
 
 ```diff
   import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
   # Wir kontrollieren das Fenster selbst
   window = turtle.Screen()
@@ -237,6 +251,9 @@ Um innerhalb einer Funktion auf eine globale Variable im Hauptprogramm zuzugreif
 
 ```diff
   import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
   # Wir kontrollieren das Fenster selbst
   window = turtle.Screen()
@@ -286,6 +303,9 @@ Um innerhalb einer Funktion auf eine globale Variable im Hauptprogramm zuzugreif
 > 
 > ```diff
 >   import turtle
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
 >   # Wir kontrollieren das Fenster selbst
 >   window = turtle.Screen()
@@ -342,6 +362,9 @@ Probleme, die Sie sehr wahrscheinlich überwinden möchten, sind folgende:
 > ```diff
 >   import turtle
 > + import time
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
 >   # Wir kontrollieren das Fenster selbst
 >   window = turtle.Screen()
