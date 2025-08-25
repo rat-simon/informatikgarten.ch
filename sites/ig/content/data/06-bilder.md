@@ -94,6 +94,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 ### Demonstration: Was bringen 14 bit Farbtiefe bei einer Kamera?
 
 ![[bitdepth_demo.mov]]
+
 ## Vektorgrafiken
 
 Wir haben bislang von Rastergrafiken gesprochen, die ein Bild in Pixel aufteilen. Der andere Haupttyp von Grafiken sind die sogenannten **Vektorgrafiken**.
