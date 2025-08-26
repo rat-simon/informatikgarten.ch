@@ -1,3 +1,6 @@
+---
+title: Logik-Gates
+---
 
 > [!success] Lernziele
 > 
