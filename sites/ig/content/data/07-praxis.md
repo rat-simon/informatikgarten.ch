@@ -4,7 +4,6 @@ title: Praktische Übungen
 
 Rastergrafiken und Vektorgrafiken werden meist in separaten Programmen erstellt und bearbeitet. Beispiele sind:
 
-
 | Lizenz | Rastergrafik | Vektorgrafik |
 | --- | --- | --- |
 | Open-Source | GIMP | Inkscape |

@@ -4,36 +4,13 @@ title: Wir bauen einen Addierer
 
 > [!success] Lernziele
 > 
-> - Sie wissen, was die **Logikgates** tun und kennen ihre **Wahrheitstabellen und Symbole**. (Die mathematische Notation müssen Sie *nicht* auswendig lernen.)
-> - Sie können aus einfachen logischen Schaltungen eine **Wahrheitstabelle ableiten**.
 > - Sie können eine logische Schaltung für einen **Halbaddierer** und einen **Addierer** mit den korrekten Symbolen zeichnen und nachvollziehen.
 > - Sie können erklären, wie man grössere Zahlen mit mehreren Addierern zusammenzählen kann (**Multibit-Addierer**).
 
-Ihr Computer ist eine Rechenmaschine, die auf purer Logik aufgebaut ist. Es gibt keine Magie, kein "Geist" in der Maschine - alles ist von Grund auf nachvollziehbar. In dieser Lektion bauen wir einen Rechner, der zwei binäre Zahlen addieren kann.
-
-Im Folgenden machen wir uns daran, einen Addierer zu bauen. Damit Sie die Übersicht nicht verlieren: Wir werden zuerst 
-1. aus Transistoren die nötigen **Logikgates** bauen 
-2. und dann aus diesen Logikgates den **Addierer**.
-
-**Der wichtige Teil für Sie ist Nummer 2**: Wie man aus Logikgates einen Addierer baut. In der Sprache von Modulen gesprochen:
-- Sie müssen Logikgates nur nutzen können (die Schnittstelle genügt, die Funktionsweise müssen Sie sich nicht merken).
-- Sie müssen den Addierer mit Logikgates implementieren können (also die Funktionsweise wirklich verstehen).
-
-![[module-overview-logicgates.excalidraw]]
-
-## 1. Aus Transistoren bauen wir Logikbausteine
-
-Im [Nand-Game](https://nandgame.com/) können Sie folgende Logikgates von Grund auf aus "Relais" bauen. Heutzutage werden diese **Gates aus Transistoren** mit Halbleitern gebaut, was den entscheidenden Vorteil hat, dass sie keine beweglichen Teile haben und deswegen viel schneller, kleiner und energieeffizienter sind. Dieser Teil wird in diesem Video erklärt.
-![[aufbau-nandgame-01.mp4]]
-
-Die Logikgates, die Sie kennen sollten, sind folgende:
-
-![[logikgates-overview.excalidraw]]
-
-## 2. Aus Logikbausteinen bauen wir den Rechner
-### Intuitive Annäherung
+## Intuitive Annäherung
 
 Führen Sie sich folgende binäre Addition von zwei Bits vor Augen. Achtung: Wir sind im **Binärsystem**!
+
 ![[adder-stellen.excalidraw]]
 
 Ich habe immer zwei Stellen beim Ergebnis hingeschrieben, damit wir uns folgendes überlegen können: Was ist die Logik beider Stellen?

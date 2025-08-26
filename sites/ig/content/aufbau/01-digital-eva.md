@@ -48,13 +48,3 @@ Wir werden also ein **digitales Signal** verwenden - die Lämpchen sind **entwed
 > 
 > Aus der Perspektive der Teilchenphysik könnte man auch argumentieren, dass viele Grössen, die wir analog erleben, tatsächlich digital sind, wenn sie quantifiziert vorliegen.
 
-## Binär: Zahlen aus nur 0 und 1?
-
-Wie wollen wir also mit drei solchen LEDs Zahlen repräsentieren? Wenn man nur **LEDs zählt**, die ON sind, hat man vier Zahlen: 0, 1, 2, 3. 
-
-Aber wir können viel mehr Zahlen verwenden, wenn wir alle **möglichen Kombinationen verwenden**. Wie viele Kombinationen gibt es?
-
-![[binary-kombinatorik.excalidraw]]
-
-Aus dieser Überlegung können wir **ein Zahlensystem bauen** - wie Sie in einer späteren Lektion sehen werden.
-
