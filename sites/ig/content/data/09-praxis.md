@@ -51,7 +51,7 @@ Die nächsten Schritte erkläre ich Ihnen nur abstrakt - versuchen Sie die Einze
 In diser Übung lernen Sie einige technische Grundlagen der Fotografie. Schnappen Sie sich dazu eine Kamera und notieren Sie die Antwort zu den Fragen.
 
 Die nächsten Schritte erkläre ich Ihnen nur abstrakt - versuchen Sie die Einzelheiten selbst herauszufinden.
-- Nehmen Sie (vorsichtig!) die Linse ab und fotografieren Sie mit Ihrem Handy den Sensor der Kamera.
+- Nehmen Sie (vorsichtig!) die Linse ab und fotografieren Sie mit Ihrem Handy den Sensor der Kamera. Machen Sie ein Foto ohne Linse und schauen Sie den Sensor an. (Halten Sie bitte die Kamera gut fest!)
 - Recherchieren Sie was diese drei Konzepte sind:
 	- Blendenöffnung / aperture
 	- Beleuchtungszeit / shutter speed

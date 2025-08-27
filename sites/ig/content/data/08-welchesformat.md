@@ -53,7 +53,7 @@ Diese Bayer-Muster sind ein Grund für die Verwendung von Greenscreens, die Sie 
 
 > [!solution]- Lösung
 > 
-> Grün ist eine der dominierenden Farben in der Farbfilterung moderner Bildsensoren. Da die Kamera-Sensoren **mehr grüne Pixel** haben als rote oder blaue, wird das grüne Farbspektrum bei der Bildaufnahme besonders gut abgebildet, was zu einer besseren Bildqualität führt. Dies trägt dazu bei, dass Objekte vor einem grünen Hintergrund **leichter und präziser vom Rest des Bildes getrennt** werden können.
+> Grün ist eine der dominierenden Farben in der Farbfilterung moderner Bildsensoren. Da die Kamera-Sensoren **mehr grüne Sub-Pixel** haben als rote oder blaue, wird das grüne Farbspektrum bei der Bildaufnahme besonders gut abgebildet, was in Rohformat zu einer besseren Bildqualität führt. Dies trägt dazu bei, dass Objekte vor einem grünen Hintergrund **leichter und präziser vom Rest des Bildes getrennt** werden können.
 > 
 > Allerdings ist die Wahl des Greenscreens nicht nur auf technische Überlegungen zurückzuführen. Grün ist eine Farbe, **die in der Kleidung oder Haut von Menschen selten vorkommt**, was es einfacher macht, diese vom Hintergrund zu unterscheiden.
 > 
@@ -84,6 +84,9 @@ Schauen Sie sich das selbst in einem Onlineeditor für Schriftarten an. Laden Si
 
 ![[Pasted-image-20231204071017.png]]
 
+## Grafikarten in einem PDF erkennen
+
+PDF ist ein Format, dass Vektor- und Rastergrafiken enthalten kann. Hier habe ich Ihnen [ein Beispiel](/data/vectororbitmap.pdf) erstellt: Versuchen Sie darauf zu erkennen, was eine Raster- und was eine Vektorgrafik ist.
 
 > [!info] Zusammenfassung
 > 
