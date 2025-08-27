@@ -14,7 +14,7 @@ Wir verwenden in dieser Übung Open-Source-Software. Der Vorteil ist, dass Sie d
 
 In dieser Übung versuchen Sie, Ihre Augenfarbe in GIMP zu ändern. Dazu müssen Sie:
 - GIMP installieren (von [gimp.org](https://www.gimp.org/downloads/))
-- ein Selfie von Ihrem Handy auf den Computer laden
+- ein Selfie von Ihrem Handy auf den Computer laden (Sie können auch ein Foto einer anderen Person online nutzen)
 
 Die nächsten Schritte erkläre ich Ihnen nur abstrakt - versuchen Sie die Einzelheiten selbst herauszufinden.
 - Öffnen Sie GIMP und laden Sie Ihr Selfie.
