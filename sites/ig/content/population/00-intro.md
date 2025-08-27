@@ -1,1 +1,5 @@
+---
+title: Intro
+---
+
 Mit Excel lassen sich nicht nur Texte, Zeichnungen und Tabellen anfertigen, sondern auch die _**Entwicklung**_ von Populationen simulieren. In dieser Lerneinheit werden wir in verschiedenen Schritten versuchen, das Wachstum einer Population – einer Wolfsgruppe - zunehmend realistisch zu modellieren.

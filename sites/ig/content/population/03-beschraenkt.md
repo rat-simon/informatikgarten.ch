@@ -1,3 +1,6 @@
+---
+title: Beschränktes Wachstum
+---
 Exponentielles Wachstum trifft in der Realität nur auf befristete Wachstumsphasen zu, in der Regel zu Beginn einer Entwicklung. Keine Population kann beliebig lange exponentiell wachsen, da die Ressourcen (Nahrung, Lebensraum etc.) beschränkt sind: Es weder eine Insel noch einen Planeten, der beliebig vielen Wölfen Platz und Nahrung bieten würde.
 
 Deshalb schränken wir das Wachstum nun ein, indem wir eine maximale Anzahl Wölfe vorgeben, die auf der Insel leben können. Das Wachstum ist nun nicht mehr einfach proportional zur Anzahl Wölfe, sondern proportional zur Anzahl Wölfe, die noch Platz haben, der sog. _**Restkapazität**_.
@@ -15,7 +18,7 @@ Deshalb schränken wir das Wachstum nun ein, indem wir eine maximale Anzahl Wöl
 
 3. Verändern Sie nun die Formel in der Zelle C2 so, dass der Zuwachs nicht proportional zur Anzahl Wölfe ist, sondern proportional zur Restkapazität der Insel.
 	$$
-	\text{Zunahme} = (\text{Kapazität der Insel} - \text{Wölfe zu Beginn}) \times \text{Wachstumsrate}
+	\text{Zunahme} = \text{Wachstumsrate} \times (\text{Kapazität der Insel} - \text{Wölfe zu Beginn})
 	$$
 	Erstellen Sie die Formel bei C4 so, dass Sie sie später einfach auf den Rest der Spalte übertragen können.
 > [!solution]- Lösung

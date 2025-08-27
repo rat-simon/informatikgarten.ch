@@ -1,3 +1,6 @@
+---
+title: Exponentielles Wachstum
+---
 Die Annahme eines linearen Wachstums ist für unsere Wolfspopulation nicht realistisch. Wir berücksichtigen z.B. nicht, dass bei einem grösseren Wolfbestand auch mehr Junge geboren werden, d.h. dass die Zunahme in der Regel von der Grösse der aktuellen Populationsgruppe abhängt.
 
 Das wollen wir nun im zweiten Experiment verbessern. Wir ändern das Modell so ab, dass die Zunahme _**proportional**_ zum aktuellen Wolfsbestand ist:

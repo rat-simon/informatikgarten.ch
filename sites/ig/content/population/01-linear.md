@@ -1,3 +1,7 @@
+---
+title: Lineares Wachstum
+---
+
 Bei der allereinfachsten Art von Wachstum ist die _**Zunahme**_ _**konstant**_**.**
 
 
