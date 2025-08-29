@@ -1,13 +1,10 @@
-Bei der allereinfachsten Art von Wachstum ist die _**Zunahme**_ _**konstant**_**.**
-
+Bei der allereinfachsten Art von Wachstum ist die **Zunahme konstant**. Diese Art des Wachstums wird **lineares Wachstum** genannt, weil es einer geraden Linie folgt.
 
 > [!NOTE] Unser Modell
 > 
 > Auf einer grossen Insel leben 100 Wölfe.
 > 
 > Jedes Jahr werden 20 junge Wölfe geboren.
-
-Diese Art des Wachstums wird _lineares_ _Wachstum_ genannt.
 
 1. Estellen Sie zuerst die Überschriften der Tabelle in der Zeile 1. Die Tabelle simuliert das Wachstum dieser Wolfspopulation während zwanzig Jahren:
 ![[01-linear-1.png]]
@@ -21,3 +18,17 @@ Diese Art des Wachstums wird _lineares_ _Wachstum_ genannt.
 7. Experimentieren Sie mit verschiedenen Werten für Zunahme in Zelle C2 (z.B. 10, 0 oder -5). Was ändert sich nun?
 8. Speichern Sie das Dokument unter dem Namen „Populationsentwicklungen.xlsx“.
 9. Benennen Sie das Excel-Blatt „01 Lineares Wachstum“
+## Verbindung zu linearen Funktionen
+
+Was wir hier simulieren ist nichts Anderes als eine lineare Funktion. Lineare Funktionen haben folgende allgemeine Form:
+$$
+y = ax + b
+$$
+Das heisst: Jedes Mal, wenn x um 1 grösser wird, wird y um die Steigung a grösser. Mit unseren Wölfen bedeutet das: Wenn wir ein weiteres Jahr warten, wird die Population um 20 Wölfe grösser.
+
+<span color="orange">y</span> ist die Anzahl der Wölfe in einem bestimmten Jahr.
+<span color="red">a</span> ist die jährliche Zunahme der Wölfe (in unserem Fall 20).
+<span color="green">b</span> ist die Anfangspopulation der Wölfe (in unserem Fall 100).
+
+![[01-linear-funktion.excalidraw]]
+
