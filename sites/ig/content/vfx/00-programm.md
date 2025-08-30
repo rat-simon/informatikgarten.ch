@@ -3,14 +3,16 @@ title: Programm
 ---
 # Wochenprogramm Variowoche 3D-Animationen & VFX
 
-**22.09. – 26.09.2025**
+<center>**22.09. – 26.09.2025**</center>
 ## Organisatorisches
+
+Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage gehen mindestens von 8:35 bis 15:45.
 
 ### Material
 
 - Bringen Sie einen so leistungsstarken **Laptop** wie möglich mit **Maus, Tastatur und Kopfhörer**
-- Gaming-Computer mit starken Grafikkarten sowie externe Monitore sind willkommen! (Transport müssten Sie organisieren, aber Ankunft am Montagmorgen wäre dafür flexibel.)
-- Tablets funktionieren nicht.
+- Gaming-Computer mit starken Grafikkarten sowie externe Monitore sind willkommen! (Transport müssten Sie organisieren, aber Ankunft am Montagmorgen könnten wir flexibel organisieren.)
+- Tablets funktionieren nicht!
 ### Verpflegung
 
 - Sie sind selbst zuständig für Ihre Verpflegung an der KSWE (Kantine ist gewohnt offen)
