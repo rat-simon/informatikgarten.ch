@@ -103,6 +103,51 @@
     "source": "https://github.com/zsviczian/obsidian-excalidraw-plugin/releases/tag/2.9.2",
     "libraryItems": [
       {
+        "id": "EONjyyKsg5vICpC0tQGSE",
+        "status": "unpublished",
+        "elements": [
+          {
+            "id": "daQCBumd",
+            "type": "text",
+            "x": 270.90830596511876,
+            "y": -606.2773592441407,
+            "width": 20.299999237060547,
+            "height": 45,
+            "angle": 0,
+            "strokeColor": "#ffff00",
+            "backgroundColor": "transparent",
+            "fillStyle": "solid",
+            "strokeWidth": 2,
+            "strokeStyle": "dotted",
+            "roughness": 0,
+            "opacity": 100,
+            "groupIds": [],
+            "frameId": null,
+            "index": "aE",
+            "roundness": null,
+            "seed": 429216267,
+            "version": 395,
+            "versionNonce": 1979886603,
+            "isDeleted": false,
+            "boundElements": [],
+            "updated": 1756671588276,
+            "link": null,
+            "locked": false,
+            "text": "Y",
+            "fontSize": 36,
+            "fontFamily": 5,
+            "textAlign": "center",
+            "verticalAlign": "top",
+            "containerId": null,
+            "originalText": "Y",
+            "autoResize": true,
+            "lineHeight": 1.25,
+            "rawText": "Y"
+          }
+        ],
+        "created": 1756671658424
+      },
+      {
         "status": "published",
         "elements": [
           {

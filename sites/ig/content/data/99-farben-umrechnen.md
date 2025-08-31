@@ -61,6 +61,8 @@ $$K = 1 - \max(r, g, b)$$
 
 **Intuition**: Wenn alle RGB-Werte niedrig sind (dunkle Farbe), ist K hoch. Wenn mindestens ein RGB-Wert hoch ist (helle Farbe), ist K niedrig.
 
+![[99-farben-umrechnen-keyexample.excalidraw.light.svg]]
+
 ### Schritt 3: Berechnung von C, M und Y
 
 Nachdem wir wissen, wie viel Schwarz wir verwenden, müssen wir die restlichen Farbanteile berechnen. Die Formeln berücksichtigen, dass wir bereits Schwarz verwenden:
@@ -105,9 +107,9 @@ Das ergibt Sinn: Orange braucht kein Cyan (Gegenfarbe), viel Magenta und Gelb, u
 
 ## Wichtige Hinweise
 
-1. **Farbverlust**: Die Umrechnung von RGB zu CMYK kann zu Farbverlusten führen, da CMYK einen kleineren Farbraum hat als RGB. Besonders leuchtende Farben können im Druck matter erscheinen.
+1. **Farbverlust**: Die Umrechnung von RGB zu CMYK kann zu Farbverlusten führen, da **CMYK einen kleineren Farbraum hat als RGB**. Besonders leuchtende Farben können im Druck matter erscheinen.
 
-2. **Professioneller Druck**: In der Praxis verwenden professionelle Druckereien oft ICC-Profile für genauere Farbumrechnungen, die gerätespezifische Eigenschaften berücksichtigen.
+2. **Professioneller Druck**: In der Praxis verwenden professionelle Druckereien oft ICC-Profile für genauere Farbumrechnungen, die spezifische Tinten- und Druckereigenschaften berücksichtigen.
 
 3. **Der Name "K"**: Das K in CMYK steht für "Key" (Schlüsselfarbe), nicht für "blacK". Historisch wurde die schwarze Druckplatte als Schlüsselplatte bezeichnet, da sie die wichtigsten Details und Konturen enthielt.
 
