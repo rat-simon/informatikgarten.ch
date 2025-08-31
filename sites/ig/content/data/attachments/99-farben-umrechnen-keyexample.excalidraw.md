@@ -14,10 +14,19 @@ CMY ^ihILCFZ8
 
 CMYK ^T6CB1aGv
 
+Original ^yeySMHay
+
+Ein anschauliches Beispiel von Wikipedia. ^TRIY4iVK
+
+## Element Links
+TRIY4iVK: https://en.wikipedia.org/wiki/CMYK_color_model
+
 ## Embedded Files
 a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]]
 
 8acb3372b3ce45c2ab8259b71030c6f2508c6bdc: [[Pasted Image 20250831222501_129.png]]
+
+7d2efa6bad59f6b50e872e421b8f5905a3f6d745: [[Pasted Image 20250831222834_683.png]]
 
 %%
 ## Drawing
@@ -50,7 +59,7 @@ a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]
 			"version": 119,
 			"versionNonce": 2069545605,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1756671890705,
 			"link": null,
 			"locked": false,
@@ -85,7 +94,7 @@ a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]
 			"version": 87,
 			"versionNonce": 1478570149,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1756671875303,
 			"link": null,
 			"locked": false,
@@ -120,7 +129,7 @@ a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]
 			"version": 36,
 			"versionNonce": 1234407499,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1756671960846,
 			"link": null,
 			"locked": false,
@@ -172,6 +181,151 @@ a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]
 			"originalText": "CMYK",
 			"autoResize": true,
 			"lineHeight": 1.15
+		},
+		{
+			"id": "JpB_1PiVCcS1UNGFQM9fb",
+			"type": "image",
+			"x": -1195.7709861937867,
+			"y": -389.0439807931168,
+			"width": 581.552904482434,
+			"height": 434.3473255353179,
+			"angle": 0,
+			"strokeColor": "transparent",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a5",
+			"roundness": null,
+			"seed": 1451692895,
+			"version": 181,
+			"versionNonce": 1711094367,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1756672112099,
+			"link": null,
+			"locked": false,
+			"status": "pending",
+			"fileId": "7d2efa6bad59f6b50e872e421b8f5905a3f6d745",
+			"scale": [
+				1,
+				1
+			],
+			"crop": null
+		},
+		{
+			"id": "yeySMHay",
+			"type": "text",
+			"x": -939.4525416677034,
+			"y": -436.0874360234536,
+			"width": 68.916015625,
+			"height": 23,
+			"angle": 0,
+			"strokeColor": "#777777",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a6",
+			"roundness": null,
+			"seed": 164072625,
+			"version": 86,
+			"versionNonce": 1988831121,
+			"isDeleted": false,
+			"boundElements": [],
+			"updated": 1756672167945,
+			"link": null,
+			"locked": false,
+			"text": "Original",
+			"rawText": "Original",
+			"fontSize": 20,
+			"fontFamily": 2,
+			"textAlign": "center",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Original",
+			"autoResize": true,
+			"lineHeight": 1.15
+		},
+		{
+			"id": "TRIY4iVK",
+			"type": "text",
+			"x": 31.804923684011783,
+			"y": -161.76304061554265,
+			"width": 372.421875,
+			"height": 23,
+			"angle": 4.71238898038469,
+			"strokeColor": "#777777",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a7",
+			"roundness": null,
+			"seed": 920729425,
+			"version": 131,
+			"versionNonce": 166061393,
+			"isDeleted": false,
+			"boundElements": null,
+			"updated": 1756672282634,
+			"link": "https://en.wikipedia.org/wiki/CMYK_color_model",
+			"locked": false,
+			"text": "Ein anschauliches Beispiel von Wikipedia.",
+			"rawText": "Ein anschauliches Beispiel von Wikipedia.",
+			"fontSize": 20,
+			"fontFamily": 2,
+			"textAlign": "center",
+			"verticalAlign": "top",
+			"containerId": null,
+			"originalText": "Ein anschauliches Beispiel von Wikipedia.",
+			"autoResize": true,
+			"lineHeight": 1.15
+		},
+		{
+			"id": "GwCntzUVvIneH8796yYnr",
+			"type": "embeddable",
+			"x": -170.17879200107245,
+			"y": -825.6212121129921,
+			"width": 560,
+			"height": 840,
+			"angle": 0,
+			"strokeColor": "transparent",
+			"backgroundColor": "transparent",
+			"fillStyle": "solid",
+			"strokeWidth": 2,
+			"strokeStyle": "solid",
+			"roughness": 0,
+			"opacity": 100,
+			"groupIds": [],
+			"frameId": null,
+			"index": "a8",
+			"roundness": {
+				"type": 3
+			},
+			"seed": 460599121,
+			"version": 3,
+			"versionNonce": 259739409,
+			"isDeleted": true,
+			"boundElements": null,
+			"updated": 1756672245433,
+			"link": "https://en.wikipedia.org/wiki/CMYK_color_model",
+			"locked": false,
+			"scale": [
+				1,
+				1
+			]
 		}
 	],
 	"appState": {
@@ -186,14 +340,14 @@ a7a42124922c15adca8dd200808ddbf19c86715e: [[Pasted Image 20250831222425_660.png]
 		"currentItemOpacity": 100,
 		"currentItemFontFamily": 2,
 		"currentItemFontSize": 20,
-		"currentItemTextAlign": "left",
+		"currentItemTextAlign": "center",
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
-		"scrollX": 925.3452939265827,
-		"scrollY": 849.8716570979304,
+		"scrollX": 1474.4826170023184,
+		"scrollY": 1761.2840846930062,
 		"zoom": {
-			"value": 1.324734
+			"value": 0.662039
 		},
 		"currentItemRoundness": "round",
 		"gridSize": 20,
