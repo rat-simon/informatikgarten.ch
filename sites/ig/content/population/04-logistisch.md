@@ -1,5 +1,5 @@
 ---
-display: hidden
+title: Logistisches Wachstum
 ---
 
 In diesem Experiment soll - was ziemlich realistisch ist - exponentielles und beschränktes Wachstum miteinander kombiniert werden. Wir nehmen an, dass die Zunahme proportional zum aktuellen Wolfsbestand **als auch** proportional zur Restkapazität ist. Das bedeutet mathematisch, dass sie proportional zum _Produkt_ der beiden ist.

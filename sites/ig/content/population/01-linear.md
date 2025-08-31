@@ -1,3 +1,6 @@
+---
+title: Lineares Wachstum
+---
 Bei der allereinfachsten Art von Wachstum ist die **Zunahme konstant**. Diese Art des Wachstums wird **lineares Wachstum** genannt, weil es einer geraden Linie folgt.
 
 > [!NOTE] Unser Modell
