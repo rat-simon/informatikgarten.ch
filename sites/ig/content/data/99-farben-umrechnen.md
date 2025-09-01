@@ -17,19 +17,29 @@ Wenn Sie ein Bild am Bildschirm erstellen und es dann ausdrucken möchten, muss 
 - **RGB**: Je mehr Licht, desto heller (Addition von Licht)
 - **CMYK**: Je mehr Farbe, desto dunkler (Subtraktion von reflektiertem Licht)
 
-## Warum ist Cyan das "Gegenteil" von Rot?
+## Zum Verständnis rechnen wir zuerst in CMY um
 
-Die CMY-Farben sind die **Komplementärfarben** zu RGB. Das bedeutet: Jede CMY-Farbe absorbiert genau eine RGB-Grundfarbe und reflektiert die anderen beiden:
 
-- **Cyan-Tinte absorbiert Rot**, reflektiert aber Grün und Blau
+> [!question] Was ist das Gegenteil von Rot?
+> 
+> Überlegen Sie sich folgende Frage: Was bleibt, wenn eine Oberfläche **alles reflektiert ausser Rot**.
+> 
+> Sie können dafür gern die Farbslider nutzen.
+
+<ColorSliders />
+
+Wir sehen: Die CMY-Farben sind die **Komplementärfarben** zu RGB. Das bedeutet: Jede CMY-Farbe absorbiert genau eine RGB-Grundfarbe und reflektiert den Rest:
+
+- **Cyan-Tinte absorbiert Rot**, reflektiert aber den Rest (bei RGB also Grün und Blau)
   - Weisses Licht (R+G+B) minus Rot = Grün + Blau = Cyan
-- **Magenta-Tinte absorbiert Grün**, reflektiert aber Rot und Blau
+- **Magenta-Tinte absorbiert Grün**, reflektiert aber den Rest (bei RGB also Rot und Blau)
   - Weisses Licht (R+G+B) minus Grün = Rot + Blau = Magenta
-- **Gelb-Tinte absorbiert Blau**, reflektiert aber Rot und Grün
+- **Gelb-Tinte absorbiert Blau**, reflektiert aber den Rest (bei RGB also Rot und Grün)
   - Weisses Licht (R+G+B) minus Blau = Rot + Grün = Gelb
 
 ![[05-farben-farbmodelle-mischfarben.excalidraw.light.svg]]
-**Anschauliches Beispiel mit Cyan:**
+### Beispiel mit Cyan
+
 Stellen Sie sich vor, weisses Licht (enthält alle Farben) trifft auf cyan-farbige Tinte:
 1. Die Cyan-Tinte "schluckt" das rote Licht - es wird absorbiert
 2. Grünes und blaues Licht werden reflektiert
@@ -39,7 +49,19 @@ Deshalb ist in der Umrechnungsformel Cyan proportional zu "wie viel Rot fehlt":
 - Viel Rot im RGB → wenig Cyan-Tinte nötig
 - Wenig Rot im RGB → viel Cyan-Tinte nötig
 
-## Die Herleitung der Umrechnungsformel
+### Umrechnen
+
+Wie hilft uns das nun, RGB in CMY umzurechnen?
+
+Die Umrechnung von RGB nach CMY erfolgt durch die Subtraktion der RGB-Werte von 1 (oder 255, je nach Kontext). Die Formeln lauten:
+
+$$C = 1 - R$$
+
+$$M = 1 - G$$
+
+$$Y = 1 - B$$
+
+## Die Herleitung der Umrechnungsformel für CMYK
 
 ### Schritt 1: Normalisierung der RGB-Werte
 
