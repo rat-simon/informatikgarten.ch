@@ -1,6 +1,8 @@
 ---
 title: Beschränktes Wachstum
 ---
+# Beschränktes Wachstum
+
 Exponentielles Wachstum trifft in der Realität nur auf befristete Wachstumsphasen zu, in der Regel zu Beginn einer Entwicklung. Keine Population kann beliebig lange exponentiell wachsen, da die Ressourcen (Nahrung, Lebensraum etc.) beschränkt sind: Es weder eine Insel noch einen Planeten, der beliebig vielen Wölfen Platz und Nahrung bieten würde.
 
 Deshalb schränken wir das Wachstum nun ein, indem wir eine maximale Anzahl Wölfe vorgeben, die auf der Insel leben können. Das Wachstum ist nun nicht mehr einfach proportional zur Anzahl Wölfe, sondern proportional zur Anzahl Wölfe, die noch Platz haben, der sog. _**Restkapazität**_.

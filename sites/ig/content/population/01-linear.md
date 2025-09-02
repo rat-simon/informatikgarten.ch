@@ -1,6 +1,8 @@
 ---
 title: Lineares Wachstum
 ---
+# Lineares Wachstum
+
 Bei der allereinfachsten Art von Wachstum ist die **Zunahme konstant**. Diese Art des Wachstums wird **lineares Wachstum** genannt, weil es einer geraden Linie folgt.
 
 > [!NOTE] Unser Modell
@@ -9,7 +11,7 @@ Bei der allereinfachsten Art von Wachstum ist die **Zunahme konstant**. Diese Ar
 > 
 > Jedes Jahr werden 20 junge Wölfe geboren.
 
-1. Estellen Sie zuerst die Überschriften der Tabelle in der Zeile 1. Die Tabelle simuliert das Wachstum dieser Wolfspopulation während zwanzig Jahren:
+1. Erstellen Sie zuerst die Überschriften der Tabelle in der Zeile 1. Die Tabelle simuliert das Wachstum dieser Wolfspopulation während zwanzig Jahren:
 ![[01-linear-1.png]]
 2. Hinter den unterstrichenen Werten verbergen sich Formeln. Stellen Sie die Formeln für die Zellen D2, A3, B3 und C3 auf und kopieren Sie sie automatisch nach unten (mit der Maus entsprechende Zelle markieren, Quadrat rechts unten an der Zelle anklicken und bei gedrückter Maustaste nach unten ziehen).
 ![[01-linear.png]]
