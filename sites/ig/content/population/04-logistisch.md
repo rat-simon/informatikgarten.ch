@@ -2,7 +2,7 @@
 title: Logistisches Wachstum
 ---
 
-In diesem Experiment soll - was ziemlich realistisch ist - exponentielles und beschränktes Wachstum miteinander kombiniert werden. Wir nehmen an, dass die Zunahme proportional zum aktuellen Wolfsbestand **als auch** proportional zur Restkapazität ist. Das bedeutet mathematisch, dass sie proportional zum _Produkt_ der beiden ist.
+In diesem Experiment soll – was ziemlich realistisch ist – exponentielles und beschränktes Wachstum miteinander kombiniert werden. Wir nehmen an, dass die Zunahme proportional zum aktuellen Wolfsbestand **als auch** proportional zur Restkapazität ist. Das bedeutet mathematisch, dass sie proportional zum _Produkt_ der beiden ist.
 
 > [!info] Unser neues Modell
 > 
@@ -12,15 +12,15 @@ In diesem Experiment soll - was ziemlich realistisch ist - exponentielles und be
 
 Wenn bei einem Wachstumsvorgang die Zunahme proportional zum Bestand als auch zur Restkapazität ist, spricht man von **logistischem Wachstum**.
 
-1. Gehen Sie vom Tabellenblatt für das beschränkte Wachstum aus. Kopieren Sie das Tabellenblatt und speichern Sie es unter dem neuen Namen „04 Logistisches Wachstum“ ab, damit Sie altes Tabellenblatt nicht aus Versehen überschreiben.
+1. Gehen Sie vom Tabellenblatt für das beschränkte Wachstum aus. Kopieren Sie das Tabellenblatt und speichern Sie es unter dem neuen Namen "04 Logistisches Wachstum" ab, damit Sie das alte Tabellenblatt nicht aus Versehen überschreiben.
 ![[04-logistisch.png]]
-2. Nun brauchen wir die **normalisierte Restkapazität**. Das heisst, anstatt eine absolute Anzahl Wölfe berechnen wir **eine Zahl zwischen 1 für eine leere Insel mit 100% Restkapazität und 0 für eine total volle Insel mit 0% Restkapazität**. So können wir das Wachstum mit diesem normalisierten Faktor multiplizierten und skalieren so das Wachstum, je nachdem wie viel Platz es auf der Insel noch gibt. Fügen Sie eine **neue Spalte zwischen den Spalten B und C** hinzu, die wir "**Restkapazitätsfaktor**" nennen, und lösen Sie folgende Aufgabe:
+2. Nun brauchen wir die **normalisierte Restkapazität**. Das heisst, anstatt eine absolute Anzahl Wölfe zu berechnen, berechnen wir **eine Zahl zwischen 1 für eine leere Insel mit 100% Restkapazität und 0 für eine total volle Insel mit 0% Restkapazität**. So können wir das Wachstum mit diesem normalisierten Faktor multiplizieren und skalieren so das Wachstum, je nachdem, wie viel Platz es auf der Insel noch gibt. Fügen Sie eine **neue Spalte zwischen den Spalten B und C** hinzu, die wir "**Restkapazitätsfaktor**" nennen, und lösen Sie folgende Aufgabe:
 
 > [!exercise] Aufgabe
 > 
 > Versuchen Sie eine Formel zu entwickeln, die Ihnen diesen Restkapazitätsfaktor ausrechnet. Einige Beispiele, was der Restkapazitätsfaktor wäre, auf einer Insel mit Platz für 1000 Wölfe:
 > - Am Anfang leben 100 Wölfe auf einer Insel mit Platz für 1000. Die Restkapazität ist 0.9 (90%).
-> - Bei 0 Wölfen wäre die Restkapazität 0 (0%).
+> - Bei 0 Wölfen wäre die Restkapazität 1 (100%).
 > - Bei 700 Wölfen wäre die Restkapazität 0.3 (30%).
 > - Bei 990 Wölfen wäre die Restkapazität 0.01 (1%). 
 
@@ -43,6 +43,6 @@ Wenn bei einem Wachstumsvorgang die Zunahme proportional zum Bestand als auch zu
 	\text{Zunahme} = \text{Wölfe zu Beginn} \times \text{Wachstumsrate} \times \text{Restkapazitätsfaktor}
 	$$
 	Erstellen Sie die Formel so, dass Sie sie später einfach auf den Rest der Spalte übertragen können.
-4. Wie sieht logistische Wachstumskurve aus? Erklären Sie sich dieses Aussehen anhand der Werte, die in den Spalten stehen.
+4. Wie sieht die logistische Wachstumskurve aus? Erklären Sie sich dieses Aussehen anhand der Werte, die in den Spalten stehen.
 5. Spielen Sie mit der Wachstumsrate und der Kapazität. Was bewirkt diese Veränderung?
 

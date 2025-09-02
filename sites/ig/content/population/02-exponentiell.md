@@ -5,7 +5,7 @@ title: Exponentielles Wachstum
 
 Die Annahme eines linearen Wachstums ist für unsere Wolfspopulation nicht realistisch. Wir berücksichtigen z.B. nicht, dass bei einem grösseren Wolfbestand auch mehr Junge geboren werden, d.h. dass die Zunahme in der Regel von der Grösse der aktuellen Populationsgruppe abhängt.
 
-Das wollen wir nun im zweiten Modell verbessern. Wir ändern das Modell so ab, dass die Zunahme **proportional zum aktuellen Wolfsbestand** ist. Ein Wachstum, bei dem die Zunahme proportional zum Bestand ist, heisst _**exponentielles Wachstum**_. Die proportionale Zunahme (z.B. 10%) nennt man die **Wachstumsrate**.
+Das wollen wir nun im zweiten Modell verbessern. Wir ändern das Modell so ab, dass die Zunahme **proportional zum aktuellen Wolfsbestand** ist. Ein Wachstum, bei dem die Zunahme proportional zum Bestand ist, heisst **exponentielles Wachstum**. Die proportionale Zunahme (z.B. 10%) nennt man die **Wachstumsrate**.
 
 > [!NOTE] Unser Modell
 > 
@@ -13,7 +13,7 @@ Das wollen wir nun im zweiten Modell verbessern. Wir ändern das Modell so ab, d
 > 
 > Jedes Jahr kommen 10% der Wölfe vom Jahresbeginn dazu.
 
-1. Erstellen Sie eine Kopie des Tabellenblatts „01 Lineares Wachstum“. Benennen Sie das Blatt um in „02 Exponentielles Wachstum“ ab, damit Sie das alte Tabellenblatt nicht aus Versehen überschreiben.
+1. Erstellen Sie eine Kopie des Tabellenblatts "01 Lineares Wachstum". Benennen Sie das Blatt in "02 Exponentielles Wachstum" um, damit Sie das alte Tabellenblatt nicht aus Versehen überschreiben.
 ![[02-exponentiell.png]]
 2. Fügen Sie ganz oben eine neue Zeile ein. Dort speichern wir nun die **Wachstumsrate**. Bei A1 können Sie "Wachstumsrate" beschriften, den Wert können Sie weiter rechts in der Zeile speichern, z.B. D1.
 ![[02-exponentiell-1.png]]

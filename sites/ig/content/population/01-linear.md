@@ -25,7 +25,7 @@ Bei der allereinfachsten Art von Wachstum ist die **Zunahme konstant**. Diese Ar
 9. Benennen Sie das Excel-Blatt „01 Lineares Wachstum“
 ## Verbindung zu linearen Funktionen
 
-Was wir hier simulieren ist nichts Anderes als eine lineare Funktion. Lineare Funktionen haben folgende allgemeine Form:
+Was wir hier simulieren, ist nichts anderes als eine lineare Funktion. Lineare Funktionen haben folgende allgemeine Form:
 $$
 y = ax + b
 $$

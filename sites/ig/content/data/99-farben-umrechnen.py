@@ -49,7 +49,7 @@ def create_worksheet(filename, rgb_color, color_name):
     pdf.setFont("Helvetica-Bold", 18)
     pdf.drawString(2*cm, height - 3.5*cm, f"RGB-Farbe: ({r}, {g}, {b})")
     
-    # Große Farbfläche (RGB-kodiert für Bildschirmvergleich)
+    # Grosse Farbfläche (RGB-kodiert für Bildschirmvergleich)
     pdf.setFillColorRGB(r/255, g/255, b/255)
     pdf.rect(2*cm, height - 8*cm, 8*cm, 3*cm, fill=1, stroke=1)
     
@@ -106,7 +106,7 @@ def create_worksheet(filename, rgb_color, color_name):
     pdf.setFont("Helvetica", 10)
     pdf.drawString(2*cm, height - 21.5*cm, "Mischen Sie hier die Farbe mit Acrylfarben nach:")
     
-    # Weißes Rechteck für Farbmischung
+    # Weisses Rechteck für Farbmischung
     pdf.setFillColorRGB(1, 1, 1)
     pdf.rect(2*cm, height - 25*cm, 8*cm, 3*cm, fill=1, stroke=1)
     
@@ -116,7 +116,7 @@ def create_worksheet(filename, rgb_color, color_name):
     solution = f"Lösung: CMYK({c}%, {m}%, {y}%, {k}%)"
     pdf.drawRightString(width - 2*cm, 2*cm, solution)
     
-    # Fußzeile
+    # Fusszeile
     pdf.setFont("Helvetica", 10)
     pdf.drawString(2*cm, 2*cm, f"Arbeitsblatt: {color_name}")
     
@@ -142,7 +142,7 @@ for i, (rgb, name) in enumerate(colors, 1):
 
 print(f"\n✓ Alle 5 Arbeitsblätter wurden im Ordner '{output_dir}' erstellt!")
 print("\nDie Arbeitsblätter enthalten:")
-print("- RGB-Farbangabe und große Farbfläche zum Vergleich")
+print("- RGB-Farbangabe und grosse Farbfläche zum Vergleich")
 print("- Platz für Mikroskopaufnahmen von RGB-Pixeln und CMYK-Druckfarben")
 print("- Umrechnungsaufgabe mit Platz zum Ausfüllen")
 print("- Fläche zum Nachmischen mit Acrylfarben")
