@@ -11,6 +11,8 @@ from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import os
 
+os.chdir(os.path.dirname(__file__))
+
 def rgb_to_cmyk(r, g, b):
     """Konvertiert RGB (0-255) zu CMYK (0-100%)"""
     r_norm = r / 255
@@ -124,9 +126,9 @@ def create_worksheet(filename, rgb_color, color_name):
 # 5 verschiedene Farben definieren
 colors = [
     ((255, 64, 16), "Orange"),
-    ((50, 0, 200), "Violett"),
-    ((0, 255, 128), "Mintgrün"),
-    ((255, 200, 0), "Goldgelb"),
+    ((100, 0, 170), "Violett"),
+    ((0, 200, 128), "Mintgrün"),
+    ((220, 190, 0), "Goldgelb"),
     ((200, 30, 90), "Magentarot")
 ]
 

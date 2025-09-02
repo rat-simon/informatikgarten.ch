@@ -61,6 +61,9 @@ $$M = 1 - G$$
 
 $$Y = 1 - B$$
 
+Das kann man sich geometrisch überlegen:
+
+![[99-farben-umrechnen-diagramm-cmy.excalidraw.light.svg]]
 ## Die Herleitung der Umrechnungsformel für CMYK
 
 ### Schritt 1: Normalisierung der RGB-Werte
@@ -125,7 +128,7 @@ $$Y = \frac{1 - 0.063 - 0}{1 - 0} = 0.937$$
 
 Das ergibt Sinn: Orange braucht kein Cyan (Gegenfarbe), viel Magenta und Gelb, und kein Schwarz.
 
-![[99-farben-umrechnen-diagramm.excalidraw.light.svg]]
+![[99-farben-umrechnen-diagramm-cmyk.excalidraw.light.svg]]
 
 ## Wichtige Hinweise
 
