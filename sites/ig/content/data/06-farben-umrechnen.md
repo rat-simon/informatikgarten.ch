@@ -170,20 +170,14 @@ def rgb_zu_cmyk(r, g, b):
         m = (1 - g_norm - k) / (1 - k)
         y = (1 - b_norm - k) / (1 - k)
     
-    # In Prozent umrechnen und runden
-    c_prozent = round(c * 100, 1)
-    m_prozent = round(m * 100, 1)
-    y_prozent = round(y * 100, 1)
-    k_prozent = round(k * 100, 1)
-    
-    return c_prozent, m_prozent, y_prozent, k_prozent
+    return c, m, y, k
 
 # Beispiel testen
 r = 50
 g = 0
 b = 200
 c, m, y, k = rgb_zu_cmyk(r, g, b)
-print(f"RGB({r}, {g}, {b}) = CMYK({c}%, {m}%, {y}%, {k}%)")
+print(f"RGB({r}, {g}, {b}) = CMYK({c*100:.2f}%, {m*100:.2f}%, {y*100:.2f}%, {k*100:.2}%)")
 
 ```
 
