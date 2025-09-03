@@ -14,7 +14,7 @@ Wenn bei einem Wachstumsvorgang die Zunahme proportional zum Bestand als auch zu
 
 1. Gehen Sie vom Tabellenblatt für das beschränkte Wachstum aus. Kopieren Sie das Tabellenblatt und speichern Sie es unter dem neuen Namen "04 Logistisches Wachstum" ab, damit Sie das alte Tabellenblatt nicht aus Versehen überschreiben.
 ![[04-logistisch.png]]
-2. Nun brauchen wir die **normalisierte Restkapazität**. Das heisst, anstatt eine absolute Anzahl Wölfe zu berechnen, berechnen wir **eine Zahl zwischen 1 für eine leere Insel mit 100% Restkapazität und 0 für eine total volle Insel mit 0% Restkapazität**. So können wir das Wachstum mit diesem normalisierten Faktor multiplizieren und skalieren so das Wachstum, je nachdem, wie viel Platz es auf der Insel noch gibt. Fügen Sie eine **neue Spalte zwischen den Spalten B und C** hinzu, die wir "**Restkapazitätsfaktor**" nennen, und lösen Sie folgende Aufgabe:
+2. Nun brauchen wir die **normalisierte Restkapazität**. Das heisst, anstatt eine absolute Anzahl Wölfe zu berechnen, berechnen wir **eine Zahl zwischen 1 für eine leere Insel mit 100% Restkapazität und 0 für eine total volle Insel mit 0% Restkapazität**. So können wir das Wachstum mit diesem normalisierten Faktor multiplizieren und das Wachstum dämpfen, je nachdem, wie viel Platz es auf der Insel noch gibt. Fügen Sie eine **neue Spalte zwischen den Spalten B und C** hinzu, die wir "**Restkapazitätsfaktor**" nennen, und lösen Sie folgende Aufgabe:
 
 > [!exercise] Aufgabe
 > 
