@@ -1,7 +1,7 @@
 ---
 title: Arbeitsauftrag
 ---
-# Auftrag Populationsentwicklungen mit Excel
+# Auftrag Populationsentwicklungen
 
 Sie sollen **zwei Dokumente** termingerecht im Arbeitsauftrag auf Teams abgeben:
 - Die Dokumente benennen Sie bitte nach dem Muster "Nachname_Vorname_Abteilung_Tierart"
