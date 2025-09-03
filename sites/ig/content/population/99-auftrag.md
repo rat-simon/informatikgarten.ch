@@ -1,6 +1,5 @@
 ---
 title: Arbeitsauftrag
-display: hidden
 ---
 # Auftrag Populationsentwicklungen mit Excel
 
@@ -32,7 +31,7 @@ Suchen Sie möglichst interessante Fakten zu der ausgewählten Tierart und zu de
 ### Modellierung: 1 - 2 Seiten (8 P)
 Versuchen Sie, die Entwicklung der Population in einem bestimmten Zeitraum **möglichst genau mithilfe eines der Populationsentwicklungsmodelle**, die wir im Unterricht behandelt haben, zu erfassen. Benutzen Sie dazu Ihre eigene Exceldatei und ergänzen Sie diese nach Bedarf mit neuen Tabellenblättern.
 
-Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie passende Annahmen und suchen Sie geeignete Parameter, um die Entwicklung so genau wie möglich nachzumodellieren. Gelingt es Ihnen, die tatsächlichen Zahlen mit dem Excel nachzubilden? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben.
+Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie passende Annahmen und suchen Sie geeignete Parameter, um die Entwicklung so genau wie möglich nachzumodellieren. Gelingt es Ihnen, die tatsächlichen Zahlen mit dem Excel nachzubilden? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben. Versuchen Sie R² zu  berechnen.
 ### Reflexion: 0.5 - 1 Seite (3 P)
 - Reflexion der Recherche: Welche Fragen bzw. Probleme haben Sie bei der Recherche angetroffen und wie haben Sie diese allenfalls gelöst?
 - Reflexion der Modellierung: Wie zufrieden sind Sie mit Ihrem Modell? Welche Fragen bzw. Probleme haben Sie bei der Modellierung angetroffen? Konnten Sie diese lösen? Wie?
