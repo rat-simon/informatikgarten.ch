@@ -39,21 +39,19 @@ $$
 y = 0.6666 \times e^{0.1806x}
 $$
 
-- Der Bestimmtheitsgrad **R²** ist ein statistisches Mass dafür, wie dicht die tatsächlichen Daten an der Regressionskurve liegen. Der Mass dafür ist die Summe der quadrierten Differenzen. **Je näher der R² Wert sich der Zahl 1 nähert, desto besser ist das Modell**.
-- R² funktioniert so, dass es jeweils die Unterschiede zwischen Realität und Modell (also den **Fehler**) quadriert und summiert. Dann vergleicht es die Summe der Flächen des Modells (z.B. hier blau) mit der Summe der Flächen, die entstehen würde, wenn man gar kein Modell hätte und einfach den Durchschnitt der Daten verwenden würde (rot). 
+
+## Auswahl der besten Trendlinie
+
+Wenn Sie eine Trendlinie hinzufügen möchten, können Sie verschiedenen Trend-/Regressionstypen auswählen. Egal welche Sie auswählen, fragt sich: "**Wie genau passt die Trendlinie auf die Daten?**"
+
+Dazu kann man das Bestimmtheitsmass **R²** ausrechnen. Wenn Sie eine Trendlinie in Ihre Daten legen, können Sie für diese Trendlinie auch den Wert von R² berechnen lassen. Wenn Sie möchten, können Sie diesen Wert in Ihrem Diagramm anzeigen, wie wir dies auf der früheren Seite gemacht haben.
+- Der Bestimmtheitsgrad **R²** ist ein statistisches Mass dafür, wie dicht die tatsächlichen Daten an der Regressionskurve liegen. **Je näher der R² Wert sich der Zahl 1 nähert, desto besser ist das Modell**.
+- R² funktioniert so, dass es jeweils die Unterschiede zwischen Realität und Modell (also den **Fehler**) quadriert und alle Fehlerquadrate summiert. Dann vergleicht es die Summe der Flächen des **Modells** (z.B. hier blau) mit der Summe der Flächen, die entstehen würde, wenn man gar kein Modell hätte und einfach den **Durchschnitt** der Daten verwenden würde (rot). 
 	- Ein R² von 0 bedeutet, der Durchschnitt ist genau so gut wie unser Modell - also ist unser Modell extrem schlecht.
 	- Ein R² näher bei 1 bedeutet, unser Modell schlägt den Durchschnitt um ein Vielfaches.
 
 ![[10-data-plot-6.png]]
 *By Orzetto - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11398293*
-
-## Zusatz: Auswahl der besten Trendlinie
-
-Wenn Sie einem Excel Diagramm eine Trendlinie hinzufügen möchten, können Sie einen der sechs verschiedenen Trend-/Regressionstypen auswählen. Die Daten, die Sie selbst gemessen oder übernommen haben, bestimmen den Typ der Trendlinie, die Sie verwenden sollten.
-
-### Zuverlässigkeit der Trendlinie
-
-Eine Trendlinie ist am zuverlässigsten, wenn ihre Bestimmtheitsmass **R²** bei oder nahe 1 liegt. Wenn Sie eine Trendlinie an Ihre Daten anpassen, berechnet Excel automatisch den Wert des R-Quadrats. Wenn Sie möchten, können Sie diesen Wert in Ihrem Diagramm anzeigen, wie wir dies auf der früheren Seite gemacht haben.
 
 ### Lineare Trendlinie (->Lineares Wachstum)
 
