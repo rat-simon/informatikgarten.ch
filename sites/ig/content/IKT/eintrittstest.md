@@ -12,7 +12,7 @@ Es ist Ihre **Eigenverantwortung**, dass Sie den IKT-Test schreiben. **Tragen Si
 - G1b, 10. Sept., 11:20, Spinnerei S109
 - G1c, 8. Sept., 15:00, Spinnerei S109
 - G1d, 10. Sept., 15:00, Spinnerei S109
-- G1e, 11. Sept., 11:20, Spinnerei S109
+- G1e, 11. Sept., 11:20, Spinnerei S109 (Achtung, die Zeit hat sich geändert!)
 - G1f, 10. Sept., 15:00, Spinnerei S109
 - G1g, 10. Sept., 11:20, Spinnerei S109
 - G1h, 19. Sept., 12:15, Spinnerei S109
