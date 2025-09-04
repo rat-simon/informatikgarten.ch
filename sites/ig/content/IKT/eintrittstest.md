@@ -12,18 +12,18 @@ Es ist Ihre **Eigenverantwortung**, dass Sie den IKT-Test schreiben. **Tragen Si
 - G1b, 10. Sept., 11:20, Spinnerei S109
 - G1c, 8. Sept., 15:00, Spinnerei S109
 - G1d, 10. Sept., 15:00, Spinnerei S109
-- G1e, 11. Sept., 12:15, Spinnerei S109
+- G1e, 11. Sept., 11:20, Spinnerei S109
 - G1f, 10. Sept., 15:00, Spinnerei S109
 - G1g, 10. Sept., 11:20, Spinnerei S109
 - G1h, 19. Sept., 12:15, Spinnerei S109
-- G1I, 8. Sept., 15:55, Spinnerei S109
+- G1i, 8. Sept., 15:55, Spinnerei S109
 - G1j, 11. Sept., 11:20, Spinnerei S109
 - G1k, 17. Sept., 11:20, Langbau L15
 - G1l, 17. Sept., 11:20, Langbau L15
 
 Falls Sie **krank sind oder Freifächer / Instrumentalunterricht** haben, können Sie bei einer anderen Klasse reinsitzen und den Test mitschreiben. Bitte schreiben Sie mir kurz auf Teams. Hier die Übersicht der Termine, damit das für Sie einfacher ist, eine Möglichkeit zu finden.
 
-![[eintrittstest-plan.png]]
+![[eintrittstest-plan.excalidraw.light.svg]]
 ## Informationen zum Eintrittstest
 
 - Wichtig: der Test wird **auf dem eigenen Gerät mit Exam.net** absolviert. 

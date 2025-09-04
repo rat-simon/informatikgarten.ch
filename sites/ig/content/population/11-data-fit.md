@@ -11,5 +11,3 @@ In diesem Kapitel werden wir KORA-Daten mit unserem eigenen exponentiellen Daten
 3. Plotten Sie nun beide Datenreihen in einem Balkendiagramm.
 4. Rechnen Sie in einer Zelle den Durchschnitt der Daten aus.
 5. Fügen Sie zwei Spalten hinzu: "Fehlerquadrat Modell" und "Fehlerquadrat Durchschnitt"
-
-...
