@@ -1,0 +1,393 @@
+---
+title: Prüfungsvorbereitung Inap6
+---
+
+## Prüfungsumfang
+
+Es gelten die Lernziele der behandelten Lektionen, wenn nichts anderes angegeben ist.
+- Wir haben das "hexadezimale" Zahlensystem nicht besprochen, es ist nicht Teil der Prüfung.
+
+## Thema 1: Farbmodelle und Farbmischung
+
+### Aufgabe 1.1: Farben mischen
+
+Behauptung: 3 Bit Farbtiefe pro Kanal bedeutet, $111_2$ also $7_{10}$ ist die höchste Zahl pro Kanal, also kann man $7^3 = 343$ Farben mischen.
+
+Ist das wahr oder falsch? Begründen Sie Ihre Antwort!
+
+> [!solution]- Lösung mit Erklärung
+> 
+> Das ist falsch. Bei 3 Bit Farbtiefe ist $111_2$ oder $7_{10}$ zwar die höchste Zahl, aber mit 0 dazugezählt hat jeder Farbkanal 8 Zustände. Das heisst, man kann $8^3 = 512$ Farben mischen.
+> 
+> ![[explainer-colordepth-claim.mp4]]
+> 
+
+### Aufgabe 1.2: Additiv vs. Subtraktiv
+
+Welche Farbe entsteht beim additiven Mischen von Rot und Blau? Und welche beim subtraktiven Mischen von Cyan und Gelb?
+
+> [!solution]- Lösung
+> 
+> - Additiv (RGB): Rot + Blau = Magenta
+> - Subtraktiv (CMY): Cyan + Gelb = Grün
+
+### Aufgabe 1.3: Farbtiefe und Anzahl Farben
+
+Mit wie vielen Bit Farbtiefe pro Kanal können Sie bei einem RGB-Bild mindestens 1 Million verschiedene Farben darstellen?
+
+> [!solution]- Lösung
+> 
+> Wir suchen x, sodass $(2^x)^3 \geq 1'000'000$
+> - Bei 6 Bit: $(2^6)^3 = 64^3 = 262'144$ (zu wenig)
+> - Bei 7 Bit: $(2^7)^3 = 128^3 = 2'097'152$ (genug!)
+> 
+> Antwort: Mindestens 7 Bit pro Kanal
+
+### Aufgabe 1.4: Berechnung Farbanzahl
+
+Mit 5 Bit Farbtiefe pro Kanal bei RGB: Wie viele verschiedene Farben sind möglich?
+
+> [!solution]- Lösung
+> 
+> $(2^5)^3 = 32^3 = 32'768$ verschiedene Farben
+
+### Aufgabe 1.5: Farbtiefe erhöhen
+
+Wir stellen unsere Kamera von 8 auf 10 Bit Farbtiefe pro Kanal um: Wie viel Mal mehr Farben können nun gespeichert werden?
+
+> [!solution]- Lösung
+> 
+> 8 Bit: $(2^8)^3 = 16'777'216$ Farben
+> 10 Bit: $(2^{10})^3 = 1'073'741'824$ Farben
+> 
+> Faktor berechnen:
+> $$\frac{(2^{10})^3}{(2^8)^3} = \left(\frac{2^{10}}{2^8}\right)^3 = (2^{10-8})^3 = (2^2)^3 = 2^6 = 64$$
+> 
+> Weniger elegant mit absoluten Zahlen:
+> $$\frac{1'073'741'824}{16'777'216} = 64$$
+> 
+> $64 \times$ mehr Farben bei 10 Bit
+
+### Aufgabe 1.6: Farbmischung RGB
+
+Welche RGB-Werte ergeben reines Gelb bei maximaler Helligkeit (8 Bit pro Kanal)?
+
+> [!solution]- Lösung
+> 
+> $\text{RGB}(255, 255, 0)$ - Rot und Grün voll, Blau aus
+
+### Aufgabe 1.7: Farbkanäle zählen
+
+Wie viele Farbkanäle haben folgende Formate: RGB, CMYK, Graustufen, RGBA?
+
+> [!solution]- Lösung
+> 
+> - RGB: 3 Kanäle (Rot, Grün, Blau)
+> - CMYK: 4 Kanäle (Cyan, Magenta, Gelb, Schwarz)
+> - Graustufen: 1 Kanal
+> - RGBA: 4 Kanäle (RGB + Alpha)
+
+## Thema 2: Farbumrechnung
+
+### Aufgabe 2.1: RGB zu CMY
+
+Rechnen Sie die RGB-Farbe $(200, 50, 100)$ in CMY um. Geben Sie die Werte normalisiert im Bereich $[0, 1]$ an.
+
+> [!solution]- Lösung
+> 
+> Normalisiert: $R = 200/255 \approx 0.784$, $G = 50/255 \approx 0.196$, $B = 100/255 \approx 0.392$
+> 
+> CMY-Umrechnung:
+> - C = 1 - R = 1 - 0.784 = 0.216
+> - M = 1 - G = 1 - 0.196 = 0.804
+> - Y = 1 - B = 1 - 0.392 = 0.608
+
+### Aufgabe 2.2: CMYK-Berechnung
+
+Berechnen Sie die CMYK-Werte für $\text{RGB}(128, 192, 64)$. Geben Sie die Werte in Prozent an.
+
+> [!solution]- Lösung
+> 
+> Normalisiert: $r = 128/255 \approx 0.502$, $g = 192/255 \approx 0.753$, $b = 64/255 \approx 0.251$
+> 
+> $K = 1 - \max(0.502, 0.753, 0.251) = 1 - 0.753 = 0.247$
+> 
+> $C = (1 - 0.502 - 0.247) / (1 - 0.247) = 0.251 / 0.753 \approx 0.333$
+> $M = (1 - 0.753 - 0.247) / (1 - 0.247) = 0 / 0.753 = 0$
+> $Y = (1 - 0.251 - 0.247) / (1 - 0.247) = 0.502 / 0.753 \approx 0.667$
+> 
+> $\text{CMYK}(33.3\%, 0\%, 66.7\%, 24.7\%)$
+
+### Aufgabe 2.3: Schwarzwert in CMYK
+
+Warum wird bei CMYK Schwarz (K) als separate Farbe verwendet, anstatt C, M und Y zu mischen?
+
+> [!solution]- Lösung
+> 
+> 1. Ökonomisch: Schwarze Tinte ist günstiger
+> 2. Qualität: Reines Schwarz sieht besser aus als gemischtes
+> 3. Effizienz: Weniger Tinte, schnelleres Trocknen
+
+### Aufgabe 2.4: CMYK Spezialfall
+
+Bei welchem RGB-Wert wird K in CMYK gleich 1 (100%)?
+
+> [!solution]- Lösung
+> 
+> Bei $\text{RGB}(0, 0, 0)$ - reines Schwarz
+> $K = 1 - \max(0, 0, 0) = 1$
+
+### Aufgabe 2.5: Komplementärfarbe
+
+Was ist die Komplementärfarbe zu Blau im RGB-System?
+
+> [!solution]- Lösung
+> 
+> Gelb (RGB: Rot + Grün) ist die Komplementärfarbe zu Blau.
+> Blau absorbiert Gelb, Gelb absorbiert Blau.
+
+## Thema 3: Bildformate und Datenmenge
+
+### Aufgabe 3.1: Unkomprimierte Datenmenge
+
+Wie viele Megabyte Speicherplatz bräuchten Sie für ein RGB-Bild von 1800px Breite und 1200px Höhe mit 8 Bit Farbtiefe pro Kanal, wenn Sie es nicht komprimieren würden?
+
+> [!solution]- Lösung mit Erklärung
+> 
+> $$ 1800 \times 1200 \times 8\text{" Bit Farbtiefe pro Kanal"}$$
+> $$ 1800 \times 1200 \times 1\text{" Byte Farbtiefe pro Kanal"}$$
+> $$ 1800 \times 1200 \times 3\text{" Byte Farbtiefe"}$$
+> $$ 6'480'000\text{" Byte"}$$
+> $$ \approx6,48 \text{" Megabyte"}$$
+> 
+> ![[explainer-datenmenge-bild.mp4]]
+
+### Aufgabe 3.2: Speicherplatz Graustufen
+
+Ein Graustufenbild mit 2048 x 1536 Pixeln und 8 Bit Farbtiefe belegt unkomprimiert wie viel Speicherplatz?
+
+> [!solution]- Lösung
+> 
+> Graustufenbild = nur 1 Kanal
+> $2048 \times 1536 \times 1$ Byte $= 3'145'728$ Byte $\approx 3.15$ MB
+
+### Aufgabe 3.3: Pixelanzahl berechnen
+
+Ein 4K-Video hat welche Pixelauflösung? Wie viele Pixel sind das insgesamt?
+
+> [!solution]- Lösung
+> 
+> 4K $= 3840 \times 2160$ Pixel
+> Insgesamt: $3840 \times 2160 = 8'294'400$ Pixel $\approx 8.3$ Megapixel
+
+### Aufgabe 3.4: Datenvolumen Video
+
+Ein unkomprimiertes RGB-Video mit $1920 \times 1080$ Pixeln, 8 Bit Farbtiefe pro Kanal und 30 Bilder pro Sekunde: Wie viel Daten fallen pro Sekunde an?
+
+> [!solution]- Lösung
+> 
+> Pro Bild: $1920 \times 1080 \times 3$ Byte $= 6'220'800$ Byte
+> Pro Sekunde: $6'220'800 \times 30 = 186'624'000$ Byte $\approx 186.6$ MB/s
+
+### Aufgabe 3.5: Megapixel berechnen
+
+Eine Kamera nimmt Bilder mit $6000 \times 4000$ Pixeln auf. Wie viele Megapixel hat sie?
+
+> [!solution]- Lösung
+> 
+> $6000 \times 4000 = 24'000'000$ Pixel $= 24$ Megapixel
+
+### Aufgabe 3.6: Speicherplatz HD vs 4K
+
+Um wie viel Mal mehr Speicher braucht ein 4K-Bild ($3840 \times 2160$) im Vergleich zu Full HD ($1920 \times 1080$) bei gleicher Farbtiefe?
+
+> [!solution]- Lösung
+> 
+> 4K: $3840 \times 2160 = 8'294'400$ Pixel
+> Full HD: $1920 \times 1080 = 2'073'600$ Pixel
+> Verhältnis: $8'294'400 / 2'073'600 = 4$
+> 
+> Ein 4K-Bild braucht $4 \times$ mehr Speicher.
+
+### Aufgabe 3.7: Datenmenge Panorama
+
+Ein Panoramabild hat $10'000 \times 3'000$ Pixel, RGB mit 8 Bit pro Kanal. Unkomprimierte Grösse?
+
+> [!solution]- Lösung
+> 
+> $10'000 \times 3'000 \times 3$ Byte $= 90'000'000$ Byte $= 90$ MB
+
+### Aufgabe 3.8: Auflösung erhöhen
+
+Was passiert mit der Datenmenge, wenn Sie die Auflösung eines Bildes in beide Richtungen verdoppeln?
+
+> [!solution]- Lösung
+> 
+> Die Datenmenge vervierfacht sich ($2 \times$ Breite $\times 2 \times$ Höhe $= 4 \times$ Pixel)
+
+### Aufgabe 3.9: Alpha-Kanal
+
+Was ist ein Alpha-Kanal und wie verändert er die Datenmenge eines RGB-Bildes?
+
+> [!solution]- Lösung
+> 
+> Der Alpha-Kanal speichert Transparenzinformationen. Ein RGBA-Bild hat 4 Kanäle statt 3, die Datenmenge erhöht sich daher um 33% (von 3 auf 4 Byte pro Pixel bei 8 Bit Farbtiefe).
+
+### Aufgabe 3.10: Vergrösserung von Bildern
+
+Ein Vektorbild wird aktuell auf Ihrem Handy mit einer Bildschirmauflösung von $2532 \times 1170$ px angezeigt. Nun möchten Sie das gleiche Bild auf ein $25 \times 10$ Meter Poster an die Fassade eines Kinos drucken. Bei einer typischen Druckauflösung von 150dpi gibt das ein Bild von ungefähr $147638 \times 59055$ Pixel ! Was passiert ungefähr mit der Datenmenge? Begründen Sie Ihre Antwort.
+
+> [!solution]- Lösung
+> 
+> Die Datenmenge bleibt gleich, weil sich Vektorgrafiken stufenlos ohne Qualitätsverlust skalieren lassen.
+
+### Aufgabe 3.11: Bit zu Byte
+
+Ein RGB-Bild mit 12 Bit Farbtiefe pro Kanal: Wie viele Byte braucht ein einzelner Pixel?
+
+> [!solution]- Lösung
+> 
+> $12$ Bit $\times 3$ Kanäle $= 36$ Bit
+> $36$ Bit $/ 8 = 4.5$ Byte pro Pixel
+
+## Thema 4: Raster- vs. Vektorgrafiken
+
+### Aufgabe 4.1: Beschriften Sie Raster- und Vektorgrafiken
+
+In diesem Bildausschnitt eines PDFs, beschriften und begründen Sie, welche Elemente auf Rastergrafiken basieren und welche auf Vektorgrafiken.
+
+![[Pasted-image-20231210130329.png]]
+
+> [!solution]- Lösung
+> 
+> - Die Buchstaben des Texts sind Vektorgrafiken.
+> - Das Smiley ist gestochen scharf. Es könnte zwar eine Rastergrafik mit sehr hoher Auflösung sein, aber wahrscheinlich ist es eine Vektorgrafik.
+> - Das verpixelte Bild links unten ist ganz offensichtlich eine Rastergrafik.
+
+### Aufgabe 4.2: Vektorgrafik erkennen
+
+Nennen Sie drei typische Anwendungsfälle, wo Vektorgrafiken sinnvoller sind als Rastergrafiken.
+
+> [!solution]- Lösung
+> 
+> 1. Logos (müssen in verschiedenen Grössen verwendet werden)
+> 2. Schriftarten (müssen scharf skalierbar sein)
+> 3. Technische Zeichnungen (bestehen aus geometrischen Formen)
+
+### Aufgabe 4.3: SVG vs PNG
+
+Für welches Format entscheiden Sie sich für ein Icon, das auf einer Webseite in Grössen von $16 \times 16$ bis $512 \times 512$ Pixel verwendet wird?
+
+> [!solution]- Lösung
+> 
+> SVG - es skaliert verlustfrei und die Dateigrösse bleibt gleich, unabhängig von der Anzeigegrösse.
+
+### Aufgabe 4.4: Benennen Sie
+
+1. Wie heissen die zwei markierten Arme?
+2. Der Pfad als Ganzes ist eine Kurve mit einem bestimmten Namen, wie heisst sie?
+
+![[Pasted-image-20231210131111.png]]
+
+
+> [!solution]- Lösung
+> 
+> Der Pfad ist eine **Bézier-Kurve**, benannt nach dem französischen Renault-Autoingenieur Pierre Bézier. Die Kontrollpunkte von Bézierkurven werden in Vektorgrafikprogrammen als Pfadpunkte (z.B. Nr. 4) mit **Handles** ("Griffen") (die markierten Punkte) angezeigt.
+
+### Aufgabe 4.5: Bézier-Kurve Ordnung
+
+Eine kubische Bézier-Kurve hat wie viele Kontrollpunkte?
+
+> [!solution]- Lösung
+> 
+> 4 Kontrollpunkte (2 Endpunkte und 2 Kontrollpunkte für die Krümmung)
+
+### Aufgabe 4.6: Praktische Dateiformate
+
+Ordnen Sie zu: Welches Format für welchen Zweck?
+- Foto für Webseite
+- Logo für verschiedene Grössen
+- Screenshot mit Text
+- Animation für Web
+
+> [!solution]- Lösung
+> 
+> - Foto für Webseite: JPEG oder WebP (gute Kompression für Fotos)
+> - Logo für verschiedene Grössen: SVG (vektorbasiert, skalierbar)
+> - Screenshot mit Text: PNG (verlustfrei, scharfer Text)
+> - Animation für Web: GIF oder WebP (unterstützen Animation)
+
+### Aufgabe 4.7: Dateigrösse vergleichen
+
+Ein Foto wird einmal als JPEG und einmal als unkomprimiertes BMP gespeichert. Das BMP ist 15 MB gross, das JPEG nur 1.5 MB. Um welchen Faktor wurde komprimiert?
+
+> [!solution]- Lösung
+> 
+> Kompressionsfaktor $= 15\text{ MB} / 1.5\text{ MB} = 10$
+> Das JPEG ist um Faktor 10 komprimiert.
+
+## Thema 5: Kameratechnik und Schriftarten
+
+### Aufgabe 5.1: Bayer-Muster
+
+Warum hat das Bayer-Muster bei Kamerasensoren doppelt so viele grüne wie rote oder blaue Filter?
+
+> [!solution]- Lösung
+> 
+> Das menschliche Auge ist für Grün besonders empfindlich. Grün trägt mehr zur wahrgenommenen Helligkeit bei als Rot oder Blau. Mehr grüne Sensoren verbessern daher die Bildqualität und entsprechen besser der menschlichen Wahrnehmung.
+
+### Aufgabe 5.2: Greenscreen
+
+Warum wird oft ein grüner Hintergrund (Greenscreen) für Filmaufnahmen verwendet?
+
+> [!solution]- Lösung
+> 
+> 1. Kamerasensoren haben mehr grüne Subpixel (Bayer-Muster)
+> 2. Grün kommt selten in Hautfarbe oder Kleidung vor
+> 3. Bessere Trennung vom Vordergrund möglich
+
+### Aufgabe 5.3: TrueType
+
+Was ist der Hauptvorteil von TrueType-Schriftarten gegenüber Bitmap-Schriftarten?
+
+> [!solution]- Lösung
+> 
+> TrueType-Schriftarten sind vektorbasiert und können daher verlustfrei in jeder Grösse dargestellt werden, während Bitmap-Schriftarten bei Vergrösserung pixelig werden.
+
+## Thema 6: Zahlensysteme und Farbnotation
+
+### Aufgabe 6.1: Wannabe-Webdesigner
+
+Sie erhalten ein unvollendetes Projekt von einem möchtegern-coolen Webdesigner übergeben, der seine Farben immer binär aufschreibt, weil in seinem Kopf alle andern sowieso keine Ahnung haben. Sie als professionelle Webdesigner rechnen sich das natürlich sofort ins Hexadezimalsystem um und notieren das mit der gängigen Form #RRGGBB.
+
+| Element | Farbe | Hexadezimal |
+| --- | --- | --- |
+| Hintergrund | 0010'1100 0010'1100 0010'1100 | # |
+| Schrift | 1110'1100 1110'1100 1110'1100 | # |
+| Akzent | 0000'0000 1000'0000 1101'1001 | # |
+
+
+> [!solution]- Lösung mit Erklärung
+> 
+> Hintergrund: `#2C2C2C`
+> Schrift: `#ECECEC`
+> Akzent: `#0080D9`
+> 
+> ![[explainer-webdesigner-bin-hex.mp4]]
+
+### Aufgabe 6.2: Binär zu Dezimal
+
+Ein Farbkanal hat den Binärwert 11001000. Welcher Dezimalwert ist das?
+
+> [!solution]- Lösung
+> 
+> $11001000_2 = 128 + 64 + 8 = 200_{10}$
+
+### Aufgabe 6.3: Hexadezimal interpretieren
+
+Die Farbe $\#\text{FF0080}$ - welche RGB-Werte hat sie und welche Farbe ist das ungefähr?
+
+> [!solution]- Lösung
+> 
+> $\text{FF} = 255$ (Rot), $\text{00} = 0$ (Grün), $\text{80} = 128$ (Blau)
+> $\text{RGB}(255, 0, 128)$ - ein kräftiges Pink/Magenta
