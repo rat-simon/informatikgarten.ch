@@ -6,6 +6,7 @@ title: Prüfungsvorbereitung Inap6
 
 Es gelten die Lernziele der behandelten Lektionen, wenn nichts anderes angegeben ist.
 - Wir haben das "hexadezimale" Zahlensystem nicht besprochen, es ist nicht Teil der Prüfung.
+- Sie dürfen die Annäherung verwenden, dass der Umrechnungsfaktor von Dateigrössen 1'000 sei (z.B. 1 kB = 1'000 Bytes). Tatsächlich ist der Faktor 1'024 wegen dem Binärsystem ($2^{10}$).
 
 ## Thema 1: Farbmodelle und Farbmischung
 
@@ -221,7 +222,7 @@ Um wie viel Mal mehr Speicher braucht ein 4K-Bild im Vergleich zu Full HD bei gl
 
 ### Aufgabe 3.7: Datenmenge Panorama
 
-Ein Panoramabild hat $10'000 \times 3'000$ Pixel, RGB mit 8 Bit pro Kanal. Unkomprimierte Grösse?
+Ein Panoramabild hat $10'000 \times 3'000$ Pixel, RGB mit 8 Bit pro Kanal. Was ist seine unkomprimierte Grösse in MB?
 
 > [!solution]- Lösung
 > 
