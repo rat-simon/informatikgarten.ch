@@ -182,7 +182,7 @@ Ein Graustufenbild mit 2048 x 1536 Pixeln und 8 Bit Farbtiefe belegt unkomprimie
 
 ### Aufgabe 3.3: Pixelanzahl berechnen
 
-Ein 4K-Video hat welche Pixelauflösung? Wie viele Pixel sind das insgesamt?
+Ein 4K-Video hat 3840 x 2160 Pixel. Wie viele Megapixel sind das ungefähr?
 
 > [!solution]- Lösung
 > 
@@ -195,6 +195,7 @@ Ein unkomprimiertes RGB-Video mit $1920 \times 1080$ Pixeln, 8 Bit Farbtiefe pro
 
 > [!solution]- Lösung
 > 
+> Pro RGB-Pixel bei 8 Bit Farbtiefe pro Kanal: $3 \times 8 \text{ Bit} = 3 \times 1 \text{ Byte} = 3 \text{ Byte}$
 > Pro Bild: $1920 \times 1080 \times 3 \text{ Byte} = 6'220'800 \text{ Byte}$
 > Pro Sekunde: $6'220'800 \times 30 = 186'624'000 \text{ Byte} \approx 186.6 \text{ MB/s}$
 
@@ -283,9 +284,9 @@ Nennen Sie drei typische Anwendungsfälle, wo Vektorgrafiken sinnvoller sind als
 > 2. Schriftarten (müssen scharf skalierbar sein)
 > 3. Technische Zeichnungen (bestehen aus geometrischen Formen)
 
-### Aufgabe 4.3: SVG vs PNG
+### Aufgabe 4.3: SVG oder PNG?
 
-Für welches Format entscheiden Sie sich für ein Icon, das auf einer Webseite in Grössen von $16 \times 16$ bis $512 \times 512 \text{ Pixel}$ verwendet wird?
+Für welches Format entscheiden Sie sich für ein Icon mit klaren Farben und Formen, das auf einer Webseite in Grössen von $16 \times 16$ bis $512 \times 512 \text{ Pixel}$ verwendet wird? SVG oder PNG? Begründen Sie Ihre Antwort.
 
 > [!solution]- Lösung
 > 
@@ -310,30 +311,6 @@ Eine kubische Bézier-Kurve hat wie viele Kontrollpunkte?
 > [!solution]- Lösung
 > 
 > 4 Kontrollpunkte (2 Endpunkte und 2 Kontrollpunkte für die Krümmung)
-
-### Aufgabe 4.6: Praktische Dateiformate
-
-Ordnen Sie zu: Welches Format für welchen Zweck?
-- Foto für Webseite
-- Logo für verschiedene Grössen
-- Screenshot mit Text
-- Animation für Web
-
-> [!solution]- Lösung
-> 
-> - Foto für Webseite: JPEG oder WebP (gute Kompression für Fotos)
-> - Logo für verschiedene Grössen: SVG (vektorbasiert, skalierbar)
-> - Screenshot mit Text: PNG (verlustfrei, scharfer Text)
-> - Animation für Web: GIF oder WebP (unterstützen Animation)
-
-### Aufgabe 4.7: Dateigrösse vergleichen
-
-Ein Foto wird einmal als JPEG und einmal als unkomprimierte Rastergrafik gespeichert. Das BMP ist 15 MB gross, das JPEG nur 1.5 MB. Um welchen Faktor wurde komprimiert?
-
-> [!solution]- Lösung
-> 
-> Kompressionsfaktor $= 15\text{ MB} / 1.5\text{ MB} = 10$
-> Das JPEG ist um Faktor 10 komprimiert.
 
 ## Thema 5: Kameratechnik und Schriftarten
 
