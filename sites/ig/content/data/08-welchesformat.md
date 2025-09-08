@@ -53,7 +53,7 @@ Diese Bayer-Muster sind ein Grund für die Verwendung von Greenscreens, die Sie 
 
 > [!solution]- Lösung
 > 
-> Grün ist eine der dominierenden Farben in der Farbfilterung moderner Bildsensoren. Da die Kamera-Sensoren **mehr grüne Sub-Pixel** haben als rote oder blaue, wird das grüne Farbspektrum bei der Bildaufnahme besonders gut abgebildet, was in Rohformat zu einer besseren Bildqualität führt. Dies trägt dazu bei, dass Objekte vor einem grünen Hintergrund **leichter und präziser vom Rest des Bildes getrennt** werden können.
+> Grün ist eine der dominierenden Farben in der Farbfilterung moderner Bildsensoren. Da die Kamera-Sensoren **mehr grüne Sensorzellen** haben als rote oder blaue, wird das grüne Farbspektrum bei der Bildaufnahme besonders gut abgebildet, was in Rohformat zu einer besseren Bildqualität führt. Dies trägt dazu bei, dass Objekte vor einem grünen Hintergrund **leichter und präziser vom Rest des Bildes getrennt** werden können.
 > 
 > Allerdings ist die Wahl des Greenscreens nicht nur auf technische Überlegungen zurückzuführen. Grün ist eine Farbe, **die in der Kleidung oder Haut von Menschen selten vorkommt**, was es einfacher macht, diese vom Hintergrund zu unterscheiden.
 > 

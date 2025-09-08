@@ -139,12 +139,21 @@ Bei welchem RGB-Wert wird K in CMYK gleich 1 (100%)?
 
 ### Aufgabe 2.5: Komplementärfarbe
 
-Was ist die Komplementärfarbe zu Blau im RGB-System?
+Was ist die Komplementärfarbe zu Blau?
 
 > [!solution]- Lösung
 > 
-> Gelb (RGB: Rot + Grün) ist die Komplementärfarbe zu Blau.
+> Gelb ist die Komplementärfarbe zu Blau.
+> 
 > Blau absorbiert Gelb, Gelb absorbiert Blau.
+
+### Aufgabe 2.6: CMYK Fangfrage
+
+Macht folgende CMYK Farbmischung Sinn? Begründen Sie Ihre Antwort, indem Sie sich überlegen, wie viel Cyan für die Mischung nötig wäre. $\text{CMYK}(100\%, 100\%, 100\%, 100\%)$
+
+> [!solution]- Lösung
+> 
+> Diese Mischung macht keinen Sinn. Wenn K = 100%, dann ist die Farbe Schwarz, und die Werte für C, M und Y sind irrelevant, da Schwarz alle Farben absorbiert. Man bräuchte also gar kein Cyan, Magenta oder Gelb.
 
 ## Thema 3: Bildformate und Datenmenge
 
@@ -169,7 +178,7 @@ Ein Graustufenbild mit 2048 x 1536 Pixeln und 8 Bit Farbtiefe belegt unkomprimie
 > [!solution]- Lösung
 > 
 > Graustufenbild = nur 1 Kanal
-> $2048 \times 1536 \times 1$ Byte $= 3'145'728$ Byte $\approx 3.15$ MB
+> $2048 \times 1536 \times 1 \text{Byte} = 3'145'728 \text{Byte} \approx 3.15 \text{MB}$
 
 ### Aufgabe 3.3: Pixelanzahl berechnen
 
@@ -178,7 +187,7 @@ Ein 4K-Video hat welche Pixelauflösung? Wie viele Pixel sind das insgesamt?
 > [!solution]- Lösung
 > 
 > 4K $= 3840 \times 2160$ Pixel
-> Insgesamt: $3840 \times 2160 = 8'294'400$ Pixel $\approx 8.3$ Megapixel
+> Insgesamt: $3840 \times 2160 = 8'294'400 \text{Pixel} \approx 8.3 \text{Megapixel}$
 
 ### Aufgabe 3.4: Datenvolumen Video
 
@@ -186,8 +195,8 @@ Ein unkomprimiertes RGB-Video mit $1920 \times 1080$ Pixeln, 8 Bit Farbtiefe pro
 
 > [!solution]- Lösung
 > 
-> Pro Bild: $1920 \times 1080 \times 3$ Byte $= 6'220'800$ Byte
-> Pro Sekunde: $6'220'800 \times 30 = 186'624'000$ Byte $\approx 186.6$ MB/s
+> Pro Bild: $1920 \times 1080 \times 3 \text{ Byte} = 6'220'800 \text{ Byte}$
+> Pro Sekunde: $6'220'800 \times 30 = 186'624'000 \text{ Byte} \approx 186.6 \text{ MB/s}$
 
 ### Aufgabe 3.5: Megapixel berechnen
 
@@ -195,11 +204,11 @@ Eine Kamera nimmt Bilder mit $6000 \times 4000$ Pixeln auf. Wie viele Megapixel 
 
 > [!solution]- Lösung
 > 
-> $6000 \times 4000 = 24'000'000$ Pixel $= 24$ Megapixel
+> $6000 \times 4000 = 24'000'000 \text{ Pixel} = 24 \text{ Megapixel}$
 
 ### Aufgabe 3.6: Speicherplatz HD vs 4K
 
-Um wie viel Mal mehr Speicher braucht ein 4K-Bild ($3840 \times 2160$) im Vergleich zu Full HD ($1920 \times 1080$) bei gleicher Farbtiefe?
+Um wie viel Mal mehr Speicher braucht ein 4K-Bild im Vergleich zu Full HD bei gleicher Farbtiefe? ($4K: 3840 \times 2160$ vs. $\text{Full HD}: 1920 \times 1080$)
 
 > [!solution]- Lösung
 > 
@@ -215,7 +224,7 @@ Ein Panoramabild hat $10'000 \times 3'000$ Pixel, RGB mit 8 Bit pro Kanal. Unkom
 
 > [!solution]- Lösung
 > 
-> $10'000 \times 3'000 \times 3$ Byte $= 90'000'000$ Byte $= 90$ MB
+> $10'000 \times 3'000 \times 3 \text{ Byte} = 90'000'000 \text{ Byte} = 90 \text{ MB}$
 
 ### Aufgabe 3.8: Auflösung erhöhen
 
@@ -223,7 +232,7 @@ Was passiert mit der Datenmenge, wenn Sie die Auflösung eines Bildes in beide R
 
 > [!solution]- Lösung
 > 
-> Die Datenmenge vervierfacht sich ($2 \times$ Breite $\times 2 \times$ Höhe $= 4 \times$ Pixel)
+> Die Datenmenge vervierfacht sich $(2 \times \text{Breite} \times 2 \times \text{Höhe} = 4 \times \text{Pixel})$
 
 ### Aufgabe 3.9: Alpha-Kanal
 
@@ -235,7 +244,7 @@ Was ist ein Alpha-Kanal und wie verändert er die Datenmenge eines RGB-Bildes?
 
 ### Aufgabe 3.10: Vergrösserung von Bildern
 
-Ein Vektorbild wird aktuell auf Ihrem Handy mit einer Bildschirmauflösung von $2532 \times 1170$ px angezeigt. Nun möchten Sie das gleiche Bild auf ein $25 \times 10$ Meter Poster an die Fassade eines Kinos drucken. Bei einer typischen Druckauflösung von 150dpi gibt das ein Bild von ungefähr $147638 \times 59055$ Pixel ! Was passiert ungefähr mit der Datenmenge? Begründen Sie Ihre Antwort.
+Ein Vektorbild wird aktuell auf Ihrem Handy mit einer Bildschirmauflösung von $2532 \times 1170 \text{ px}$ angezeigt. Nun möchten Sie das gleiche Bild auf ein $25 \times 10 \text{ Meter}$ Poster an die Fassade eines Kinos drucken. Bei einer typischen Druckauflösung von $150\text{dpi}$ gibt das ein Bild von ungefähr $147638 \times 59055 \text{ Pixel}$ ! Was passiert ungefähr mit der Datenmenge? Begründen Sie Ihre Antwort.
 
 > [!solution]- Lösung
 > 
@@ -247,8 +256,8 @@ Ein RGB-Bild mit 12 Bit Farbtiefe pro Kanal: Wie viele Byte braucht ein einzelne
 
 > [!solution]- Lösung
 > 
-> $12$ Bit $\times 3$ Kanäle $= 36$ Bit
-> $36$ Bit $/ 8 = 4.5$ Byte pro Pixel
+> $12 \text{ Bit} \times 3 \text{ Kanäle} = 36 \text{ Bit}$
+> $36 \text{ Bit} / 8 = 4.5 \text{ Byte pro Pixel}$
 
 ## Thema 4: Raster- vs. Vektorgrafiken
 
@@ -276,7 +285,7 @@ Nennen Sie drei typische Anwendungsfälle, wo Vektorgrafiken sinnvoller sind als
 
 ### Aufgabe 4.3: SVG vs PNG
 
-Für welches Format entscheiden Sie sich für ein Icon, das auf einer Webseite in Grössen von $16 \times 16$ bis $512 \times 512$ Pixel verwendet wird?
+Für welches Format entscheiden Sie sich für ein Icon, das auf einer Webseite in Grössen von $16 \times 16$ bis $512 \times 512 \text{ Pixel}$ verwendet wird?
 
 > [!solution]- Lösung
 > 
@@ -319,7 +328,7 @@ Ordnen Sie zu: Welches Format für welchen Zweck?
 
 ### Aufgabe 4.7: Dateigrösse vergleichen
 
-Ein Foto wird einmal als JPEG und einmal als unkomprimiertes BMP gespeichert. Das BMP ist 15 MB gross, das JPEG nur 1.5 MB. Um welchen Faktor wurde komprimiert?
+Ein Foto wird einmal als JPEG und einmal als unkomprimierte Rastergrafik gespeichert. Das BMP ist 15 MB gross, das JPEG nur 1.5 MB. Um welchen Faktor wurde komprimiert?
 
 > [!solution]- Lösung
 > 
@@ -338,56 +347,9 @@ Warum hat das Bayer-Muster bei Kamerasensoren doppelt so viele grüne wie rote o
 
 ### Aufgabe 5.2: Greenscreen
 
-Warum wird oft ein grüner Hintergrund (Greenscreen) für Filmaufnahmen verwendet?
+Warum wird oft ein grüner Hintergrund (Greenscreen) für Filmaufnahmen verwendet? Nennen Sie zwei gute Gründe.
 
 > [!solution]- Lösung
 > 
-> 1. Kamerasensoren haben mehr grüne Subpixel (Bayer-Muster)
-> 2. Grün kommt selten in Hautfarbe oder Kleidung vor
-> 3. Bessere Trennung vom Vordergrund möglich
-
-### Aufgabe 5.3: TrueType
-
-Was ist der Hauptvorteil von TrueType-Schriftarten gegenüber Bitmap-Schriftarten?
-
-> [!solution]- Lösung
-> 
-> TrueType-Schriftarten sind vektorbasiert und können daher verlustfrei in jeder Grösse dargestellt werden, während Bitmap-Schriftarten bei Vergrösserung pixelig werden.
-
-## Thema 6: Zahlensysteme und Farbnotation
-
-### Aufgabe 6.1: Wannabe-Webdesigner
-
-Sie erhalten ein unvollendetes Projekt von einem möchtegern-coolen Webdesigner übergeben, der seine Farben immer binär aufschreibt, weil in seinem Kopf alle andern sowieso keine Ahnung haben. Sie als professionelle Webdesigner rechnen sich das natürlich sofort ins Hexadezimalsystem um und notieren das mit der gängigen Form #RRGGBB.
-
-| Element | Farbe | Hexadezimal |
-| --- | --- | --- |
-| Hintergrund | 0010'1100 0010'1100 0010'1100 | # |
-| Schrift | 1110'1100 1110'1100 1110'1100 | # |
-| Akzent | 0000'0000 1000'0000 1101'1001 | # |
-
-
-> [!solution]- Lösung mit Erklärung
-> 
-> Hintergrund: `#2C2C2C`
-> Schrift: `#ECECEC`
-> Akzent: `#0080D9`
-> 
-> ![[explainer-webdesigner-bin-hex.mp4]]
-
-### Aufgabe 6.2: Binär zu Dezimal
-
-Ein Farbkanal hat den Binärwert 11001000. Welcher Dezimalwert ist das?
-
-> [!solution]- Lösung
-> 
-> $11001000_2 = 128 + 64 + 8 = 200_{10}$
-
-### Aufgabe 6.3: Hexadezimal interpretieren
-
-Die Farbe $\#\text{FF0080}$ - welche RGB-Werte hat sie und welche Farbe ist das ungefähr?
-
-> [!solution]- Lösung
-> 
-> $\text{FF} = 255$ (Rot), $\text{00} = 0$ (Grün), $\text{80} = 128$ (Blau)
-> $\text{RGB}(255, 0, 128)$ - ein kräftiges Pink/Magenta
+> 1. Kamerasensoren haben mehr grüne Sensorzellen (Bayer-Muster), also eine bessere Auflösung für Grün
+> 2. Grün kommt selten in Hautfarbe oder Kleidung vor, was die Trennung erleichtert
