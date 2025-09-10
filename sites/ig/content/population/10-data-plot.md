@@ -26,9 +26,14 @@ Offensichtlich zeigt der Verlauf des Wolfsbestandes am ehesten eine **exponentie
 
 > [!solution]- Lösung
 > 
-> Sie haben zwei Optionen:
-> - Die Daten erst ab dem Jahr 1998 darstellen, da sind alle Wolfszahlen positiv
-> - Die Daten in den Jahren mit dem Bestand 0 (1994 und 1997) leer zu lassen
+> Sie hätten zwei Optionen:
+> - Die Daten erst ab dem Jahr 1998 darstellen, da sind alle Wolfszahlen positiv.
+> - Die Daten in den Jahren mit dem Bestand 0 (1994 und 1997) leer zu lassen.
+> 
+> Ich empfehle Ihnen, dass Sie eine separate Spalte "Bereinigter Wolfsbestand" machen. Dort können Sie mit der Funktion =WENN() die Nullwerteabfangen und durch "nicht verfügbar" ersetzen mit NV().
+> ```excel
+> =WENN(B2=0;NV();B2)
+> ```
 
 4. Mit den bereinigten Daten lässt sich nun auch die exponentielle Trendlinie auswählen. Blenden Sie noch die Annäherungsformel für die Daten und den sogenannten R²-Wert, die Sie unter „Weitere Optionen...“ finden.
 ![[10-data-plot-2025-09-03-11.32.00.excalidraw]]
