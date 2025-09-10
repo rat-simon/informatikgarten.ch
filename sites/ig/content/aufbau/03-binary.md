@@ -15,3 +15,4 @@ title: Binärsystem
 ## Stellenwerte im Binärsystem
 
 ![[aufbau-binary-stellenwert.mp4]]
+

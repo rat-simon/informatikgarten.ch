@@ -9,6 +9,7 @@ export default {
       type: 'separator',
       title: 'Writings'
     },
+    europe: {},
     venezuela: {},
     usa: { title: 'USA' }
 }

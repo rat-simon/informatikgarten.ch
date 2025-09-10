@@ -45,6 +45,9 @@ Sie kennen Turtle so, dass sich automatisch ein Fenster öffnet. Bei diesem Spie
 
 ```python
 import turtle
+import os
+
+os.chdir(os.path.dirname(__file__))
 
 # Wir kontrollieren das Fenster selbst
 window = turtle.Screen()
@@ -56,6 +59,8 @@ window.title("Turtle Invaders") # Titel des Fensters
 turtle.done()
 ```
 
+Die Zeilen `import os` und `os.chdir(os.path.dirname(__file__))` sorgen dafür, dass das **Arbeitsverzeichnis** auf den Ordner gesetzt wird, in dem sich die Python-Datei befindet. Das ist wichtig, damit Python später Bilder wie `spaceship.gif` im richtigen Ordner findet, auch wenn das Programm aus einem anderen Verzeichnis gestartet wird.
+
 ### Raumschiff
 
 Jetzt bauen wir unser Raumschiff. Dazu können Sie sich ein gif-Bild im Internet suchen oder dieses Beispielbild verwenden. 
@@ -63,23 +68,26 @@ Jetzt bauen wir unser Raumschiff. Dazu können Sie sich ein gif-Bild im Internet
 ![[spaceship.gif]]
 Speichern Sie das Bild als `spaceship.gif` in Ihrem Projektordner ab. Wir fügen das Schiff wie folgt als Turtle ins Programm ein.
 
-```python
-import turtle
+```diff
+  import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
-# Wir kontrollieren das Fenster selbst
-window = turtle.Screen() # Das Fenster kreieren
-window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-window.bgcolor("#202020") # Hintergrund in Hex-RGB
-window.title("Turtle Invaders") # Titel des Fensters
+  # Wir kontrollieren das Fenster selbst
+  window = turtle.Screen() # Das Fenster kreieren
+  window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+  window.bgcolor("#202020") # Hintergrund in Hex-RGB
+  window.title("Turtle Invaders") # Titel des Fensters
 
-# Unser Raumschiff  # [!code ++]
-ship = turtle.Turtle() # [!code ++]
-turtle.register_shape('spaceship.gif') # Das Bild laden und registrieren  # [!code ++]
-ship.shape('spaceship.gif') # Das Bild der Turtle zuweisen  # [!code ++]
-ship.penup() # Das Raumschiff soll nichts zeichnen  # [!code ++]
++ # Unser Raumschiff
++ ship = turtle.Turtle()
++ turtle.register_shape('spaceship.gif') # Das Bild laden und registrieren
++ ship.shape('spaceship.gif') # Das Bild der Turtle zuweisen
++ ship.penup() # Das Raumschiff soll nichts zeichnen
 
-# Temporär, damit es sich nicht gleich wieder schliesst
-turtle.done()
+  # Temporär, damit es sich nicht gleich wieder schliesst
+  turtle.done()
 ```
 
 
@@ -126,31 +134,34 @@ Jetzt möchten wir das Raumschiff am unteren Rand positionieren, 5% der Fensterh
  > 
  > Das hilft uns, die Ränder und den unteren Rand zu definieren.
  > 
-> ```python
-> import turtle
+> ```diff
+>   import turtle
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
-> # Wir kontrollieren das Fenster selbst
-> window = turtle.Screen()
-> window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-> window.bgcolor("#202020") # Hintergrund in Hex-RGB
-> window.title("Turtle Invaders") # Titel des Fensters
+>   # Wir kontrollieren das Fenster selbst
+>   window = turtle.Screen()
+>   window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+>   window.bgcolor("#202020") # Hintergrund in Hex-RGB
+>   window.title("Turtle Invaders") # Titel des Fensters
 > 
-> # Einige Konstanten für das Fenster, die uns hilfreich sein werden  # [!code ++]
-> LEFT = -window.window_width() / 2  # [!code ++]
-> RIGHT = window.window_width() / 2  # [!code ++]
-> TOP = window.window_height() / 2  # [!code ++]
-> BOTTOM = -window.window_height() / 2  # [!code ++]
-> GROUND = 0.9 * BOTTOM  # [!code ++]
+> + # Einige Konstanten für das Fenster, die uns hilfreich sein werden
+> + LEFT = -window.window_width() / 2
+> + RIGHT = window.window_width() / 2
+> + TOP = window.window_height() / 2
+> + BOTTOM = -window.window_height() / 2
+> + GROUND = 0.9 * BOTTOM
 > 
-> # Unser Raumschiff
-> ship = turtle.Turtle()
-> turtle.register_shape('spaceship.gif')
-> ship.shape('spaceship.gif')
-> ship.penup() # Das Raumschiff soll nichts zeichnen
-> ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein  # [!code ++]
+>   # Unser Raumschiff
+>   ship = turtle.Turtle()
+>   turtle.register_shape('spaceship.gif')
+>   ship.shape('spaceship.gif')
+>   ship.penup() # Das Raumschiff soll nichts zeichnen
+> + ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
 > 
-> # Temporär, damit es sich nicht gleich wieder schliesst
-> turtle.done()
+>   # Temporär, damit es sich nicht gleich wieder schliesst
+>   turtle.done()
 > ```
 
 ### Animationen kontrollieren
@@ -159,35 +170,38 @@ Sie werden merken, dass Ihr Schiff zu Beginn eine Weile braucht, bis es den unte
 
 Wir lösen das, indem wir die automatischen Animationen mit `window.tracer(0)` komplett abstellen und manuell `window.update()` auslösen, wenn wir ein neues Bild berechnet haben wollen.
 
-```python
-import turtle
+```diff
+  import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
-# Wir kontrollieren das Fenster selbst
-window = turtle.Screen()
-window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-window.bgcolor("#202020") # Hintergrund in Hex-RGB
-window.title("Turtle Invaders") # Titel des Fensters
-window.tracer(0)  # [!code ++]
+  # Wir kontrollieren das Fenster selbst
+  window = turtle.Screen()
+  window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+  window.bgcolor("#202020") # Hintergrund in Hex-RGB
+  window.title("Turtle Invaders") # Titel des Fensters
++ window.tracer(0)
 
-# Einige Konstanten für das Fenster, die uns hilfreich sein werden
-LEFT = -window.window_width() / 2
-RIGHT = window.window_width() / 2
-TOP = window.window_height() / 2
-BOTTOM = -window.window_height() / 2
-GROUND = 0.9 * BOTTOM
+  # Einige Konstanten für das Fenster, die uns hilfreich sein werden
+  LEFT = -window.window_width() / 2
+  RIGHT = window.window_width() / 2
+  TOP = window.window_height() / 2
+  BOTTOM = -window.window_height() / 2
+  GROUND = 0.9 * BOTTOM
 
-# Unser Raumschiff
-ship = turtle.Turtle()
-turtle.register_shape('spaceship.gif')
-ship.shape('spaceship.gif')
-ship.penup() # Das Raumschiff soll nichts zeichnen
-ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
+  # Unser Raumschiff
+  ship = turtle.Turtle()
+  turtle.register_shape('spaceship.gif')
+  ship.shape('spaceship.gif')
+  ship.penup() # Das Raumschiff soll nichts zeichnen
+  ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
 
-# Temporär, damit es sich nicht gleich wieder schliesst  # [!code --]
-turtle.done()  # [!code --]
-running = True  # [!code ++]
-while running:  # [!code ++]
-  window.update()  # [!code ++]
+- # Temporär, damit es sich nicht gleich wieder schliesst
+- turtle.done()
++ running = True
++ while running:
++   window.update()
 ```
 
 ## Steuerung des Raumschiffs
@@ -235,41 +249,44 @@ window.listen()
 
 Um innerhalb einer Funktion auf eine globale Variable im Hauptprogramm zuzugreifen und sie zu verändern, muss man das Schlagwort `global` verwenden. (Hier das [geänderte Beispiel auf Python Tutor](https://pythontutor.com/render.html#code=def%20quit%28%29%3A%0A%20%20%20%20global%20running%0A%20%20%20%20print%28%22quit%28%29%20wird%20ausgef%C3%BChrt!%22%29%0A%20%20%20%20running%20%3D%20False%0A%20%20%20%20print%28%22running%20in%20quit%28%29%20ist%22,%20running%29%0A%0Arunning%20%3D%20True%0Aiteration%20%3D%200%0Awhile%20running%20and%20iteration%20%3C%2010%3A%0A%20%20%20%20iteration%20%2B%3D%201%0A%20%20%20%20print%28%22Das%20Programm%20l%C3%A4uft%20und%20running%20ist%22,%20running%29%0A%20%20%20%20quit%28%29&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false).)
 
-```python
-import turtle
+```diff
+  import turtle
++ import os
++ 
++ os.chdir(os.path.dirname(__file__))
 
-# Wir kontrollieren das Fenster selbst
-window = turtle.Screen()
-window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-window.bgcolor("#202020") # Hintergrund in Hex-RGB
-window.title("Turtle Invaders") # Titel des Fensters
-window.tracer(0)
+  # Wir kontrollieren das Fenster selbst
+  window = turtle.Screen()
+  window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+  window.bgcolor("#202020") # Hintergrund in Hex-RGB
+  window.title("Turtle Invaders") # Titel des Fensters
+  window.tracer(0)
 
-# Einige Konstanten für das Fenster, die uns hilfreich sein werden
-LEFT = -window.window_width() / 2
-RIGHT = window.window_width() / 2
-TOP = window.window_height() / 2
-BOTTOM = -window.window_height() / 2
-GROUND = 0.9 * BOTTOM
+  # Einige Konstanten für das Fenster, die uns hilfreich sein werden
+  LEFT = -window.window_width() / 2
+  RIGHT = window.window_width() / 2
+  TOP = window.window_height() / 2
+  BOTTOM = -window.window_height() / 2
+  GROUND = 0.9 * BOTTOM
 
-# Unser Raumschiff
-ship = turtle.Turtle()
-turtle.register_shape('spaceship.gif')
-ship.shape('spaceship.gif')
-ship.penup() # Das Raumschiff soll nichts zeichnen
-ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
+  # Unser Raumschiff
+  ship = turtle.Turtle()
+  turtle.register_shape('spaceship.gif')
+  ship.shape('spaceship.gif')
+  ship.penup() # Das Raumschiff soll nichts zeichnen
+  ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
 
-# Steuerung  # [!code ++]
-def quit():  # [!code ++]
-    global running  # [!code ++]
-    running = False  # [!code ++]
-  # [!code ++]
-window.onkeypress(quit, "q")  # [!code ++]
-window.listen()  # [!code ++]
++ # Steuerung 
++ def quit():
++     global running
++     running = False
++ 
++ window.onkeypress(quit, "q")
++ window.listen()
 
-running = True
-while running:
-  window.update()
+  running = True
+  while running:
+    window.update()
 ```
 
 ### Links und rechts steuern
@@ -284,52 +301,55 @@ while running:
 
 > [!success]- Mögliche erste Lösung
 > 
-> ```python
-> import turtle
+> ```diff
+>   import turtle
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
-> # Wir kontrollieren das Fenster selbst
-> window = turtle.Screen()
-> window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-> window.bgcolor("#202020") # Hintergrund in Hex-RGB
-> window.title("Turtle Invaders") # Titel des Fensters
-> window.tracer(0)
+>   # Wir kontrollieren das Fenster selbst
+>   window = turtle.Screen()
+>   window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+>   window.bgcolor("#202020") # Hintergrund in Hex-RGB
+>   window.title("Turtle Invaders") # Titel des Fensters
+>   window.tracer(0)
 > 
-> # Einige Konstanten für das Fenster, die uns hilfreich sein werden
-> LEFT = -window.window_width() / 2
-> RIGHT = window.window_width() / 2
-> TOP = window.window_height() / 2
-> BOTTOM = -window.window_height() / 2
-> GROUND = 0.9 * BOTTOM
+>   # Einige Konstanten für das Fenster, die uns hilfreich sein werden
+>   LEFT = -window.window_width() / 2
+>   RIGHT = window.window_width() / 2
+>   TOP = window.window_height() / 2
+>   BOTTOM = -window.window_height() / 2
+>   GROUND = 0.9 * BOTTOM
 > 
-> # Unser Raumschiff
-> SHIP_STEP = 10 # Schrittweite für das Raumschiff  # [!code ++]
-> ship = turtle.Turtle()
-> turtle.register_shape('spaceship.gif')
-> ship.shape('spaceship.gif')
-> ship.penup() # Das Raumschiff soll nichts zeichnen
-> ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
+>   # Unser Raumschiff
+> + SHIP_STEP = 10 # Schrittweite für das Raumschiff
+>   ship = turtle.Turtle()
+>   turtle.register_shape('spaceship.gif')
+>   ship.shape('spaceship.gif')
+>   ship.penup() # Das Raumschiff soll nichts zeichnen
+>   ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
 > 
-> # Steuerung
-> def quit():
->     global running
->     running = False
+>   # Steuerung
+>   def quit():
+>       global running
+>       running = False
 > 
-> def move_left():  # [!code ++]
->    new_x = ship.xcor() - SHIP_STEP  # [!code ++]
->    ship.setx(new_x)  # [!code ++]
->   # [!code ++]
-> def move_right():  # [!code ++]
->    new_x = ship.xcor() + SHIP_STEP  # [!code ++]
->    ship.setx(new_x)  # [!code ++]
+> + def move_left():
+> +    new_x = ship.xcor() - SHIP_STEP
+> +    ship.setx(new_x)
+> + 
+> + def move_right():
+> +    new_x = ship.xcor() + SHIP_STEP
+> +    ship.setx(new_x)
 > 
-> window.onkeypress(quit, "q")
-> window.onkeypress(move_left, "Left")  # [!code ++]
-> window.onkeypress(move_right, "Right")  # [!code ++]
-> window.listen()
+>   window.onkeypress(quit, "q")
+> + window.onkeypress(move_left, "Left")
+> + window.onkeypress(move_right, "Right")
+>   window.listen()
 > 
-> running = True
-> while running:
->   window.update()
+>   running = True
+>   while running:
+>     window.update()
 > ```
 
 Probleme, die Sie sehr wahrscheinlich überwinden möchten, sind folgende:
@@ -339,64 +359,67 @@ Probleme, die Sie sehr wahrscheinlich überwinden möchten, sind folgende:
 
 > [!success]- Eine Lösung ohne diese Probleme
 > 
-> ```python
-> import turtle
-> import time  # [!code ++]
+> ```diff
+>   import turtle
+> + import time
+> + import os
+> + 
+> + os.chdir(os.path.dirname(__file__))
 > 
-> # Wir kontrollieren das Fenster selbst
-> window = turtle.Screen()
-> window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
-> window.bgcolor("#202020") # Hintergrund in Hex-RGB
-> window.title("Turtle Invaders") # Titel des Fensters
-> window.tracer(0)
+>   # Wir kontrollieren das Fenster selbst
+>   window = turtle.Screen()
+>   window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm
+>   window.bgcolor("#202020") # Hintergrund in Hex-RGB
+>   window.title("Turtle Invaders") # Titel des Fensters
+>   window.tracer(0)
 > 
-> # Einige Konstanten für das Fenster, die uns hilfreich sein werden
-> LEFT = -window.window_width() / 2
-> RIGHT = window.window_width() / 2
-> TOP = window.window_height() / 2
-> BOTTOM = -window.window_height() / 2
-> GROUND = 0.9 * BOTTOM
+>   # Einige Konstanten für das Fenster, die uns hilfreich sein werden
+>   LEFT = -window.window_width() / 2
+>   RIGHT = window.window_width() / 2
+>   TOP = window.window_height() / 2
+>   BOTTOM = -window.window_height() / 2
+>   GROUND = 0.9 * BOTTOM
 > 
-> # Unser Raumschiff
-> SHIP_STEP = 1 # Schrittweite für das Raumschiff  # [!code ++]
-> ship_direction = 0 # -1 = nach links, 0 = halt, +1 = nach rechts  # [!code ++]
-> ship = turtle.Turtle()
-> turtle.register_shape('spaceship.gif')
-> ship.shape('spaceship.gif')
-> ship.penup() # Das Raumschiff soll nichts zeichnen
-> ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
+>   # Unser Raumschiff
+> + SHIP_STEP = 1 # Schrittweite für das Raumschiff
+> + ship_direction = 0 # -1 = nach links, 0 = halt, +1 = nach rechts
+>   ship = turtle.Turtle()
+>   turtle.register_shape('spaceship.gif')
+>   ship.shape('spaceship.gif')
+>   ship.penup() # Das Raumschiff soll nichts zeichnen
+>   ship.setposition(0, GROUND) # Das Raumschiff soll unten im Bild sein
 > 
-> # Steuerung
-> def quit():
->     global running
->     running = False
+>   # Steuerung
+>   def quit():
+>       global running
+>       running = False
 > 
-> def move_left():  # [!code ++]
->    global ship_direction  # [!code ++]
->    ship_direction = -1  # [!code ++]
->   # [!code ++]
-> def move_right():  # [!code ++]
->    global ship_direction  # [!code ++]
->    ship_direction = 1  # [!code ++]
->     # [!code ++]
-> def stop_moving():  # [!code ++]
->    global ship_direction  # [!code ++]
->    ship_direction = 0  # [!code ++]
+> + def move_left():
+> +    global ship_direction
+> +    ship_direction = -1
+> + 
+> + def move_right():
+> +    global ship_direction
+> +    ship_direction = 1
+> + 
+> + def stop_moving():
+> +    global ship_direction
+> +    ship_direction = 0
 > 
-> window.onkeypress(quit, "q")
-> window.onkeypress(move_left, "Left")  # [!code ++]
-> window.onkeypress(move_right, "Right")  # [!code ++]
-> window.onkeyrelease(stop_moving, "Left")  # [!code ++]
-> window.onkeyrelease(stop_moving, "Right")  # [!code ++]
-> window.listen()
+>   window.onkeypress(quit, "q")
+> + window.onkeypress(move_left, "Left")
+> + window.onkeypress(move_right, "Right")
+> + window.onkeyrelease(stop_moving, "Left")
+> + window.onkeyrelease(stop_moving, "Right")
+>   window.listen()
 > 
-> running = True
-> while running:
->   new_x = ship.xcor() + SHIP_STEP * ship_direction  # [!code ++]
->   if LEFT < new_x < RIGHT:  # [!code ++]
->     ship.setx(new_x)  # [!code ++]
->   window.update()
->   time.sleep(.001) # Temporäre Lösung, um die Animation zu verlangsamen  # [!code ++]
+>   running = True
+>   while running:
+> +   new_x = ship.xcor() + SHIP_STEP * ship_direction
+> +   if LEFT < new_x < RIGHT:
+> +     ship.setx(new_x)
+>     window.update()
+> +   time.sleep(.001) # Temporäre Lösung, um die Animation zu verlangsamen
 > ```
 
 ### Challenge: Mögliche Erweiterungen

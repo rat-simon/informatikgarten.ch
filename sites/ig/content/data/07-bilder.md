@@ -8,7 +8,7 @@ title: Von Farben zu ganzen Bildern
 > 
 > - Sie können die **unkomprimierte Datenmenge für ein RGB-Bild** mit einer gewissen Auflösung und Farbtiefe berechnen.
 > - Sie wissen, wie sich die Berechnung verändert, wenn es ein Graustufen-Bild wäre, oder wenn ein Alpha-Kanal hinzugefügt würde.
-> - Sie können die Prinzipien einer **Rastergrafik** und einer **Vektorgrafik** voneinander unterscheiden.
+> - Sie können die Prinzipien einer **Rastergrafik** und einer **Vektorgrafik** voneinander unterscheiden und wissen, welchen Familien die Dateiformate **JPEG**, **PNG**, **GIF** und **SVG** angehören.
 > - Sie verstehen die Begriffe **Pfadpunkt** und **Handler** bei **Bézier-Kurven** in Vektorgrafik-Programmen.
 
 Stellen Sie sich vor: Bits könnten in Ihrem Speicher könnten ja direkt einzelne Farben sein. 0 wäre schwarz, 1 wäre weiss. 
@@ -94,6 +94,7 @@ Ich habe Ihnen das in Blender visualisiert: Jeder kleine Würfel entspricht eine
 ### Demonstration: Was bringen 14 bit Farbtiefe bei einer Kamera?
 
 ![[bitdepth_demo.mov]]
+
 ## Vektorgrafiken
 
 Wir haben bislang von Rastergrafiken gesprochen, die ein Bild in Pixel aufteilen. Der andere Haupttyp von Grafiken sind die sogenannten **Vektorgrafiken**.

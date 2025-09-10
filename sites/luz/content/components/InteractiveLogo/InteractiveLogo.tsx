@@ -11,8 +11,8 @@ declare let confetti: any
 
 const InteractiveLogoComponent = () => {
     const currentRiddleName = 'firstriddle'
-    const textUnsolved = "Du hast das Rätsel gelöst! 🥳 Viel Spass beim Stöbern auf luz.to."
-    const textSolved = "Stellen Sie doch bitte die Lichter des Logos an... 😎"
+    const textUnsolved = "You solved the riddle! 🥳 Have fun browsing luz.to."
+    const textSolved = "Please turn on the lights, would you...? 😎"
 
     const [solvedBefore, setSolvedBefore] = useState(
         localStorage.getItem(currentRiddleName) !== null

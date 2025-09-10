@@ -22,7 +22,7 @@ Es gelten die Lernziele der behandelten Lektionen, sofern hier nichts anderes an
 
 [[06-bilder|Kapitel über Bilder (Rastergrafiken & Vektorgrafiken)]]
 
-[[07-welchesformat|Kapitel, wann welches Grafikformat Sinn macht]]
+[[08-welchesformat|Kapitel, wann welches Grafikformat Sinn macht]]
 - Wir haben den Inhalt anders abgedeckt, aber die Inhalte auf Informatikgarten zu Kameras und Schriftarten haben wir *nicht* angeschaut und sie sind nicht Teil der Prüfung.
 
 ## Syntax und Semantik

@@ -28,12 +28,6 @@ Wir verwenden dazu ein Video von einem Wissenschafts-Youtuber, den ich Ihnen wä
 > 
 > Der Sinn und Zweck ist, dass Sie selbst versuchen, herauszufinden, wie das funktioniert. Schauen Sie sich als Hilfsmittel zum Beispiel [die Spezifikation auf Wikipedia](https://en.wikipedia.org/wiki/International_Article_Number#Binary_encoding_of_data_digits_into_EAN-13_barcode) an. 
 
-## Erklärvideo
-
-Wie man einen Barcode von A bis Z kreiert, ist in diesem Video erklärt.
-
-![[barcode-drawing2.mp4]]
-
 ## Aufbau eines Barcodes
 
 Der meistverbreitete Barcode, den Sie in Läden finden, heisst **EAN-13**. Das steht für "European Article Number", ist aber als "internationale Artikelnummer" bekannt. EAN-13 hat 13 Zahlen und ist eine Weiterentwicklung des "Universal Product Codes" UPC, der nur 12 Zahlen hatte.

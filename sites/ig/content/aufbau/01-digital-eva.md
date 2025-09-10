@@ -23,14 +23,9 @@ Beginnen wir weit vorne: Ein Computer ist im Grunde eine **Datenverarbeitungsmas
 > 
 > ![[logicboard-top-eva.excalidraw.md]]
 
-## Wie wollen wir Zahlen repräsentieren?
-
-> [!discuss] Diskutieren Sie
-> 
-> Wir wollen ja einen Rechner bauen. Aber wie wollen wir Zahlen repräsentieren? Überlegen Sie sich im Speziellen die **Ausgabe**: Wie könnten wir mit Lämpchen Zahlen repräsentieren?
 ## Analoge und digitale Signale
 
-Ein **analoges** Signal ist ein Signal, das **unendlich viele Werte innerhalb eines Bereichs** annehmen kann und **keine klaren Abgrenzungen**. Das Signal kann immer ein bisschen mehr oder ein bisschen weniger stark sein und man kann zwei Zustände ohne Probleme **mischen**.
+Ein **analoges** Signal ist ein Signal, das **unendlich viele Werte innerhalb eines Bereichs** annehmen kann und **keine klaren Abgrenzungen** hat. Das Signal kann immer ein bisschen mehr oder ein bisschen weniger stark sein und man kann zwei Zustände ohne Probleme **mischen**.
 
 Ein Beispiel wäre ein **Lichtdimmer** bei dem die Helligkeit jede beliebige Stufe zwischen komplett aus und maximal hell einnehmen kann. Viele Dinge in der Natur sind analog: z.B. **die Lautstärke oder die Höhe von Tönen**. Eher schwierig für analoge Signale sind Dinge mit klaren Grenzen: z.B. **exakte Zahlen** (1,2.5,132...) und **Buchstaben**. Der Nachteil eines analogen Signals ist, dass es beim Kopieren oder Weiterleiten sehr **anfällig auf Störungen** ist.
 
@@ -53,10 +48,3 @@ Wir werden also ein **digitales Signal** verwenden - die Lämpchen sind **entwed
 > 
 > Aus der Perspektive der Teilchenphysik könnte man auch argumentieren, dass viele Grössen, die wir analog erleben, tatsächlich digital sind, wenn sie quantifiziert vorliegen.
 
-## Binär: Zahlen aus nur 0 und 1?
-
-Wie wollen wir also mit drei solchen LEDs Zahlen repräsentieren? Wenn man nur **LEDs zählt**, die ON sind, hat man vier Zahlen: 0, 1, 2, 3. 
-
-Aber wir können viel mehr Zahlen verwenden, wenn wir alle **möglichen Kombinationen verwenden**. Wie viele Kombinationen gibt es?
-
-![[binary-kombinatorik.excalidraw]]

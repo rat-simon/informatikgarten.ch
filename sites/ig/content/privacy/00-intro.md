@@ -36,7 +36,7 @@ Cookies haben **verschiedene Typen**:
     - Verweildauer auf bestimmten Seiten.
 - **Tracking-Pixel**: Ein Tracking-Pixel ist ein winziges Bild (oft 1x1 Pixel), das von einem externen Server geladen wird, wenn eine Seite besucht wird. Dieser Bildaufruf gibt Informationen wie IP-Adresse, Browsertyp und das Gerät des Nutzers weiter.
     
-- **Third-Party Tracker**: Werbeplattformen wie Google Analytics, Facebook oder andere Werbenetzwerke setzen Drittanbieter-Cookies und Tracking-Pixel ein, um das Verhalten von Nutzern über verschiedene Webseiten hinweg zu verfolgen und personalisierte Werbung zu schalten. Zum Beispiel kann der Tracker erkennen, dass ein Nutzer eine Webseite besucht hat, aber noch keinen Kauf abgeschlossen hat. Daraufhin könnte eine gezielte Werbung erscheinen, die den Nutzer dazu anregt, den Kauf abzuschließen.
+- **Third-Party Tracker**: Werbeplattformen wie Google Analytics, Facebook oder andere Werbenetzwerke setzen Drittanbieter-Cookies und Tracking-Pixel ein, um das Verhalten von Nutzern über verschiedene Webseiten hinweg zu verfolgen und personalisierte Werbung zu schalten. Zum Beispiel kann der Tracker erkennen, dass ein Nutzer eine Webseite besucht hat, aber noch keinen Kauf abgeschlossen hat. Daraufhin könnte eine gezielte Werbung erscheinen, die den Nutzer dazu anregt, den Kauf abzuschliessen.
     
 
 ### 3. **Wie funktionieren Tracker in Apps?**

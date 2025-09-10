@@ -40,25 +40,19 @@ Beachten Sie:
 ![[10-funktionen-block.excalidraw.light.svg]]
 ## Beispiele
 
-### Würfeln (eine Funktion ohne Parameter und ohne `return`-Wert)
+### Eine Funktion ohne Parameter und ohne `return`-Wert
 
-Sagen wir, Sie wollen eine Funktion schreiben, die wie ein Würfel Ihnen eine Zufallszahl zwischen 1 und 6 ausdruckt. Das dient als Beispiel, wie Sie eine Funktion ohne Parameter und ohne `return`-Wert definieren können. Diese Funktion könnte so aussehen:
+Parameter und return-Wert sind optional. Sie können auch eine Funktion ohne Parameter und ohne `return`-Wert definieren. Zum Beispiel eine Funktion, die einfach nur etwas ausgibt:
 
-```turtle
-import random
+```turtle id="begruessung"
+# Funktion, die eine Nachricht ausgibt
+def begruessung():
+    print("Hallo, willkommen zu unserem Programm!")
 
-def wuerfeln():
-    zahl = random.randint(1, 6)
-    print("Die geworfene Zahl ist:", zahl)
-
-print("Wir würfeln eine erste Zahl:")
-wuerfeln()
-print("Hier könnte ein beliebig grosser Teil des Programms stehen.")
-print("Und wenn wir es gebrauchen, würfeln wir halt noch eine Zahl:")
-wuerfeln()
+# Hauptprogramm
+begruessung()
+print("Das Programm läuft weiter...")
 ```
-
-Jetzt können Sie die Funktion `wuerfeln()` immer wieder aufrufen, wann immer Sie eine Zufallszahl zwischen 1 und 6 ausdrucken wollen. Das ist wohl einfacher, als immer wieder den gleichen Code zu schreiben.
 
 ### Flächeninhalt eines Rechtsecks (eine Funktion mit zwei Parametern und mit `return`-Wert)
 
@@ -138,6 +132,32 @@ Schreiben Sie eine Funktion, die das Volumen eines Kegels berechnet. Die Funktio
 Nutzen Sie Ihre zuvor erstellten Funktionen, um das Volumen dieses Hauses zu berechnen.
 
 ![[10-funktionen-hausvolumen.excalidraw]]
+
+> [!solution]- Mögliche Lösung
+>
+> ```turtle
+> import math
+> def volumen_wuerfel(seitenlaenge):
+>     volumen = seitenlaenge ** 3
+>     return volumen
+> 
+> def volumen_quader(lange, breite, hoehe):
+>     volumen = lange * breite * hoehe
+>     return volumen
+> 
+> def volumen_kegel(radius, hoehe):
+>     volumen = (1/3) * math.pi * (radius ** 2) * hoehe
+>     return volumen
+> 
+> # Hauptprogramm
+> summe = volumen_quader(15,5,5) + \
+>         volumen_quader(4,1.5,1.5) + \
+>         volumen_wuerfel(5) + \
+>         volumen_kegel(3,11) + \
+>         volumen_kegel(3.5,11)
+> 
+> print("Das Gesamtvolumen ist:", summe)
+> ```
 
 ### Aufgabe: Umrechnung von Celsius in Fahrenheit
 

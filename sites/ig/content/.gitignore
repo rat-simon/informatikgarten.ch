@@ -5,3 +5,9 @@ videos/*
 !videos/*.js
 !videos/*.ts
 public/_next-video
+
+
+
+
+# Ignore Smart Environment folder
+.smart-env

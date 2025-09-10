@@ -6,15 +6,15 @@ title: Internet - das Netzwerk der Netzwerke
 
 Im Jahr 2001 kam der erste **Herr der Ringe** Film in die Kinos. Im Film wurden normalgrosse Schauspieler mit genialen Filmtricks zu kleinen Hobbits gemacht. Ein Beispiel: Filmsets wurden einmal sehr gross gebaut für die Hobbits, damit sie klein wirken; und einmal sehr klein für die Menschen und Zauberer, damit sie gross wirken. Viel wurde auch mit Perspektiven gespielt, sodass Menschen im Vordergrund stehen und gross wirken, während die Hobbits viel weiter im Hintergrund stehen, als man vermuten würde, und dadurch klein wirken.
 
-Das Dorf der Hobbits heisst Hobbiton und liegt im Auenland in Mittelerde. In unserer Welt wurde das Dorf in Neuseeland gebaut und kann bis heute besichtigt werden. Die Touristen können die Filmsets besuchen und die Häuser der Hobbits sehen.
+Das Dorf der Hobbits heisst Hobbiton und liegt im Auenland in Mittelerde. In unserer Welt wurde das Dorf in Neuseeland gebaut und kann bis heute besichtigt werden. Touristen können die Filmsets besuchen und die Häuser der Hobbits sehen.
 
 ![](https://www.wairualodge.co.nz/wordpress/wp-content/uploads/2020/03/Hobbiton-3-e1583826897607.jpg)
 
 Nun denken Sie vielleicht: "Das ist ja alles schön und gut, aber **was hat das mit Informatik zu tun?**" 
 
-Nun, das Bild von Hobbiton ist gar nicht auf dem gleichen Server wie diese Webseite gespeichert, sondern **auf dem Server `wairualodge.co.nz` in Neuseeland**. Tatsächlich setzt sich diese Webseite aus Daten von über fünf verschiedenen Webservern zusammen. Mit anderen Worten: Ihr Computer findet in deutlich weniger als einer Sekunde mehr als fünf Server weltweit und lädt die nötigen Dateien herunter!
+Nun, das Bild da oben 👆 von Hobbiton ist gar nicht auf dem gleichen Server wie `informatikgarten.ch` gespeichert, sondern **auf dem Server `wairualodge.co.nz` in Neuseeland**. Tatsächlich setzt sich `informatikgarten.ch` aus Daten von über fünf verschiedenen Servern zusammen. Ihr Computer findet in deutlich weniger als einer Sekunde mehr als fünf Server weltweit und lädt die nötigen Dateien herunter!
 
-Mit der Webseite [geotraceroute.com](https://geotraceroute.com/) habe ich den Weg zum Server mit dem Bild von Hobbiton visualisiert. Diese Webseite versucht, zu ermitteln, wo sich die Geräte befinden, die auf der Route nach Neuseeland genutzt werden. Das ist nur zu circa 90% verlässlich und **findet nicht alle involvierten Geräte**, aber es gibt allemal ein gutes Bild!
+Mit der Webseite [geotraceroute.com](https://geotraceroute.com/) habe ich den Weg zum Server `wairualodge.co.nz` mit dem Bild von Hobbiton visualisiert. Diese Webseite versucht, zu ermitteln, wo sich die Geräte befinden, die auf der Route nach Neuseeland genutzt werden. Das ist nur zu circa 90% verlässlich und **findet nicht alle involvierten Geräte**, aber es gibt allemal ein gutes Bild!
 
 <iframe src="https://geotraceroute.com/?node=1761&host=wairualodge.co.nz" width="100%" height="500"></iframe>
 
@@ -38,7 +38,7 @@ PING wairualodge.co.nz (119.47.117.103) 56(84) bytes of data.
 rtt min/avg/max/mdev = 248.442/303.558/350.340/36.340 ms
 ```
 
-Das bedeutet, dass unsere Computer die Strecke nach Neuseeland über das Internet und zurück in durchschnittlich 303.558 Millisekunden (ms) zurücklegt. Das sind 0.3 Sekunden, also ziemlich schnell!
+Das bedeutet, dass unser Computer die Strecke nach Neuseeland über das Internet und zurück in durchschnittlich 303.558 Millisekunden (ms) zurücklegt. Das sind 0.3 Sekunden, also ziemlich schnell!
 
 Die Verbindung von der Schweiz nach Neuseeland ist gemäss geotraceroute.com _mindestens_ 19'963 Kilometer. Wenn wir die Zeit von 0.303558 Sekunden nehmen, können wir die Geschwindigkeit berechnen, mit der die Datenpakete reisen:
 
@@ -58,7 +58,6 @@ Das bedeutet, dass die Reise hin und zurück von der Schweiz nach Neuseeland üb
 > 
 > Gehen Sie selbst auf [geotraceroute.com](https://geotraceroute.com/) und klicken Sie auf "Run another traceroute". Geben Sie eigene Websites an oder wählen Sie ein Land aus. 
 > - Finden Sie eine Strecke über 10'000 Kilometer?
-> - Wenn Sie Zeit haben: Versuchen Sie ein 
 
 Zwei Beispiele, die man gut findet:
 
@@ -104,7 +103,7 @@ Wieso werden wir für die australische Zeitung Sydney Morning Herald (smh.com.au
   4. Antwort empfangen und verarbeiten
 - **Ressourcen-Priorität**: CSS und JavaScript werden meist vor Bildern geladen
 
-### 5.1 - Beispiel für das Hobbiton-Bild von wairualodge.co.nz:
+#### Beispiel für das Hobbiton-Bild von wairualodge.co.nz:
 - **DNS-Auflösung**: IP-Adresse von wairualodge.co.nz ermitteln
 - **TCP-Verbindung**: Zu Server in Neuseeland aufbauen
 - **HTTP-Anfrage**: GET-Request für das Bild

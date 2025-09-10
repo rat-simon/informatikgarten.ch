@@ -4,8 +4,12 @@
   ],
   "baseFontSizeAction": true,
 <<<<<<< HEAD
+<<<<<<< HEAD
   "baseFontSize": 24
 =======
   "baseFontSize": 18
 >>>>>>> 2260894c956b81af187071d21d9b4557e63fe0d1
+=======
+  "baseFontSize": 16
+>>>>>>> ae22b336b991265f00a8642b150e9c5e24b63143
 }
