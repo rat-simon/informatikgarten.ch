@@ -7,7 +7,7 @@ In diesem Kapitel werden wir KORA-Daten mit unserem eigenen exponentiellen Daten
 
 ## Combo-Chart erstellen
 
-1. Dazu kopieren wir zuerst das Tabellenblatt "Logistisches Wachstum" und benennen diese Blatt in ein neues Tabellenblatt: "06 KORA mit Modell" um.
+1. Dazu kopieren wir zuerst das Tabellenblatt "Logistisches Wachstum" und benennen diese Blatt in ein neues Tabellenblatt: "KORA mit Modell" um.
 ![[11-data-fit.png]]
 2. Wir fügen zwei leere Spalten ein. Dort werden wir die KORA-Daten hineinkopieren. Bislang haben wir die Jahre von 1 an gezählt, die KORA-Daten haben Jahre seit 1994. Benennen Sie die Spalten einfach sinnvoll, damit Sie die Jahresangaben auseinanderhalten können, z.B. "Realer Wolfsbestand" und "Reales Jahr".
 3. Plotten Sie nun beide Datenreihen in einem "Combo"-Diagramm aus einem Linien- und einem Balkendiagramm. Einige Tipps:
@@ -26,16 +26,13 @@ Sie werden schnell merken, dass es sehr angenehm wäre, wenn Sie den Zeitpunkt n
 
 > [!question] Frage
 > 
-> Versuchen Sie das mal selbst, die Logik ist: `Wenn das aktuelle Jahr kleiner ist als das Startjahr, ist die Zunahme 0. Ansonsten ist die Zunahme unsere Formel, die wir bisher verwendet haben.`
+> Versuchen die Logik selbst in einer Formel umzusetzen: `Wenn das aktuelle Jahr kleiner ist als das Startjahr, ist die Zunahme 0. Ansonsten ist die Zunahme unsere Formel, die wir bisher verwendet haben.`
 
 > [!solution]- Lösung
 > 
+> Wenn mein Startjahr in der Zelle D3 steht und ich mich auf der Zeile 5 befinde:
+> 
 > ```excel
-> =WENN(B2=0;NV();B2)
+> =WENN(A5<$D$3;0;B5*$D$1*C5)
 > ```
 
-
-## R² berechnen
-
-1. Rechnen Sie in einer Zelle den Durchschnitt der Daten aus.
-2. Fügen Sie zwei Spalten hinzu: "Fehlerquadrat Modell" und "Fehlerquadrat Durchschnitt"
