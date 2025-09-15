@@ -9,46 +9,22 @@ export default {
         title: 'Grundjahr'
     },
     adder: {
-        title: (
-            <span className="menuicon pink">
-                <span>A</span>Bau eines Addierers
-            </span>
-        )
+        title: <span className="menuicon pink">Bau eines Addierers</span>
     },
     aufbau: {
-        title: (
-            <span className="menuicon pink">
-                <span>B</span>Computer & OS
-            </span>
-        )
+        title: <span className="menuicon pink">Computer & OS</span>
     },
     code: {
-        title: (
-            <span className="menuicon pink">
-                <span>C</span>Programmieren 1
-            </span>
-        )
+        title: <span className="menuicon pink">Programmieren 1</span>
     },
     data: {
-        title: (
-            <span className="menuicon pink">
-                <span>D</span>Daten & Information
-            </span>
-        )
+        title: <span className="menuicon pink">Daten & Information</span>
     },
     code2: {
-        title: (
-            <span className="menuicon pink">
-                <span>E</span>Programmieren 2
-            </span>
-        )
+        title: <span className="menuicon pink">Programmieren 2</span>
     },
     net: {
-        title: (
-            <span className="menuicon pink">
-                <span>F</span>Netzwerke & Internet
-            </span>
-        )
+        title: <span className="menuicon pink">Netzwerke & Internet</span>
     },
     // Weitere Inhalte
     '---': {
@@ -56,56 +32,34 @@ export default {
         title: 'Weitere Inhalte'
     },
     crypto: {
-        title: (
-            <span className="menuicon blue">
-                <span>F</span>Kryptologie
-            </span>
-        )
+        title: <span className="menuicon blue">Kryptologie</span>
     },
     microbit: {
-        title: (
-            <span className="menuicon blue">
-                <span>G</span>Robotik
-            </span>
-        )
+        title: <span className="menuicon blue">Robotik</span>
     },
     didactics: {
-        title: (
-            <span className="menuicon blue">
-                <span>H</span>Didaktik
-            </span>
-        )
+        title: <span className="menuicon blue">Didaktik</span>
     },
     sql: {
-        title: (
-            <span className="menuicon blue">
-                <span>I</span>Datenbanken
-            </span>
-        )
+        title: <span className="menuicon blue">Datenbanken</span>
     },
     privacy: {
         display: 'hidden'
     },
     turtleinvaders: {
-        title: (
-            <span className="menuicon blue">
-                <span>J</span>Turtle Invaders
-            </span>
-        )
+        title: <span className="menuicon blue">Turtle Invaders</span>
     },
     webdev: {
-        title: (
-            <span className="menuicon blue">
-                <span>K</span>Web-Dev
-            </span>
-        )
+        title: <span className="menuicon blue">Web-Dev</span>
     },
     IKT: {
-        title: (
-            <span className="menuicon blue">
-                <span>L</span>IKT
-            </span>
-        )
+        title: <span className="menuicon blue">IKT</span>
+    },
+    population: {
+        title: <span className="menuicon blue">Populationsdynamik</span>
+    },
+    vfx: {
+        title: <span className="menuicon blue">VFX</span>
     },
     // -- Hidden stuff ---
     // Navbar items
