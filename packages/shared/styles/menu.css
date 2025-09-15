@@ -1,6 +1,6 @@
 @layer components {
     .menuicon span:first-child {
-        @apply bg-gray-300 text-white rounded-md border-none px-1 py-0.5 mr-1.5 text-center no-underline text-xs font-bold w-[1.15rem] inline-block;
+        @apply bg-gray-300 text-white rounded-md border-none px-1 py-0.5 mr-1.5 text-center no-underline text-xs font-bold inline-block;
 
     }
 

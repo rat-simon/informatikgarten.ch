@@ -8,38 +8,45 @@ export default {
         type: 'separator',
         title: 'Grundjahr'
     },
+    adder: {
+        title: (
+            <span className="menuicon pink">
+                <span>A</span>Bau eines Addierers
+            </span>
+        )
+    },
     aufbau: {
         title: (
             <span className="menuicon pink">
-                <span>A</span>Aufbau von Computern
+                <span>B</span>Computer & OS
             </span>
         )
     },
     code: {
         title: (
             <span className="menuicon pink">
-                <span>B</span>Programmieren 1
+                <span>C</span>Programmieren 1
             </span>
         )
     },
     data: {
         title: (
             <span className="menuicon pink">
-                <span>C</span>Daten & Information
+                <span>D</span>Daten & Information
             </span>
         )
     },
     code2: {
         title: (
             <span className="menuicon pink">
-                <span>D</span>Programmieren 2
+                <span>E</span>Programmieren 2
             </span>
         )
     },
     net: {
         title: (
             <span className="menuicon pink">
-                <span>E</span>Netzwerke & Internet
+                <span>F</span>Netzwerke & Internet
             </span>
         )
     },
