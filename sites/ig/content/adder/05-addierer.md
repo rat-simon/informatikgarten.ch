@@ -86,6 +86,10 @@ Hier ein Beispiel, wie sie vier Addierer zu einem Multibit-Addierer zusammenhän
 
 ![[adder-multibit.excalidraw]]
 
+Hierzu habe ich einige Schablonen vorbereitet:
+- **Multibit-Addierer** mit Beispielrechnung als [PDF](/adder/multibit.pdf) und [Inkscape-SVG](/adder/multibit.svg)
+- **Multibit-Addierer** mit Platzhaltern als [PDF](/adder/multibit-blank.pdf) und [Inkscape-SVG](/adder/multibit-blank.svg)
+
 Hier der Mutlibit-Addierer in Action!
 
 ![[aufbau-adder-multibit.mp4]]
