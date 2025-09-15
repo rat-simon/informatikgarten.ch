@@ -51,7 +51,7 @@ Wenn Sie eine Trendlinie hinzufügen möchten, können Sie verschiedenen Trend-/
 
 Dazu kann man das Bestimmtheitsmass **R²** ausrechnen. Wenn Sie eine Trendlinie in Ihre Daten legen, können Sie für diese Trendlinie auch den Wert von R² berechnen lassen. Wenn Sie möchten, können Sie diesen Wert in Ihrem Diagramm anzeigen, wie wir dies auf der früheren Seite gemacht haben.
 - Der Bestimmtheitsgrad **R²** ist ein statistisches Mass dafür, wie dicht die tatsächlichen Daten an der Regressionskurve liegen. **Je näher der R² Wert sich der Zahl 1 nähert, desto besser ist das Modell**.
-- R² funktioniert so, dass es jeweils die Unterschiede zwischen Realität und Modell (also den **Fehler**) quadriert und alle Fehlerquadrate summiert. Dann vergleicht es die Summe der Flächen des **Modells** (z.B. hier blau) mit der Summe der Flächen, die entstehen würde, wenn man gar kein Modell hätte und einfach den **Durchschnitt** der Daten verwenden würde (rot). 
+- R² funktioniert so, dass es jeweils die Unterschiede zwischen Realität und Modell (also den **Fehler**) quadriert und alle Fehlerquadrate summiert. Dann vergleicht es die Summe der Flächen des **Modells** (z.B. hier blau) mit der Summe der Flächen, die entstehen würde, wenn man gar kein Modell hätte und einfach den **Durchschnitt** der Daten verwenden würde (rot). Diese Summe der quadrierten Abweichungen vom Durchschnitt nennt man auch die **Varianz** der Daten, das ist ein Mass, wie breit die Daten verstreut sind. 
 	- Ein R² von 0 bedeutet, der Durchschnitt ist genau so gut wie unser Modell - also ist unser Modell extrem schlecht.
 	- Ein R² näher bei 1 bedeutet, unser Modell schlägt den Durchschnitt um ein Vielfaches.
 
