@@ -89,3 +89,4 @@ Hier ein Beispiel, wie sie vier Addierer zu einem Multibit-Addierer zusammenhän
 Hier der Mutlibit-Addierer in Action!
 
 ![[aufbau-adder-multibit.mp4]]
+

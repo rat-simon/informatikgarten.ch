@@ -7,15 +7,17 @@ title: Logik-Gates
 > - Sie wissen, was die **Logikgates** in der Tabelle tun und kennen ihre **Wahrheitstabellen und Symbole**. (Die mathematische Notation müssen Sie *nicht* auswendig lernen.)
 > - Sie können aus einfachen logischen Schaltungen eine **Wahrheitstabelle ableiten**.
 
-Ihr Computer ist eine Rechenmaschine, die auf purer Logik aufgebaut ist. Es gibt keine Magie, kein "Geist" in der Maschine - alles ist von Grund auf nachvollziehbar. In dieser Lektion bauen wir einen Rechner, der zwei binäre Zahlen addieren kann.
+Ihr Computer ist eine Rechenmaschine, die auf purer Logik aufgebaut ist. Es gibt keine Magie, kein "Geist" in der Maschine - alles ist von Grund auf nachvollziehbar. 
 
-In den nächsten Lektionen machen wir uns daran, einen **Addierer** zu bauen. In der Sprache von Modulen gesprochen:
-- Sie müssen Logikgates nur nutzen können (die Schnittstelle genügt, die Funktionsweise müssen Sie sich nicht merken), Sie müssen nicht verstehen, wie Sie elektrotechnisch aufgebaut werden.
+Um Ihnen das zu zeigen, bauen wir in den nächsten Lektionen einen **Addierer**, der zwei Zahlen zusammenzählen kann. Dazu brauchen wir sogenannte **Logikgates** - das sind elektrotechnische Schaltkreise, die eine grundsätzliche Logikfunktion implementieren, sodass Sie zum Beispiel fragen können: " Ist A oder B gleich 1 ? "
+
+Konzentrieren Sie sich auf die relevanten Inhalte:
+- Sie müssen **Logikgates nur nutzen** können, die **Schnittstelle genügt**. Sie müssen sich die Funktionsweise nicht merken, also wie die Logikgates im Innern elektrotechnisch aufgebaut werden.
 - Sie müssen den Addierer mit Logikgates implementieren können (also die Funktionsweise wirklich verstehen).
 
 ![[module-overview-logicgates.excalidraw]]
 
-## Aus Transistoren werden Logikbausteine
+## Logikgates: Die grundsätzlichen Logikbausteine eines Computers
 
 > [!NOTE]- Wie baut man Logikgates?
 > 
@@ -25,8 +27,7 @@ In den nächsten Lektionen machen wir uns daran, einen **Addierer** zu bauen. In
 > 
 > ![[aufbau-nandgame-01.mp4]]
 
-Sie haben auf dem Logikboard die Logikgates untersucht und gemerkt: Diese Logikgates implementieren jeweils eine Logikfunktion, wie z.B. "und", "nicht", oder "oder".
-
+Sie haben auf dem Logikboard die Logikgates untersucht und gemerkt: Diese Logikgates implementieren jeweils eine Logikfunktion, wie z.B. "und", "nicht", oder "oder". Wir haben dazu **Wahrheitstabellen** geschrieben, um zu erfassen, was diese Logikgates tun.
 ![[logikgates-overview.excalidraw]]
 
 Schaltungen kann man auch aus mehreren Logikgates bauen und dazu dann eine Wahrheitstabelle schreiben. 
@@ -48,15 +49,4 @@ Schaltungen kann man auch aus mehreren Logikgates bauen und dazu dann eine Wahrh
 > 
 > Und hier ein Erklärvideo der Aufgabe:
 > ![[aufbau-examprep-schaltung1.mp4]]
-## Zahlen aus nur 0 und 1?
-
-Nun stellt sich die Frage: Wie wollen wir mit nur drei LEDs Zahlen repräsentieren? 
-
-Wenn man einfach **LEDs zählen** würde, die ON sind, hätte man vier Zahlen: 0, 1, 2, 3. Aber wir können viel mehr Zahlen verwenden, wenn wir alle **möglichen Kombinationen verwenden**. 
-
-Wie viele Kombinationen gibt es?
-
-![[binary-kombinatorik.excalidraw]]
-
-Aus dieser Überlegung können wir **ein Zahlensystem bauen** - wie Sie in der nächsten Lektion sehen werden.
 

@@ -43,8 +43,10 @@ Sie werden schnell merken, dass es sehr angenehm wäre, wenn Sie den Zeitpunkt n
 *By Orzetto - Own work, CC BY-SA 3.0, https://commons.wikimedia.org/w/index.php?curid=11398293*
 
 Wir haben gesehen, dass R² misst, wie gut ein Modell zu den Daten passt. Wir können R² auch für unser eigenes Modell berechnen. Dazu müssen wir für jedes Jahr zwei Fehlerquadrate berechnen: 
-- Einmal die Differenz zwischen dem realen Wolfsbestand und dem modellierten Wolfsbestand
-- und einmal die Differenz zwischen dem realen Wolfsbestand und der Nullhypothese (dem Durchschnitt aller realen Wolfsbestände). Diese Summe der quadrierten Abweichungen vom Durchschnitt nennt man in der Statistik auch die **Varianz**.
+- Einmal die Differenz zwischen dem realen Wolfsbestand und dem modellierten Wolfsbestand, die wir dann quadrieren (also diese Differenz²).
+- und einmal die Differenz zwischen dem realen Wolfsbestand und der Nullhypothese (dem Durchschnitt aller realen Wolfsbestände), die wir ebenfalls quadrieren (Differenz²)
+
+So können Sie das in Excel umsetzen:
 
 1. Fügen Sie eine Konstante "Durchschnitt realer Wolfsbestand" ein, die den Durchschnitt aller realen Wolfsbestände berechnet.
 2. Fügen Sie zwei Spalten ein: "Fehlerquadrat Modell" und "Fehlerquadrat Nullhypothese".
