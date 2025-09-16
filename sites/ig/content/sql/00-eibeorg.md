@@ -3,8 +3,6 @@ title: Überblick EIBE
 ---
 Der aktuelle Überblick zu EIBE-Informatik im Frühlingssemester 2026:
 - **Benotet** wird dieses Semester ein eigenständiges Python-Projekt. Damit haben Sie drei gleichwertige Informatiknoten für das Schuljahr.
-
-<<<<<<< HEAD
 ![[00-eibeorg.png|500]]
 
 =======

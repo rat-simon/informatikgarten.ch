@@ -93,7 +93,6 @@ export default {
             </span>
         )
     },
-<<<<<<< HEAD
     Blender_VFX_Tracking: {
 	    title: (
 	        <span className="menuicon blue">
@@ -101,8 +100,6 @@ export default {
 	        </span>
 	    )
     },
-    kurse: {},
-=======
     IKT: {
         title: (
             <span className="menuicon blue">
@@ -111,7 +108,6 @@ export default {
         )
     },
     // -- Hidden stuff ---
->>>>>>> 393d48f18974e4affda4867f823151cce8d3fdb0
     // Navbar items
     dashboard: {
         display: 'hidden'
