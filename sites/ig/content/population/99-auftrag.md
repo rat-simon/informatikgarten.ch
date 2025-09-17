@@ -34,7 +34,7 @@ Versuchen Sie, die Entwicklung der Population in einem bestimmten Zeitraum **mö
 
 Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie passende Annahmen und suchen Sie geeignete Parameter, um die Entwicklung so genau wie möglich nachzumodellieren. Gelingt es Ihnen, die tatsächlichen Zahlen mit dem Excel nachzubilden? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben. 
 
-Bonuspunkte: Versuchen Sie R² zu für Ihr Modell zu berechnen.
+Knobelaufgabe: Versuchen Sie R² zu für Ihr Modell zu berechnen. Die Erklärung dazu finden Sie in [dieser Lektion](11-data-fit)
 
 ### Reflexion: 0.5 - 1 Seite (3 P)
 - Reflexion der Recherche: Welche Fragen bzw. Probleme haben Sie bei der Recherche angetroffen und wie haben Sie diese allenfalls gelöst?
