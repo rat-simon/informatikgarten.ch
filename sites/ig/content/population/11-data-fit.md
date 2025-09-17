@@ -3,26 +3,26 @@ title: Reale Daten mit Modell vergleichen
 ---
 # Reale Daten mit Modell vergleichen
 
-In diesem Kapitel werden wir KORA-Daten mit unserem eigenen logistischen Datenmodell nachbilden und beide Datensätze graphisch gegenüberstellen.
-
+In diesem Kapitel werden wir reale Daten mit unserem logistischen Modell nachbilden und beides graphisch gegenüberstellen.
 ## Combo-Chart erstellen
 
-1. Dazu kopieren wir zuerst das Tabellenblatt mit dem Modell, das Sie verwenden möchten, und benennen das neue Blatt z.B. in diesem Fall "KORA mit logistischem Modell".
-![[11-data-fit.png]]
-2. Wir fügen zwei leere Spalten ein. Dort werden wir die KORA-Daten hineinkopieren. Bislang haben wir die Jahre von 1 an gezählt, die KORA-Daten haben Jahre seit 1994. Benennen Sie die Spalten einfach sinnvoll, damit Sie die Jahresangaben auseinanderhalten können, z.B. "Realer Wolfsbestand" und "Reales Jahr".
+1. Dazu **kopieren wir zuerst das Tabellenblatt mit dem Modell, das Sie verwenden möchten**, und benennen das neue Blatt sinnvoll, z.B. in diesem Fall "KORA-Daten mit logistischem Modell".
+2. Wir nutzen nach dem Modell zwei Spalten, wo wir die Daten hineinkopieren. 
+	1. In eine der neuen Spalten füllen Sie die Jahreszahlen ein. Bislang haben wir die Jahre von 1 an gezählt, Ihre Daten werden aber konkrete Jahreszahlen haben. Betiteln Sie die Spalte sinnvoll (z.B. "Reales Jahr").
+	2. In die zweite neue Spalte füllen Sie die tatsächlichen Daten ein. Betiteln Sie die Spalte sinnvoll (z.B. "Reale Population")
 3. Plotten Sie nun beide Datenreihen in einem "Combo"-Diagramm aus einem Linien- und einem Balkendiagramm. Einige Tipps:
-	1. Gehen Sie vom Liniendiagramm aus, dass Sie bereits haben. Mit Rechtsklick auf das Diagramm, wählen Sie "Daten auswählen...". Jetzt können Sie links eine neue Datenserie auswählen - da können Sie den realen Wolfsbestand auswählen.
-	2. Sie können aus dem realen Wolfsbestand ein Balkendiagramm machen, indem Sie auf "Diagrammtyp ändern..." klicken und links auf "Combo". Dort können Sie pro Datenserie einen eigenen Diagrammtyp auswählen.
-	3. Hier ein Beispiel, wie Ihr Diagramm am Schluss aussehen könnte
+	1. Gehen Sie vom Liniendiagramm aus, dass Sie bereits haben. Mit Rechtsklick auf das Diagramm, wählen Sie "**Daten auswählen**...". Jetzt können Sie links **eine neue Datenserie auswählen** - da können Sie die realen Populationsdaten auswählen.
+	2. Sie können aus den realen Populationsdaten ein Balkendiagramm machen, indem Sie auf "**Diagrammtyp ändern**..." klicken und links auf "**Combo**". Dort können Sie pro Datenserie einen eigenen Diagrammtyp auswählen.
+	3. Hier ein Beispiel, wie Ihr Diagramm bislang aussehen könnte.
 
 ![[combodiagramm.png]]
 
-## Unser Modell in der Zeit verschieben
+## Das Modell in der Zeit verschieben
 
-Sie werden schnell merken, dass es sehr angenehm wäre, wenn Sie den Zeitpunkt nach hinten verschieben können, ab wann Ihr Modell die Populationsdynamik übernimmt und die Zunahme berechnet. Wir lösen das, indem wir ein "Startjahr" fürs Modell bestimmen und die Zunahme erst ab diesem Zeitpunkt überhaupt berechnen. Tönt kompliziert, ist aber recht einfach:
+Sie werden schnell merken, dass es sehr angenehm wäre, wenn Sie den Zeitpunkt verschieben können, ab wann Ihr Modell die Populationsdynamik übernimmt und die theoretische Zunahme berechnet. Wir lösen das, indem wir ein "Startjahr" fürs Modell bestimmen und die Zunahme erst ab diesem Zeitpunkt überhaupt berechnen. Tönt kompliziert, ist aber recht einfach:
 
-1. Fügen Sie neben Zunahmefaktor und Kapazität  eine Konstante "Startjahr" hinzu.
-2. Jetzt machen wir die Formel in der Spalte "Zunahme" konditionell mit der =WENN()-Funktion. 
+1. Fügen Sie oben neben Zunahmefaktor und Kapazität  eine Konstante "**Startjahr**" hinzu.
+2. Jetzt machen wir **die Formel in der Spalte "Zunahme" konditionell** mit der =WENN()-Funktion. 
 
 > [!question] Frage
 > 

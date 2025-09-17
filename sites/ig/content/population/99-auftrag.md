@@ -20,9 +20,18 @@ Insgesamt gibt dieser Auftrag **maximal 30 Punkte**.
 - Datei korrekt benannt (1P)
 - Dokument mit Formatvorlagen sauber strukturiert (3P)
 ### Theorie: 1 Seite (4 P)
-Fassen Sie kurz zusammen, in Wort und Grafik, was Sie im Unterricht über Populationen und Populationswachstumsmodelle gelernt haben.
+Fassen Sie kurz zusammen, in Wort und Grafik, was Sie im Unterricht über Populationen und Populationswachstumsmodelle gelernt haben. 
+
+Erklären Sie die theoretischen Modelle, die wir im Unterricht erstellt haben:
+- [Lineares Wachstum](01-linear)
+- [Exponentielles Wachstum](01-exponentiell)
+- [Beschränktes Wachstum](02-beschraenkt)
+- [Logistisches Wachstum](03-logistisch)
+
 ### Recherche: 0.5 - 1 Seite (3 P)
-Entscheiden Sie sich für eine Tierart die Ihnen besonders am Herzen liegt. Einziges Kriterium ist, dass Sie **solide Populationszahlen finden mit mindestens 10 Datenpunkten und diese eine interessante Entwicklung aufweisen**. Nehmen Sie Rücksprache mit der Lehrperson.
+Entscheiden Sie sich für eine Tierart die Ihnen besonders am Herzen liegt. Einziges Kriterium ist, dass Sie **solide Populationszahlen finden mit mindestens 10 Datenpunkten und diese eine interessante Entwicklung aufweisen**. Nehmen Sie Rücksprache mit der Lehrperson. Am einfachsten ist es, Daten [direkt von der Webseite der **Living Planet Database**](https://www.livingplanetindex.org/search) ins Excel zu kopieren (copy & paste). [Hier habe ich weitere mögliche Datenquellen zusammengetragen](99-data).
+
+![[99-auftrag-lpd.excalidraw]]
 
 Suchen Sie möglichst interessante Fakten zu der ausgewählten Tierart und zu deren Populationszahlen. Erklären Sie, wie Sie recherchiert haben, und geben Sie Ihre Quellen an. 
 - Warum haben Sie diese Tierart / Populationszahlen gewählt? 
@@ -30,11 +39,11 @@ Suchen Sie möglichst interessante Fakten zu der ausgewählten Tierart und zu de
 - Wie haben Sie die Daten ausgewählt? Wie verlässlich sind diese Daten?
 
 ### Modellierung: 1 - 2 Seiten (8 P)
-Versuchen Sie, die Entwicklung der Population in einem bestimmten Zeitraum **möglichst genau mithilfe eines der Populationsentwicklungsmodelle**, die wir im Unterricht behandelt haben, zu erfassen. Benutzen Sie dazu Ihre eigene Exceldatei und ergänzen Sie diese nach Bedarf mit neuen Tabellenblättern.
+Versuchen Sie, die Entwicklung der Population in einem bestimmten Zeitraum **möglichst genau mithilfe eines der Populationsentwicklungsmodelle**, die wir im Unterricht behandelt haben, zu erfassen. Benutzen Sie dazu Ihre eigene Exceldatei und ergänzen Sie diese mit einem neuen Tabellenblatt, wie [hier am Beispiel von Wölfen beschrieben](11-data-fit).
 
 Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie passende Annahmen und suchen Sie geeignete Parameter, um die Entwicklung so genau wie möglich nachzumodellieren. Gelingt es Ihnen, die tatsächlichen Zahlen mit dem Excel nachzubilden? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben. 
 
-Knobelaufgabe: Versuchen Sie R² zu für Ihr Modell zu berechnen. Die Erklärung dazu finden Sie in [dieser Lektion](11-data-fit).
+Knobelaufgabe: Versuchen Sie R² zu für Ihr Modell zu berechnen. Die Erklärung dazu finden Sie ebenfalls [in dieser Lektion mit dem Beispiel der Wolfsdaten](11-data-fit).
 
 ### Reflexion: 0.5 - 1 Seite (3 P)
 - Reflexion der Recherche: Welche Fragen bzw. Probleme haben Sie bei der Recherche angetroffen und wie haben Sie diese allenfalls gelöst?

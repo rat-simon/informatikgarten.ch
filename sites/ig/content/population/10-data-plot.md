@@ -1,5 +1,5 @@
 ---
-title: Eigene Daten plotten
+title: Daten mit Trendlinie plotten (nicht Teil des Auftrags!)
 ---
 Populationen entwickeln sich selten genau nach vorher vorgestellten Modellen. Wenn wir im Internet reelle Daten zu Populationsentwicklungen finden, ist es manchmal aus den Zahlen oft erkennbar, um was wir Entwicklung („Wachstum“) es sich handelt. Ein Beispiel dafür ist die Entwicklung der Wolfspopulation in der Schweiz in der Abbildung 3 unten. Trotzdem können wir mit solchen Grafiken keine Berechnungen anstellen, bis wir die Zahlen vollständig übernommen haben und diese auch variieren können, um verschiedene Hypothesen aufzustellen und zu überprüfen.
 
