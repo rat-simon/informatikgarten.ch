@@ -13,8 +13,12 @@ Sie sollen **zwei Dokumente** termingerecht im Arbeitsauftrag auf Teams abgeben:
 Insgesamt gibt dieser Auftrag **maximal 30 Punkte**.
 ## Spreadsheet (8 Punkte)
 - Datei korrekt benannt (1P)
-- Tabellenblätter zur eigenen Spezies mitgeliefert (1P)
-- Tabellenblätter der Modelle im Unterricht mit dabei und sauber gelöst (6P)
+- Vier Tabellenblätter zu den Modellen, die wir im Unterricht besprochen haben sauber gelöst (4P). Gemeint sind:
+	- [Lineares Wachstum](01-linear)
+	- [Exponentielles Wachstum](01-exponentiell)
+	- [Beschränktes Wachstum](02-beschraenkt)
+	- [Logistisches Wachstum](03-logistisch)
+- Mindestens ein Tabellenblatt zur eigenen Spezies mitgeliefert, das reale Daten mit einem ausgewählten Modell vergleicht (wie [hier am Beispiel von Wölfen beschrieben](11-data-fit)) (3P)
 
 ## Textdokument in A4 (22 Punkte)
 - Datei korrekt benannt (1P)
@@ -22,7 +26,7 @@ Insgesamt gibt dieser Auftrag **maximal 30 Punkte**.
 ### Theorie: 1 Seite (4 P)
 Fassen Sie kurz zusammen, in Wort und Grafik, was Sie im Unterricht über Populationen und Populationswachstumsmodelle gelernt haben. 
 
-Erklären Sie die theoretischen Modelle, die wir im Unterricht erstellt haben:
+Erklären Sie die theoretischen Modelle, die wir im Unterricht erstellt haben. Gemeint sind:
 - [Lineares Wachstum](01-linear)
 - [Exponentielles Wachstum](01-exponentiell)
 - [Beschränktes Wachstum](02-beschraenkt)
@@ -41,7 +45,7 @@ Suchen Sie möglichst interessante Fakten zu der ausgewählten Tierart und zu de
 ### Modellierung: 1 - 2 Seiten (8 P)
 Versuchen Sie, die Entwicklung der Population in einem bestimmten Zeitraum **möglichst genau mithilfe eines der Populationsentwicklungsmodelle**, die wir im Unterricht behandelt haben, zu erfassen. Benutzen Sie dazu Ihre eigene Exceldatei und ergänzen Sie diese mit einem neuen Tabellenblatt, wie [hier am Beispiel von Wölfen beschrieben](11-data-fit).
 
-Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie passende Annahmen und suchen Sie geeignete Parameter, um die Entwicklung so genau wie möglich nachzumodellieren. Gelingt es Ihnen, die tatsächlichen Zahlen mit dem Excel nachzubilden? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben. 
+Wählen Sie das geeignetste Wachstumsmodell aus, welches am besten zu den gewählten Populationsdaten passt. Treffen Sie **passende Annahmen und suchen Sie geeignete Parameter**, damit das Modell die Entwicklung in den realen Daten so genau wie möglich nachbildet. Gelingt es Ihnen, die Dynamik der tatsächlichen Zahlen mit dem Excel zu modellieren? Beschriften Sie die dazu die erstellten Grafiken. Dokumentieren Sie diesen Vorgang, damit Ihre Leser nachvollziehen können, was Sie sich überlegt haben. 
 
 Knobelaufgabe: Versuchen Sie R² zu für Ihr Modell zu berechnen. Die Erklärung dazu finden Sie ebenfalls [in dieser Lektion mit dem Beispiel der Wolfsdaten](11-data-fit).
 
