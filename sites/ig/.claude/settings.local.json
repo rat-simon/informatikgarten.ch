@@ -3,7 +3,8 @@
     "allow": [
       "Bash(python:*)",
       "Bash(pip install:*)",
-      "mcp__ide__executeCode"
+      "mcp__ide__executeCode",
+      "Read(//home/chris/git/informatikgarten.ch/packages/shared/components/**)"
     ],
     "deny": [],
     "ask": []

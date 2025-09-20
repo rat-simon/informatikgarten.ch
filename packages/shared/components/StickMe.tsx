@@ -28,8 +28,10 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
         wHeight: 0,
         wWidth: 0,
         isLandscape: true,
-        contentWidth: 0,
+        articleWidth: 0,
+        landscapeContentWidth: 0,
         staticOffset: 0,
+        originalWidth: 0,
     });
     const containerRef = useRef<HTMLDivElement>(null);
     const contentRef = useRef<HTMLDivElement>(null);
@@ -38,18 +40,23 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
     const updateDimensions = () => {
         if (!containerRef.current) return;
         const { width, height } = containerRef.current.getBoundingClientRect();
+        const articleElem = document.querySelector("article");
         const nextraContentColumn =
-            document.querySelector("article")?.parentElement;
+            articleElem?.parentElement;
         dimensionsRef.current = {
             elemHeight: height,
             elemAspect: width / height,
             wHeight: window.innerHeight,
             wWidth: window.innerWidth,
             isLandscape: window.innerWidth > window.innerHeight,
-            contentWidth: nextraContentColumn
+            articleWidth: articleElem
+                ? (articleElem as HTMLElement).clientWidth
+                : 0,
+            landscapeContentWidth: nextraContentColumn
                 ? (nextraContentColumn as HTMLElement).offsetWidth / 2.1
                 : 0,
             staticOffset: containerRef.current.offsetTop,
+            originalWidth: dimensionsRef.current.originalWidth,
         };
         logger.silly("Dimensions updated", dimensionsRef.current);
     };
@@ -86,6 +93,10 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
             pinActivated &&
             window.scrollY + navbarOffset > dimensionsRef.current.staticOffset
         ) {
+            // Capture width right before sticking
+            if (!isSticking && contentRef.current) {
+                dimensionsRef.current.originalWidth = contentRef.current.offsetWidth;
+            }
             setIsSticking(true);
             document.documentElement.classList.add("has-sticky-content");
         } else {
@@ -93,6 +104,7 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
             document.documentElement.classList.remove("has-sticky-content");
         }
     };
+
 
     return (
         <div
@@ -114,20 +126,22 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
             <div
                 ref={contentRef}
                 className={cn(
-                    "transition-transform duration-300 w-fit",
+                    "stickycontent transition-transform duration-300",
                     isSticking ? "fixed" : "relative translate-x-px"
                 )}
                 style={{
-                    width:
-                        isSticking && dimensionsRef.current.isLandscape
-                            ? `${dimensionsRef.current.contentWidth}px`
-                            : "auto",
+                    width: isSticking
+                        ? dimensionsRef.current.isLandscape
+                            ? `${dimensionsRef.current.landscapeContentWidth}px`
+                            : `${dimensionsRef.current.originalWidth}px`
+                        : "auto",
                     top: isSticking ? navbarOffset : "",
                     translate:
                         isSticking && dimensionsRef.current.isLandscape
                             ? "100%"
                             : "0px",
                     zIndex: isSticking ? "var(--z-fullscreen)" : "auto",
+                    backgroundColor: isSticking ? "rgb(var(--nextra-bg))" : "",
                 }}
             >
                 {children}
@@ -140,8 +154,12 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
                     {pinActivated ? <Unpin /> : <Pin />}
                 </button>
 
-                {dimensionsRef.current.isLandscape && (
-                    <style jsx global>{`
+                <style jsx global>{`
+                    .stickycontent h2:first-child,
+                    .stickycontent h3:first-child {
+                        margin-top: 0;
+                    }
+                    ${dimensionsRef.current.isLandscape ? `
                         .nextra-sidebar,
                         .nextra-sidebar-footer,
                         .nextra-toc {
@@ -157,11 +175,10 @@ export function StickMe({ children, pinActivedAtStart = true }: StickMeProps) {
                             transition: padding-right 0.3s ease-in-out;
                         }
                         :root.has-sticky-content main {
-                            padding-right: ${dimensionsRef.current
-                                .contentWidth}px;
+                            padding-right: ${dimensionsRef.current.landscapeContentWidth}px;
                         }
-                    `}</style>
-                )}
+                    ` : ''}
+                `}</style>
             </div>
         </div>
     );

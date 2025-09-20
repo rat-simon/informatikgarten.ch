@@ -1,12 +1,21 @@
 "use client"
 
 import Image from 'next/image'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 type YoutubeProps = {
     id: string;
     playlist?: string;
     startTime?: number;
+}
+
+declare global {
+    interface Window {
+        YT: any;
+        onYouTubeIframeAPIReady: () => void;
+        youtubePlayerReady: boolean;
+    }
 }
 
 export function Youtube({ id, playlist, startTime }: YoutubeProps) {
@@ -16,6 +25,11 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
     const [isOpen, setIsOpen] = useState(false)
     const [thumbnailUrl, setThumbnailUrl] = useState<string | null>(null)
     const [isLoading, setIsLoading] = useState(true)
+    const playerRef = useRef<any>(null)
+    const iframeRef = useRef<HTMLIFrameElement>(null)
+    const pathname = usePathname()
+    const uniqueId = `${id}-${pathname?.replace(/\//g, '-') || 'default'}`
+
     const handleClick = () => setIsOpen(true)
 
     // Build the YouTube URL parameters
@@ -24,6 +38,10 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
 
         // Add autoplay when opened
         params.append('autoplay', '1');
+
+        // Enable JS API
+        params.append('enablejsapi', '1');
+        params.append('origin', window.location.origin);
 
         // Add start time if provided (in seconds)
         if (startTime) params.append('start', startTime.toString());
@@ -89,6 +107,43 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
         fetchVideoMetadata();
     }, [id]);
 
+    // Listen for timestamp navigation events
+    useEffect(() => {
+        if (!isOpen || !iframeRef.current) return;
+
+        const handleTimestampClick = (event: MessageEvent) => {
+            if (event.data.type === 'youtube-seek' && event.data.targetId === uniqueId) {
+                const iframe = iframeRef.current;
+                if (iframe && iframe.contentWindow) {
+                    // Send seekTo command to YouTube iframe
+                    iframe.contentWindow.postMessage(
+                        JSON.stringify({
+                            event: 'command',
+                            func: 'seekTo',
+                            args: [event.data.time, true]
+                        }),
+                        '*'
+                    );
+
+                    // Ensure video is playing
+                    iframe.contentWindow.postMessage(
+                        JSON.stringify({
+                            event: 'command',
+                            func: 'playVideo'
+                        }),
+                        '*'
+                    );
+
+                    // Scroll to video
+                    iframe.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        };
+
+        window.addEventListener('message', handleTimestampClick);
+        return () => window.removeEventListener('message', handleTimestampClick);
+    }, [isOpen, uniqueId]);
+
     if (!isOpen) {
         return (
             <div className="relative cursor-pointer aspect-video" onClick={handleClick}>
@@ -134,6 +189,7 @@ export function Youtube({ id, playlist, startTime }: YoutubeProps) {
 
     return (
         <iframe
+            ref={iframeRef}
             className="w-full aspect-video"
             src={buildEmbedUrl()}
             title="YouTube Video"
