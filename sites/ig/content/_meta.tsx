@@ -31,6 +31,9 @@ export default {
         type: 'separator',
         title: 'Weitere Inhalte'
     },
+    blender: {
+        title: <span className="menuicon blue">Blender & VFX</span>
+    },
     crypto: {
         title: <span className="menuicon blue">Kryptologie</span>
     },
@@ -57,9 +60,6 @@ export default {
     },
     population: {
         title: <span className="menuicon blue">Populationsdynamik</span>
-    },
-    vfx: {
-        title: <span className="menuicon blue">VFX</span>
     },
     // -- Hidden stuff ---
     // Navbar items

@@ -4,7 +4,11 @@
       "Bash(python:*)",
       "Bash(pip install:*)",
       "mcp__ide__executeCode",
-      "Read(//home/chris/git/informatikgarten.ch/packages/shared/components/**)"
+      "Read(//home/chris/git/informatikgarten.ch/packages/shared/components/**)",
+      "Bash(chmod:*)",
+      "Read(//tmp/**)",
+      "Bash(npm run dev:*)",
+      "Bash(pnpm dev:*)"
     ],
     "deny": [],
     "ask": []
