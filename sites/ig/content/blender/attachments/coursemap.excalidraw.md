@@ -49,11 +49,11 @@ l0XVwJaY: [[90-facialtracking]]
 
 i7BLgsC1: [[30-greenscreen]]
 
-h4Pu6aX9: [[70-character-modelling]]
+h4Pu6aX9: [[75-character-modelling]]
 
 uON0aowX: [[90-sculpting]]
 
-psrhE8oI: [[71-character-animation]]
+psrhE8oI: [[70-character-animation]]
 
 ryOo1SlP: [[80-fireball]]
 
@@ -1739,7 +1739,7 @@ adca95183810be89259615d9d3e26ecb1513da1d: [[Pasted Image 20250921221551_705.png]
 					"type": "arrow"
 				}
 			],
-			"link": "[[70-character-modelling]]",
+			"link": "[[75-character-modelling]]",
 			"locked": false,
 			"containerId": null,
 			"originalText": "Charaktere modellieren",
@@ -1936,7 +1936,7 @@ adca95183810be89259615d9d3e26ecb1513da1d: [[Pasted Image 20250921221551_705.png]
 			"isDeleted": false,
 			"groupIds": [],
 			"boundElements": [],
-			"link": "[[71-character-animation]]",
+			"link": "[[70-character-animation]]",
 			"locked": false,
 			"containerId": null,
 			"originalText": "Charakter Animation",
@@ -2243,7 +2243,7 @@ adca95183810be89259615d9d3e26ecb1513da1d: [[Pasted Image 20250921221551_705.png]
 			"version": 36,
 			"versionNonce": 1255180188,
 			"isDeleted": false,
-			"boundElements": null,
+			"boundElements": [],
 			"updated": 1758485862170,
 			"link": null,
 			"locked": false,
@@ -2272,10 +2272,10 @@ adca95183810be89259615d9d3e26ecb1513da1d: [[Pasted Image 20250921221551_705.png]
 		"currentItemStartArrowhead": null,
 		"currentItemEndArrowhead": "arrow",
 		"currentItemArrowType": "round",
-		"scrollX": 192.06448582373233,
-		"scrollY": 1015.5960010980696,
+		"scrollX": 1310.9856157205973,
+		"scrollY": 1627.2136837008388,
 		"zoom": {
-			"value": 1.007226
+			"value": 0.249903
 		},
 		"currentItemRoundness": "round",
 		"gridSize": 20,
