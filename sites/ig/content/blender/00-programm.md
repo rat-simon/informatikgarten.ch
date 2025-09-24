@@ -17,7 +17,7 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 
 ## Übersicht der Inhalte
 
-![[coursemap.excalidraw|links]]
+![[coursemap.excalidraw]]
 
 ## Grobes Wochenprogramm
 
@@ -42,8 +42,10 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 
 **Vormittag**
 
-- Keyframe-Animation
-- Erstes Kamera-Tracking: Donut auf Tisch platzieren
+- Entweder erstes Kamera-Tracking: z.B Donut auf Tisch platzieren
+- Oder Charakter animieren
+
+![[cameratracking.png]]
 
 **Mittag:** Mittag normal an der KSWE
 
@@ -51,28 +53,61 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 
 - *Cont.* Erstes Kamera-Tracking
 - Evtl. Objekt-Tracking
-
-![[cameratracking.png]]
 ### Mittwoch, 24. September
 
 **Vormittag**
 
-- Eigene Projektidee mit VFX entwerfen
-    - Was für Material bräuchten wir?
-    - Welche Skills bräuchten wir?
-- Arbeit an eigenem Projekt
+- Kurzer Überblick über Möglichkeiten, die wir kennengelernt haben.
 
-**Mittag:** Mittag normal an der KSWE 
+> [!discuss] World Café: Projektideen entwickeln
+> 
+> **So funktioniert's:**
+> 
+> - Sie sitzen in fünf Fünfergruppen an verschiedenen Tischen
+> - Eine Person bleibt als "Host" am Tisch sitzen und notiert, was besprochen wird
+> - Nach jeder Runde wechseln alle anderen die Tische
+> - Der/Die Host erklärt den Neuen, was bisher besprochen wurde
+> - Jede Runde hat eine neue Aufgabe
+> 
+> #### Runde 1 (15 Min): Wilde Ideen sammeln
+> 
+> **Aufgabe:** Sammeln Sie Ideen für 3D-Projekte, die Ihnen **extrem Spass** machen würden!
+> 
+> - Denken Sie gross - die Ideen müssen nicht realistisch sein
+> - Alles ist erlaubt: Fantasie-Welten, verrückte Charaktere, Actionszenen, unmögliche Gebäude...
+> - Schreiben Sie alles auf!
+> 
+> #### Runde 2 (20 Min): Realistische Umsetzung
+> 
+> **Aufgabe:** Nehmen Sie eine der coolsten Ideen und machen Sie sie **in 3 Tagen umsetzbar**
+> 
+> - Was müssen Sie weglassen oder vereinfachen?
+> - Erstellen Sie ein **konkretes Storyboard** (Skizzen mit Beschreibung)
+> - Denken Sie an: Was soll am Ende rauskommen?
+> 
+> #### Runde 3 (20 Min): Was braucht's dafür?
+> 
+> **Aufgabe:** Planen Sie die Umsetzung Ihrer Idee
+> 
+> - **Skills:** Welche Fähigkeiten müssen Sie lernen?
+> - **Material:** Was für Software, Hardware oder andere Hilfsmittel brauchen Sie?
+> - **Zeitplan:** Wie könnte ein 3-Tage-Plan aussehen?
+
+- Kurzer Input, wie Sie Ihre 3D-Projekte teilen und bearbeiten können
+
+**Mittag**
+
+Normale Mittagspause an der KSWE
 
 **Nachmittag**
 
+- Kurzer Input zu Animationen
 - Arbeit an eigenem Projekt
-
 ### Donnerstag, 25. September
 
 **Vormittag**
 
-- Kurzer Input zu Partikel-Simulationen
+- Kurzer Input zu Simulationen
 - Arbeit an eigenem Projekt
 
 **Mittag:** Mittag normal an der KSWE
