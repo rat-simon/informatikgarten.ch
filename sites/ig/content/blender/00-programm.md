@@ -101,20 +101,19 @@ Normale Mittagspause an der KSWE
 
 **Nachmittag**
 
-- Kurzer Input zu Animationen
 - Arbeit an eigenem Projekt
 ### Donnerstag, 25. September
 
 **Vormittag**
 
-- Kurzer Input zu Simulationen
+- Kurzer Input zu Animationen
 - Arbeit an eigenem Projekt
 
 **Mittag:** Mittag normal an der KSWE
 
 **Nachmittag**
 
-- Kurzer Input zu Physik-Simulationen
+- Kurzer Input zu Simulationen
 - Arbeit an eigenem Projekt
 
 ### Freitag, 26. September
@@ -127,4 +126,5 @@ Normale Mittagspause an der KSWE
 
 **Nachmittag**
 
+- Aufräumen
 - Vorstellung der eigenen Projekte

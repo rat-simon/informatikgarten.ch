@@ -1,8 +1,10 @@
 ---
-title: Fireball erstellen
+title: 🔥 Feuer simulieren in Cycles
 ---
 
-# Fireball in Blender
+# Feuer simulieren in Cycles
+
+_Achtung: Dieses Tutorial wird in Cycles gerendert. Dafür benötigen Sie einen leistungsstarken Computer. In Eevee wäre es wohl einfacher, Feuer nicht zu simulieren sondern künstlich nachzumachen, wie [in diesem Tutorial](80-fire), oder [dieses Simulations-Tutorial zu wählen](81-fireball-eevee)._
 
 <StickMe>
 ## Tutorial-Video

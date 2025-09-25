@@ -16,3 +16,6 @@ tsup.config.bundled*
 tsconfig.tsbuildinfo
 _pagefind/
 docs/public/sitemap.xml
+
+# Python virtual environments
+sites/ig/scripts/venv/
