@@ -26,12 +26,12 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 **Vormittag**
 
 - Setup und Einführung
-	- Installation Arbeitsplätze
+	- Installation Schulzimmer und Arbeitsplätze
 	- Installation Software
-- Grundlagen Special Effects
+- Bemerkung zum Spirit der Woche: Positiver Vibe, Self-Help und dem Spass folgen
 - Blender Einführung mit Donut-Tutorial
 
-**Mittag:** Mittag normal an der KSWE
+
 
 **Nachmittag**
 
@@ -42,22 +42,23 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 
 **Vormittag**
 
-- Entweder erstes Kamera-Tracking: z.B Donut auf Tisch platzieren
-- Oder Charakter animieren
+Ab hier folgenden *Empfehlungen*. Gehen Sie in die Richtung, die Sie anzieht.
+
+- Entweder: Erstes Kamera-Tracking, z.B Ihren Donut in einem realen Video platzieren [[20-tracking|mit diesem Tutorial]].
 
 ![[cameratracking.png]]
 
-**Mittag:** Mittag normal an der KSWE
+- Oder: Charakter animieren [[70-character-animation|mit diesem Tutorial]].
 
 **Nachmittag**
 
-- *Cont.* Erstes Kamera-Tracking
-- Evtl. Objekt-Tracking
+- *Cont.* Arbeit am Tutorial vom Morgen
+- Evtl. Objekt-Tracking - z.B. dass Sie sich ein 3D-Objekt in die Hand projizieren [[25-objecttracking|mit diesem Tutorial]] oder einen komplizierteren Charakter kreieren und mit Motion-Capture-Daten animieren [[61-rigging|anhand dieses Tutorials]].
 ### Mittwoch, 24. September
 
 **Vormittag**
 
-- Kurzer Überblick über Möglichkeiten, die wir kennengelernt haben.
+- Kurzer Überblick über Möglichkeiten, die wir haben, damit Sie sehen, was Sie tun könnten.
 
 > [!discuss] World Café: Projektideen entwickeln
 > 
@@ -93,11 +94,7 @@ Wir starten **am Montag, 22. September, um 8:35 in S109.** Als Richtwert: Tage g
 > - **Material:** Was für Software, Hardware oder andere Hilfsmittel brauchen Sie?
 > - **Zeitplan:** Wie könnte ein 3-Tage-Plan aussehen?
 
-- Kurzer Input, wie Sie Ihre 3D-Projekte teilen und bearbeiten können
-
-**Mittag**
-
-Normale Mittagspause an der KSWE
+- Kurzer Input, wie Sie Ihre 3D-Projekte teilen und bearbeiten können.
 
 **Nachmittag**
 
@@ -106,25 +103,25 @@ Normale Mittagspause an der KSWE
 
 **Vormittag**
 
-- Kurzer Input zu Animationen
-- Arbeit an eigenem Projekt
-
-**Mittag:** Mittag normal an der KSWE
+- Kurzer Input zu Animationen - Keyframes, Dopesheet und Graph-Editor.
+- *Cont.* Arbeit an eigenem Projekt
 
 **Nachmittag**
 
-- Kurzer Input zu Simulationen
-- Arbeit an eigenem Projekt
+- Kurzer Input zu Simulationen - Rigid Bodies, Kleider, Wasser und Feuer.
+- Blender Studio Kurzfilm #1
+- *Cont.* Arbeit an eigenem Projekt
 
 ### Freitag, 26. September
 
 **Vormittag**
 
-- Arbeit am eigenen Projekt
+- *Const.* Arbeit am eigenen Projekt
 
 **Mittag:** Pizza?
 
 **Nachmittag**
 
-- Aufräumen
 - Vorstellung der eigenen Projekte
+- Blender Studio Kurzfilm #2
+- Aufräumen
