@@ -10,6 +10,7 @@ timestamps using the <YT> component\
 timestamps using the <YT> component\
 - use the transcript + timestamps for more detailed content inside the main structure + links
 using the <YT> component
+- use swiss german writing: avoid the german character eszett (ß) and instead use double s (ss)
 
 here's an example for the beginning of the summary:
 

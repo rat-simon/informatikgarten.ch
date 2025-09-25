@@ -56,7 +56,7 @@ Ein kompaktes Tutorial zum Object Tracking in Blender - die Technik zum Verfolge
 
 **Optimale Bewegung:**
 - <YT time={54} videoId="grclmlKzwY4" label="Markers visible for majority of movement (0:54)" />
-- Langsame, gleichmäßige Bewegungen
+- Langsame, gleichmässige Bewegungen
 - Marker sollten nicht verdeckt werden
 
 ## 3. Blender Setup
@@ -197,7 +197,7 @@ Ein kompaktes Tutorial zum Object Tracking in Blender - die Technik zum Verfolge
 - Stativ für stabile Kamera verwenden
 - Mindestens 8 gut sichtbare Marker am Objekt
 - Hoher Kontrast der Marker zum Objekt
-- Langsame, gleichmäßige Objektbewegung
+- Langsame, gleichmässige Objektbewegung
 - Marker über gesamte Objektoberfläche verteilen
 
 **Häufige Probleme:**

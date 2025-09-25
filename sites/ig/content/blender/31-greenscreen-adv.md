@@ -70,10 +70,10 @@ Beleuchtung sollte zur Sonnenposition im Hintergrund-Footage passen - Schatten a
 - Mit G-Taste positionieren
 
 <YT time={409} videoId="5ZpGpfQjzJA" label="Mask anpassen (0:06:49)" />
-Handles an die Ecken ziehen, um unnötiges Footage auszuschneiden. Mask muss das Subjekt während der gesamten Animation umschließen.
+Handles an die Ecken ziehen, um unnötiges Footage auszuschneiden. Mask muss das Subjekt während der gesamten Animation umschliessen.
 
 <YT time={435} videoId="5ZpGpfQjzJA" label="Timeline durchscrubben (0:07:15)" />
-Überprüfen Sie, dass das Subjekt nie außerhalb der Maske ist. Bei Bedarf Mask-Größe anpassen.
+Überprüfen Sie, dass das Subjekt nie ausserhalb der Maske ist. Bei Bedarf Mask-Grösse anpassen.
 
 ## Teil 3: Compositing & Keying
 
@@ -232,7 +232,7 @@ Finale Animation als Video-Datei exportieren.
 
 ### Green Screen Aufnahme
 - Höchstmögliche Qualität (4K wenn möglich)
-- Gleichmäßige Beleuchtung des Green Screens
+- Gleichmässige Beleuchtung des Green Screens
 - Subjekt weit vom Green Screen entfernt
 - Keine grüne Kleidung tragen
 - Backlighting für bessere Kantentrennung

@@ -34,8 +34,8 @@ Joey erklärt die zwei Hauptmethoden für Character Modeling:
 - **Sculpting + Retopology**: Freiheit bei Formen, aber dichtes Mesh erfordert Nachbearbeitung
 
 <YT time={32} videoId="O6HQhs-gk50" label="Stil-Überlegungen (0:00:32)" />
-- Realistische Modelle: Gliedmaßen mit Torso verbunden
-- Stilisierte Modelle: Gliedmaßen als separate Objekte (anfängerfreundlicher)
+- Realistische Modelle: Gliedmassen mit Torso verbunden
+- Stilisierte Modelle: Gliedmassen als separate Objekte (anfängerfreundlicher)
 
 ## Teil 2: Low-Poly Human Model
 
@@ -76,8 +76,8 @@ Joey erklärt die zwei Hauptmethoden für Character Modeling:
 - E: Extrudieren bis zum Knöchel
 - S: Skalieren für Beinform
 
-<YT time={360} videoId="O6HQhs-gk50" label="Fuß modellieren (0:06:00)" />
-- E: Extrudieren für Fuß
+<YT time={360} videoId="O6HQhs-gk50" label="Fuss modellieren (0:06:00)" />
+- E: Extrudieren für Fuss
 - Absolute Grid Snap für perfekte Bodenposition
 - Loop Cut für bessere Deformation
 
@@ -127,20 +127,20 @@ Playbook bietet 4TB kostenlosen Cloud-Speicher speziell für Kreative mit Featur
 - Shift+D: Duplizieren für Körper
 - Separate Objekte für einfacheres Modeling
 
-### Skin Modifier für Gliedmaßen
+### Skin Modifier für Gliedmassen
 <YT time={788} videoId="O6HQhs-gk50" label="Skin Modifier Setup (0:13:08)" />
 - Plane hinzufügen
 - Mirror + Skin + Subdivision Modifier
 - M: Merge at Center
 
-<YT time={831} videoId="O6HQhs-gk50" label="Gliedmaßen erstellen (0:13:51)" />
+<YT time={831} videoId="O6HQhs-gk50" label="Gliedmassen erstellen (0:13:51)" />
 - Ctrl+A: Skalieren der Skin-Dicke
 - E: Extrudieren für Beine
 - Shift+D: Duplizieren für Arme
 - Mark Root für fehlende Roots
 
-### Füße modellieren
-<YT time={896} videoId="O6HQhs-gk50" label="Füße Setup (0:14:56)" />
+### Füsse modellieren
+<YT time={896} videoId="O6HQhs-gk50" label="Füsse Setup (0:14:56)" />
 - Cube hinzufügen
 - Origin Point nach unten verschieben
 - Mirror Modifier mit Mirror Object
@@ -304,12 +304,12 @@ Playbook bietet 4TB kostenlosen Cloud-Speicher speziell für Kreative mit Featur
 ### Modifier-Stack
 - Mirror für Symmetrie
 - Subdivision für Smoothing
-- Skin Modifier für Gliedmaßen
+- Skin Modifier für Gliedmassen
 - Richtige Reihenfolge wichtig
 
 ### Proportionen
 - 2m Höhe als Menschen-Referenz
-- Kopf als Maßeinheit (7-8 Köpfe hoch)
+- Kopf als Masseinheit (7-8 Köpfe hoch)
 - Joints mit Extra-Loops für Animation
 
 ### Deformation vorbereiten
@@ -321,4 +321,4 @@ Playbook bietet 4TB kostenlosen Cloud-Speicher speziell für Kreative mit Featur
 - Loop Tools Add-on verwenden
 - Proportional Editing für organische Formen
 - Mirror Modifier früh einsetzen
-- Skin Modifier für schnelle Gliedmaßen
+- Skin Modifier für schnelle Gliedmassen
