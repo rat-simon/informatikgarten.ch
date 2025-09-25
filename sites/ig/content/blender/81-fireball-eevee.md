@@ -77,19 +77,19 @@ Feuer- und Rauch-Simulationen sind Teil des Fluid-Systems in Blender:
 **Texture erstellen**:
 - **Properties** → **Texture** → New Texture
 - **Type**: **Clouds**
-- **Colors** → **Contrast**: 5 (mehr Definition zwischen Weiß/Schwarz)
+- **Colors** → **Contrast**: 5 (mehr Definition zwischen Weiss/Schwarz)
 
 **Texture anwenden**:
 - **Physics Properties** → **Texture**: Clouds-Texture auswählen
 - **Size**: 0.5 (kleinere Patches für detaillierteres Feuer)
-- **Weiß** = Feuer-Emission, **Schwarz** = keine Emission
+- **Weiss** = Feuer-Emission, **Schwarz** = keine Emission
 
 ### Texture-Animation
 <YT time={294} videoId="LYy_YaoMTck" label="Texture animieren (4:54)" />
 - **Frame 1**: Offset auf 0, Keyframe setzen (I-Taste)
 - **Frame 200**: Offset auf 1.5, Keyframe setzen
 - **Timeline**: Beide Keyframes auswählen → **T** → **Linear**
-- Ergebnis: Gleichmäßige Texture-Bewegung für organischeres Aussehen
+- Ergebnis: Gleichmässige Texture-Bewegung für organischeres Aussehen
 
 ## Teil 4: Domain-Konfiguration
 
@@ -280,5 +280,5 @@ Dieses Tutorial ist Teil einer umfassenden Serie:
 **Empfohlene nächste Schritte:**
 - Experimentieren mit verschiedenen Texture-Typen
 - Wind-Pattern für spezifische Effekte entwickeln
-- Integration in größere Szenen mit Beleuchtung
+- Integration in grössere Szenen mit Beleuchtung
 - Performance-Tests für verschiedene Hardware-Konfigurationen

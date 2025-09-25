@@ -71,15 +71,15 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 - Ellenbogen und Handgelenk ausrichten
 - Leichte Beugung in Beugerichtung einbauen
 
-<YT time={223} videoId="m-Obo_nC3SM" label="Beine und Füße" />
+<YT time={223} videoId="m-Obo_nC3SM" label="Beine und Füsse" />
 - Knie in Beinmitte positionieren
-- Fuß-Bones für Ferse und Zehen
+- Fuss-Bones für Ferse und Zehen
 - Foot Roll Controller ausrichten
 
 ### Topologie für bessere Deformation
 <YT time={260} videoId="m-Obo_nC3SM" label="Topologie-Optimierung" />
 - Extra Loop Cuts bei Gelenken hinzufügen
-- Mehr Vertices auf der Außenseite von Gelenken
+- Mehr Vertices auf der Aussenseite von Gelenken
 
 <YT time={286} videoId="m-Obo_nC3SM" label="Ellenbogen-Topologie" />
 1. Edge Loop auswählen mit Alt+Click
@@ -175,14 +175,14 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 - Ctrl beim Bewegen für automatisches Einrasten
 - Hilfreich bei komplexen Formen
 
-### Beine und Füße
+### Beine und Füsse
 <YT time={865} videoId="m-Obo_nC3SM" label="Bein-Bones erstellen" />
 - Spine-Bone duplizieren für Oberschenkel
 - 180° rotieren und positionieren
 - Leichte Beugung für IK-Setup
 
-<YT time={919} videoId="m-Obo_nC3SM" label="Fuß-Setup" />
-- Foot-Bone für Hauptfuß
+<YT time={919} videoId="m-Obo_nC3SM" label="Fuss-Setup" />
+- Foot-Bone für Hauptfuss
 - Toe-Bone für Zehen
 - Heel-Bone als Controller (Non-Deform)
 
@@ -254,7 +254,7 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 
 ### Kleidungs-Bones
 <YT time={1567} videoId="m-Obo_nC3SM" label="Coat Bones" />
-- Extra Bones für Mantelschöße
+- Extra Bones für Mantelschösse
 - Bessere Kontrolle über Kleidungssimulation
 - Parent zu Hips für Folgebewegung
 
@@ -304,9 +304,9 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 - Foot-Bone als IK Target
 - Heel-Bone für zusätzliche Kontrolle
 
-<YT time={1925} videoId="m-Obo_nC3SM" label="Fuß-Controller" />
+<YT time={1925} videoId="m-Obo_nC3SM" label="Fuss-Controller" />
 - Copy Rotation Constraint für Zehen
-- Ermöglicht Fuß-Roll
+- Ermöglicht Fuss-Roll
 - Parent-Chain für intuitive Kontrolle
 
 ## Teil 8: Root und Torso Control
@@ -314,7 +314,7 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 ### Root Bone
 <YT time={2066} videoId="m-Obo_nC3SM" label="Root Controller erstellen" />
 - Zentraler Controller für gesamten Character
-- Im Zentrum unter den Füßen
+- Im Zentrum unter den Füssen
 - Alle Hauptbones als Children
 
 <YT time={2104} videoId="m-Obo_nC3SM" label="Parenting-Struktur" />
@@ -468,7 +468,7 @@ Rigging ist der Prozess, ein 3D-Modell mit einem Skelett (Armature) auszustatten
 <YT time={3560} videoId="m-Obo_nC3SM" label="Wichtige Tipps" />
 - Immer mit guter Topologie beginnen
 - Bone Roll früh korrekt einstellen
-- Regelmäßig speichern und Backups erstellen
+- Regelmässig speichern und Backups erstellen
 - Klein anfangen, dann komplexer werden
 
 ### Weiterführende Ressourcen

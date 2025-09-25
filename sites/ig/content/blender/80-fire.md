@@ -94,7 +94,7 @@ Dieses kompakte Tutorial von CG Patrick zeigt, wie Sie einen realistischen Flamm
 <YT time={225} videoId="orNRbPw-KZ0" label="Node-Logik erklärt (3:45)" />
 - **Mix Factor** steuert Verteilung der Shader
 - **Schwarz** = Transparent BSDF (unsichtbar)
-- **Weiß** = Emission Shader (leuchtend)
+- **Weiss** = Emission Shader (leuchtend)
 - Diese Technik funktioniert für alle Node-basierten Effekte
 
 ## Teil 5: Animation der Flammen
@@ -160,7 +160,7 @@ Dieses kompakte Tutorial von CG Patrick zeigt, wie Sie einen realistischen Flamm
 - Obere Hälfte löschen
 - Material duplizieren
 - **Emission Strength**: 0.3
-- **Farbe**: Weiß (für heißen Kern)
+- **Farbe**: Weiss (für heissen Kern)
 
 ## Technische Erkenntnisse
 
@@ -171,7 +171,7 @@ Dieses kompakte Tutorial von CG Patrick zeigt, wie Sie einen realistischen Flamm
 
 ### Anpassungsmöglichkeiten
 - Farben ändern für verschiedene Feuerarten
-- Scale-Werte für Flammengröße
+- Scale-Werte für Flammengrösse
 - Modifier-Stärke für Bewegungsintensität
 - Zusätzliche Ebenen für Komplexität
 
@@ -190,5 +190,5 @@ Das Tutorial zeigt eine Grundtechnik, die sich für viele andere Effekte adaptie
 **Empfohlene nächste Schritte:**
 - Experimentieren mit verschiedenen Noise-Einstellungen
 - Kombinieren mit Particle Systems
-- Integration in größere Szenen
+- Integration in grössere Szenen
 - Verwendung für andere Elementar-Effekte
