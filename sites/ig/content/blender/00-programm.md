@@ -95,10 +95,11 @@ Ab hier folgenden *Empfehlungen*. Gehen Sie in die Richtung, die Sie anzieht.
 > - **Zeitplan:** Wie könnte ein 3-Tage-Plan aussehen?
 
 - Kurzer Input, wie Sie Ihre 3D-Projekte teilen und bearbeiten können.
+- Arbeit an eigenem Projekt
 
 **Nachmittag**
 
-- Arbeit an eigenem Projekt
+- *Cont.* Arbeit an eigenem Projekt
 ### Donnerstag, 25. September
 
 **Vormittag**
