@@ -11,19 +11,23 @@ title: Asymmetrische Kryptografie
 ![[crypto-05-publickey-rsa-photo.png]]
 *V.l.n.r: Adi Shamir, Ron Rivest, and Len Adleman. Photo: Dan Wrights RSA-Algorithmuskurs auf imps.mcmaster.ca.*
 
-Kurz nach Diffie und Hellman veröffentlichten drei Forscher – Ronald Rivest, Adi Shamir und Leonard Adleman – im Jahr 1977 das **RSA-Kryptosystem**. Sie entdeckten, dass man durch die geschickte Wahl der Zahlen im Diskreten Logarithmusproblem (DLP) ein System schaffen kann, bei dem **zwei Schlüssel jeweils in umgekehrter Richtung eine Einbahnstrasse schaffen**: 
+Kurz nach Diffie und Hellman veröffentlichten drei Forscher – Ronald Rivest, Adi Shamir und Leonard Adleman – im Jahr 1977 das **RSA-Kryptosystem**. Sie entdeckten, dass man mit diskreten Logarithmen durch die geschickte Wahl der Zahlen ein System schaffen kann, bei dem **zwei Schlüssel jeweils in umgekehrter Richtung eine Einbahnstrasse schaffen**:
 
-> Wenn man einen Klartext kann mit einem Schlüssel verschlüsselt, kann er ausschliesslich mit dem anderen Schlüssel wieder entschlüsselt werden. 
+> Wenn man einen Klartext mit einem der Schlüssel verschlüsselt, kann er ausschliesslich mit dem anderen Schlüssel wieder entschlüsselt werden.
 
-Mann nennt das ***asymmetrische* Kryptografie**, weil man unterschiedliche Schlüssel für das ver- und entschlüsseln nutzt. Oft wird dabei **ein öffentlicher und ein privater Schlüssel** erstellt. Der öffentliche Schlüssel wird frei verteilt, während der private Schlüssel geheim gehalten wird. 
+Man nennt das ***asymmetrische* Kryptografie**, weil man unterschiedliche Schlüssel für das ver- und entschlüsseln nutzt. Oft wird dabei **ein öffentlicher und ein privater Schlüssel** erstellt. Der öffentliche Schlüssel wird frei verteilt, während der private Schlüssel geheim gehalten wird. 
 
-Anders als in der letzten Lektion wird für den Modulo im DLP keine Primzahl verwendet, sondern das Produkt zweier Primzahlen.
 
 ![[crypto-05-publickey-basic.excalidraw]]
 
-Der genaue Prozess der Schlüsselgenerierung und Verschlüsselung erklären wir hier nicht, aber das zugrunde liegende Prinzip basiert auf zwei schwierigen mathematischen Problemen:
-- Das diskrete Algorithmusproblem, dass wir in der letzten Lektion kennengelernt haben.
-- Das Faktorisierungsproblem, also die Tatsache, dass die Multiplikation grosser Primzahlen einfach ist, während es sehr schwierig ist, vom Produkt her wieder herzuleiten, was die Faktoren waren.
+Anders als bei Diffie-Hellman wird für den Modulo keine Primzahl verwendet, sondern das Produkt zweier Primzahlen. Der genaue Prozess der Schlüsselgenerierung und Verschlüsselung erklären wir hier nicht, aber wichtig zu wissen, ist, dass die Sicherheit von RSA primär auf dem sogenannten Faktorisierungsproblem beruht. Das heisst: Es ist einfach, zwei grosse Primzahlen zu multiplizieren, aber extrem schwierig, aus dem Produkt wieder die ursprünglichen Primzahlen zu ermitteln.
+
+**Beispiel Faktorisierungsproblem:**
+
+$$61 \times 53 = 3233$$
+
+Die Multiplikation ist einfach und dauert Sekundenbruchteile. Aber wenn Sie nur die Zahl 3233 haben und herausfinden müssen, welche zwei Primzahlen multipliziert wurden, wird es deutlich schwieriger. Bei grossen Zahlen (mit hunderten von Stellen) ist dies praktisch unmöglich.
+
 ### Ein Beispiel:
 
 Unser öffentlicher Schlüssel ist $\textcolor{lightgreen}{k_{pub}} = \textcolor{lightgreen}{1007}$, unser privater Schlüssel ist $\textcolor{orange}{k_{priv}} = \textcolor{orange}{1103}$ und $n = 3233$. Diese Zahlen wurden **speziell gewählt**!
@@ -38,7 +42,7 @@ Beachten Sie: Mit dem öffentlichen Schlüssel $\textcolor{lightgreen}{k_{pub}}$
 
 $$\textcolor{lightgreen}{1388^{1007}} \mod 3233 = \textcolor{red}{1056}$$
 
-Aber mit dem privaten Schlüssel $\textcolor{orange}{k_{priv}} = \textcolor{orange}{1103}$ können die Nachricht entschlüsseln, 
+Aber mit dem privaten Schlüssel $\textcolor{orange}{k_{priv}} = \textcolor{orange}{1103}$ können wir die Nachricht entschlüsseln, 
 
 $$ \textcolor{lightgreen}{\text{ciphertext}_{pub}}^{\textcolor{orange}{k_{priv}}} \mod{n}= \textcolor{cyan}{\text{klartext}}$$
 
@@ -67,7 +71,7 @@ Um das Konzept der asymmetrischen Kryptografie besser zu veranschaulichen, habe 
 
 ## Anwendungsbeispiele
 ### 1. **Verschlüsselung von Nachrichten**
-- **Erklärung**: Investigativjournalisten veröffentlichen ihre öffentlichen Schlüssel, dass Quellen sie sicher kontaktieren können.
+- **Erklärung**: Investigativjournalisten veröffentlichen ihre öffentlichen Schlüssel, damit Quellen sie sicher kontaktieren können.
 - **Beispiel**: Alice möchte Bob eine geheime Nachricht senden. Alice verwendet Bobs öffentlichen Schlüssel, um die Nachricht zu verschlüsseln. Nur Bob, der den entsprechenden privaten Schlüssel besitzt, kann die Nachricht entschlüsseln und lesen.
 
 ![[crypto-05-publickey-guardian.png]]
