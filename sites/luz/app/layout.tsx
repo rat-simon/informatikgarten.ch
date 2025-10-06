@@ -90,10 +90,14 @@ const RootLayout: FC<{
   return (
     <html lang="en" dir="ltr" className={cn(bodyFont.variable, headingFont.variable)} suppressHydrationWarning>
       <Head
-      color={{
-        hue: 200,
-        saturation: 50,
-      }}>
+        color={{
+          hue: 200,
+          saturation: 20,
+        }}
+        backgroundColor={{
+          light: "#eee",
+          dark: "#111"
+        }}>
         <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
         <link rel="shortcut icon" href="/img/favicon.ico" />
@@ -101,17 +105,17 @@ const RootLayout: FC<{
         <link rel="manifest" href="/img/site.webmanifest" />
       </Head>
       <body>
-          <Layout
-            navbar={navbar}
-            feedback={{ content: null }}
-            pageMap={pageMap}
-            docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/sites/luz"
-            editLink="Verbesserung vorschlagen"
-            sidebar={{ defaultMenuCollapseLevel: 1 }}
-            footer={<></>}
-          >
-            {children}
-          </Layout>
+        <Layout
+          navbar={navbar}
+          feedback={{ content: null }}
+          pageMap={pageMap}
+          docsRepositoryBase="https://github.com/marcchehab/nextras25/tree/main/sites/luz"
+          editLink="Verbesserung vorschlagen"
+          sidebar={{ defaultMenuCollapseLevel: 1 }}
+          footer={<></>}
+        >
+          {children}
+        </Layout>
       </body>
     </html>
   )

@@ -5,7 +5,6 @@
 
 @theme {
     --color-ig-strong: hsl(20 100% 65%);
-    --color-ig-background: #eee;
     --color-ig-text: #262626;
     --color-ig-heading: #262626;
     --color-ig-h2: hsl(180 100% 42%);
@@ -18,7 +17,6 @@
 
 * {
     @variant dark {
-        --color-ig-background: #111;
         --color-ig-text: #eee;
         --color-ig-heading: #fff;
         --color-ig-h2: hsl(180 100% 50%);
@@ -58,6 +56,10 @@ main {
     margin-top: 1rem;
 }
 
+a {
+    color: var(--color-ig-text);
+}
+
 /* ----------- todo list corrections ------------- */
 
 .contains-task-list {
@@ -93,7 +95,7 @@ main {
     text-decoration: none;
     padding: 0px 4px;
     background-image:
-        linear-gradient(black, #737272 80%, white),
+        linear-gradient(rgb(var(--nextra-bg)), color-mix(in srgb, rgb(var(--nextra-bg)) 90%, transparent) 80%, transparent),
         linear-gradient(to right,
             rgb(255 0 0 / var(--rainbow-opacity)),
             rgb(255 128 0 / var(--rainbow-opacity)),
@@ -107,7 +109,7 @@ main {
             rgb(128 0 255 / var(--rainbow-opacity)),
             rgb(255 0 255 / var(--rainbow-opacity)),
             rgb(255 0 0 / var(--rainbow-opacity)));
-    background-blend-mode: multiply;
+    background-blend-mode: normal;
     background-repeat: repeat-x;
     border-radius: 5px;
     background-size: 100%, 300% 100%;

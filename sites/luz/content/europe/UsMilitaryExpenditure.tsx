@@ -62,8 +62,8 @@ export default function USMilitaryDualAxis() {
       const noteData = data.find(d => d.year === label);
       return (
         <div style={{
-          backgroundColor: '#f8f9fa',
-          border: '1px solid #dee2e6',
+          backgroundColor: 'rgb(var(--nextra-bg))',
+          border: '1px solid #77777777',
           borderRadius: '4px',
           padding: '10px'
         }}>
@@ -77,7 +77,7 @@ export default function USMilitaryDualAxis() {
           ))}
           {noteData?.note && (
             <p style={{ marginTop: '5px', fontStyle: 'italic', fontSize: '12px', color: '#666' }}>
-              📌 {noteData.note}
+              {noteData.note}
             </p>
           )}
         </div>
