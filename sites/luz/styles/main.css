@@ -35,7 +35,8 @@ main {
 
 main {
 
-    p, ul {
+    p,
+    ul {
         font-family: var(--nextfont-body);
         color: var(--color-ig-text);
         font-size: 120%;
@@ -90,7 +91,9 @@ main {
     --rainbow-y-offset: 90%;
     display: inline;
     text-decoration: none;
+    padding: 0px 4px;
     background-image:
+        linear-gradient(black, #737272 80%, white),
         linear-gradient(to right,
             rgb(255 0 0 / var(--rainbow-opacity)),
             rgb(255 128 0 / var(--rainbow-opacity)),
@@ -104,9 +107,11 @@ main {
             rgb(128 0 255 / var(--rainbow-opacity)),
             rgb(255 0 255 / var(--rainbow-opacity)),
             rgb(255 0 0 / var(--rainbow-opacity)));
+    background-blend-mode: multiply;
     background-repeat: repeat-x;
-    background-size: 300% 20%;
-    background-position: bottom 0px left 0%;
+    border-radius: 5px;
+    background-size: 100%, 300% 100%;
+    background-position: bottom left;
     animation: rainbow-shadow-flow 180s linear infinite;
 }
 
