@@ -8,6 +8,7 @@ import {
     remarkWikiLinks,
     remarkCallouts,
     remarkYoutube,
+    remarkDashes,
 } from "shared/server/remark";
 
 function isExportNode(node, varName: string) {
@@ -79,6 +80,7 @@ const withNextra = nextra({
             remarkPathCorrections,
             remarkCustomCodeLangs,
             remarkCallouts,
+            remarkDashes,
         ],
         rehypePlugins: [
             // Provide only on `build` since turbopack on `dev` supports only serializable values
