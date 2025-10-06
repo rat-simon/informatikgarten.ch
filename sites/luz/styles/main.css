@@ -34,7 +34,8 @@ main {
 main {
 
     p,
-    ul {
+    ul,
+    ol {
         font-family: var(--nextfont-body);
         color: var(--color-ig-text);
         font-size: 120%;
