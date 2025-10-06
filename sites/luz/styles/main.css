@@ -4,21 +4,24 @@
 /* ----------- colors ----------------- */
 
 @theme {
-    --color-ig-h1: hsl(345 94% 58%);
+    --color-ig-strong: hsl(20 100% 65%);
+    --color-ig-background: #eee;
+    --color-ig-text: #262626;
+    --color-ig-heading: #262626;
     --color-ig-h2: hsl(180 100% 42%);
     --color-ig-h3: hsl(200 100% 55%);
     --color-ig-h4: hsl(260 100% 70%);
     --color-ig-h5: hsl(300 100% 42%);
-    --color-ig-strong: hsl(20 100% 65%);
-    --ig-background: #eee;
-    --ig-text: #111;
 }
 
-.dark {
-    @theme {
+@variant dark (&:where(.dark *));
+
+* {
+    @variant dark {
+        --color-ig-background: #111;
+        --color-ig-text: #eee;
+        --color-ig-heading: #fff;
         --color-ig-h2: hsl(180 100% 50%);
-        --ig-background: #111;
-        --ig-text: #eee;
     }
 }
 
@@ -31,14 +34,20 @@ main {
 /* ----------- fonts ----------------- */
 
 main {
-    font-family: var(--nextfont-body);
-    font-size: 120%;
+
+    p, ul {
+        font-family: var(--nextfont-body);
+        color: var(--color-ig-text);
+        font-size: 120%;
+    }
+
     h1,
     h2,
     h3,
     h4,
     h5 {
         font-family: var(--nextfont-heading);
+        color: var(--color-ig-heading);
     }
 }
 
@@ -53,10 +62,12 @@ main {
 .contains-task-list {
     font-weight: bold;
     margin: 1rem;
+
     .contains-task-list {
         font-weight: normal;
         margin: 0 1rem 1rem;
     }
+
     .task-list-item:has(> input[type="checkbox"]:checked) {
         font-style: italic;
         opacity: 0.7;
@@ -100,6 +111,11 @@ main {
 }
 
 @keyframes rainbow-shadow-flow {
-    0% { background-position: 0% var(--rainbow-y-offset); }
-    100% { background-position: 300% var(--rainbow-y-offset); }
+    0% {
+        background-position: 0% var(--rainbow-y-offset);
+    }
+
+    100% {
+        background-position: 300% var(--rainbow-y-offset);
+    }
 }

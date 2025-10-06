@@ -1,7 +1,5 @@
 .title {
     position: relative;
-    color: var(--ig-text);
-    font-weight: bold;
     text-align: center;
     font-size: 3.125rem;
     font-size: min(4rem, max(8vw, 2.8rem));
