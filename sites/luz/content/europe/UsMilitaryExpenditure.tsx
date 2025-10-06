@@ -42,6 +42,12 @@ const data = [
   { year: 2024, absolute: 968381.6, share: 34.22 }
 ];
 
+interface CustomTooltipProps {
+  active?: boolean;
+  payload?: { color: string; name: string; value: number }[];
+  label?: number;
+}
+
 export default function USMilitaryDualAxis() {
   const formatYAxisBillion = (value) => {
     return `$${(value / 1000).toFixed(0)}B`;
@@ -51,7 +57,7 @@ export default function USMilitaryDualAxis() {
     return `${value}%`;
   };
 
-  const CustomTooltip = ({ active, payload, label }) => {
+  const CustomTooltip = ({ active, payload, label }: CustomTooltipProps) => {
     if (active && payload && payload.length) {
       const noteData = data.find(d => d.year === label);
       return (
