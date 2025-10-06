@@ -7,7 +7,7 @@ export function IgStrong({
     ...props
 }: ComponentProps<"strong"> & { className?: string }): ReactElement {
     return (
-        <strong className={cn("text-ig-strong", className)} {...props}>
+        <strong className={cn("rainbow-text", className)} {...props}>
             {children}
         </strong>
     );

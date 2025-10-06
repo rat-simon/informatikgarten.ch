@@ -1,4 +1,5 @@
 .svglogo {
+    --skin: #f8b297;
     height: 3rem;
     .cls-1 {
         fill: #6fb3f7;
@@ -18,19 +19,19 @@
     }
 
     .cls-2 {
-        fill: #f8b297;
+        fill: var(--skin);
     }
 
     .cls-3 {
-        fill: #f7b293;
+        fill: var(--skin);
     }
 
     .cls-4 {
-        fill: #ea8e75;
+        fill: var(--skin);
     }
 
     .cls-5 {
-        fill: #d5a28d;
+        fill: var(--skin);
     }
 
     .cls-6 {
@@ -52,7 +53,7 @@
         fill: #f9f7f2;
     }
     .bgbeam-light {
-        fill: #ffb600;
+        fill: url(#rainbow-gradient);
     }
 
     .cls-10 {

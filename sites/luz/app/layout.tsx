@@ -5,15 +5,15 @@ import { getPageMap } from 'nextra/page-map'
 import type { FC, ReactNode } from 'react'
 import './globals.css'
 import { LuzLogo } from 'shared/components/icons'
-import { Barlow_Condensed, Roboto_Slab } from 'next/font/google'
+import { Barlow_Condensed, EB_Garamond } from 'next/font/google'
 import cn from 'clsx'
 
 // TODO: move to taliwind
 import 'shared/components/TurtleEditor/style/turtle.global.css'
 
-const bodyFont = Roboto_Slab({
+const bodyFont = EB_Garamond({
   subsets: ['latin'],
-  weight: '200',
+  weight: ['400', '500', '600'],
   variable: '--nextfont-body'
 })
 
@@ -89,7 +89,11 @@ const RootLayout: FC<{
   const pageMap = await getPageMap()
   return (
     <html lang="en" dir="ltr" className={cn(bodyFont.variable, headingFont.variable)} suppressHydrationWarning>
-      <Head>
+      <Head
+      color={{
+        hue: 200,
+        saturation: 50,
+      }}>
         <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />
         <link rel="shortcut icon" href="/img/favicon.ico" />

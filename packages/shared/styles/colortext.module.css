@@ -1,4 +1,19 @@
 .title {
+    position: relative;
+    color: var(--ig-text);
+    font-weight: bold;
+    text-align: center;
+    font-size: 3.125rem;
+    font-size: min(4rem, max(8vw, 2.8rem));
+}
+
+.title::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 1.5px;
+    top: 1.5px;
+    width: 100%;
+    height: 100%;
     background-image: linear-gradient(to right,
             #ff0000,
             #ff8000,
@@ -17,11 +32,8 @@
     -webkit-background-clip: text;
     color: transparent;
     -webkit-text-fill-color: transparent;
-    animation: rainbow-text-flow 30s linear infinite;
-    font-weight: bold;
-    text-align: center;
-    font-size: 3.125rem;
-    font-size: min(4rem, max(8vw, 2.8rem));
+    animation: rainbow-text-flow 180s linear infinite;
+    z-index: -1;
 }
 
 @keyframes rainbow-text-flow {

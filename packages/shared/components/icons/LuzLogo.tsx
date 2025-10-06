@@ -18,6 +18,35 @@ const LuzLogo = () => {
             viewBox="0 0 464.91 163.53"
             className={styles.svglogo}
         >
+            <defs>
+                <linearGradient id="rainbow-gradient" x1="0%" y1="0%" x2="300%" y2="0%" spreadMethod="repeat">
+                    <stop offset="0%" style={{ stopColor: 'rgb(255, 0, 0)', stopOpacity: 0.6 }} />
+                    <stop offset="8.33%" style={{ stopColor: 'rgb(255, 128, 0)', stopOpacity: 0.6 }} />
+                    <stop offset="16.66%" style={{ stopColor: 'rgb(255, 255, 0)', stopOpacity: 0.6 }} />
+                    <stop offset="25%" style={{ stopColor: 'rgb(128, 255, 0)', stopOpacity: 0.6 }} />
+                    <stop offset="33.33%" style={{ stopColor: 'rgb(0, 255, 0)', stopOpacity: 0.6 }} />
+                    <stop offset="41.66%" style={{ stopColor: 'rgb(0, 255, 128)', stopOpacity: 0.6 }} />
+                    <stop offset="50%" style={{ stopColor: 'rgb(0, 255, 255)', stopOpacity: 0.6 }} />
+                    <stop offset="58.33%" style={{ stopColor: 'rgb(0, 128, 255)', stopOpacity: 0.6 }} />
+                    <stop offset="66.66%" style={{ stopColor: 'rgb(0, 0, 255)', stopOpacity: 0.6 }} />
+                    <stop offset="75%" style={{ stopColor: 'rgb(128, 0, 255)', stopOpacity: 0.6 }} />
+                    <stop offset="83.33%" style={{ stopColor: 'rgb(255, 0, 255)', stopOpacity: 0.6 }} />
+                    <stop offset="91.66%" style={{ stopColor: 'rgb(255, 0, 128)', stopOpacity: 0.6 }} />
+                    <stop offset="100%" style={{ stopColor: 'rgb(255, 0, 0)', stopOpacity: 0.6 }} />
+                    <animate
+                        attributeName="x1"
+                        values="0%;-600%;0%"
+                        dur="180s"
+                        repeatCount="indefinite"
+                    />
+                    <animate
+                        attributeName="x2"
+                        values="300%;-300%;300%"
+                        dur="180s"
+                        repeatCount="indefinite"
+                    />
+                </linearGradient>
+            </defs>
             <path
                 className={cn(
                     styles['bgbeam'],

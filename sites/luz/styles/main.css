@@ -10,15 +10,15 @@
     --color-ig-h4: hsl(260 100% 70%);
     --color-ig-h5: hsl(300 100% 42%);
     --color-ig-strong: hsl(20 100% 65%);
-    --ig-background: #fff;
-    --ig-text: #171717;
+    --ig-background: #eee;
+    --ig-text: #111;
 }
 
 .dark {
     @theme {
         --color-ig-h2: hsl(180 100% 50%);
-        --ig-background: #171717;
-        --ig-text: #fff;
+        --ig-background: #111;
+        --ig-text: #eee;
     }
 }
 
@@ -32,6 +32,7 @@ main {
 
 main {
     font-family: var(--nextfont-body);
+    font-size: 120%;
     h1,
     h2,
     h3,
@@ -69,4 +70,36 @@ main {
 
 [role="tabpanel"] h3:first-child {
     display: none;
+}
+
+/* ----------- custom utilities ----------------- */
+
+.rainbow-text {
+    --rainbow-opacity: 0.6;
+    --rainbow-y-offset: 90%;
+    display: inline;
+    text-decoration: none;
+    background-image:
+        linear-gradient(to right,
+            rgb(255 0 0 / var(--rainbow-opacity)),
+            rgb(255 128 0 / var(--rainbow-opacity)),
+            rgb(255 255 0 / var(--rainbow-opacity)),
+            rgb(128 255 0 / var(--rainbow-opacity)),
+            rgb(0 255 0 / var(--rainbow-opacity)),
+            rgb(0 255 128 / var(--rainbow-opacity)),
+            rgb(0 255 255 / var(--rainbow-opacity)),
+            rgb(0 128 255 / var(--rainbow-opacity)),
+            rgb(0 0 255 / var(--rainbow-opacity)),
+            rgb(128 0 255 / var(--rainbow-opacity)),
+            rgb(255 0 255 / var(--rainbow-opacity)),
+            rgb(255 0 0 / var(--rainbow-opacity)));
+    background-repeat: repeat-x;
+    background-size: 300% 20%;
+    background-position: bottom 0px left 0%;
+    animation: rainbow-shadow-flow 180s linear infinite;
+}
+
+@keyframes rainbow-shadow-flow {
+    0% { background-position: 0% var(--rainbow-y-offset); }
+    100% { background-position: 300% var(--rainbow-y-offset); }
 }

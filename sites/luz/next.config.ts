@@ -123,7 +123,7 @@ const nextConfig = withNextra({
         });
 
         config.module.rules.push({
-            test: /\.(tsv|ai|blend|log|mp4|backup\.md|excalidraw\.md)$/,
+            test: /\.(tsv|ai|blend|log|mp4|backup\.md|excalidraw\.md|map)$/,
             use: "null-loader",
         });
 

@@ -88,10 +88,10 @@ export default function USMilitaryDualAxis() {
 
   return (
     <div className="w-full p-6">
-      <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
+      <h2 className="text-2xl font-bold mb-4 text-center">
         US-Militärausgaben: Weltanteil vs. absolute Ausgaben (1988-2024)
       </h2>
-      <p className="text-sm text-gray-600 text-center mb-6">
+      <p className="text-sm text-center mb-6">
         Die Divergenz zwischen Ausgabenniveau und globaler Dominanz
       </p>
       
@@ -99,16 +99,14 @@ export default function USMilitaryDualAxis() {
         <LineChart
           data={data}
           margin={{
-            top: 20,
-            bottom: 60,
+            top: 40,
+            bottom: 20,
           }}
         >
-          <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
-          <XAxis 
-            dataKey="year" 
+          <XAxis
+            dataKey="year"
             stroke="#666"
             tick={{ fontSize: 11 }}
-            label={{ value: 'Jahr', position: 'insideBottom', offset: -10 }}
           />
           <YAxis
             yAxisId="left"
@@ -128,29 +126,29 @@ export default function USMilitaryDualAxis() {
             label={{ value: 'Absolute Ausgaben (konstant USD)', angle: 90, position: 'insideRight', offset: 10, style: { fill: '#dc2626', textAnchor: 'middle' } }}
           />
           <Tooltip content={<CustomTooltip />} />
-          <Legend wrapperStyle={{ paddingTop: '20px' }} />
-          
+
           {/* Reference lines for key events */}
-          <ReferenceLine yAxisId="left" x={2001} stroke="#fbbf24" strokeDasharray="3 3" />
-          <ReferenceLine yAxisId="left" x={2003} stroke="#f97316" strokeDasharray="3 3" />
-          <ReferenceLine yAxisId="left" x={2011} stroke="#8b5cf6" strokeDasharray="3 3" />
-          <ReferenceLine yAxisId="left" x={2022} stroke="#ec4899" strokeDasharray="3 3" />
-          
-          <Line 
+          <ReferenceLine yAxisId="left" x={1990} stroke="#666" strokeDasharray="3 3" label={{ value: 'Ende Kalter Krieg', position: 'top', fontSize: 10, fill: '#666', offset: 10 }} />
+          <ReferenceLine yAxisId="left" x={2001} stroke="#fbbf24" strokeDasharray="3 3" label={{ value: '11. Sept.', position: 'top', fontSize: 10, fill: '#fbbf24', offset: 10 }} />
+          <ReferenceLine yAxisId="left" x={2003} stroke="#f97316" strokeDasharray="3 3" label={{ value: 'Irakkrieg', position: 'top', fontSize: 10, fill: '#f97316', offset: 25 }} />
+          <ReferenceLine yAxisId="left" x={2011} stroke="#8b5cf6" strokeDasharray="3 3" label={{ value: 'Höchststand', position: 'top', fontSize: 10, fill: '#8b5cf6', offset: 10 }} />
+          <ReferenceLine yAxisId="left" x={2022} stroke="#ec4899" strokeDasharray="3 3" label={{ value: 'Ukrainekrieg', position: 'top', fontSize: 10, fill: '#ec4899', offset: 10 }} />
+
+          <Line
             yAxisId="left"
-            type="linear" 
-            dataKey="share" 
-            stroke="#2563eb" 
+            type="linear"
+            dataKey="share"
+            stroke="#2563eb"
             strokeWidth={3}
             dot={{ fill: '#2563eb', strokeWidth: 2, r: 3 }}
             connectNulls
             name="Weltanteil (%)"
           />
-          <Line 
+          <Line
             yAxisId="right"
-            type="linear" 
-            dataKey="absolute" 
-            stroke="#dc2626" 
+            type="linear"
+            dataKey="absolute"
+            stroke="#dc2626"
             strokeWidth={3}
             dot={{ fill: '#dc2626', strokeWidth: 2, r: 3 }}
             name="Absolute Ausgaben (USD)"
