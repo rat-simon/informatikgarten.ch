@@ -98,7 +98,7 @@ const nextConfig = withNextra({
         ignoreDuringBuilds: true,
     },
     webpack(config, { isServer }) {
-        if (process.env.NODE_ENV === "development") {
+        if (process.env.NODE_ENV === "development" && process.env.NEXT_PUBLIC_LOG_LEVEL === "silly") {
             config.infrastructureLogging = {
                 level: "verbose",
                 debug: /PackFileCacheStrategy|webpack\.FileSystemInfo/,
@@ -125,7 +125,7 @@ const nextConfig = withNextra({
         });
 
         config.module.rules.push({
-            test: /\.(tsv|ai|blend|log|mp4|backup\.md|excalidraw\.md)$/,
+            test: /\.(tsv|ai|blend|log|mp4|backup\.md|excalidraw\.md|map|js\.map)$/,
             use: "null-loader",
         });
 

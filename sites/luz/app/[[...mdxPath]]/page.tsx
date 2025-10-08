@@ -2,6 +2,7 @@ import { generateStaticParamsFor, importPage } from 'nextra/pages'
 import { useMDXComponents as getMDXComponents } from '../../mdx-components'
 import { searchFileInSubdirectories } from 'shared/server/utils'
 import path from 'path'
+import { logger } from 'shared/utils'
 
 export const generateStaticParams = generateStaticParamsFor('mdxPath')
 
@@ -44,14 +45,18 @@ async function getOgImage(result: any, mdxPath: string[]) {
             // Normalize path separators for import (use forward slashes)
             const normalizedPath = relativePath.replace(/\\/g, '/')
 
-            console.log(`Found image ${imageName} at ${normalizedPath}`)
+            logger.info(`Importing image for OG: ${normalizedPath}`)
 
-            // Dynamically import with a more specific pattern that webpack can analyze
-            // The key is to have a static base path that webpack can see
-            const img = await import(`../../content/${normalizedPath}`)
+            // Dynamically import with webpack magic comments to restrict file types
+            // This prevents webpack from including .js, .tsx, .map files in the context
+            const img = await import(
+                /* webpackInclude: /\.(png|jpg|jpeg|gif|webp|svg)$/ */
+                /* webpackExclude: /\.(js|jsx|ts|tsx|map)$/ */
+                `../../content/${normalizedPath}`
+            )
             return img.default?.src || img.default
         } catch (error) {
-            console.warn(`Failed to import image: ${imageName}`, error)
+            logger.warn(`Failed to import image: ${imageName} - ${error}`)
             return null
         }
     }
@@ -124,7 +129,7 @@ async function getOgImage(result: any, mdxPath: string[]) {
             }
         }
     } catch (error) {
-        console.warn('Failed to extract image from content:', error)
+        logger.warn('Failed to extract image from content:', error)
     }
 
     // 3. Fallback to API-generated image with title

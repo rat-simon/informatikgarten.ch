@@ -13,16 +13,13 @@
         "sites/*",
         "packages/*"
     ],
-    "prisma": {
-        "schema": "packages/shared/server/prisma/schema.prisma"
-    },
     "dependencies": {
         "@excalidraw/excalidraw": "^0.18.0",
         "@monaco-editor/react": "^4.7.0",
         "@mux/blurup": "^1.0.1",
         "@mux/mux-player-react": "^3.3.0",
         "@next-auth/prisma-adapter": "^1.0.7",
-        "@prisma/client": "6.7.0",
+        "@prisma/client": "6.17.0",
         "@tanstack/react-query": "^5.69.0",
         "@vercel/og": "^0.6.5",
         "clsx": "^2.1.1",
@@ -37,7 +34,7 @@
         "next-themes": "^0.4.6",
         "nextra": "^4.2.17",
         "nextra-theme-docs": "^4.2.17",
-        "prisma": "^6.7.0",
+        "prisma": "6.17.0",
         "react": "^19.0.0",
         "react-dom": "^19.0.0",
         "react-textfit": "^1.1.1",
