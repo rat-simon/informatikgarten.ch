@@ -86,7 +86,7 @@ Finnlands Präsident Alexander Stubb hat diesen Unterschied kürzlich in einer R
 
 Eine besonders treffende Bemerkung Stubbs ist, dass **Multipolarismus die Probleme der Welt nicht lösen kann**. Nehmen wir an, wir lebten in einer multipolaren Weltordnung, in der die USA, China, Russland (und evtl. die EU) in ihren Einflusszonen jeweils ihre eigenen Regeln durchsetzen. Würde uns das der Lösung drängender Probleme näherbringen--Kriege, Flüchtlingsströme, Klimawandel, Pandemien, Armutsbekämpfung, KI-Sicherheit, Weltraumforschung, ...? Wohl kaum. Im Gegenteil: Es würde die Zusammenarbeit erschweren und die Konflikte verschärfen.
 
-Die Schweiz, andere Kleinstaaten, und Europa generell, haben ein überwältigendes Interesse an einer multilateralen Weltordnung, die auf dem Prinzip der Rechtsstaatlichkeit basiert. Die Hütung dieser Ordnung sollte ein zentrales Element unserer Aussenpolitik sein.
+Die Schweiz, viele Staaten Europas, und Kleinstaaten generell, haben **ein überwältigendes Interesse an einer multilateralen Weltordnung**, die auf dem Prinzip der Rechtsstaatlichkeit basiert. Die Hütung dieser Ordnung sollte ein zentrales Element unserer Aussenpolitik sein.
 
 ## Kauern oder Rückgrat zeigen?
 
