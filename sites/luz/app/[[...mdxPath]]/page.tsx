@@ -27,11 +27,10 @@ async function getOgImage(result: any, mdxPath: string[]) {
     const folder = mdxPath && mdxPath.length > 1 ? mdxPath.slice(0, -1).join('/') : ''
 
     // Helper to import image and get hashed URL
-    // Only searches within the markdown file's directory (e.g., /content/europe/)
+    // Uses require.context to pre-register all images at build time
     async function importImage(imageName: string) {
         try {
             // Search for the image file only in the folder where the markdown file is located
-            // e.g., if markdown is in /content/europe, only search in europe/ and its subdirectories
             const markdownDir = path.join(process.cwd(), 'content', folder)
             const foundPath = searchFileInSubdirectories(markdownDir, imageName)
 
@@ -43,12 +42,13 @@ async function getOgImage(result: any, mdxPath: string[]) {
             // Convert absolute path to relative path from content directory
             const relativePath = path.relative(path.join(process.cwd(), 'content'), foundPath)
             // Normalize path separators for import (use forward slashes)
-            const importPath = `../../content/${relativePath.replace(/\\/g, '/')}`
-            
-            console.log(`Found image ${imageName} at ${relativePath} and will import from ${importPath}`)
+            const normalizedPath = relativePath.replace(/\\/g, '/')
 
-            // Use dynamic import to get the webpack-hashed URL
-            const img = await import(importPath)
+            console.log(`Found image ${imageName} at ${normalizedPath}`)
+
+            // Dynamically import with a more specific pattern that webpack can analyze
+            // The key is to have a static base path that webpack can see
+            const img = await import(`../../content/${normalizedPath}`)
             return img.default?.src || img.default
         } catch (error) {
             console.warn(`Failed to import image: ${imageName}`, error)
@@ -93,7 +93,7 @@ async function getOgImage(result: any, mdxPath: string[]) {
 
                 // Look for wikilink style images: ![[image.png]]
                 const wikiLinkMatch = content.match(/!\[\[([^\]]+\.(png|jpg|jpeg|gif|webp|svg))\]\]/i)
-                if (wikiLinkMatch) {
+                if (wikiLinkMatch && wikiLinkMatch[1]) {
                     const imageName = wikiLinkMatch[1]
                     const importedSrc = await importImage(imageName)
                     if (importedSrc) {
@@ -137,9 +137,9 @@ const Wrapper = getMDXComponents().wrapper
 export default async function Page(props) {
     const params = await props.params
     const result = await importPage(params.mdxPath)
-    const { default: MDXContent, toc, metadata } = result
+    const { default: MDXContent, ...restProps } = result
     return (
-        <Wrapper toc={toc} metadata={metadata}>
+        <Wrapper {...restProps}>
             <MDXContent {...props} params={params} />
         </Wrapper>
     )
