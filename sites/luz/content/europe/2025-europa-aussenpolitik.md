@@ -1,15 +1,15 @@
 ---
-title: Für eine Aussenpolitik mit Rückgrat
+title: Eine Aussenpolitik mit Rückgrat
 ---
 
-# Für eine Aussenpolitik mit Rückgrat
+# Eine Aussenpolitik mit Rückgrat
 
 Die USA erheben völlig ungerechtfertigt **39 Prozent Zoll auf die meisten Schweizer Güter**--ähnlich willkürliche Fantasiezahlen fallen in den USA auf Einfuhren aus allen Länder der Welt an. Wie könnten sich liberale Demokratien wie die Schweiz positionieren, in einer Welt, in der die alte Führungsmacht zu einer grotesken Clownshow verkommen ist, die gleich im Dutzend Wort- und Vertragsbruch begeht?
 
 ![[trump-clowncaptain.png]]
 *Ein inkompetenter Clown als Captain für den folgenreichsten Umbau des internationalen Systems seit dem Kalten Krieg. Trump als Clowncaptain.*
 
-Als Ausgangspunkt sollten wir festhalten: Die **US-Zölle widersprechen klar den Handelsregeln der WTO**, die auf dem Prinzip der "Allgemeinen Meistbegünstigung" beruh(t)e, verankert in [GATT 1994 Art. 1](https://www.fedlex.admin.ch/eli/cc/1959/1745_1807_1812/de#art_I). Das Prinzip besagt, dass ein Land, das einem anderen Land einen Handelsvorteil gewährt (z.B. einen niedrigeren Zollsatz), diesen Vorteil allen anderen Ländern gewähren muss, die ebenfalls Mitglieder der WTO sind.
+Als Ausgangspunkt sollten wir festhalten: Die **US-Zölle widersprechen klar den Handelsregeln der WTO**, die auf dem Prinzip der "Allgemeinen Meistbegünstigung" beruh(t)e, bereits verankert in [GATT 1947 Art. 1](https://www.fedlex.admin.ch/eli/cc/1959/1745_1807_1812/de#art_I). Das Prinzip besagt, dass ein Land, das einem anderen Land einen Handelsvorteil gewährt (z.B. einen niedrigeren Zollsatz), diesen Vorteil allen anderen Ländern gewähren muss, die ebenfalls Mitglieder der WTO sind.
 
 Wieso setze ich hier das imperfekte "t" in Klammern? Weil die USA die WTO seit Oktober 2018 weitgehend lahmlegen, indem sie die **Richter für Handelsdispute im "Appellate Body" blockieren**--eine Politik, die *nota bene* vom Demokraten Joe Biden weitergeführt wurde. Aktuell verweigern die USA gar ihre Beitragszahlungen zum Budget der WTO für die Jahre 2024 und 2025. (Die EU, China und viele andere Länder haben darauf reagiert, indem sie eine Art Klon des "Appellate Body" an der WTO anrufen--namens MPIA--, solange der "Appellate Body" nicht funktioniert.)
 
