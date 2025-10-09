@@ -6,20 +6,18 @@ title: A Foreign Policy with Backbone
 
 _There was a previous article [in German](2025-europa-aussenpolitik) that focused more on the Swiss perspective._
 
-The US has imposed completely unjustified **39 per cent tariffs on most Swiss goods**—similarly arbitrary fantasy numbers are being applied by the US on imports from all countries around the world. How should liberal democracies like Switzerland position themselves in a world where the old leading power has degenerated into a grotesque clown show, breaking its word and violating treaties by the dozen?
+The US has imposed completely unjustified **39 per cent tariffs on most Swiss goods**—similarly arbitrary fantasy numbers are being applied by the US on imports from all countries around the world. How should liberal democracies like Switzerland position themselves in a world where the old leading power has degenerated into a grotesque clown show, breaking its word and violating signed treaties by the dozen?
 
 ![[trump-clowncaptain.png]]
 *An incompetent clown as captain for the most consequential restructuring of the international system since the Cold War. Trump as clown captain.*
 
-As a starting point, we should note: The **US tariffs clearly violate(d) the WTO's trade rules**, which are based on the "Most Favoured Nation" principle, enshrined already in [GATT 1947 Art. 1](https://www.wto.org/english/docs_e/legal_e/gatt47_e.htm). The principle states that a country which grants a trade advantage to another country (e.g. a low tariff rate) must grant that advantage to all other countries that are also members of the WTO, too. You cannot pick and choose who gets a good deal, that was the genius of this system.
+As a starting point, we should note: The **US tariffs clearly violate(d) the WTO's trade rules**, which are based on the "Most Favoured Nation" principle, enshrined already in [GATT 1947 Art. 1](https://www.wto.org/english/docs_e/legal_e/gatt47_e.htm). The principle states that a country which grants a trade advantage to another country (e.g. a low tariff rate) must grant that advantage to all other countries that are also members of the WTO, too. You **cannot pick and choose who gets a good deal**, that was the genius of this system. It made the entire world gradually gravitate towards more open trade relations.
 
-Whether this flagrant breach will have any consequences is doubtful. The US has largely paralysed the WTO since October 2018 by **blocking the judges for trade disputes in the "Appellate Body"**—a policy that, it should be emphasised, was continued by the Democrat Joe Biden. Currently, the US is even refusing to pay its contributions to the WTO budget for the years 2024 and 2025. (The EU, China, and many other countries have responded by invoking a sort of clone of the "Appellate Body" at the WTO—called the MPIA—whilst the "Appellate Body" is not functioning.)
+Whether the US' flagrant breach will have any consequences is doubtful. Washington has been trying to paralyse the WTO since October 2018 by **blocking the judges for trade disputes in the "Appellate Body"**—a policy that, it should be emphasised, was continued by the Democrat Joe Biden. Currently, it is even refusing to pay its contributions to the WTO budget for the years 2024 and 2025. (The EU, China, and many other countries have responded by invoking a sort of clone of the "Appellate Body" at the WTO—called the MPIA—whilst the "Appellate Body" is not functioning.)
 
 ![[mpia.svg]]
 
-Any sober observer will likely conclude: **The US is no longer a reliable partner for the foreseeable future**—and we Europeans cannot influence that. It's a domestic issue for the US to deal with. We can only assess the situation soberly and react to it.
-
-Of course, the US is not just any state turning away from the liberal world order, but the superpower that largely created, advanced, and defended this order. This particularly benefited Western Europeans—above all, America's entry into the Second World War that saved us from fascism and communism.
+Any sober observer will thus conclude: **The US is no longer a reliable partner for the foreseeable future**—and we Europeans cannot influence that. It's a domestic issue for the US to deal with. We can only assess the new global situation soberly and chart our own path. This is not to downplay the gravity of the situation: The US is not just any state turning away from the liberal world order, but the superpower that largely created, advanced, and defended this order. This particularly benefited Western Europeans—above all, America's entry into the Second World War that saved us from fascism and communism.
 
 ## The US Is Losing Its Supremacy
 
