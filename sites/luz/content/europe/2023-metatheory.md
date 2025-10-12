@@ -1,17 +1,16 @@
 ---
-title: A practical theory of international politics
+title: A practical theory of power for political analysts
 ---
 ## Executive Summary
 
-This essay proposes a practical theory of international politics. It is a condensed version of points made during my Bachelor's thesis at the University of Bradford (2013) and my Master's thesis at IBEI in Spain (2014).
+This essay proposes a practical theory of power, particularly in international relations.[^thesis] The basic points are:
+- The form politics takes is primarily determined by the **tension levels** between the States involved -- friends cooperate, rivals compete, and enemies fight.[^wendtnote]
+- These tension levels **determine the means of power/threat States use** and the logic of their interaction. E.g. friendly neighbours can't use military threats against each other and stay friends, just like military enemies are past trade disputes and sanctions.
+- The **escalation** of tension levels happens in **predictable, concrete steps** and is fairly well researched. I'll illustrate and conceptualise this using Friedrich Glasl's nine-step-model of conflict escalation.
+- In uninstitutionalised interactions, **power is a successful threat** of sorts. Unsuccessful uses of power -- unsuccessful threats -- are the primary way conflicts escalate.
+- Institutions and treaties are designed to withstand a certain maximum level of tension. If tensions escalate beyond their dispute settlement mechanisms, these structures falter or break down.
 
-The basic points are:
-- The form politics takes is primarily determined by the **tension levels** between the States involved - friends cooperate, rivals compete, and enemies fight.[^wendtnote]
-- Tension levels **determine the means of power/threat States use** and the logic of their interaction. E.g. friendly neighbours can't use military threats against each other and stay friends, just like military enemies are past trade disputes and sanctions.
-- The **escalation** of tension levels happens in **predictable, concrete steps** and is fairly well researched. I use Friedrich Glasl's nine-step-model of conflict escalation model to illustrate and conceptualise this.
-- Unsuccessful uses of power/threats is the **primary way conflicts escalate**.
-- **Institutions and treaties are designed to withstand a certain maximum level of tension.** If tensions escalate beyond their dispute settlement mechanisms, these structures falter or break down.
-
+[^thesis]: Some parts were first developed for my Bachelor's thesis at the University of Bradford (2013) and my Master's thesis at IBEI in Spain (2014).
 [^wendtnote]: Academics will recognize Alexander Wendt's cultures of anarchy. But this account goes beyond Wendt. Wendt, Alexander. _Social Theory of International Politics_. Cambridge: Cambridge University Press, 1999.
 
 I believe the theory laid out here is superior to current theories in several respects: 
@@ -19,47 +18,80 @@ I believe the theory laid out here is superior to current theories in several re
 - It is **useful** to practitioners who need a strong framework of analysis.
 - It leads researchers to ask **better research questions**.
 ## What is politics?
-As a starting point, it's difficult to disagree with Andrew Heywood’s introductory definition that politics is "the activity through which people make, preserve and amend **the general rules under which they live**."[^heywood] I'll use "make the general rules" as a shorthand. 
+As a starting point, it's difficult to disagree with Andrew Heywood’s introductory definition that politics is "the activity through which people make, preserve and amend **the general rules under which they live**."[^heywood] I'll use "politics" and "make the general rules" as a shorthand to refer to this idea. 
 [^heywood]: Heywood, Andrew. _Politics_. Basingstoke: Palgrave Macmillan, 2007. 4.
 
 Heywood’s introduction goes on to differentiate four categories of definitions: Politics understood as **(1) the art of government** (think Bismarck, Machiavelli, Easton, and arguably Clausewitz) and politics as **(2) public affairs** (Aristotle, Mill, Rousseau, Arendt, the liberal tradition more generally); politics as **(3) compromise** and consensus (Habermas, Crick), and politics as **(4) power and the distribution of resources** (Leftwich, Lasswell, realism, often feminism and Marxism).
 ### Politics without the State?
-The first two differ mainly on whether or not politics happens when the State isn't involved. To define politics as the art of government is an **institutional definition**. It’s similar to Clausewitz’ definition of warfare as ‘everything that is related to the armed forces; their creation, maintenance and use.’[^clausewitz] So, labour relations, gender, religious obligations, or beauty standards; are these issues ‘political’ even when they don’t involve the State?
+The first two categories differ mainly on whether or not politics happens when the State isn't involved. To define politics as the art of government is an **institutional definition**. It’s similar to Clausewitz’ definition of warfare as ‘everything that is related to the armed forces; their creation, maintenance and use.’[^clausewitz] So, labour relations, gender, religious obligations, or beauty standards; are these issues ‘political’ even when they don’t involve the State? Can irregular guerrilla forces conduct warfare?
 
 [^clausewitz]: Clausewitz, Carl Philipp Gottlieb von. _Vom Kriege_. Edited by J. Schulze. 1 edition. Null Papier Gratis, 1832. chap. 2.
 
-I don't think this question should be predefined in general terms for all societies throughout history. Instead, let's extrapolate from Heywood’s initial definition: Whether or not politics is that which pertains to the State depends on whether States are in fact the institutions that set the ‘general rules’ for a given issue at a given place and time. If it's other institutions (e.g. the workplace, religious institutions, tribal clan structures, international organisations, et cetera), then the process by which those 'general rules' are set is political, too, and our theory should yield insights for it.
+I don't think this question should be predefined for all societies throughout history. Instead, let's extrapolate from Heywood’s initial definition: Whether or not politics is that which pertains to the State depends on whether States are in fact the institutions that set the ‘general rules’ for a given issue at a given place and time. If it's other institutions (e.g. the workplace, religious institutions, tribal clan structures, international organisations, et cetera), then the process by which those general rules are set is political, too, and our theory should yield insights for it.
+
 ### Politics without power?
+
 Heywood's latter two groups disagree mostly about whether politics also happens when nobody imposes their will on somebody else. When everybody freely agrees on a reasonable general rule, is that still politics?
 
-As we shall see, it is largely correct that power is often a key ingredient in politics. And it is also true that using power is anathema to friendship. But to then say politics is _defined_ as that which involves power (and thus rivalry) is effectively to assume that setting general rules cooperatively – as happens in most households around the globe on a daily basis – is humanly impossible, or too boring to think about. As Sir Bernard Crick had it: ‘Why call … a struggle for power ‘politics’ when it is simply a struggle for power?’[^crick]
+As we shall see, power is often a key ingredient in politics. And it is also true that using power is anathema to friendly relations. But to then say politics is _defined_ as that which involves power and rivalry is effectively to assume that setting general rules cooperatively – as happens in households, parliaments, schools, workplaces around the globe on a daily basis – is humanly impossible, or too boring to think about. Setting those general rules without power struggles is evidently possible. As Sir Bernard Crick had it: ‘Why call … a struggle for power ‘politics’ when it is simply a struggle for power?’[^crick]
 
 [^crick]: Crick, Bernard. _In Defence of Politics_. New Ed edition. London: Continuum, 2005. p. 5.
+
 ## What is power?
-In political science, power is often defined as control: A has power over B if A can make B do what A wants.[^dahl] Hans J. Morgenthau elaborated: "Power may comprise anything that establishes and maintains the power of man over man. Thus power covers all social relationships which serve that end, from physical violence to the most subtle psychological ties by which one mind controls another."[^morgenthau]
+
+In political science, power is often defined thus: A has power over B if A can make B do what A wants.[^dahl] Hans J. Morgenthau elaborated: "Power may comprise anything that establishes and maintains the power of man over man. Thus power covers all social relationships which serve that end, from physical violence to the most subtle psychological ties by which one mind controls another."[^morgenthau] 
+
+The weakness of this definition is that it is exclusively bilateral. Max Weber's terminology evades this limitation and that's why I use his definition of power (_Macht_) as: "**Power is any chance to impose one's own will within a social relationship, even against resistance, regardless of what this chance is based on.**"[^weber] This covers bilateral uses of power, but also the case of imposiing one's own will vis-a-vis a collective (e.g. a ruler imposing their will on a population), or two collectives fighting for supremacy (e.g. two nations at war).
 
 [^dahl]: Dahl is (unjustly) often credited with the original complete formulation, Dahl, Robert A. ‘The Concept of Power’. _Behavioral Science_ 2, no. 3 (1957): 201–15. [https://doi.org/10.1002/bs.3830020303](https://doi.org/10.1002/bs.3830020303). For alternatives and a comprehensive taxonomy of power definitions in IR, see Barnett, Michael, and Raymond Duvall. ‘Power in Global Governance’. In _Power in Global Governance_, edited by Michael Barnett and Raymond Duvall, 98:1–32. Cambridge University Press, 2004. Influential studies of political power work with this definition are, e.g., Dahl, Robert A. _Who Governs?: Democracy And Power In An American City_. Yale University Press, 2005; Lindblom, Charles Edward. _Politics and Markets: The World’s Political Economic Systems_. Basic Books, 1977.
 [^morgenthau]: Morgenthau, Hans Joachim. _Politics among Nations: The Struggle for Power and Peace_. Edited by Kenneth W. Thompson. Knopf, 1985.
+[^weber]: Orig. German: "Macht bedeutet jede Chance, innerhalb einer sozialen Beziehung den eigenen Willen auch gegen Widerstreben durchzusetzen, gleichviel worauf diese Chance beruht" (Weber, Max. Wirtschaft und Gesellschaft -- Grundriss der verstehenden Soziologie. 1985, S. 28).
 
 ### Power looking backward or forward in time
-An interesting property of this definition is that one can only say whether A has power over B *after* A has successfully used that power. In other words: The definition does not actually define anything that makes a State powerful vis-à-vis another State. It defines the effect you'll see when you **look back in time** - namely, that thing which will have made B do what A wants. It's worth noting that, even in retrospect, it's not entirely clear what made B give in. The means that will achieve this control aren’t predefined – if anything, they’re post-defined. My martial arts skills do not give me power over you in and of themselves, only once I successfully used them to threaten you into giving me your ice cream can we potentially say that they give me power over you.
 
-Repeated and institutionalised interaction diminishes this problem - when power becomes *Herrschaft* in Weberian terms. But let's stick with simple power for the time being. In this realm, to know beforehand whether or not you’ll submit to the threat of my martial arts skills is somewhere between an art and a science. The reason is that it is _you_ who **chooses to submit or not**. In the moment right after I issued my threat, it’s **_your_ reaction that counts, not mine**. So it may be that you’re a judo master and confident that you could beat me easily. But even then, having superior means of power, maybe you still yield because the hassle just isn’t worth an ice cream. It requires some knowledge about the other party to know which threats they may yield to.
+An interesting property of this definition is that one can only say whether A has power *after* A has successfully used that power. In terms of international relations: The definition is totally agnostic about what makes a State powerful. It defines the effect you'll see when you **look back in time** at its interactions. The means by which A achieved this power are not part of the definition. In fact, even in retrospect, it's not always clear what made the others give in. The means of power that achieved this aren't predefined – if anything, they’re apparent _ex ante_.
 
-And if you choose not to submit and violence breaks out? Well, as Morgenthau (and many, many others) knew: "When violence becomes an actuality, it signifies the abdication of political power in favour of military or pseudo-military power."[^morgenthau] If you consider that A essentially tries to control B's behaviour using a threat of violence, you immediately see that if A has to actually implement that violence (what Morgenthau called ‘military power’) that means B's behaviour wasn’t successfully controlled.
+A simple example to illustrate: My martial arts skills do not give me power over you in and of themselves, only once I successfully used them to threaten you into giving me your ice cream can we potentially say that they gave me power over you. (I don't have any martial arts skills. Relax.) To know beforehand whether or not you’ll submit to the threat is somewhere between an art and a science. The reason is that it is _you_ who **chooses to submit or not**. In the moment right after I issued my threat, it’s **_your_ reaction that gives me power, not mine**. So it may be that you’re a judo master and confident that you could easily match my threat. But even then, objectively having superior means of power, maybe you still yield because the hassle just isn’t worth an ice cream. To predefine the means of power that make a State powerful in all situations is, in my estimation, futile and will lead to dogmatism. 
 
-This generalises: As I shall now argue, **looking forward in time, power is successful threat** of sorts. The really interesting thing a theory of power should do is to try and predict the means of threat/power that States will marshal without unwarranted assumptions. And this theory does that.
+And if you choose not to submit and violence breaks out? Well, as Morgenthau (and many, many others) knew: "When violence becomes an actuality, it signifies the abdication of political power in favour of military or pseudo-military power."[^morgenthau] If you consider that I essentially try to control your behaviour using a threat of violence, you immediately realise that if I have to actually use my means of threat that signals that I don't have power over you after all. Sure, I might ultimately win the fight and get your ice cream, but I haven't made you do what I wanted.
 
-PS: I don't have any martial arts skills. Relax.
+Let's apply this to a recent example in international relations: In summer of 2024, Israel and Hezbollah were in a two-decade-long stalemate. Had one looked at Hezbollah's military capabilities, one might have concluded that Hezbollah can make an Israeli invasion of Southern Lebanon prohibitively costly. No definition of power that predefines the means of power would have helped foresee the possibility that Israel would rig explosives to pagers and walkie-talkies to kill and injure Hezbollah personell and civilians. Would anybody have counted pagers and walkie-talkies as a means of power? I think not. But in a power struggle, those involved constantly try to outsmart each other (in the logic of their already degraded interaction).
+
+The basic point stands that **the relevant means of power are revealed in retrospect to the use of power**. Using power is always a bit of a gamble. The interesting thing a theory of power should do is to try and **predict the means of threat/power that States will marshal before the fact** but without dogmatic assumptions. And this theory tries to do just that.
+
+### What this theory is and isn't
+
+Repeated and institutionalised interactions diminish the uncertainty laid out above by potentially **transforming power (_Macht_) into Weberian domination (_Herrschaft_)**. This transition occurs when power is not only routinised but also grounded in a belief by the dominated in the legitimacy of the dominant’s power (_Legitimitätsglauben_). Power is thus met with the cooperation of the dominated in the form of obedience (_Gehorsam_), which stabilises power and establishes domination.[^legitimacy] Jean-Jacques Rousseau expressed the same idea rather more beautifully:
+
+> **"The strongest is never strong enough to be always the master, unless he transforms strength into right, and obedience into duty."**
+>
+> -- *Jean-Jacques Rousseau, The Social Contract (Du Contrat Social), Book I, Chapter 3*
+>
+> (Original French: "Le plus fort n'est jamais assez fort pour être toujours le maître, s'il ne transforme la force en droit et l'obéissance en devoir.")
+
+[^legitimacy]: Crucially, _Legitimitätsglauben_ is not a normative judgement by the analyst but an **objective social fact**: the dominated _act as if_ the authority is legitimate.
+
+And so when interactions are becoming institutionalised, there grows **an ever thicker layer of confounding variables**: Powerful institutions might arise by the sheer need for functional cooperation (e.g., trade regimes); control of these institutions might be obtained through means other than power, yet provide the occupant with considerable means of power/threat (e.g., bureaucracies, arguably democracy); history might lend formerly powerful nations advantages through path dependencies (e.g., colonial legacies).
+
+Let's then distinguish **two ideal-typical poles of social interaction: _uninstitutionalised_ and _institutionalised_**. 
+- At one extreme, _uninstitutionalised interactions_ are episodic, ad-hoc, and lack stabilising institutions. 
+- At the other extreme, _institutionalised interactions_ are embedded in rules, roles, and routines, where power is mediated by legitimacy, repetition, and shared expectations.
+
+In what follows we'll focus **focuses on uninstitutionalised interactions** first to isolate the all too human roots of many power struggles in our psychology. By stripping away the effects of institutionalisation at first, we can examine how power functions in its raw and most uncertain form.
+
 ## Predicting the means of power/threat
 
-This part can be thought of as an update to Morgenthau’s view of human nature (you find more about his view in the academic part at the end). It’s based on the insight that the tension level between parties **foreshadows before-the-fact which means of threat they will use** if they choose to use power against each other. In short: Power is a successful threat **with a higher tension level** - usually the next higher level.
+What we endeavour now is can be thought of as an update to Morgenthau’s view of human nature. It’s based on the insight from conflict research that the tension level between parties **foreshadows before-the-fact which means of threat they will likely use** if they choose to use threats against each other. I'll argue that **attempts to use power are usually a threat of conflict escalation** to the next higher tension level.
 
-That's why it's utterly unbecoming to a friendship to attempt to use power - you're essentially threatening your friends with conflict escalation. Likewise it's irrelevant if you threaten an enemy with an angry letter - because the relationship is long past that point. The means I can reasonably be expected to use to attempt to control you depend on whether you are my friend, my rival, or my enemy. For **any individual act**, we can ask: Given the current relationship and its tension level, is this act escalatory, de-escalatory, or confirming the status quo?
+That's why it's utterly unbecoming to a friendship to attempt to use power -- you're essentially threatening your friends with conflict escalation. Likewise, it's irrelevant if you threaten an enemy with an angry letter -- because the relationship is long past that point. The means I can reasonably be expected to use to attempt to control you depend on whether you are my friend, my rival, or my enemy. For **any individual act**, we can ask: Given the current relationship and its tension level, is this act escalatory, de-escalatory, or confirming the status quo?
 
-This same way we also determine **how extreme an act** is. If the president of France were to buy the Chancellor of Germany an ice-cream as a friendly gesture, that’d be slightly awkward, but basically just confirming their friendship. Yet, if Putin bought them an ice-cream, they'd (quite rightly) have it tested for toxins. Little details that are irrelevant among relaxed friends can become very important status symbols between tense enemies – like when [Yasser Arafat and Ehud Barak couldn’t decide who enters the door first at Camp David](https://youtu.be/dLlZzzaxFLY?si=vCd0Df-EY7chcAnP&t=42).
+This same way we also determine **how extreme an act** is. If the French president Emmanuel Macron had bought an ice-cream for Angela Merkel when she was still the Chancellor of Germany, that’d have been a friendly gesture confirming their friendship. Now with Olaf Scholz as Chancellor, it might be a bit more awkward given their colder relationship, but still basically just confirming their friendship. But consider if Vladimir Putin were to offer Wolodimir Zelenskyy an ice-cream "as a gesture of goodwill" -- that'd be supremely awkward and Zelenskyy would quite rightly have it tested for toxins. 
 
-In conflict research and social psychology, a great deal of research has been conducted into the nature of conflict escalation and de-escalation - a field I propose political analysts should tap into. How tensions escalate and friends become enemies is actually quite well understood, predictable and known in considerable detail. I shall now give a fairly detailed overview.
+The logic of interaction is determined by the relationship and its tension level. Little details that are irrelevant among relaxed friends can become very important status symbols between tense enemies – like when Yasser Arafat and Ehud Barak couldn’t decide who enters the door first at Camp David. 
+
+<Youtube id="vCd0Df-EY7chcAnP" startTime={42} />
+
+In conflict research and social psychology, a great deal of research has been conducted into the nature of conflict escalation and de-escalation -- a field I propose political analysts should tap into. How tensions escalate and friends become enemies is actually quite well understood, predictable and known in considerable detail. I shall now give a fairly detailed overview.
 
 ### Basic logic of conflict escalation
 
@@ -67,13 +99,13 @@ This account uses a popular model of conflict escalation from the German conflic
 
 [^glasl]: Glasl, Friedrich. _Konfliktmanagement : Ein Handbuch Für Führungskräfte, Beraterinnen Und Berater_. Bern: Haupt Verlag, 2010.
 
-On each step of the ladder, the parties intuitively know which kind of behaviour is adequate and what constitutes a taboo. But because conflicts are very frustrating situations for us humans to be in, there is a tendency in each party on each step to try to dissolve the distressing ambiguity of the situation. And, one way we ironically choose is breaking the next taboo-barrier. We humans often perceive this as a clarifying moment.
+On each step of the ladder, **the parties intuitively know which kind of behaviour is adequate and what constitutes a taboo**. But because conflicts are very frustrating situations for us humans to be in, there is a tendency in each party on each step to try to dissolve the distressing ambiguity of the situation. And, one way we humans ironically choose to do this is breaking the taboo-barrier to the next the next step! We often perceive this as a clarifying moment, when we finally say: "Enough!"
 
 > "Crossing points of no return \[taboo-barriers\] thus means that one has reached a more intense stage of conflict. This new stage has its own norms, regiment and rules. But it is again clearly delineated by a new barrier. And precisely this barrier gives the parties – in spite of a heightened use of violence – new securities! Violence does not become limitless in a bang, but is again constrained. … The expectations remain – like Tomas Schelling says – co-ordinated."[^glasltaboo]
 
 [^glasltaboo]: Glasl 2010, 230.
 
-Using these distinct escalation steps, we can deduce what means of power can be expected to be marshalled on each step. Indeed, as we shall see, this perspective utterly reframes the very nature of power as such.
+Using these distinct escalation steps, we can deduce what means of power can be expected to be marshalled on each step. Indeed, as we shall see, this perspective yields rich insights into the nature of power, postulates many empirical hypotheses that are eminently falsifiable, 
 
 ### There is no universal state of nature
 
@@ -86,14 +118,14 @@ These three spheres roughly correspond to the way Alexander Wendt read Martin Wi
 
 [^wendt3]: Wendt 1999, 258. More generally chap. 6.
 
-The brief sketch that follows paints a picture of an ideal-type conflict degeneration without any conflict resolving forces in order to illustrate it. Nothing here suggests that the ‘normal’ state of human affairs – the null hypothesis – is conflict-free or peaceful, or that human societies teleologically gravitate towards cooperation.[^pink] Indeed, I agree with Glasl: While _conflict_ _escalation_ is driven to a great degree by primitive, partly unconscious drives, _conflict de-escalation_ is usually a conscious, laborious, and rational effort.[^conscious] Overall, there simply is no state of nature; we possess the capacity for cooperation, rivalry, or violence.
+The brief sketch that follows paints a picture of an ideal-type conflict degeneration without any conflict resolving forces in order to illustrate it. Nothing here suggests that the ‘normal’ state of human affairs is conflict-free or peaceful, or that human societies teleologically gravitate towards cooperation.[^pink] Indeed, I agree with Glasl: While _conflict escalation_ is driven to a great degree by primitive, partly unconscious drives, _conflict de-escalation_ is usually a conscious, laborious, and rational effort.[^conscious] There simply is no state of nature; **we possess the capacity for cooperation, rivalry, or violence**.
 
 [^pink]: In fact, after reading some of Steven Pinker’s work, I think such a view is rather difficult to entertain. Especially, Pinker, Steven. _The Better Angels of Our Nature: A History of Violence and Humanity_. London: Penguin, 2012. Also Pinker, Steven. _The Blank Slate: The Modern Denial of Human Nature_. New York: Penguin, 2003.
-[^conscious]: Glasl 2010, 197–8. Also consider Nelson Mandela: ‘Our talking to the enemy was the result of the domination of the brain over emotion.’ [Nelson Mandela: ‘We Made the Brain Dominate the Blood’](https://www.youtube.com/watch?v=-wLpr2hzN4g) - Oprah Winfrey Network 2013.
+[^conscious]: Glasl 2010, 197–8. Also consider Nelson Mandela: ‘Our talking to the enemy was the result of the domination of the brain over emotion.’ [Nelson Mandela: ‘We Made the Brain Dominate the Blood’](https://www.youtube.com/watch?v=-wLpr2hzN4g) -- Oprah Winfrey Network 2013.
 
-### 1-3 - Friends: ‘We have a problem’
+### 1-3 -- Friends: ‘We have a problem’
 
-Through the first three steps (the Kantian sphere of cooperation), the parties involved think in terms of **issues**. The sovereignty and physical integrity of the other participants is not only guaranteed, rather, it is so deeply internalised that the parties don’t even think about the possibility of violating it. For example, Switzerland ‘accidentally invaded’ neighbouring Liechtenstein in 2007 (170 infantry soldiers unknowingly crossed the unmarked border.[^swiss] Nobody doubted this was an accident and a simple apology sufficed to make amends. The same scenario is impossible on, e.g., the Lebanese-Israeli border.
+Through the first three steps (the Kantian sphere of cooperation), the parties involved think in terms of **issues**. The sovereignty and physical integrity of the other participants is not only guaranteed, rather, it is so deeply internalised that the parties don’t even think about the possibility of violating it. For example, Switzerland ‘accidentally invaded’ neighbouring Liechtenstein in 2007 (170 infantry soldiers unknowingly crossed the unmarked border).[^swiss] Nobody doubted this was an accident and a simple apology sufficed to make amends. The same scenario is impossible on, e.g., the Lebanese-Israeli border.
 
 [^swiss]: Oliver, Mark, and agencies. ‘Liechtenstein: No Retaliation for Swiss “Invasion”’. _The Guardian_, 2 March 2007, sec. World news. [http://www.theguardian.com/world/2007/mar/02/markoliver](http://www.theguardian.com/world/2007/mar/02/markoliver).
 
@@ -107,7 +139,7 @@ Nevertheless, absent an apology or other conflict resolving forces, the conflict
 [^g3]: Ibid., 249–56.
 [^g4]: Glasl, Friedrich. ‘AW: Klärungsfrage [Personal Communication]’, 19 March 2012.
 
-### 4-6 - Rivals: ‘You are a problem’
+### 4-6 -- Rivals: ‘You are a problem’
 
 The increasing importance of self- and other-image already anticipates the primacy of personal identity throughout Lockean power politics. 
 4) Initially (step 4), the parties _worry about their reputation and honour_.[^g5] The next taboo-barrier is broken when a party wilfully provokes the _public_ _loss of face_ of the rival (4>5). 
@@ -127,7 +159,7 @@ Conflict escalation through the Lockean sphere defines the alliances which will 
 [^8]: Young, S. G. _et al._ show that a racial intergroup context hampers facial recognition for both in- and out-group. See, Young, Steven G., Kurt Hugenberg, Micheal J. Bernstein, and Donald F. Sacco. ‘Interracial Contexts Debilitate Same-Race Face Recognition’. _Journal of Experimental Social Psychology_ 45, no. 5 (September 2009): 1123–26. [https://doi.org/10.1016/j.jesp.2009.05.009](https://doi.org/10.1016/j.jesp.2009.05.009).
 [^9]: Glasl 2010, 301.
 
-### 7-9 - Enemies: ‘You threaten my existence’
+### 7-9 -- Enemies: ‘You threaten my existence’
 
 The importance of physical security and threats towards the end of the Lockean rivalry already anticipates the primacy of the means of violence in the Hobbesian sphere. The enemy’s loss is now considered a direct personal gain in and of itself (nicely captured in the German _Schadenfreude_). For example, ‘\[in the nuclear-war planning of the cold-war era\] the calculation went, if each side was likely to suffer 50% or even 75% casualties among its entire population, the war would be ‘won’ in ensuing years by the side that could more quickly recover, rebuild (and repopulate).’[^enemies1] In other words, the logic of the situation is no longer zero-sum but negative-sum. 
 
@@ -183,8 +215,8 @@ Indeed, it is important to stress that the behavioural logic at such high tensio
 [^enemies15]: Ibid., 266.
 [^enemies16]: James, Alan. ‘Sovereignty: Ground Rule or Gibberish?’ _Review of International Studies_ 10, no. 01 (1984): 1–18. [https://doi.org/10.1017/S0260210500116018](https://doi.org/10.1017/S0260210500116018). 2.
 [^enemies19]: Clausewitz 1832, ch. 1, sec. 1.16. This frustrated Clausewitz because defence serves only a negative purpose: preservation. In Clausewitz’ view, ‘if defence has a negative object, it follows that it should be used only so long as weakness compels and be abandoned as soon as we are strong enough to pursue a positive object’. Gat, Azar. ‘Clausewitz on Defence and Attack’. _Journal of Strategic Studies_ 11, no. 1 (1 March 1988): 20–26. [https://doi.org/10.1080/01402398808437327](https://doi.org/10.1080/01402398808437327). 20.
-## A new understanding of power
-I said before that _power is always a successful threat using means from higher tension levels_. Now we have pretty solid idea of what that means and can attempt a before-the-fact approximation of the means of power/threat parties will use to try to control somebody – the after-the-fact definition of power we usually use in political science.
+## A new understanding of uninstitutionalised power
+I said before that _uninstitutionalised power is a successful threat using means from higher tension levels_. Now we have pretty solid idea of what that means and can attempt a before-the-fact approximation of the means of power/threat parties will use to try to control somebody – the after-the-fact definition of power we usually use in political science.
 
 Say tensions are already on step four, where the parties worry primarily about their reputation and honour. If somebody wanted to use power against somebody else in this context, the _additional_ means of power/threat they’d now most likely employ would be threatening to release some dirty secrets about their rival to cause her or his loss of face. This while continuing to apply all previous means of power/threat already used.
 

@@ -16,7 +16,7 @@
     /* Display counter for pink items */
     .menuicon.pink::before {
         content: counter(pink-counter, upper-alpha);
-        @apply bg-ig-heading text-white rounded-md border-none px-1 py-0.5 mr-1.5 text-center no-underline text-xs font-bold inline-block;
+        @apply bg-ig-h1 text-white rounded-md border-none px-1 py-0.5 mr-1.5 text-center no-underline text-xs font-bold inline-block;
     }
     
     /* Display counter for blue items */

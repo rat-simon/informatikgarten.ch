@@ -7,6 +7,7 @@
     --color-ig-strong: hsl(20 100% 65%);
     --color-ig-text: #262626;
     --color-ig-heading: #262626;
+    --color-ig-h1: hsl(345 94% 58%);
     --color-ig-h2: hsl(180 100% 42%);
     --color-ig-h3: hsl(200 100% 55%);
     --color-ig-h4: hsl(260 100% 70%);
@@ -17,9 +18,9 @@
 
 * {
     @variant dark {
+        --color-ig-h2: hsl(180 100% 50%);
         --color-ig-text: #eee;
         --color-ig-heading: #fff;
-        --color-ig-h2: hsl(180 100% 50%);
     }
 }
 
