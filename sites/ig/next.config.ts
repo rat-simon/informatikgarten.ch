@@ -93,6 +93,12 @@ const nextConfig = withNextra({
         // ESLint behaves weirdly in this monorepo.
         ignoreDuringBuilds: true,
     },
+    outputFileTracingExcludes: {
+        "*": [
+            "./content/**/*",
+            "./content",
+        ],
+    },
     webpack(config, { isServer }) {
 
         // Add this rule before other rules to exclude Obsidian files
