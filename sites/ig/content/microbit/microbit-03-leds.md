@@ -7,32 +7,11 @@ title: Einzelne LEDs und return-Statement
 > - **Funktionen und return**: Sie haben Funktionen mit Parametern repetiert und können mit `return` die Ausführung einer Funktion beenden.
 > - **`if ... elif ... else`**: Sie können mehrere Bedingungen mit `and` und `or` verknüpfen, und haben die `if ... elif ... else`-Verkettung repetiert.
 
-> [!example] Theorie
-> 
-> ### Design pattern: Funktion ausführen bis `return`
-> 
-> `return` kann nur innerhalb einer Funktion verwendet werden. Damit kann man dem Hauptprogramm einen Wert zurückgeben. Aber für dieses Design pattern viel wichtiger: Es beendet die Ausführung der Funktion.
-> 
-> So konnten wir in unserer Funktion `fill()` die LEDs füllen, bis die Summe der LEDs gleich gross war, wie die gewünschte Anzahl, und dann einfach die Funktion beenden.
-> 
-> ```python {hl_lines="2 6-8"}
-> def fill(nr, wartezeit):
->     sum = 0
->     for y in range(5):
->         for x in range(5):
->             if sum == nr:
->                 return
->             display.set_pixel(x, y, 9)
->             sum = sum + 1
->             sleep(wartezeit)
-> ```
-
-
 ## LEDs auffüllen
 
 Der Microbit hat ein 5x5 Screen mit insgesamt 25 LEDs, die wir mit `microbit.display` ansteuern können.
 ### Aufgabe: Reihe auffüllen
-Schreiben Sie ein Programm, bei dem man sieht, wie es die erste Reihe Pixel um Pixel auffüllt.
+Schreiben Sie ein Programm, bei dem man sieht, wie es die **erste Reihe Pixel um Pixel auffüllt**.
 
 > [!solution]- Lösung
 > 
@@ -223,5 +202,26 @@ Jetzt wollen Sie natürlich Ihren Microbit genau so cool machen wie K.I.T.T., da
 > 	# Von rechts nach links
 >     for i in range(4, -1, -1):
 >         kitt(i)
+> ```
+
+
+> [!example] Theorie
+> 
+> ### Design pattern: Funktion ausführen bis `return`
+> 
+> `return` kann nur innerhalb einer Funktion verwendet werden. Damit kann man dem Hauptprogramm einen Wert zurückgeben. Aber für dieses Design pattern viel wichtiger: Es beendet die Ausführung der Funktion.
+> 
+> So konnten wir in unserer Funktion `fill()` die LEDs füllen, bis die Summe der LEDs gleich gross war, wie die gewünschte Anzahl, und dann einfach die Funktion beenden.
+> 
+> ```python {hl_lines="2 6-8"}
+> def fill(nr, wartezeit):
+>     sum = 0
+>     for y in range(5):
+>         for x in range(5):
+>             if sum == nr:
+>                 return
+>             display.set_pixel(x, y, 9)
+>             sum = sum + 1
+>             sleep(wartezeit)
 > ```
 

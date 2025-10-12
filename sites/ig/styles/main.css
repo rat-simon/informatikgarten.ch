@@ -86,3 +86,44 @@ main img {
 [role="tabpanel"] h3:first-child {
     display: none;
 }
+
+/* ----------- custom utilities ----------------- */
+
+.rainbow-text {
+    --rainbow-opacity: 0.6;
+    --rainbow-y-offset: 90%;
+    display: inline;
+    text-decoration: none;
+    padding: 0px 4px;
+    background-image:
+        linear-gradient(rgb(var(--nextra-bg)), color-mix(in srgb, rgb(var(--nextra-bg)) 90%, transparent) 80%, transparent),
+        linear-gradient(to right,
+            rgb(255 0 0 / var(--rainbow-opacity)),
+            rgb(255 128 0 / var(--rainbow-opacity)),
+            rgb(255 255 0 / var(--rainbow-opacity)),
+            rgb(128 255 0 / var(--rainbow-opacity)),
+            rgb(0 255 0 / var(--rainbow-opacity)),
+            rgb(0 255 128 / var(--rainbow-opacity)),
+            rgb(0 255 255 / var(--rainbow-opacity)),
+            rgb(0 128 255 / var(--rainbow-opacity)),
+            rgb(0 0 255 / var(--rainbow-opacity)),
+            rgb(128 0 255 / var(--rainbow-opacity)),
+            rgb(255 0 255 / var(--rainbow-opacity)),
+            rgb(255 0 0 / var(--rainbow-opacity)));
+    background-blend-mode: normal;
+    background-repeat: repeat-x;
+    border-radius: 5px;
+    background-size: 100%, 300% 100%;
+    background-position: bottom left;
+    animation: rainbow-shadow-flow 180s linear infinite;
+}
+
+@keyframes rainbow-shadow-flow {
+    0% {
+        background-position: 0% var(--rainbow-y-offset);
+    }
+
+    100% {
+        background-position: 300% var(--rainbow-y-offset);
+    }
+}

@@ -8,7 +8,6 @@ import {
     remarkWikiLinks,
     remarkCallouts,
 } from "shared/server/remark";
-import { logger } from "shared/utils";
 
 function isExportNode(node, varName: string) {
     if (node.type !== "mdxjsEsm") return false;

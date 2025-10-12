@@ -7,7 +7,7 @@ title: Prüfungsvorbereitung
 > - Die Prüfung wird auf Exam.net stattfinden und 60 Minuten dauern. Sie umfasst sowohl Theorie als auch praktische Programmieraufgaben.
 > - Sie werden Zugang [zum Microbit-Editor](https://python.microbit.org/v/3) und seiner Dokumentation haben, mit dem Sie dank dem Simulator auf der rechten Seite auch zuhause üben können.
 > - Es gelten die Lernziele der Lektionen, die wir behandelt haben, sofern sie hier nicht ausgeschlossen werden:
-> 	- Bei der Lektion [[microbit-02-buttons|zu den Knöpfen]] haben wir das Abbrechen der while-Schleife nicht behandelt.
+> 	- Bei der Lektion [[microbit-05-buttons|zu den Knöpfen]] haben wir das Abbrechen der while-Schleife nicht behandelt.
 > 	- Bei der Lektion [[microbit-03-leds|zu den LEDs]] haben wir die Knacknuss-Aufgaben nicht behandelt.
 > 	- Beim [[microbit-10-maqueen-intro|Intro zum Maqueen-Roboter]] haben wir den Staubsauger mit der Zufallszahl nicht programmiert.
 > 	- Beim [[microbit-14-linetracker|Linientracker]] haben wir die Geschwindigkeit nicht dynamisch angepasst.
