@@ -19,7 +19,7 @@
 * {
     @variant dark {
         --color-ig-h2: hsl(180 100% 50%);
-        --color-ig-text: #eee;
+        --color-ig-text: #e6e6e6;
         --color-ig-heading: #fff;
     }
 }
@@ -39,7 +39,8 @@ main {
     ol {
         font-family: var(--nextfont-body);
         color: var(--color-ig-text);
-        font-size: 120%;
+        font-size: 18pt;
+        line-height: 1.5;
     }
 
     h1,

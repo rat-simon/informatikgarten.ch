@@ -96,7 +96,7 @@ const RootLayout: FC<{
         }}
         backgroundColor={{
           light: "#eee",
-          dark: "#111"
+          dark: "#111b23"
         }}>
         <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/img/favicon.svg" />

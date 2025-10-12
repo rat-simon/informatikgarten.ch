@@ -8,7 +8,18 @@
       "Bash(git commit:*)",
       "Bash(git push:*)",
       "Bash(source:*)",
-      "Bash(pip install:*)"
+      "Bash(pip install:*)",
+      "Bash(pnpm build)",
+      "Bash(snap list:*)",
+      "Bash(flatpak list:*)",
+      "Read(//usr/share/applications/**)",
+      "Bash(update-desktop-database:*)",
+      "Bash(xrandr:*)",
+      "Bash(echo:*)",
+      "Read(//home/chris/.config/**)",
+      "Bash(dconf read:*)",
+      "Bash(dconf dump:*)",
+      "Bash(gsettings list-recursively:*)"
     ],
     "deny": []
   }

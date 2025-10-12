@@ -6,7 +6,7 @@ title: A Foreign Policy with Backbone
 
 _There was a previous article [in German](2025-europa-aussenpolitik) that focused more on the Swiss perspective._
 
-The US has imposed completely unjustified **39 per cent tariffs on most Swiss goods**—similarly arbitrary fantasy numbers are being applied by the US on imports from all countries around the world. How should liberal democracies like Switzerland position themselves in a world where the old leading power has degenerated into a grotesque clown show, breaking its word and violating signed treaties by the dozen?
+The US has imposed completely unjustified **39 per cent tariffs on most Swiss goods**—similarly arbitrary fantasy numbers are being applied by the US on imports from all countries around the world. How should liberal democracies like Switzerland position themselves in a world where the old leading power has degenerated into a grotesque clown show, breaking its word and violating signed treaties by the dozen? 
 
 ![[trump-clowncaptain.png]]
 *An incompetent clown as captain for the most consequential restructuring of the international system since the Cold War. Trump as clown captain.*
@@ -14,6 +14,8 @@ The US has imposed completely unjustified **39 per cent tariffs on most Swiss go
 As a starting point, we should note: The **US tariffs clearly violate(d) the WTO's trade rules**, which are based on the "Most Favoured Nation" principle, enshrined already in [GATT 1947 Art. 1](https://www.wto.org/english/docs_e/legal_e/gatt47_e.htm). The principle states that a country which grants a trade advantage to another country (e.g. a low tariff rate) must grant that advantage to all other countries that are also members of the WTO, too. You **cannot pick and choose who gets a good deal**, that was the genius of this system. It made the entire world gradually gravitate towards more open trade relations.
 
 Whether the US' flagrant breach will have any consequences is doubtful. Washington has been trying to paralyse the WTO since October 2018 by **blocking the judges for trade disputes in the "Appellate Body"**—a policy that, it should be emphasised, was continued by the Democrat Joe Biden. Currently, it is even refusing to pay its contributions to the WTO budget for the years 2024 and 2025. (The EU, China, and many other countries have responded by invoking a sort of clone of the "Appellate Body" at the WTO—called the MPIA—whilst the "Appellate Body" is not functioning.)
+
+#### Members of MPIA
 
 ![[mpia.svg]]
 
@@ -51,6 +53,8 @@ A sort of "Bancor" actually exists, by the way. The Special Drawing Rights (SDR)
 
 ## Multipolar vs Multilateral
 
+### The only alternative to power struggles that demonstrably works
+
 The example of Bretton Woods shows the eternal behaviour of powers in politics, which Jean-Jacques Rousseau described most beautifully:
 
 > **"The strongest is never strong enough to be always the master, unless he transforms strength into right, and obedience into duty."**
@@ -61,7 +65,7 @@ The example of Bretton Woods shows the eternal behaviour of powers in politics, 
 
 And so rulers and leading powers have always endeavoured to legitimise and consolidate their supremacy at the centre by creating rules and institutions. And precisely because they place themselves as an irreplaceable entity at the centre, these rules and institutions eventually collapsed.
 
-The only counter-design to power politics that has prevailed worldwide in dozens of states and is successfully practised is **the rule of law**. It is one of the philosophical achievements of the Enlightenment that the power politics of rulers should be replaced by the principle of the rule of law. It was recognised that the problem of tyranny cannot be solved by "good" tyranny. Instead of seeking supposedly "good" princes, kings, emperors, dictators, philosophers, or presidents and hoisting them onto a throne, we destroy the throne itself! We subject everyone, even the most powerful, to the law—instead of making ourselves dependent on their grace. Thanks to this principle, we have been able to create liberal constitutional states, stability, and prosperity.[^ruleoflaw]
+The only counter-design to power politics that I know of and that has prevailed worldwide in dozens of states where it is successfully practised is the rule of law. It is one of the philosophical achievements of the Enlightenment that **the problem of tyranny cannot be solved by "good" tyranny**. Instead of seeking supposedly "good" princes, kings, emperors, dictators, philosophers, or presidents and putting them onto a throne, we destroy the throne itself! We subject everyone equally to the law instead of making ourselves dependent on the whims of the powerful. Thanks to this principle, we have been able to create liberal constitutional states, stability, and prosperity.[^ruleoflaw]
 
 [^ruleoflaw]: Cf. Why Nations Fail by Daron Acemoglu and James A. Robinson.
 
@@ -73,11 +77,11 @@ Why so and not otherwise? Because power corrupts.
 >
 > (Original French: "C'est une expérience éternelle que tout homme qui a du pouvoir est porté à en abuser ; il va jusqu'à ce qu'il trouve des limites.")
 
-And even if a person is utterly convinced of their own virtue or that of a charismatic leader, the thought should bring them to their senses that one cannot build a throne for just one person. The throne outlasts the person sitting on it. And even if this one person were absolutely incorruptible—which I doubt—no one can foresee who will sit on this throne next. In short: **Building thrones is negligent**.
+However unwillingly a person who is enthralled by some supposedly great leader may admit the possibility that this leader, too, may be corrupted if given undue power, that person ought to moved at least by the consideration that however good this leader may be, one cannot build a throne for a single person. Thrones tend to outlast the people sitting on them. And *even if* this one person were absolutely incorruptible—which I reject—**no one can guarantee who will sit upon the throne when they're gone**. No principle of succession has ever been proposed that is not either ghastly corrupt to begin with, or easily corruptible by the monarch. In short: Building thrones is never worth the risk.
 
-The separation of powers is a logical extension of this idea. For the state must fulfil three fundamental tasks: creating laws, implementing laws, and enforcing laws. Montesquieu recognised that none of these tasks may lie in one hand, otherwise there is no more freedom. The **legislature** creates the laws, the **executive** implements them, and the **judiciary** ensures that both adhere to the laws. Each power controls the others and limits their power. Only in this way can one prevent one power from dominating the others and becoming tyranny.
+The separation of powers is a logical extension of this basic principle. For the state must fulfil three fundamental tasks: creating laws, implementing laws, and enforcing laws. Montesquieu recognised that none of these tasks may lie in one hand, otherwise there is no more freedom. The legislature creates the laws, the executive implements them, and the judiciary ensures that both adhere to the laws. Each power controls the others and limits their power. Only in this way can one prevent one power from dominating the others and becoming tyranny.
 
-The logic is strikingly simple: Only power can limit power. If the same ruler could both enact laws and control their application, he would de facto no longer be bound by the laws. He could grant himself immunity, have critics convicted, or interpret laws at will. The separation of powers forces those in power to control each other—not out of goodness, but out of institutional self-interest.
+The logic is strikingly simple: **Only power can limit power**. If the same ruler could both enact laws and control their application, he would de facto no longer be bound by the laws. He could grant himself immunity, have critics convicted, or interpret laws at will. The separation of powers forces those in power to control each other—not out of goodness, but out of institutional self-interest.
 
 It is precisely this central element that distinguishes today those who advocate for a multilateral world order from those who strive for a multipolar world order.
 - **Multilateralism** is based on the principle of the rule of law and means that states jointly negotiate rules that are enforced by independent legal institutions. The goal is a stable order in which no nation is indispensable. Examples include the UN, the EU, the European Court of Human Rights, the WTO, the International Monetary Fund (IMF), the World Bank, and many other international institutions.
