@@ -14,7 +14,7 @@ import 'shared/components/TurtleEditor/style/turtle.global.css'
 
 const bodyFont = Roboto_Slab({
   subsets: ['latin'],
-  weight: '200',
+  weight: '300',
   variable: '--nextfont-body'
 })
 

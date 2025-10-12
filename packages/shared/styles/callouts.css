@@ -1,5 +1,5 @@
 :root.light {
-    --callout-bg-color: #f2f3f5;
+    --callout-bg-color: 242, 243, 245;
     --callout-summary: #00b0ff;
     --callout-summary-accent: #7fd7ff;
     --callout-bug: #f50057;
@@ -27,7 +27,7 @@
 }
 
 :root.dark {
-    --callout-bg-color: #1e2029;
+    --callout-bg-color: 30, 32, 41;
     --callout-summary: #00b0ff !important;
     --callout-summary-accent: #00587f !important;
     --callout-bug: #f50057 !important;
@@ -99,13 +99,14 @@ blockquote.callout-foldable {
 }
 
 blockquote.callout {
+    --nextra-bg: var(--callout-bg-color);
     margin: 20px 0;
     border-radius: 5px !important;
     position: relative;
     padding-left: 0 !important;
     font-style: normal;
     color: var(--dark) !important;
-    background: var(--callout-bg-color);
+    background: rgb(var(--callout-bg-color));
 
     .callout-title {
         position: relative;
