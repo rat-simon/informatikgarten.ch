@@ -80,7 +80,7 @@ const withNextra = nextra({
         ],
         rehypePlugins: [
             // Provide only on `build` since turbopack on `dev` supports only serializable values
-            process.env.NODE_ENV === "production" && rehypeOpenGraphImage,
+            ...(process.env.NODE_ENV === "production" ? [rehypeOpenGraphImage] : []),
             rehypeMuxvideo,
         ],
     },
