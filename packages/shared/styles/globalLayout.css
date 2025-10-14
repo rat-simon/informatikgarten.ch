@@ -116,7 +116,7 @@ main img {
     background-blend-mode: normal;
     background-repeat: repeat-x;
     border-radius: 5px;
-    background-size: 100%,100%, 300% 100%;
+    background-size: 100%,300% 100%;
     background-position: bottom left;
     animation: rainbow-shadow-flow 180s linear infinite;
 }
