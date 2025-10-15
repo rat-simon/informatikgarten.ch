@@ -1,11 +1,11 @@
 ---
-title: Buttons abfragen
+title: Buttons abfragen & return-Statement
 ---
 > [!success]  Lernziele
 > 
 > - **Design-Mustern** und **Event-Loop**: Sie können diese zwei Ideen erklären.
 > - **Knöpfe abfragen**: Sie können einen Event-Loop schreiben, den man per Knopfdruck beenden kann.
-> - **Funktionen und return**: Sie haben Funktionen mit Parametern repetiert und können mit `return` die Ausführung einer Funktion beenden.
+> - **return-Statement**: Sie können mit `return` die Ausführung einer Funktion beenden.
 
 ## Design Muster
 

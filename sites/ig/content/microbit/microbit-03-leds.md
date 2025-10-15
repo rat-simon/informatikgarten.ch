@@ -1,10 +1,10 @@
 ---
-title: Einzelne LEDs und return-Statement
+title: LEDs einzeln auffüllen
 ---
 > [!success]  Lernziele
 > 
 > - **LEDs anstellen**: Sie können LEDs gezielt ansteuern und mit `for`-Schleifen das Display füllen.
-> - Funktionen mit Parametern definieren und ausführen
+> - **Funktionen**: Sie haben Funktionen mit mehreren Parametern repetiert
 
 ## LEDs auffüllen
 
