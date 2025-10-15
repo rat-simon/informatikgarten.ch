@@ -4,6 +4,7 @@ title: Linientracker
 
 > [!success] Lernziele
 > 
+> - **`if ... elif ... else`**: Sie können mehrere Bedingungen mit `and` und `or` verknüpfen, und haben die `if ... elif ... else`-Verkettung repetiert. 
 > - **Verständnis von `and` und `or` in Wahrheitstests:** Sie verstehen, wie man mit den Operatoren `and` und `or` mehrere Bedingungen logisch verknüpfen kann.
 > - **Programmierung eines Linientrackers:** Sie können ein Programm schreiben, das einen Maqueen-Roboter einer Linie folgen lässt.
 > - **Parametrisierung der Geschwindigkeit:** Sie wissen, wie Sie eine Variabel für die Geschwindigkeit nutzen und dynamisch anpassen können.
