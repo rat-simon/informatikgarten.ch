@@ -1,5 +1,6 @@
 ---
 title: ⚠️ IKT-Eintrittstest
+display: hidden
 ---
 Liebe Schülerinnen und Schüler der KSWE,
 
