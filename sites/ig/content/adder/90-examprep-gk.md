@@ -1,10 +1,12 @@
 ---
-title: Prüfungsvorbereitung
+title: Prüfungsvorbereitung Gymi Montag
 display: hidden
 ---
 ## Lernziele
 
-Es gelten die Lernziele der Lektionen, die wir behandelt haben.
+Es gelten die Lernziele der Lektionen, die wir behandelt haben, mit folgenden Ausnahmen:
+- Der [Multibit-Addierer](05-addierer#multibit-addierer) wird nicht geprüft.
+- Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut.
 ## Übungsaufgaben
 
 ### Einführung
