@@ -1,9 +1,19 @@
 ---
 title: Prüfungsvorbereitung
+display: hidden
 ---
 ## Lernziele
+
 Es gelten die Lernziele der Lektionen, die wir behandelt haben.
 ## Übungsaufgaben
+
+### Einführung
+
+Füllen Sie die Lücken ein: In der Informatik teilen wir Dinge gern in Module auf, um Ordnung zu schaffen. Wenn wir ein Modul verwenden, können wir uns ausschliesslich auf die **???** des Moduls konzentrieren und die Details der **???** komplett ignorieren.
+
+> [!solution]- Lösung
+> 
+> Wenn wir ein Modul verwenden, können wir uns nämlich ausschliesslich auf die **Abstraktion** oder **Schnittstelle** des Moduls konzentrieren und die Details der **Implementierung** oder **Funktionsweise** komplett  ignorieren.
 
 ### EVA & digital
 
@@ -13,11 +23,14 @@ Für was stehen E, V und A beim EVA-Prinzip?
 > 
 > Eingabe, Verarbeitung, Ausgabe
 
-Füllen Sie die Lücken ein: In der Informatik teilen wir Dinge gern in Module auf, um Ordnung zu schaffen. Wenn wir ein Modul verwenden, können wir uns ausschliesslich auf die **???** des Moduls konzentrieren und die Details der **???** komplett ignorieren.
+### Analog & Digital
+
+Was unterscheidet ein digitales von einem analogen Signal?
+
 
 > [!solution]- Lösung
 > 
-> Wenn wir ein Modul verwenden, können wir uns nämlich ausschliesslich auf die **Abstraktion** oder **Schnittstelle** des Moduls konzentrieren und die Details der **Implementierung** oder **Funktionsweise** komplett  ignorieren.
+> Ein **digitales** Signal arbeitet mit **klar definierten Zuständen**, oft in Form von “ON” (1) und “OFF” (0). Man kann die Zustände nicht mischen, “Halb-ON” (0.5) gibt es schlicht nicht.
 
 ## Binärsystem
 
@@ -47,7 +60,7 @@ Ein OR-Gate habe zwei Inputs "A" und "B" sowie einen Output "out". Schreiben Sie
 > | 1     | 1     | 1      |
 > 
 
-Schreiben Sie Wahrheitstabellen für diese Schaltungen
+Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 
 ![[examprep-schaltung1.excalidraw]]
 
@@ -101,10 +114,18 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen
 > | 1   | 1   | 0   | 0   |
 > | 1   | 1   | 1   | 1   |
 > 
-> ![[examprep-schaltung3.excalidraw]]
+> ![[examprep-schaltung3-solution.excalidraw]]
 > 
 > Hier das Erklärvideo zur Aufgabe:
 > ![[aufbau-examprep-schaltung3.mp4]]
+
+![[examprep-schaltung4.excalidraw]]
+
+> [!solution]- Lösung
+> 
+> Die Wahrheitstabelle und die Herleitung mit Farben:
+> 
+> ![[examprep-schaltung4-solution.excalidraw]]
 
 Vervollständigen Sie: Ein Halbaddierer besteht aus (Anzahl) **???** Logikgates, nämlich einem **???** und einem **???**.
 
@@ -124,7 +145,7 @@ Na toll... Meine Katze hat wieder mit meinem Addierer gespielt und alle Verbindu
 ### Testaufgaben zur Von-Neumann-Architektur
 
 Benennen Sie folgende sechs Teile der Von-Neumann-Architektur.
-![[Excalidraw/aufbau-04-prüfungsvorbereitung-2024-05-15-16.10.32.excalidraw]]
+![[aufbau-04-prüfungsvorbereitung-vonneumann.excalidraw]]
 
 > [!solution]- Lösung
 > 
@@ -144,15 +165,15 @@ Im Speicherzähler des Prozessors befindet sich:
 > 
 > Eine **Adresse** ist richtig
 
-Im Fetch-Schritt des FDE-Zyklus wird von wo nach wo was transferiert?
+Im Fetch-Schritt des FDE-Zyklus wird was von wo nach wo transferiert?
 
 > [!solution]- Lösung
 > 
 > Die aktuelle Adresse im Speicherzähler (PC) Register bestimmt, welche Speicherzelle im Arbeitsspeicher (RAM) gelesen wird. Der Inhalt dieser Speicherzelle wird in ein Register im Prozessor kopiert.
 
-Wenn Sie dieses Programm im LMC ausführen: Welcher Wert steht am Schluss im **Akkumulator**?
+Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumulator**?
 
-![Pasted-Image-20240515163823](./attachments/Pasted-image-20240515163823.png)
+![[Pasted-image-20240515163823.png]]
 > [!solution]- Lösung
 > 
 > **505**. 
@@ -182,7 +203,7 @@ Was gibt dieses Programm aus? Wie würden Sie die Rechnung zusammenfassen?
 > 
 > Ausgabe: $24$. Es wird $3 \times 8$ gerechnet
 
-### Betriebssystem
+## ⛔ Betriebssystem (nicht Prüfungsstoff)
 
 Sie schreiben ein Programm, das Sie auf vielen Computern installieren möchten. Beantworten Sie mit wahr oder falsch: **Welche Information über die Computer brauchen Sie?**
 - Was für einen Prozessor sie benutzen
