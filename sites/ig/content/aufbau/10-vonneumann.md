@@ -3,10 +3,9 @@ title: Von Neumann Architektur
 ---
 > [!success] Lernziele
 > 
-> - Sie kennen die Begriffe **Bits und Bytes** mit den Präfixen Kilo, Mega, Giga, Tera.
 > - Sie wissen, was die Schritte des **Fetch-Decode-Execute-Zyklus** tun.
 >  - Sie wissen, was folgende Teile der Von-Neumann-Architektur sind: **CPU, CU, ALU, Register (PC und ACC), RAM, Bus**
-> - Sie können kleine [Programme im **LMC**](https://oinf.ch/interactive/little-man-computer/) verstehen oder schreiben. Versichern Sie sich, dass Sie **alle Befehle in der Tabelle verstehen** (nicht auswendig lernen!)
+> - Sie können kleine [Programme im **LMC**](https://oinf.ch/interactive/little-man-computer/) nachvollziehen. Versichern Sie sich, dass Sie **alle Befehle in der Tabelle verstehen** (nicht auswendig lernen!)
 
 ## Computer-Architektur
 
