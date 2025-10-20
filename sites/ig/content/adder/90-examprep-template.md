@@ -135,7 +135,7 @@ Vervollständigen Sie: Ein Halbaddierer besteht aus (Anzahl) **???** Logikgates,
 
 Na toll... Meine Katze hat wieder mit meinem Addierer gespielt und alle Verbindungen rausgerissen 😭 Helfen Sie mir bitte und zeichnen Sie die richtigen Verbindungen ein!
 
-![[Excalidraw/aufbau-04-prüfungsvorbereitung-2024-05-15-15.54.09.excalidraw]]
+![[aufbau-04-prüfungsvorbereitung-adder.excalidraw]]
 > [!solution]- Lösung
 > 
 > Zum Üben habe ich die Logikgates wieder schön arrangiert. 
