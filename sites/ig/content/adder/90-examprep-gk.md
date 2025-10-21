@@ -6,7 +6,7 @@ display: hidden
 
 Es gelten die Lernziele der Lektionen, die wir behandelt haben, mit folgenden Ausnahmen:
 - Der [Multibit-Addierer](05-addierer#multibit-addierer) wird nicht geprüft.
-- Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut.
+- Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut. Lernen Sie die Lektion nur bis zur 2. Aufgabe des LMC-Simulators - der ganze Rest der Aufgaben und der Teil über Binär kommt nicht.
 
 Wir haben alle Lektionen des Themas "**A Bau eines Addierers**" sowie die Lektion "[Von Neumann Architektur](/aufbau/10-vonneumann)" behandelt.
 ## Übungsaufgaben
