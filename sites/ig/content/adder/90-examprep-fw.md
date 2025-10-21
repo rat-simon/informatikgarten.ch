@@ -1,11 +1,11 @@
 ---
-title: Prüfungsvorbereitung Gymi Montag
+title: Prüfungsvorbereitung FMS
 display: hidden
 ---
 ## Lernziele
 
 Es gelten die Lernziele der Lektionen, die wir behandelt haben, mit folgenden Ausnahmen:
-- Der [Multibit-Addierer](05-addierer#multibit-addierer) wird nicht geprüft.
+- Sie müssen die Symbole der Logikgates nicht auswendig können.
 - Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut.
 
 Wir haben alle Lektionen des Themas "**A Bau eines Addierers**" sowie die Lektion "[Von Neumann Architektur](/aufbau/10-vonneumann)" behandelt.
@@ -27,8 +27,6 @@ Für was stehen E, V und A beim EVA-Prinzip?
 > 
 > Eingabe, Verarbeitung, Ausgabe
 
-### Analog & Digital
-
 Was unterscheidet ein digitales von einem analogen Signal?
 
 
@@ -36,7 +34,7 @@ Was unterscheidet ein digitales von einem analogen Signal?
 > 
 > Ein **digitales** Signal arbeitet mit **klar definierten Zuständen**, oft in Form von “ON” (1) und “OFF” (0). Man kann die Zustände nicht mischen, “Halb-ON” (0.5) gibt es schlicht nicht.
 
-## Binärsystem
+### Binärsystem
 
 Formen Sie $1001101011_2$ ins Dezimalsystem um.
 
@@ -146,6 +144,7 @@ Na toll... Meine Katze hat wieder mit meinem Addierer gespielt und alle Verbindu
 > Zum Üben habe ich die Logikgates wieder schön arrangiert. 
 > 
 > ![[adder-full-step4.excalidraw]]
+
 
 ## Von-Neumann-Architektur
 
