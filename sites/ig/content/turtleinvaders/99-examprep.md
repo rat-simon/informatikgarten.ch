@@ -5,7 +5,7 @@ title: Prüfungsvorbereitung
 > [!success] Hinweise zur Prüfung
 > 
 > Diese Prüfungsvorbereitung ist dazu da, dass Sie die Art der Fragestellungen abschätzen können.
-> - **Stoffumfang**: bis und mit "3 Turtleinvaders" im Kapitel "B Turtle-Invaders" auf Informatikgarten. Dort finden Sie auch die Lernziele.
+> - **Stoffumfang**: bis und mit "Turtle Invaders" im Kapitel "Turtle Invaders" auf Informatikgarten. Dort finden Sie auch die Lernziele.
 > - Ihre generellen **Pythonkenntnisse** werden ebenfalls vorausgesetzt.
 > - Sie werden [diese **Befehlsliste**](/pubfiles/befehlsliste_turtleinvader.pdf) erhalten. (Python-Strukturen werden darauf nicht erklärt!)
 > - Sie finden [hier](https://exam.net/student?code=5Zrb45) eine **technische Vorschau** auf Exam.net, um den Programmiereditor zu versuchen.
@@ -229,9 +229,9 @@ Schreiben Sie ein Programm, das eine Liste mit 100 Zufallszahlen zwischen 1 und 
 >         print(zahl)
 > ```
 
-Nehmen Sie folgendes Programm als Ausgangslage. Erweitern Sie es so, dass alle 0.5 Sekunden die Funktion create_invader() ausgeführt wird.
+Nehmen Sie folgendes Programm als Ausgangslage. Erweitern Sie es so, dass in einem Intervall von 0.5 Sekunden die Funktion create_invader() ausgeführt wird.
 
-*Bitte beachten Sie: Auf Exam.net gibt es eine Zeitbegrenzung, wie lange Programme ausgeführt werden dürfen. Bitte belassen Sie alle Linien der Ausgangslage (insbesondere die Linien mit PROGRAMM_START) so, wie Sie sind.*
+*Bitte beachten Sie: Auf Exam.net gibt es eine Zeitbegrenzung, wie lange Programme ausgeführt werden dürfen (5 Sekunden). Bitte belassen Sie alle Linien der Ausgangslage (insbesondere die Linien mit CHEHABS_START) so, wie Sie sind.*
 
 ```python
 import time
@@ -243,7 +243,11 @@ CHEHABS_START = time.time()
 def create_invader():
     print("Invader kommt!")
 
+# Fügen Sie hier extra Code hinzu
+# ...
+
 while True:
+
 	# Fügen Sie hier extra Code hinzu
 	# ...
 	
@@ -275,34 +279,4 @@ while True:
 >     if time.time() - PROGRAMM_START > 4.5:
 >         break
 > ```
-
-Schreiben Sie ein Turtle-Programm, das 10 Invader-Turtle am oberen Bildrand auf einer zufälligen X-Koordinate platziert und sie gleichzeitig über den Bildschirm nach unten fahren lässt.
-
-> [!solution]- Lösung
-> 
-> ```python
-> import turtle
-> import random
-> 
-> window = turtle.Screen()
-> window.tracer(0) # unnötiges Candy
-> 
-> TOP = window.window_height() / 2
-> XMAX = window.window_width() / 2 
-> 
-> invaderlist = []
-> for i in range(10):
->     t = turtle.Turtle()
->     t.penup() # unnötiges Candy
->     t.setposition(random.randint(int(-XMAX), int(XMAX)), TOP) # ohne int() gäbe keinen Abzug
->     t.right(90)
->     t.pendown() # unnötiges Candy
->     invaderlist.append(t)
-> 
-> while True:
->     for invader in invaderlist:
->         invader.forward(1)
->     window.update() # unnötiges Candy
-> ```
-> 
 
