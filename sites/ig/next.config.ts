@@ -8,6 +8,7 @@ import {
     remarkWikiLinks,
     remarkCallouts,
 } from "shared/server/remark";
+import { transformerNotationDiff } from "@shikijs/transformers"
 
 function isExportNode(node, varName: string) {
     if (node.type !== "mdxjsEsm") return false;
@@ -83,6 +84,9 @@ const withNextra = nextra({
             ...(process.env.NODE_ENV === "production" ? [rehypeOpenGraphImage] : []),
             rehypeMuxvideo,
         ],
+        rehypePrettyCodeOptions: {
+            transformers: [transformerNotationDiff()]
+        }
     },
     whiteListTagsStyling: ["figure", "figcaption"],
 });
