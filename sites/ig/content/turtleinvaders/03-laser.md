@@ -79,7 +79,7 @@ Beachten Sie: Die Funktion `move_laser()` wird beim Refaktorieren noch parametri
 >     t.color(random.random(), random.random(), random.random())
 >     invader_liste.append(t)
 > 
-> # Laser-Logik # [!code ++]
+> # Laser-Logik [!code ++]
 > laser_liste = [] # [!code ++]
 > LASER_SPEED = 10 # [!code ++]
 > LASER_LENGTH = 200 # [!code ++] 
@@ -149,8 +149,8 @@ def destroy_turtle(sprite, liste):
 def destroy_turtle(sprite, liste): # [!code ++]
     sprite.clear() # [!code ++]
     sprite.hideturtle() # [!code ++]
-    liste.remove(sprite) # unsere Liste # [!code ++]
-    turtle.turtles().remove(sprite) # interne turtle-Liste # [!code ++]
+    liste.remove(sprite) # unsere Liste [!code ++]
+    turtle.turtles().remove(sprite) # interne turtle-Liste [!code ++]
 
 running = True
 while running:

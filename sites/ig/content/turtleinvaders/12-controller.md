@@ -143,7 +143,7 @@ Diesen gesamten Teil unserer Steuerung brauchen wir nicht mehr.
 
 ```python filename="main.py"
 # Steuerung
-ship_direction = 0  # [!code --]
+ship_direction = 0 # [!code --]
  # [!code --]
  # [!code --]
 def move_left(): # [!code --]
@@ -181,7 +181,7 @@ Zu Beginn unseres Mainloops lesen wir nun die Inputs des Controllers und `x` ers
 
 ```python filename="main.py"
 while running:
-    x, y, a, b, rb = joycon.read() # read the controller  # [!code ++]
+    x, y, a, b, rb = joycon.read() # read the controller [!code ++]
 	new_x = ship.xcor() + SHIP_STEP * x # [!code ++]
 	new_x = ship.xcor() + SHIP_STEP * ship_direction # [!code --]
 ```
@@ -195,7 +195,7 @@ while running:
     new_x = ship.xcor() + SHIP_STEP * x
     if LEFT < new_x < RIGHT:
         ship.setx(new_x)
-    if a == 1:  # [!code ++]
+    if a == 1: # [!code ++]
         create_laser() # [!code ++]
 ```
 
@@ -210,7 +210,7 @@ while running:
     new_x = ship.xcor() + SHIP_STEP * x
     if LEFT < new_x < RIGHT:
         ship.setx(new_x)
-    if a == 1 and time.time() - laser_time > LASER_INTERVALL:  # [!code ++]
+    if a == 1 and time.time() - laser_time > LASER_INTERVALL: # [!code ++]
         create_laser() # [!code ++]
         laser_time = time.time() # [!code ++]
 ```
