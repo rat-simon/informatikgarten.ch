@@ -176,6 +176,11 @@ import os # [!code ++]
  # [!code ++]
 os.chdir(os.path.dirname(__file__)) # [!code ++]
 
+https://mail.proton.me/u/0/inbox
+
+
+
+
 # Wir kontrollieren das Fenster selbst
 window = turtle.Screen()
 window.setup(0.5, 0.75) # Breite und Höhe relativ zum Bildschirm

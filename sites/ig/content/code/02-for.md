@@ -4,7 +4,7 @@ title: Wiederholungen in Python mit for-Schleifen
 > [!success] Lernziele
 > 
 > - Sie kennen das Konzept von **Schleifen**, die gewisse Zeilen Code **wiederholen**.
-> - Sie kennen den Unterschied von `for`- und `while`-Schleifen.
+> - Sie kennen den Unterschied von `for`- und `while`-Schleifen im Abstrakten.
 > - Sie haben `for`-Schleifen genutzt, um regelmässige geometrische Formen mit der Turtle zu zeichnen.
 
 Wir haben das letzte Mal gesehen, wie man eine Turtle namens `eva` erstellt und fernsteuert. Es gibt die Befehle:
