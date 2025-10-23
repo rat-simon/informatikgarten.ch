@@ -65,6 +65,10 @@ import { Tabs } from 'nextra/components'
   </Tabs.Tab>
 </Tabs>
 
+In diesem Erklärvideo wird dieses Beispiel komplett durchgeführt.
+
+![[aufbau-vonneumann-neu.mp4]]
+
 ### Auffälligkeiten der Von-Neumann-Architektur
 Wir bemerken:
 - Daten und Instruktionen werden **nicht unterschieden** und **binär** im selben Speicher (RAM) gespeichert. Dieselbe Adresse kann je nach Operation als Daten oder als Instruktion interpretiert werden.
@@ -80,7 +84,7 @@ https://oinf.ch/interactive/little-man-computer/
 
 Ändern Sie Beispiel 1 so ab, dass zwei Inputwerte **subtrahiert** werden.
 
-> [!solution]- Lösung
+> [!solution]- Lösung mit Videoerklärung
 > 
 > ```
 > 901
@@ -93,6 +97,8 @@ https://oinf.ch/interactive/little-man-computer/
 > 902
 > 000
 > ```
+> 
+> ![[aufbau-vonneumann-to-lmc.mp4]]
 
 Schreiben Sie ein Programm, das die **ersten zwei Inputwerte addiert und dann den dritten Inputwert subtrahiert**.
 
@@ -101,6 +107,10 @@ Schreiben Sie ein Programm, das die **ersten zwei Inputwerte addiert und dann de
 > Zum Speichern der Inputs brauche ich hohe Speicheradressen (>20), weil ich während dem Schreiben des Programms ja nicht weiss, wie lange das Programm wird. 
 > 
 > ![[abc.png]]
+
+> [!danger] Achtung
+> 
+> Die Spring-Befehle und der Rest dieser Lektion sind nicht Prüfungsstoff.
 
 Beispiel 2 nutzt die Springbefehle. Mit diesen "springt" das Programm an einen anderen Ort im Speicher, indem der Program Counter (PC) überschrieben wird. Ändern Sie das Beispiel 2 so ab, dass ein **Inputwert unendlich lange zu sich selbst addiert wird**, e.g. Input 3 => 3, 6, 9, 12,... (Also nicht wie im Beispiel die vorprogrammierte Zahl 7.)
 
