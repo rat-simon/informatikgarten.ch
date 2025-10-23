@@ -65,9 +65,9 @@ import { Tabs } from 'nextra/components'
   </Tabs.Tab>
 </Tabs>
 
-In diesem Erklärvideo wird dieses Beispiel komplett durchgeführt.
-
-![[aufbau-vonneumann-neu.mp4]]
+> [!hint]- Erklärvideo zu diesem Beispiel
+> 
+> ![[aufbau-vonneumann-neu2.mp4]]
 
 ### Auffälligkeiten der Von-Neumann-Architektur
 Wir bemerken:
