@@ -23,7 +23,9 @@ Für was stehen E, V und A beim EVA-Prinzip?
 > 
 > Eingabe, Verarbeitung, Ausgabe
 
-### Analog & Digital
+
+---
+
 
 Was unterscheidet ein digitales von einem analogen Signal?
 
@@ -32,13 +34,15 @@ Was unterscheidet ein digitales von einem analogen Signal?
 > 
 > Ein **digitales** Signal arbeitet mit **klar definierten Zuständen**, oft in Form von “ON” (1) und “OFF” (0). Man kann die Zustände nicht mischen, “Halb-ON” (0.5) gibt es schlicht nicht.
 
-## Binärsystem
+### Binärsystem
 
 Formen Sie $1001101011_2$ ins Dezimalsystem um.
 
 > [!solution]- Lösung
 > 
 > $619_{10}$
+
+---
 
 Formen Sie $286_{10}$ ins Binärsystem um.
 
@@ -60,6 +64,8 @@ Ein OR-Gate habe zwei Inputs "A" und "B" sowie einen Output "out". Schreiben Sie
 > | 1     | 1     | 1      |
 > 
 
+---
+
 Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 
 ![[examprep-schaltung1.excalidraw]]
@@ -80,6 +86,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > Und hier ein Erklärvideo der Aufgabe:
 > ![[aufbau-examprep-schaltung1.mp4]]
 
+---
+
 ![[examprep-schaltung2.excalidraw]]
 
 > [!solution]- Lösung mit Videoerklärung
@@ -97,6 +105,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > 
 > Hier ein Erklärvideo dazu:
 > ![[aufbau-examprep-schaltung2.mp4]]
+
+---
 
 ![[examprep-schaltung3.excalidraw]]
 > [!solution]- Lösung mit Videoerklärung
@@ -119,6 +129,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > Hier das Erklärvideo zur Aufgabe:
 > ![[aufbau-examprep-schaltung3.mp4]]
 
+---
+
 ![[examprep-schaltung4.excalidraw]]
 
 > [!solution]- Lösung
@@ -127,11 +139,15 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > 
 > ![[examprep-schaltung4-solution.excalidraw]]
 
+---
+
 Vervollständigen Sie: Ein Halbaddierer besteht aus (Anzahl) **???** Logikgates, nämlich einem **???** und einem **???**.
 
 > [!solution]- Lösung
 > 
 > Ein Halbaddierer besteht aus **zwei** Gates, nämlich ein **AND** und ein **XOR**.
+
+---
 
 Na toll... Meine Katze hat wieder mit meinem Addierer gespielt und alle Verbindungen rausgerissen 😭 Helfen Sie mir bitte und zeichnen Sie die richtigen Verbindungen ein!
 
@@ -156,6 +172,8 @@ Benennen Sie folgende sechs Teile der Von-Neumann-Architektur.
 > 5. Systembus
 > 6. Arbeitsspeicher (RAM)
 
+---
+
 Im Speicherzähler des Prozessors befindet sich:
 - ein Befehl
 - eine Adresse
@@ -165,11 +183,15 @@ Im Speicherzähler des Prozessors befindet sich:
 > 
 > Eine **Adresse** ist richtig
 
+---
+
 Im Fetch-Schritt des FDE-Zyklus wird was von wo nach wo transferiert?
 
 > [!solution]- Lösung
 > 
 > Die aktuelle Adresse im Speicherzähler (PC) Register bestimmt, welche Speicherzelle im Arbeitsspeicher (RAM) gelesen wird. Der Inhalt dieser Speicherzelle wird in ein Register im Prozessor kopiert.
+
+---
 
 Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumulator**?
 
@@ -180,12 +202,16 @@ Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumula
 > 
 > Falls Sie **-191** gesagt hätten: Dieser Wert wird ausgegeben. Aber das Programm lädt bei Speicherzelle 05 den Wert der Speicherzelle 00 in den Akkumulator.
 
+---
+
 Was müssten Sie bei folgendem Programm tun, damit die Zahlenreihe in der Ausgabe nicht bei 0 sondern bei 7 beginnt?
 
 ![[hw-04-prüfungsvorbereitung-20240520125635.png]]
 > [!solution]- Lösung
 > 
 > Den Inhalt der Speicherzellen 00 und 01 vertauschen.
+
+---
 
 Was müssen Sie vor dem Ausführen dieses Programms tun, damit es 99 ausgibt?
 
@@ -194,6 +220,8 @@ Was müssen Sie vor dem Ausführen dieses Programms tun, damit es 99 ausgibt?
 > [!solution]- Lösung
 > 
 > Die Zahl 5 in die Eingabe schreiben.
+
+---
 
 Was gibt dieses Programm aus? Wie würden Sie die Rechnung zusammenfassen?
 

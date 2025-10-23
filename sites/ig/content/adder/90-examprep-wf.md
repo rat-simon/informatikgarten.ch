@@ -6,7 +6,7 @@ display: hidden
 
 Es gelten die Lernziele der Lektionen, die wir behandelt haben, mit folgenden Ausnahmen:
 - Sie müssen die Symbole der Logikgates nicht auswendig können.
-- Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut.
+- Die "Springe"-Befehle [bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nicht angeschaut. Lernen Sie die Lektion nur bis zur 2. Aufgabe des LMC-Simulators - der ganze Rest der Aufgaben und der Teil über Binär kommt nicht.
 
 Wir haben alle Lektionen des Themas "**A Bau eines Addierers**" sowie die Lektion "[Von Neumann Architektur](/aufbau/10-vonneumann)" behandelt.
 ## Übungsaufgaben
@@ -27,6 +27,8 @@ Für was stehen E, V und A beim EVA-Prinzip?
 > 
 > Eingabe, Verarbeitung, Ausgabe
 
+---
+
 Was unterscheidet ein digitales von einem analogen Signal?
 
 
@@ -41,6 +43,8 @@ Formen Sie $1001101011_2$ ins Dezimalsystem um.
 > [!solution]- Lösung
 > 
 > $619_{10}$
+
+---
 
 Formen Sie $286_{10}$ ins Binärsystem um.
 
@@ -62,6 +66,8 @@ Ein OR-Gate habe zwei Inputs "A" und "B" sowie einen Output "out". Schreiben Sie
 > | 1     | 1     | 1      |
 > 
 
+---
+
 Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 
 ![[examprep-schaltung1.excalidraw]]
@@ -82,6 +88,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > Und hier ein Erklärvideo der Aufgabe:
 > ![[aufbau-examprep-schaltung1.mp4]]
 
+---
+
 ![[examprep-schaltung2.excalidraw]]
 
 > [!solution]- Lösung mit Videoerklärung
@@ -99,6 +107,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > 
 > Hier ein Erklärvideo dazu:
 > ![[aufbau-examprep-schaltung2.mp4]]
+
+---
 
 ![[examprep-schaltung3.excalidraw]]
 > [!solution]- Lösung mit Videoerklärung
@@ -121,6 +131,8 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > Hier das Erklärvideo zur Aufgabe:
 > ![[aufbau-examprep-schaltung3.mp4]]
 
+---
+
 ![[examprep-schaltung4.excalidraw]]
 
 > [!solution]- Lösung
@@ -129,11 +141,15 @@ Schreiben Sie Wahrheitstabellen für diese Schaltungen.
 > 
 > ![[examprep-schaltung4-solution.excalidraw]]
 
+---
+
 Vervollständigen Sie: Ein Halbaddierer besteht aus (Anzahl) **???** Logikgates, nämlich einem **???** und einem **???**.
 
 > [!solution]- Lösung
 > 
 > Ein Halbaddierer besteht aus **zwei** Gates, nämlich ein **AND** und ein **XOR**.
+
+---
 
 Na toll... Meine Katze hat wieder mit meinem Addierer gespielt und alle Verbindungen rausgerissen 😭 Helfen Sie mir bitte und zeichnen Sie die richtigen Verbindungen ein!
 
@@ -160,6 +176,8 @@ Benennen Sie folgende sechs Teile der Von-Neumann-Architektur.
 > 5. Systembus
 > 6. Arbeitsspeicher (RAM)
 
+---
+
 Die Zahl im Speicherzeiger des Prozessors repräsentiert:
 - ein Befehl
 - eine Adresse
@@ -169,11 +187,15 @@ Die Zahl im Speicherzeiger des Prozessors repräsentiert:
 > 
 > Eine **Adresse** ist richtig
 
+---
+
 Im Fetch-Schritt des FDE-Zyklus wird was von wo nach wo transferiert?
 
 > [!solution]- Lösung
 > 
 > Die aktuelle Adresse im Speicherzähler (PC) Register bestimmt, welche Speicherzelle im Arbeitsspeicher (RAM) gelesen wird. Der Inhalt dieser Speicherzelle wird in ein Register im Prozessor kopiert.
+
+---
 
 Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumulator**?
 
@@ -185,6 +207,8 @@ Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumula
 > Falls Sie **-191** gesagt hätten: Dieser Wert wird ausgegeben. Aber das Programm lädt bei Speicherzelle 05 den Wert der Speicherzelle 00 in den Akkumulator.
 > 
 > ![[aufbau-lmc_exercise1.mp4]]
+
+---
 
 Wenn Sie dieses Programm ausführen: Welcher Wert wird **ausgegeben**?
 

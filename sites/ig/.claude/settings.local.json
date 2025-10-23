@@ -8,7 +8,15 @@
       "Bash(chmod:*)",
       "Read(//tmp/**)",
       "Bash(npm run dev:*)",
-      "Bash(pnpm dev:*)"
+      "Bash(pnpm dev:*)",
+      "Bash(cat:*)",
+      "Read(//home/chris/git/informatikgarten.ch/**)",
+      "Bash(pnpm list:*)",
+      "Bash(pnpm info:*)",
+      "WebFetch(domain:nextra.site)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:rehype-pretty-code.netlify.app)",
+      "WebFetch(domain:rehype-pretty.pages.dev)"
     ],
     "deny": [],
     "ask": []

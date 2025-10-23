@@ -12,11 +12,15 @@ Computerprogramme bestehen aus einer Reihe von Anweisungen, die in einer bestimm
 
 Um zu verstehen, was eine Programmiersprache für uns tut, können Sie sich daran orientieren, was [im "Little Man Computer"](../01-aufbau/hw-04-vonneumann.mdx) alles mühsam war.
 - Wir mussten uns **Speicheradressen** als Zahlen merken 😑 Wenn sich das Programm verlängert hat, mussten wir diese Zahlen überall anpassen 🤬
-- Wir konnten nie unsere **Lösungen wiederverwenden** 😥 Z.B. haben wir die Multiplikation gelöst, aber dann für die Fakultät mussten wir wieder von vorne beginnen, obwohl das eine Multiplikation ist! 🥵
+- Wir konnten nie unsere **Lösungen wiederverwenden** 😥 Z.B. haben wir eine Multiplikation erstellt, aber dann für die Fakultät mussten wir wieder von vorne beginnen, obwohl das ja mehrere Multiplikationen sind! 🥵
 - Die **Befehle** waren Zahlen, die man sich merken musste 🤯
 
 Eine Programmiersprache löst all diese Probleme, indem sie **vom Machinencode abstrahiert**. Wir müssen uns nie mehr eine Speicheradresse merken, können Dinge wiederverwenden und Befehle als Wörter schreiben. 🥳🙌
 ## Ein minimalistisches Python-Programm
+
+> [!hint] Ein Tipp vorweg
+> 
+> Sie lernen jetzt eine neue Sprache. Ich empfehle Ihnen: Behandeln Sie das Lernen einer Programmiersprache anfangs sehr ähnlich wie eine natürliche Sprache und schreiben Sie sich **Voci-Kärtchen**.
 
 Beginnen wir mit einem kurzen Python-Programm aus zwei Linien. Führen Sie das gern einfach mal aus indem Sie auf "▶️ Run" drücken, dann besprechen wir den Inhalt.
 
