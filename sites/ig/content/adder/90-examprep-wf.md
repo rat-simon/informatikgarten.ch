@@ -216,7 +216,5 @@ Wenn Sie dieses Programm ausführen: Welcher Wert wird **ausgegeben**?
 
 > [!solution]- Lösung
 > 
-> **505**. 
-> 
-> Falls Sie **-191** gesagt hätten: Dieser Wert wird ausgegeben. Aber das Programm lädt bei Speicherzelle 05 den Wert der Speicherzelle 00 in den Akkumulator.
+> **115**.
 

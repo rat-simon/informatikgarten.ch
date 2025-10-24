@@ -196,13 +196,23 @@ Im Fetch-Schritt des FDE-Zyklus wird was von wo nach wo transferiert?
 
 ---
 
+Wenn Sie dieses Programm ausführen: Welcher Wert steht am Schluss im **Akkumulator**?
+
+![[Pasted-image-20240515163823.png]]
+> [!solution]- Lösung mit Videoerklärung
+> 
+> **505**. 
+> 
+> Falls Sie **-191** gesagt hätten: Dieser Wert wird ausgegeben. Aber das Programm lädt bei Speicherzelle 05 den Wert der Speicherzelle 00 in den Akkumulator.
+> 
+> ![[aufbau-lmc_exercise1.mp4]]
+
+---
+
 Wenn Sie dieses Programm ausführen: Welcher Wert wird **ausgegeben**?
 
 ![[90-examprep-lmc-code.excalidraw]]
 
 > [!solution]- Lösung
 > 
-> **505**. 
-> 
-> Falls Sie **-191** gesagt hätten: Dieser Wert wird ausgegeben. Aber das Programm lädt bei Speicherzelle 05 den Wert der Speicherzelle 00 in den Akkumulator.
-
+> **115**.
