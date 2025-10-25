@@ -8,7 +8,7 @@ Es gelten die Lernziele der Lektionen, die wir behandelt haben. Wir haben alle L
 
 Bei Ihnen gelten folgende Ausnahmen:
 - Sie müssen die Symbole der Logikgates nicht auswendig können.
-- [Bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nur die Übersicht in der Architektur angeschaut und Beispielprogramme ohne die "Spring"-Befehle. Den LMC-Simulator und der Teil über die binäre Logik wird nicht abgefragt!
+- [Bei der Von-Neumann-Architektur](/aufbau/10-vonneumann) haben wir nur die Übersicht in der Architektur angeschaut und Beispielprogramme ohne die "Spring"-Befehle. Der LMC-Simulator und der Teil über die binäre Logik wird nicht abgefragt. Das dritte Lernziel dieser Lektion gilt für Sie also in beschränktem Umfang, nämlich dass Sie einfache Programme im Übersichtsdiagramm nachvollziehen können. Ich habe Ihnen ganz unten eine Beispielaufgabe angehängt.
 
 ## Übungsaufgaben
 
