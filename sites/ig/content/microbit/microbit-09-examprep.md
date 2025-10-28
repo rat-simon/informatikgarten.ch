@@ -1,6 +1,5 @@
 ---
 title: Prüfungsvorbereitung
-display: hidden
 ---
 
 > [!success] Umfang
@@ -8,11 +7,7 @@ display: hidden
 > - Die Prüfung wird auf Exam.net stattfinden und 60 Minuten dauern. Sie umfasst sowohl Theorie als auch praktische Programmieraufgaben.
 > - Sie werden Zugang [zum Microbit-Editor](https://python.microbit.org/v/3) und seiner Dokumentation haben, mit dem Sie dank dem Simulator auf der rechten Seite auch zuhause üben können.
 > - Es gelten die Lernziele der Lektionen, die wir behandelt haben, sofern sie hier nicht ausgeschlossen werden:
-> 	- Bei der Lektion [[microbit-05-buttons|zu den Knöpfen]] haben wir das Abbrechen der while-Schleife nicht behandelt.
-> 	- Bei der Lektion [[microbit-03-leds|zu den LEDs]] haben wir die Knacknuss-Aufgaben nicht behandelt.
-> 	- Beim [[microbit-10-maqueen-intro|Intro zum Maqueen-Roboter]] haben wir den Staubsauger mit der Zufallszahl nicht programmiert.
-> 	- Beim [[microbit-14-linetracker|Linientracker]] haben wir die Geschwindigkeit nicht dynamisch angepasst.
-> 	- [[microbit-15-linefinder|Linienfinder]] & [[microbit-20-radio|Radio]] haben wir nicht behandelt und das ist **nicht Teil des Prüfungsstoffs**.
+> 	- Bei der Lektion [[microbit-05-buttons|zu den Knöpfen]] haben wir die Knacknuss-Aufgabe nicht behandelt.
 
 Folgende Übungsaufgaben sollten Ihnen zur Prüfungsvorbereitung hilfreich sein. 
 ## Herz pocht nicht
@@ -32,20 +27,7 @@ while True:
 > 
 > Nach `display.show(Image.HEART_SMALL)` wiederholt der Microbit die while-Schleife sofort und zeigt wieder das grosse Herz an. Man müsste also etwas **warten mit `sleep()`, z.B. `sleep(500)`**.
 
-## Maqueen not defined
-
-Wie könnte ich diese Fehler in meinem Programm lösen, damit ich nur auf einer Linie etwas ändern muss? Was müsste ich auf welcher Linie ändern und wieso?
-
-![](microbit-06-examprep-import-1.png)
-
-> [!solution]- Lösung
-> 
-> Linie 2: `import maqueen`
-> 
-> Der Syntax `from maqueen import *` importiert den ganzen Inhalt direkt. Man müsste die Funktion `read_patrol()` dann direkt (ohne `maqueen.`) aufrufen. Aber das wären zwei Linien Code, die man verändern muss.
-> 
-> `import maqueen` hingegen importiert alles unter dem Namen `maqueen` - und so funktionieren auch die Linien 4 und 5 so, wie sie dastehen.
-
+---
 ## Muster selbst zeichnen
 
 Was für ein Muster generiert folgenden Code? Sagen Sie voraus, welche LEDs nach diesem Programm angestellt sein werden.
@@ -159,51 +141,3 @@ Erweitern Sie das fill()-Programm so, dass die Spalten nicht automatisch auffül
 >         leds += 1
 >         fill(leds)
 > ```
-
-## Maqueen spinnt!?
-
-Hilfe! Mein Maqueen spinnt total, obwohl ich doch alles richtig mache?? Ich habe ihn zuerst so programmiert, dass er auf Weiss schnell fährt und auf Schwarz langsam. Alles lief tiptop. 
-
-Nun wollte ich noch einbauen, dass er kurz vor einem Hindernis auf meinem Papier eine 180-Grad-Drehung macht und ausweicht - aber er fährt einfach volle Kanne in die Wand!
-
-Erklären Sie mir bitte meinen Fehler und wie ich das verbessern könnte.
-
-```python
-from microbit import *
-import maqueen
-
-while True:
-    
-    if maqueen.read_patrol(0) == 1:
-        maqueen.set_motor(0, 100)
-        maqueen.set_motor(1, 100)
-    
-    if maqueen.read_patrol(0) == 0:
-        maqueen.set_motor(0, 30)
-        maqueen.set_motor(1, 30)
-        
-    if maqueen.read_distance() < 7:
-        maqueen.set_motor(0, -100)
-        maqueen.set_motor(1, 100)
-```
-
-
-> [!solution]- Lösung
-> 
-> Das Problem ist, dass die Motoren-Befehle des Ausweichmanövers nach `if maqueen.read_distance() < 7{:python}` sogleich wieder übersteuert werden. Die `while`-Schleife wiederholt ja sofort und misst die Helligkeit des Bodens.
-> 
-> Man müsste z.B. mit sleep() am Schluss des Blocks von `if maqueen.read_distance() < 7{:python}` eine gewisse Zeit warten.
-
-## Dem Rand einer Figur folgen
-
-Hilfe! Ich habe meinen Maqueen-Roboter so programmiert, dass er dem Rand einer Figur im Uhrzeiger folgt. Aber dann hat ein Sonnensturm meine Daten korrumpiert! Bitte reparieren Sie mein Programm!
-
-![[microbit-06-examprep-randfolgen.excalidraw.light.svg]]
-
-> [!solution]- Lösung
->
-> Mit den Hilfsvariabeln `left` und `right`.
-> 
-> 1. `left == 1 and right == 0`
-> 2. `left == 0 and right == 0`
-> 3. `left == 1 and right == 1`

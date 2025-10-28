@@ -5,7 +5,8 @@ title: Buttons abfragen & return-Statement
 > 
 > - **Design-Mustern** und **Event-Loop**: Sie können diese zwei Ideen erklären.
 > - **Knöpfe abfragen**: Sie können einen Event-Loop schreiben, den man per Knopfdruck beenden kann.
-> - **return-Statement**: Sie können mit `return` die Ausführung einer Funktion beenden.
+> - **return-Statement**: Sie können mit `return` die Ausführung einer Funktion beenden und verstehen, wie wir damit die Funktion `fill()` erweitert haben.
+> - **`radio`-Modul**: Sie verstehen, wie wir uns mit dem Radio-Modul gegenseitig den Screen aufgefüllt haben und wie die  Umformung von Integers und Strings ablief.
 
 ## Design Muster
 
@@ -93,6 +94,7 @@ Erweitern Sie Ihr Programm der letzten Lektion mit der Funktion fill() so, dass 
 >             sleep(wartezeit)
 > ```
 
+## Übungsaufgaben
 ### Aufgabe: Eine gewisse Anzahl LEDs anstellen
 
 Erweitern Sie Ihre Funktion fill(), damit Sie auch die Anzahl der LEDs bestimmen können, die angestellt werden soll.
@@ -119,6 +121,8 @@ Erweitern Sie Ihre Funktion fill(), damit Sie auch die Anzahl der LEDs bestimmen
 > # Beispiel: Stelle 13 LEDs sofort ganz an
 > fill(9, 0, 13)
 > ```
+
+---
 ### Aufgabe: Ein LED mehr, ein LED weniger
 
 Ändern Sie Ihr Programm nun so ab, dass man mit dem Knöpfen A und B jeweils ein LED mehr oder weniger anstellen kann. 
@@ -177,14 +181,19 @@ Erweitern Sie Ihre Funktion fill(), damit Sie auch die Anzahl der LEDs bestimmen
 >         fill(9, 0, aktuelle_anzahl)
 > ```
 
-### Aufgabe: Erdbeschleunigung füllt Screen auf
-
-Schauen Sie sich in den Referenzen an, wie der Beschleudnigungssensor funktioniert. Programmieren Sie Ihren Microbit dann so, dass er das Display mehr auffüllt, je aufrechter er da steht. Also dass 0 LEDs leuchten, wenn er waagrecht auf dem Tisch liegt, 12 LEDs, wenn er 45 Grad schräg gehalten wird, und voll aufgefüllt, wenn er aufrecht gehalten wird.
+---
 ### Aufgabe: Per Radio auffüllen
 
 Nutzen Sie zu zweit Ihr Radio, sodass Sie den Knopf A drücken können und bei Ihrer Nachbarin ein weiteres LED angestellt wird.
 
 *Danach gibt es eine Hacking-Wettbewerb.*
+
+----
+### Aufgabe: Erdbeschleunigung füllt Screen auf
+
+Schauen Sie sich in den Referenzen an, wie der Beschleudnigungssensor funktioniert. Programmieren Sie Ihren Microbit dann so, dass er das Display mehr auffüllt, je aufrechter er da steht. Also dass 0 LEDs leuchten, wenn er waagrecht auf dem Tisch liegt, 12 LEDs, wenn er 45 Grad schräg gehalten wird, und voll aufgefüllt, wenn er aufrecht gehalten wird.
+
+---
 ### Knacknuss: "Kitt, I need you pal!"
 
 In den 1980ern und 1990ern waren viele aus dem Häuschen wegen einer Serie, in der ein junger Schönling mit seinem schwarzen, künstlich-intelligenten Auto für Gerechtigkeit kämpft. Die Rede ist von "Knight Rider" mit David Hasselhoff. Zu Ihrer Belustigung, hier ein Trailer:

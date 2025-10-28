@@ -4,7 +4,7 @@ title: LEDs einzeln auffüllen
 > [!success]  Lernziele
 > 
 > - **LEDs anstellen**: Sie können LEDs gezielt ansteuern und mit `for`-Schleifen das Display füllen.
-> - **Funktionen**: Sie haben Funktionen mit mehreren Parametern repetiert
+> - **Funktionen**: Sie haben Funktionen mit mehreren Parametern repetiert.
 
 ## LEDs auffüllen
 
